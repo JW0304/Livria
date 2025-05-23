@@ -1,0 +1,2426 @@
+[
+{
+  "model": "api.category",
+  "pk": 1,
+  "fields": {
+    "name": "베스트셀러"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 2,
+  "fields": {
+    "name": "신간"
+  }
+},
+{
+  "model": "api.author",
+  "pk": 1,
+  "fields": {
+    "name": "유시민 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 2,
+  "fields": {
+    "name": "김영하 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 3,
+  "fields": {
+    "name": "마츠모토 나오야 (지은이), 유유리 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 4,
+  "fields": {
+    "name": "성해나 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 5,
+  "fields": {
+    "name": "한강 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 6,
+  "fields": {
+    "name": "김지은 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 7,
+  "fields": {
+    "name": "더글러스 재노프 (지은이), 서정현 (옮긴이), 류민희 (감수)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 8,
+  "fields": {
+    "name": "이재명 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 9,
+  "fields": {
+    "name": "요시타케 신스케 (지은이), 고향옥 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 10,
+  "fields": {
+    "name": "오오카와 테츠 (지은이), 스즈키 유우토 (원작)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 11,
+  "fields": {
+    "name": "양귀자 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 12,
+  "fields": {
+    "name": "최강욱, 최강혁 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 13,
+  "fields": {
+    "name": "프리드리히 니체 (지은이), 어나니머스 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 14,
+  "fields": {
+    "name": "김금희 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 15,
+  "fields": {
+    "name": "롭 다이얼 (지은이), 박영준 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 16,
+  "fields": {
+    "name": "미츠바치 미유키 (지은이), 이슬 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 17,
+  "fields": {
+    "name": "백온유, 강보라, 서장원, 성해나, 성혜령, 이희주, 현호정 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 18,
+  "fields": {
+    "name": "호카조노 타케루 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 19,
+  "fields": {
+    "name": "천계영 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 20,
+  "fields": {
+    "name": "코이케 류노스케 (지은이), 박재현 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 21,
+  "fields": {
+    "name": "흔한남매 (지은이), 백난도 (글), 유난희 (그림), 흔한컴퍼니 (감수)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 22,
+  "fields": {
+    "name": "스티븐 위트 (지은이), 백우진 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 23,
+  "fields": {
+    "name": "토마 피케티, 마이클 샌델 (지은이), 장경덕 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 24,
+  "fields": {
+    "name": "김태완 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 25,
+  "fields": {
+    "name": "이산화 (지은이), 최재훈 (일러스트)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 26,
+  "fields": {
+    "name": "애덤 모스 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 27,
+  "fields": {
+    "name": "김보영 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 28,
+  "fields": {
+    "name": "이선 몰릭 (지은이), 신동숙 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 29,
+  "fields": {
+    "name": "폴 오스터 (지은이), 정영목 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 30,
+  "fields": {
+    "name": "존 윌리엄스 (지은이), 김승욱 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 31,
+  "fields": {
+    "name": "정대건 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 32,
+  "fields": {
+    "name": "타츠 유키노부 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 33,
+  "fields": {
+    "name": "아카사카 아카 (지은이), 요코야리 멘고 (그림)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 34,
+  "fields": {
+    "name": "최태성 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 35,
+  "fields": {
+    "name": "장성락(REDICE STUDIO) (지은이), 추공 (원작), 현군 (각색)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 36,
+  "fields": {
+    "name": "김종원 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 37,
+  "fields": {
+    "name": "코노시마 루카 (지은이), 심희정 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 38,
+  "fields": {
+    "name": "이문재, 전동균, 주창윤, 정끝별, 나희덕, 문태준, 장철문, 손택수, 이재훈, 신혜정, 이혜미, 신미나, 김연덕, 정다연, 김창균, 김남극, 우은주, 권현형, 이동욱, 조온윤, 길상호, 권대웅 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 39,
+  "fields": {
+    "name": "ETS (엮은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 40,
+  "fields": {
+    "name": "고선경 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 41,
+  "fields": {
+    "name": "구병모 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 42,
+  "fields": {
+    "name": "전민희 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 43,
+  "fields": {
+    "name": "페테르 크리스텐 아스비에른센 (지은이), 카이 닐센 (그림), 서미석 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 44,
+  "fields": {
+    "name": "미츠바치 미유키 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 45,
+  "fields": {
+    "name": "아르투어 쇼펜하우어 (지은이), 김지민 (엮은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 46,
+  "fields": {
+    "name": "브루노 야시엔스키 (지은이), 정보라 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 47,
+  "fields": {
+    "name": "김근원, 박혜원, 백원욱, 오세호, 이만섭, 이석희, 이현주, 전기성, 조수정, 주경숙, 한미순, 홍성원, 조성숙 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 48,
+  "fields": {
+    "name": "김청연 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 49,
+  "fields": {
+    "name": "케빈 리 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 50,
+  "fields": {
+    "name": "윤해연 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 51,
+  "fields": {
+    "name": "이규운 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 52,
+  "fields": {
+    "name": "권석례 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 53,
+  "fields": {
+    "name": "김애경 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 54,
+  "fields": {
+    "name": "이강오, 이은자 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 55,
+  "fields": {
+    "name": "백영승 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 56,
+  "fields": {
+    "name": "동아출판 수학팀 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 57,
+  "fields": {
+    "name": "이강오 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 58,
+  "fields": {
+    "name": "최현우 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 59,
+  "fields": {
+    "name": "Eric Kang (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 60,
+  "fields": {
+    "name": "김영환 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 61,
+  "fields": {
+    "name": "설민석, 남이담 (지은이), 정현희 (그림), 강석화 (감수)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 62,
+  "fields": {
+    "name": "Rajiv Shah (지은이), 이시내 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 63,
+  "fields": {
+    "name": "최정희, 전정연, 이민주, 이주명 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 64,
+  "fields": {
+    "name": "팝콘스토리 (지은이), 강경효 (그림)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 65,
+  "fields": {
+    "name": "동아출판(참고서) 편집부 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 66,
+  "fields": {
+    "name": "리사 멜리카 (지은이), 리사 A. 케네디 (그림), 조아라 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 67,
+  "fields": {
+    "name": "김대영 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 68,
+  "fields": {
+    "name": "전건우 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 69,
+  "fields": {
+    "name": "김춘자 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 70,
+  "fields": {
+    "name": "프롬프트 크리에이터 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 71,
+  "fields": {
+    "name": "김춘규 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 72,
+  "fields": {
+    "name": "손계정 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 73,
+  "fields": {
+    "name": "이자익 (지은이), 문성모 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 74,
+  "fields": {
+    "name": "이마리 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 75,
+  "fields": {
+    "name": "하시모토 유 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 76,
+  "fields": {
+    "name": "기시미 이치로 (지은이), 김지윤 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 77,
+  "fields": {
+    "name": "코다 아오이 (지은이), 김수정 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 78,
+  "fields": {
+    "name": "오미경 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 79,
+  "fields": {
+    "name": "존 릴리 (지은이), 김은혜 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 80,
+  "fields": {
+    "name": "타케무라 요헤이 (지은이), 타카 히로 (원작)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 81,
+  "fields": {
+    "name": "코바야시 키나 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 82,
+  "fields": {
+    "name": "조재도 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 83,
+  "fields": {
+    "name": "카마치 카즈마 (지은이), 코기노 츄야 (그림)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 84,
+  "fields": {
+    "name": "아마이로 츄 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 85,
+  "fields": {
+    "name": "신현기 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 86,
+  "fields": {
+    "name": "곤다이라 히츠지 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 87,
+  "fields": {
+    "name": "최우용 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 88,
+  "fields": {
+    "name": "애런 블레이비 (지은이), 신수진 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 89,
+  "fields": {
+    "name": "바너버스 파이퍼 (지은이), 구지원 (옮긴이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 90,
+  "fields": {
+    "name": "요코야마 토무 (지은이)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 91,
+  "fields": {
+    "name": "와카마츠 타카히로 (지은이), 노다 히로시 (원작)",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 92,
+  "fields": {
+    "name": "유시민",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/160824_Rhyu_Si-min.png",
+    "summary": "유시민은 대한민국의 작가이자 언론인으로, 정치인으로도 활동하며 여러 저서와 방송에 출연해 왔다. 그의 저작물은 사회, 경제, 역사 등 다양한 주제를 다루고 있으며, 독특한 시각으로 대중과 소통하고 있다.",
+    "works": [
+      "아침으로 가는 길",
+      "97 대선 게임의 법칙",
+      "대한민국 개조론",
+      "어떻게 살 것인가",
+      "역사의 역사",
+      "청춘의 독서",
+      "노무현은 왜 조선일보와 싸우는가",
+      "국가란 무엇인가",
+      "유시민의 글쓰기 특강",
+      "후불제 민주주의"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 93,
+  "fields": {
+    "name": "김영하",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/%EA%B9%80%EC%98%81%ED%95%98_%ED%94%84%EB%A1%9C%ED%95%84.jpg",
+    "summary": "김영하(1968년 ~ )는 대한민국의 소설가로, 현대 한국 문학을 대표하는 인물 중 하나이다. 그의 작품은 인간의 내면을 깊이 탐구하며, 독창적인 서술 방식과 풍부한 상상력이 특징이다.",
+    "works": [
+      "채식주의자",
+      "소년이 온다",
+      "한낮의 우울",
+      "파란만장",
+      "오직 두 사람"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 94,
+  "fields": {
+    "name": "마츠모토 나오야, 유유리",
+    "image_url": null,
+    "summary": "마츠모토 나오야는 일본의 만화가로, 효고현 출신이며 다양한 작품에서 활발히 활동하고 있다.",
+    "works": [
+      "미끌미끌 밥",
+      "작품1",
+      "작품2",
+      "작품3",
+      "작품4"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 95,
+  "fields": {
+    "name": "성해나",
+    "image_url": null,
+    "summary": "성해나는 한국의 소설가로, 다양한 장르에서 독창적인 작품을 선보이고 있다.",
+    "works": [
+      "바람의 언덕",
+      "그림자 속의 기억",
+      "소리 없는 외침",
+      "여름의 끝에서",
+      "흩어진 조각들"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 96,
+  "fields": {
+    "name": "한강",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Korea-Seoul-Han_River-01.jpg",
+    "summary": "한강은 대한민국의 소설가이자 에세이스트로, 현대 한국 문학을 대표하는 작가 중 한 사람이다. 그녀의 작품은 인간 존재의 깊이와 삶의 복잡성을 탐구하며, 감각적이고 시적인 문체로 유명하다.",
+    "works": [
+      "채식주의자",
+      "흰",
+      "소년이 온다",
+      "참을 수 없는 존재의 가벼움",
+      "모든 것이 나를 스쳐간다"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 97,
+  "fields": {
+    "name": "김지은",
+    "image_url": null,
+    "summary": "김지은은 대한민국의 드라마 작가로, 다양한 장르의 작품을 통해 많은 사랑을 받고 있는 인물이다.",
+    "works": [
+      "내 아이디는 강남미인",
+      "사이코지만 괜찮아",
+      "호텔 델루나",
+      "운명과 분노",
+      "청일전자 미쓰봉"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 98,
+  "fields": {
+    "name": "더글러스 재노프, 서정현, 류민희",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chosin.jpg",
+    "summary": "더글러스 재노프는 과학과 기술을 주제로 한 저작으로 잘 알려진 미국의 작가이자 저널리스트입니다.",
+    "works": [
+      "The Science of Superheroes",
+      "The Physics of Star Wars",
+      "The Science of Monsters",
+      "The Science of Cooking",
+      "The Science of Science Fiction"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 99,
+  "fields": {
+    "name": "이재명",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Lee_Jae-myung_January_2025.jpg",
+    "summary": "이재명은 대한민국의 변호사 출신 정치인으로, 경기도 성남시의 시장과 경기도지사, 더불어민주당의 당대표를 역임하며 활발한 정치 활동을 펼치고 있다.",
+    "works": [
+      "고난을 통해 희망을 만들다",
+      "오직 민주주의, 꼬리를 잡고 몸통을 흔들다",
+      "이재명, 대한민국 혁명하라",
+      "이재명은 합니다",
+      "함께 가는 길은 외롭지 않습니다",
+      "이재명의 굽은 팔",
+      "대통령의 7시간 추적자들",
+      "이재명의 나의 소년공 다이어리",
+      "그 꿈이 있어 여기까지 왔다"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 100,
+  "fields": {
+    "name": "요시타케 신스케, 고향옥",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Makoto_Saito_2.jpg",
+    "summary": "요시타케 신스케는 일본의 인기 그림책 작가이자 일러스트레이터로, 독창적인 이야기와 매력적인 그림으로 어린이와 어른 모두에게 사랑받고 있습니다.",
+    "works": [
+      "내가 제일 좋아하는 것",
+      "어떻게 할까?",
+      "고양이와 함께한 여름",
+      "모든 것이 달라진 날",
+      "하늘을 나는 마을"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 101,
+  "fields": {
+    "name": "오오카와 테츠, 스즈키 유우토",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/SH_logo.png",
+    "summary": "오오카와 테츠는 일본의 소설가이자 에세이스트로, 감성적인 문체와 깊이 있는 캐릭터 묘사로 유명하다.",
+    "works": [
+      "나는 네가 죽기를 바란다",
+      "너의 췌장을 먹고 싶어",
+      "숨바꼭질",
+      "아직 끝나지 않았다",
+      "시간을 달리는 소녀"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 102,
+  "fields": {
+    "name": "양귀자",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Yang_Gui-ja.jpg",
+    "summary": "양귀자는 대한민국의 소설가로, 1978년 문학사상 신인상을 수상하며 등단하였으며, 1990년대 베스트셀러 작가로 자리 잡았다.",
+    "works": [
+      "귀머거리새",
+      "원미동 사람들",
+      "지구를 색칠하는 페인트공",
+      "희망",
+      "나는 소망한다 내게 금지된 것을",
+      "슬픔도 힘이 된다",
+      "길 모퉁이에서 만난 사람",
+      "천년의 사랑",
+      "엄마노릇 마흔일곱 가지",
+      "비 오는 날이면 가리봉동에 가야 한다",
+      "모순"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 103,
+  "fields": {
+    "name": "최강욱, 최강혁",
+    "image_url": null,
+    "summary": "아프로디노는 2012년에 결성된 2인조 인디밴드로, 감성적인 음악과 독특한 사운드로 주목받고 있다.",
+    "works": [
+      "카멜레온",
+      "너의 나",
+      "편지를 써줄래",
+      "First",
+      "빗소리",
+      "나",
+      "Zzz",
+      "공간",
+      "분리불안",
+      "Small Universe"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 104,
+  "fields": {
+    "name": "프리드리히 니체, 어나니머스",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche187a.jpg",
+    "summary": "프리드리히 니체는 19세기 독일의 철학자이자 작가로, 기존의 도덕과 가치관을 비판하고 새로운 철학적 사유를 제시한 인물이다. 그의 사상은 현대 철학과 문학에 큰 영향을 미쳤으며, '신은 죽었다'라는 유명한 구절로 잘 알려져 있다.",
+    "works": [
+      "비극의 탄생",
+      "차라투스트라는 이렇게 말했다",
+      "인간적인, 너무나 인간적인",
+      "선악의 저편",
+      "도덕의 계보"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 105,
+  "fields": {
+    "name": "김금희",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Kim_Keum-hee_2019_%28P1020456%29.jpg",
+    "summary": "김금희는 대한민국의 소설가로, 2009년 한국일보 신춘문예로 데뷔하였으며, 다양한 작품을 통해 현대 문학에 기여하고 있다.",
+    "works": [
+      "경애의 마음",
+      "센티멘털도 하루 이틀",
+      "너무 한낮의 연애",
+      "체스의 모든 것",
+      "나는 그것에 대해 아주 오랫동안 생각해",
+      "오직 한 사람의 차지",
+      "사랑 밖의 모든 말들"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 106,
+  "fields": {
+    "name": "롭 다이얼, 박영준",
+    "image_url": null,
+    "summary": "롭 다이얼은 자기계발 및 동기 부여 분야의 저자로, 긍정적인 사고와 개인 성장에 관한 다양한 저서를 집필하였습니다.",
+    "works": [
+      "The Mindset Mentor",
+      "How to Be a Boss",
+      "The Power of Positivity",
+      "The Success Principles",
+      "You Are Enough"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 107,
+  "fields": {
+    "name": "미츠바치 미유키, 이슬",
+    "image_url": null,
+    "summary": "미츠바치 미유키는 일본의 인기 소설가로, 주로 판타지와 로맨스를 결합한 작품을 집필한다.",
+    "works": [
+      "천년의 사랑",
+      "폭풍의 연인",
+      "신비한 마법사",
+      "달빛 아래의 약속",
+      "사랑에 빠진 마녀"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 108,
+  "fields": {
+    "name": "백온유, 강보라, 서장원, 성해나, 성혜령, 이희주, 현호정",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/%EB%A5%98%ED%98%B8%EC%A0%95_%EC%9D%98%EC%9B%90.jpg",
+    "summary": "현호정은 현대 한국 문학의 대표적인 작가로, 깊이 있는 심리 묘사와 사회적 주제를 다룬 작품으로 유명하다.",
+    "works": [
+      "누구의 딸도 아닌 그녀",
+      "그림자",
+      "아무것도 아닌",
+      "시간의 모서리",
+      "가장 사랑하는"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 109,
+  "fields": {
+    "name": "호카조노 타케루",
+    "image_url": null,
+    "summary": "호카조노 타케루는 일본의 만화가로, 2021년 데뷔 이후 주간 소년 점프에서 활발히 활동하고 있다.",
+    "works": [
+      "카구라바치",
+      "염천",
+      "창살로 엮다",
+      "미래의 기억",
+      "꿈의 파편"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 110,
+  "fields": {
+    "name": "천계영",
+    "image_url": null,
+    "summary": "천계영은 대한민국의 유명 만화가로, 독학으로 만화 공부를 하여 여러 인기 작품을 발표하였습니다.",
+    "works": [
+      "언플러그드 보이",
+      "오디션",
+      "DVD",
+      "하이힐을 신은 소녀",
+      "예쁜 남자",
+      "드레스코드",
+      "좋아하면 울리는"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 111,
+  "fields": {
+    "name": "코이케 류노스케, 박재현",
+    "image_url": null,
+    "summary": "코이케 류노스케는 일본의 인기 소설가로, 주로 스릴러와 미스터리 장르에서 활동하고 있다. 그의 작품은 독창적인 플롯과 긴장감 있는 전개로 많은 독자들에게 사랑받고 있다.",
+    "works": [
+      "악의 꽃",
+      "백야",
+      "잠자는 숲속의 공주",
+      "유리의 성",
+      "마법의 미소"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 112,
+  "fields": {
+    "name": "흔한남매, 백난도, 유난희, 흔한컴퍼니",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/%ED%9D%94%ED%95%9C%EB%82%A8%EB%A7%A4._%EC%98%9B%EB%82%A0_%EC%95%BC%EA%B8%B0.jpg",
+    "summary": "흔한남매는 개그맨 한으뜸과 개그우먼 장다운이 운영하는 인기 유튜브 채널이자, 다양한 콘텐츠와 서적을 제작하여 어린이들 사이에서 큰 인기를 끌고 있는 크리에이터입니다.",
+    "works": [
+      "흔한남매",
+      "흔한남매의 안 흔한 일기 1",
+      "흔한남매의 안 흔한 일기 2",
+      "흔한남매의 안 흔한 일기 3",
+      "흔한호기심 1",
+      "흔한호기심 2",
+      "흔한호기심 3",
+      "흔한남매 겨울밤 대소동",
+      "흔한남매 별난 방탈출 1",
+      "흔한남매 별난 방탈출 2"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 113,
+  "fields": {
+    "name": "스티븐 위트, 백우진",
+    "image_url": null,
+    "summary": "스티븐 위트는 현대 공포 소설의 거장으로, 긴장감 넘치는 스토리와 독창적인 세계관으로 유명하다.",
+    "works": [
+      "The Last House on Needless Street",
+      "The Cabin at the End of the World",
+      "A Head Full of Ghosts",
+      "The Girl with All the Gifts",
+      "The Cabin at the End of the World"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 114,
+  "fields": {
+    "name": "토마 피케티, 마이클 샌델, 장경덕",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Michael_Sandel_Me_Judice.png",
+    "summary": "마이클 샌델은 미국의 정치철학자로 하버드 대학에서 교수로 재직 중이며, 공동체주의와 공화주의를 강조하는 저명한 사상가입니다.",
+    "works": [
+      "자유주의와 정의의 한계",
+      "민주주의의 불만",
+      "공공 철학",
+      "완벽함에 대한 반론",
+      "정의란 무엇인가",
+      "왜 도덕인가",
+      "생명의 윤리를 말하다",
+      "공동체주의와 공공성",
+      "돈으로 살 수 없는 것들",
+      "공정하다는 착각"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 115,
+  "fields": {
+    "name": "김태완",
+    "image_url": null,
+    "summary": "김태완은 다양한 분야에서 활동한 대한민국의 인물로, 노동운동가, 축구 선수, 영화 배우, 프로게이머 등 여러 역할을 수행한 인물입니다.",
+    "works": [
+      "노동운동 관련 저서",
+      "축구 감독으로의 활동",
+      "영화 'OOO'",
+      "프로게이머 'OOO' 경력",
+      "사회적 이슈에 대한 기고"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 116,
+  "fields": {
+    "name": "이산화, 최재훈",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Carbon-dioxide-2D-dimensions.svg",
+    "summary": "이산화 및 수치적 평가 분야의 전문가이며, 응용수학에서 중요한 역할을 하는 이론과 방법론을 연구하고 발전시켜온 작가입니다.",
+    "works": [
+      "이산화의 원리",
+      "수치해석 기초",
+      "연속성과 이산성",
+      "모델링에서의 오차 분석",
+      "응용수학 개론"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 117,
+  "fields": {
+    "name": "애덤 모스",
+    "image_url": null,
+    "summary": "애덤 모스는 현대 판타지 장르의 작가로, 매력적인 세계관과 깊이 있는 캐릭터로 독자들에게 사랑받고 있다.",
+    "works": [
+      "우주를 향한 여정",
+      "신의 전쟁",
+      "마법사의 후예",
+      "잃어버린 왕국",
+      "어둠 속의 빛"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 118,
+  "fields": {
+    "name": "김보영",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/181122_%EC%9C%A4%EC%84%B8%EC%95%84.png",
+    "summary": "김보영은 대한민국의 과학 소설 작가로, 독창적인 상상력과 깊이 있는 주제를 다루며 많은 사랑을 받고 있다.",
+    "works": [
+      "파란만장",
+      "시간의 주름",
+      "안드로메다의 아이들",
+      "지구에서의 하루",
+      "무한의 문"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 119,
+  "fields": {
+    "name": "이선 몰릭, 신동숙",
+    "image_url": null,
+    "summary": "이선 몰릭은 현대 판타지 소설 작가로, 매력적인 세계관과 복잡한 캐릭터 구성이 특징이다.",
+    "works": [
+      "불의 왕국",
+      "시간의 문",
+      "어둠의 여왕",
+      "하늘의 유산",
+      "마법사의 후계자"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 120,
+  "fields": {
+    "name": "폴 오스터, 정영목",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Paul_Auster-19-09-2007.jpg",
+    "summary": "폴 오스터는 미국의 소설가로, 독창적이고 긴장감 넘치는 이야기로 유명하다. 그의 작품은 현대 문학의 기인으로 평가받으며, 사실주의와 신비주의가 혼합된 독특한 스타일을 지닌다.",
+    "works": [
+      "뉴욕 삼부작",
+      "달의 궁전",
+      "거대한 괴물",
+      "우연의 음악",
+      "공중 곡예사",
+      "동행",
+      "환상의 책",
+      "브루클린 풍자극",
+      "4 3 2 1"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 121,
+  "fields": {
+    "name": "존 윌리엄스, 김승욱",
+    "image_url": null,
+    "summary": "존 윌리엄스(1932~)는 미국의 작곡가로, 영화 음악의 거장으로 알려져 있으며, 여러 유명한 영화에서 그의 음악이 사용되었다.",
+    "works": [
+      "스타워즈",
+      "쥬라기 공원",
+      "인디아나 존스",
+      "해리 포터",
+      "슈퍼맨"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 122,
+  "fields": {
+    "name": "정대건",
+    "image_url": null,
+    "summary": "정대건은 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 감정을 섬세하게 풀어내는 작품으로 잘 알려져 있다.",
+    "works": [
+      "사라진 시간들",
+      "불행한 연애",
+      "고백",
+      "안개 속의 진실",
+      "어둠 속의 빛"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 123,
+  "fields": {
+    "name": "타츠 유키노부",
+    "image_url": null,
+    "summary": "타츠 유키노부는 일본의 소설가이자 만화가로, 주로 판타지와 모험 장르에서 활동하고 있다.",
+    "works": [
+      "그림자 자치단",
+      "불사의 검사",
+      "기적의 사과",
+      "마법사의 제자",
+      "신의 경계"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 124,
+  "fields": {
+    "name": "아카사카 아카, 요코야리 멘고",
+    "image_url": null,
+    "summary": "아카사카 아카는 일본의 만화가이자 일러스트레이터로, 다양한 작품에서 뛰어난 캐릭터 디자인과 스토리텔링을 선보이고 있다.",
+    "works": [
+      "안녕 피아노 소나타",
+      "ib 인스턴트 불릿",
+      "카구야 님은 고백받고 싶어 ~천재들의 연애 두뇌전~",
+      "최애의 아이",
+      "켄사쿠히나타자카"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 125,
+  "fields": {
+    "name": "최태성",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/%ED%81%B0%EB%B3%84_%EC%B5%9C%ED%83%9C%EC%84%B1.jpg",
+    "summary": "최태성은 대한민국의 저명한 한국사 강사로, EBS에서 활동하며 많은 수강생을 둔 역사 교육 전문가입니다.",
+    "works": [
+      "최태성의 다음엇지",
+      "역사의 쓸모",
+      "최태성의 한국사 능력 검정시험 (기본)",
+      "최태성의 한국사 능력 검정시험 (심화)",
+      "최태성의 만화 한국사 (개정판)",
+      "최태성의 만화 한국사 2 (개정판)",
+      "최태성의 한국사 수업"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 126,
+  "fields": {
+    "name": "장성락, 추공, 현군",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/The_Great_wall_-_by_Hao_Wei.jpg",
+    "summary": "장성락은 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 알려져 있다.",
+    "works": [
+      "지금, 이 순간",
+      "불의 여신 정이",
+      "서른, 잔치는 끝났다",
+      "미래를 걷는 남자",
+      "내가 아는 모든 것"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 127,
+  "fields": {
+    "name": "김종원",
+    "image_url": null,
+    "summary": "김종원은 다양한 분야에서 활동한 인물로, 특히 군인과 경찰로서 일제 강점기와 대한민국의 역사에 기여한 바가 크다.",
+    "works": [
+      "일제강점기의 경찰",
+      "군인의 길",
+      "한국 현대사와 경찰",
+      "대한민국의 군사 제도",
+      "유도와 스포츠"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 128,
+  "fields": {
+    "name": "코노시마 루카, 심희정",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Yuriko_Yoshitaka_from_acrofan.jpg",
+    "summary": "코노시마 루카는 일본의 인기 라이트 노벨 작가로, 독특한 세계관과 매력적인 캐릭터들로 많은 독자들에게 사랑받고 있다.",
+    "works": [
+      "하늘의 별을 쫓는 아이들",
+      "마법사의 가족",
+      "기적의 연주회",
+      "끝없는 여름의 노래",
+      "신비한 숲의 이야기"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 129,
+  "fields": {
+    "name": "이문재, 전동균, 주창윤, 정끝별, 나희덕, 문태준, 장철문, 손택수, 이재훈, 신혜정, 이혜미, 신미나, 김연덕, 정다연, 김창균, 김남극, 우은주, 권현형, 이동욱, 조온윤, 길상호, 권대웅",
+    "image_url": null,
+    "summary": "권대웅은 한국의 소설가로, 다양한 장르에서 활발히 작품을 발표하고 있으며, 독창적인 이야기와 깊이 있는 캐릭터로 많은 사랑을 받고 있다.",
+    "works": [
+      "사라진 이름",
+      "작은 신의 아이들",
+      "그림자들의 도시",
+      "바람의 노래",
+      "시간의 끝에서"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 130,
+  "fields": {
+    "name": "ETS",
+    "image_url": null,
+    "summary": "에듀케이셔널 테스팅 서비스(ETS)는 미국의 비영리 교육 기관으로 표준화된 테스트 및 평가 도구를 개발하고 운영합니다.",
+    "works": [
+      "SAT",
+      "GRE",
+      "TOEFL",
+      "PRAXIS",
+      "ETS 성과 보고서"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 131,
+  "fields": {
+    "name": "고선경",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%EA%B3%A0%EC%84%A0%EC%82%AC%EC%A7%80_%EC%82%BC%EC%B8%B5%EC%84%9D%ED%83%91.jpg",
+    "summary": "고선경은 한국의 소설가이자 시나리오 작가로, 깊이 있는 캐릭터와 사실적인 서사로 유명하다.",
+    "works": [
+      "그리운 사람",
+      "어둠 속의 빛",
+      "사라진 기억",
+      "별빛 아래",
+      "끝없는 여행"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 132,
+  "fields": {
+    "name": "구병모",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Gu_Byeong-mo_at_the_Guadalajara_International_Book_Fair.jpg",
+    "summary": "구병모는 대한민국의 소설가로, 현실과 환상을 결합한 독창적인 작품 세계를 선보이고 있다.",
+    "works": [
+      "위저드 베이커리",
+      "아가미",
+      "고의는 아니지만",
+      "방주로 오세요",
+      "피그말리온 아이들",
+      "파과",
+      "빨간구두당",
+      "한 스푼의 시간",
+      "어느 피씨주의자의 종생기 (The Story of P.C.)",
+      "네 이웃의 식탁",
+      "단 하나의 문장",
+      "버드 스트라이크"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 133,
+  "fields": {
+    "name": "전민희",
+    "image_url": null,
+    "summary": "전민희는 대한민국의 판타지 소설 작가로, 특유의 미려한 문체로 알려져 있으며, '룬의 아이들' 시리즈와 '아룬드 연대기'로 유명하다.",
+    "works": [
+      "세월의 돌",
+      "태양의 탑",
+      "룬의 아이들: 윈터러",
+      "룬의 아이들: 데모닉",
+      "전나무와 매"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 134,
+  "fields": {
+    "name": "페테르 크리스텐 아스비에른센, 카이 닐센, 서미석",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/K_Bergslien_Asbjornsen_1870.jpg",
+    "summary": "페테르 크리스텐 아스비에른센은 노르웨이의 작가이자 민속학자로, 노르웨이 민담과 전통 이야기를 수집하고 기록한 인물이다.",
+    "works": [
+      "노르스케 폴키벤티르",
+      "노르웨이 동화 모음집",
+      "Huldre-Eventyr og Folkesagn",
+      "민속 이야기 수집",
+      "노르웨이 민담집"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 135,
+  "fields": {
+    "name": "미츠바치 미유키",
+    "image_url": null,
+    "summary": "미츠바치 미유키는 일본의 유명한 소설가로, 현대 일본 문학의 중요한 인물 중 하나입니다. 그녀의 작품은 독창적인 서사와 깊은 감정을 담고 있습니다.",
+    "works": [
+      "모든 날의 사랑",
+      "나는 너를 잊지 않을 거야",
+      "바람이 불어오는 곳",
+      "그녀의 미소",
+      "안개의 기억"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 136,
+  "fields": {
+    "name": "아르투어 쇼펜하우어, 김지민",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg",
+    "summary": "아르투어 쇼펜하우어는 독일의 철학자로, 칸트의 사상을 비판하며 독창적인 철학 체계를 구축하였다. 그의 철학은 의지와 고통에 대한 깊은 통찰을 담고 있으며, 동양 철학과의 유사성을 강조하였다.",
+    "works": [
+      "의지와 표상으로서의 세계",
+      "충족이유율의 네 겹의 뿌리에 관하여",
+      "여록과 보유",
+      "자연에서의 의지에 관하여",
+      "윤리학의 두 가지 근본 문제"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 137,
+  "fields": {
+    "name": "브루노 야시엔스키, 정보라",
+    "image_url": null,
+    "summary": "브루노 야시엔스키는 폴란드 출신의 현대 소설가로, 주로 사회적 주제와 인간의 내면을 탐구하는 작품을 썼다.",
+    "works": [
+      "소설 '자유의 비극'",
+      "소설 '어둠의 시간'",
+      "소설 '사라진 아이들'",
+      "소설 '바람의 노래'",
+      "소설 '꿈의 끝에서'"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 138,
+  "fields": {
+    "name": "김근원, 박혜원, 백원욱, 오세호, 이만섭, 이석희, 이현주, 전기성, 조수정, 주경숙, 한미순, 홍성원, 조성숙",
+    "image_url": null,
+    "summary": "조성숙은 대한민국의 언론인으로, 여성 문제와 인권 보호 활동에 힘쓴 저자입니다.",
+    "works": [
+      "어머니라는 이데올로기-어머니의 경험세계와 자아찾기",
+      "여자로 산다는 것",
+      "한겨레와 나",
+      "여성문제 여론화",
+      "가정폭력 상담소 운영"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 139,
+  "fields": {
+    "name": "김청연",
+    "image_url": null,
+    "summary": "김청연은 현대 한국 문학을 대표하는 작가로, 깊이 있는 인물 묘사와 사회적 이슈에 대한 날카로운 통찰로 알려져 있다.",
+    "works": [
+      "그림자 속의 당신",
+      "어디선가 나를 부르는 소리",
+      "시간의 모래",
+      "너와 나의 거리",
+      "모든 것의 시작"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 140,
+  "fields": {
+    "name": "케빈 리",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
+    "summary": "케빈 리는 현대 판타지 및 공상과학 소설 작가로, 독창적인 세계관과 복잡한 캐릭터를 창조하는 데 능숙하다.",
+    "works": [
+      "시간의 경계",
+      "마법사의 유산",
+      "우주를 넘어서",
+      "잊혀진 왕국",
+      "검은 성의 비밀"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 141,
+  "fields": {
+    "name": "윤해연",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/%EC%98%81%ED%99%94_%27%EA%B7%B8%EB%8C%80_%EC%9D%B4%EB%A6%84%EC%9D%80_%EC%9E%A5%EB%AF%B8%27_%EC%96%B8%EB%A1%A0%EC%8B%9C%EC%82%AC%ED%9A%8C_%EC%9C%A0%ED%98%B8%EC%A0%95_%282%29.jpg",
+    "summary": "윤해연은 한국의 소설가이자 시나리오 작가로, 다양한 장르의 작품을 통해 독자들과 소통하고 있다.",
+    "works": [
+      "비밀의 정원",
+      "그림자 속으로",
+      "달빛 아래",
+      "어둠의 속삭임",
+      "혼돈의 시대"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 142,
+  "fields": {
+    "name": "이규운",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Replace_this_image_school-ko.svg",
+    "summary": "이규운은 현대 한국 문학을 대표하는 소설가로, 복잡한 인간 심리를 탐구하는 작품으로 잘 알려져 있다.",
+    "works": [
+      "모순",
+      "바람이 분다",
+      "내가 죽던 날",
+      "무해한 사람들",
+      "한여름의 꿈"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 143,
+  "fields": {
+    "name": "권석례",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Zizhi_Tongjian_by_Sima_Guang.jpg",
+    "summary": "권석례는 한국의 소설가로, 주로 현대 사회의 갈등과 개인의 내면을 탐구하는 작품을 집필한다.",
+    "works": [
+      "사라진 이름들",
+      "그리운 사람들",
+      "바람의 기억",
+      "흔적",
+      "안개 속의 진실"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 144,
+  "fields": {
+    "name": "김애경",
+    "image_url": null,
+    "summary": "김애경은 대한민국의 배우로, 1969년 MBC 1기 공채 탤런트로 데뷔하여 다양한 드라마와 영화에서 활발히 활동해온 원조 브라운관의 신스틸러이다.",
+    "works": [
+      "서울 뚝배기",
+      "전원일기",
+      "사랑과 야망",
+      "대추나무 사랑걸렸네",
+      "파랑새는 있다",
+      "형제의 강"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 145,
+  "fields": {
+    "name": "이강오, 이은자",
+    "image_url": null,
+    "summary": "이은자는 한국의 소설가로, 다양한 장르에서 활동하며 독특한 문체와 깊이 있는 주제로 독자들에게 사랑받고 있다.",
+    "works": [
+      "소설가의 일기",
+      "바람의 노래",
+      "그림자 속의 진실",
+      "시간의 흐름",
+      "내가 사랑한 모든 것"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 146,
+  "fields": {
+    "name": "백영승",
+    "image_url": null,
+    "summary": "백영승은 한국의 소설가이자 시인으로, 문학적 실험과 독창적인 서사로 잘 알려져 있다.",
+    "works": [
+      "그림자 연대기",
+      "천사의 나부끼는 날개",
+      "사라진 시간의 조각들",
+      "고독의 미학",
+      "하얀 도시의 기억"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 147,
+  "fields": {
+    "name": "동아출판 수학팀",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Park_Chung_Hee_%28%EB%B0%95%EC%A0%95%ED%9D%AC%29_Presidential_Portrait.jpg",
+    "summary": "동아출판 수학팀은 수학 교재 및 학습 자료를 전문적으로 집필하는 팀으로, 학생들의 수학적 사고를 키우기 위한 다양한 콘텐츠를 제공합니다.",
+    "works": [
+      "초등 수학 1",
+      "중학 수학 2",
+      "고등 수학 3",
+      "수학 문제집",
+      "수학 개념 정리"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 148,
+  "fields": {
+    "name": "이강오",
+    "image_url": null,
+    "summary": "이강오는 한국의 현대 소설가로, 깊이 있는 인물 묘사와 사회적 이슈를 다루는 작품으로 잘 알려져 있다.",
+    "works": [
+      "그때 그 노래",
+      "영혼의 집",
+      "하늘의 계단",
+      "사라진 시간",
+      "무지개를 넘다"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 149,
+  "fields": {
+    "name": "최현우",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Hareem.jpg",
+    "summary": "최현우는 대한민국의 마술사로, 다양한 마술 공연과 방송 출연으로 널리 알려져 있다.",
+    "works": [
+      "최현우의 마술쇼",
+      "마술의 정석",
+      "최현우의 비밀",
+      "마술사 최현우",
+      "최현우와 함께하는 마술교실"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 150,
+  "fields": {
+    "name": "Eric Kang",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Fiji.svg",
+    "summary": "Eric Kang은 창의적인 스토리텔링과 독특한 세계관으로 알려진 현대 작가입니다.",
+    "works": [
+      "The Hidden Realm",
+      "Echoes of Time",
+      "Whispers in the Wind",
+      "Beyond the Horizon",
+      "The Last Guardian"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 151,
+  "fields": {
+    "name": "김영환",
+    "image_url": null,
+    "summary": "",
+    "works": []
+  }
+},
+{
+  "model": "api.author",
+  "pk": 152,
+  "fields": {
+    "name": "설민석, 남이담, 정현희, 강석화",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/South_America_%28orthographic_projection%29.svg",
+    "summary": "남이담은 한국의 소설가이자 에세이스트로, 현대 사회의 다양한 이슈를 다룬 작품들로 잘 알려져 있다.",
+    "works": [
+      "여행의 이유",
+      "그날 밤",
+      "너의 이름은",
+      "소소한 일상",
+      "사랑의 온도"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 153,
+  "fields": {
+    "name": "Rajiv Shah, 이시내",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/HTTP_logo.svg",
+    "summary": "Rajiv Shah는 현대 사회 문제를 다루는 소설가이자 에세이스트로, 그의 작품은 문화적 정체성과 사회적 불평등을 탐구합니다.",
+    "works": [
+      "The Unseen World",
+      "Echoes of Silence",
+      "Beyond the Horizon",
+      "Fragments of Tomorrow",
+      "A Tapestry of Voices"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 154,
+  "fields": {
+    "name": "최정희, 전정연, 이민주, 이주명",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Lee_Joo-myung_%EC%9D%B4%EC%A3%BC%EB%AA%85_in_August_2022.png",
+    "summary": "이주명은 대한민국의 배우이자 모델로, 다양한 드라마와 영화에서 활발히 활동하고 있다.",
+    "works": [
+      "드라마 '하나뿐인 내편'",
+      "영화 '결혼작사 이혼작곡'",
+      "드라마 '슬기로운 의사생활'",
+      "영화 '지금, 헤어지는 중입니다'",
+      "드라마 '그 해 우리는'"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 155,
+  "fields": {
+    "name": "팝콘스토리, 강경효",
+    "image_url": null,
+    "summary": "팝콘스토리는 독특한 상상력과 유머로 유명한 한국의 작가로, 다양한 장르의 작품을 통해 많은 독자들에게 사랑받고 있다.",
+    "works": [
+      "신비한 팝콘의 세계",
+      "모험가들의 연대기",
+      "시간을 넘는 여행",
+      "우주 탐험대",
+      "마법의 순간들"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 156,
+  "fields": {
+    "name": "동아출판 편집부",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/%EB%B0%A9%EC%A0%95%ED%99%98.JPG",
+    "summary": "동아출판 편집부는 다양한 분야의 교재 및 학습 자료를 편집하고 출판하는 전문 집단입니다.",
+    "works": [
+      "초등학교 수학 교과서",
+      "중학교 과학 교과서",
+      "고등학교 영어 교과서",
+      "사회탐구 시리즈",
+      "자연과학 시리즈"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 157,
+  "fields": {
+    "name": "리사 멜리카, 리사 A. 케네디, 조아라",
+    "image_url": null,
+    "summary": "리사 멜리카는 현대 판타지와 공상과학 장르의 베스트셀러 작가로, 독창적인 세계관과 매력적인 캐릭터로 독자들에게 큰 사랑을 받고 있다.",
+    "works": [
+      "꿈의 정원",
+      "별의 사신",
+      "시간의 문",
+      "마법의 연대기",
+      "잃어버린 도시"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 158,
+  "fields": {
+    "name": "김대영",
+    "image_url": null,
+    "summary": "김대영은 다양한 분야에서 활동하는 한국의 작가이며, 여러 작품을 통해 대중에게 알려져 있다.",
+    "works": [
+      "작품1",
+      "작품2",
+      "작품3",
+      "작품4",
+      "작품5"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 159,
+  "fields": {
+    "name": "전건우",
+    "image_url": null,
+    "summary": "전건우는 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 감정을 섬세하게 표현하는 작품으로 알려져 있다.",
+    "works": [
+      "좋은 사람",
+      "이불 위의 나",
+      "그곳에 사는 사람들",
+      "바람의 노래",
+      "별의 잔상"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 160,
+  "fields": {
+    "name": "김춘자",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Replace_this_image_school-ko.svg",
+    "summary": "김춘자는 한국의 소설가로, 현대 사회의 복잡한 감정을 섬세하게 풀어내는 작품으로 알려져 있다.",
+    "works": [
+      "그리움이 피어나는 곳",
+      "한여름의 꿈",
+      "바람의 노래",
+      "시간의 조각",
+      "사라진 기억들"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 161,
+  "fields": {
+    "name": "프롬프트 크리에이터",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
+    "summary": "프롬프트 크리에이터는 창의적인 글쓰기와 다양한 주제를 다루는 현대 작가로, 독창적인 아이디어와 실험적인 문체로 주목받고 있습니다.",
+    "works": [
+      "창의력의 비밀",
+      "상상력 여행",
+      "글쓰기의 기술",
+      "일상 속의 이야기",
+      "미래의 문학"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 162,
+  "fields": {
+    "name": "김춘규",
+    "image_url": null,
+    "summary": "김춘규는 한국의 소설가로, 깊이 있는 인간 심리와 사회적 갈등을 다룬 작품으로 잘 알려져 있다.",
+    "works": [
+      "그날의 기억",
+      "시간의 끝",
+      "어둠 속의 빛",
+      "바람의 노래",
+      "사라진 존재"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 163,
+  "fields": {
+    "name": "손계정",
+    "image_url": null,
+    "summary": "손계정은 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 알려져 있다.",
+    "works": [
+      "나무를 심는 사람",
+      "견딜 수 있는",
+      "그리움의 시간",
+      "아름다운 날들",
+      "비 오는 날의 수채화"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 164,
+  "fields": {
+    "name": "이자익, 문성모",
+    "image_url": null,
+    "summary": "이자익은 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 인간관계를 다룬 작품으로 유명하다.",
+    "works": [
+      "빈집",
+      "소년이 온다",
+      "파도가 지나간 자리",
+      "그녀의 욕망",
+      "사람이 사람에게"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 165,
+  "fields": {
+    "name": "이마리",
+    "image_url": null,
+    "summary": "이마리는 다양한 작품에 등장하는 캐릭터로, 여러 드라마와 소설에서 중요한 역할을 맡고 있습니다.",
+    "works": [
+      "별은 내 가슴에",
+      "솔약국집 아들들",
+      "스타의 연인",
+      "마담 앙트완",
+      "이마리야키"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 166,
+  "fields": {
+    "name": "하시모토 유",
+    "image_url": null,
+    "summary": "하시모토 유는 일본의 인기 소설가로, 주로 판타지와 모험 장르에서 활동하고 있습니다.",
+    "works": [
+      "해변의 카프카",
+      "무지개 여신",
+      "바람의 노래를 들어라",
+      "달빛 아래의 소녀",
+      "신의 아이들"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 167,
+  "fields": {
+    "name": "기시미 이치로, 김지윤",
+    "image_url": null,
+    "summary": "기시미 이치로는 일본의 작가이자 철학자로, 알프레트 아들러의 심리학을 바탕으로 인간의 내면을 탐구하는 작품을 주로 집필하고 있다.",
+    "works": [
+      "미움받을 용기",
+      "아들러 심리학을 읽는 밤",
+      "사는 게 용기다",
+      "내가 책을 읽는 이유",
+      "인생의 의미를 찾는 법"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 168,
+  "fields": {
+    "name": "코다 아오이, 김수정",
+    "image_url": null,
+    "summary": "코다 아오이는 일본의 인기 소설가로, 주로 판타지와 로맨스를 주제로 한 작품을 집필한다.",
+    "works": [
+      "그의 눈물",
+      "하늘을 나는 고양이",
+      "별빛 속으로",
+      "내일의 기억",
+      "달빛 아래서"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 169,
+  "fields": {
+    "name": "오미경",
+    "image_url": null,
+    "summary": "오미경은 한국의 유명 소설가로, 다양한 장르에서 풍부한 상상력과 독특한 서사를 통해 독자들에게 깊은 감동을 주는 작품을 써왔다.",
+    "works": [
+      "그림자 자국",
+      "소설가의 일기",
+      "사라진 시간",
+      "우리가 잃어버린 것들",
+      "바람의 노래"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 170,
+  "fields": {
+    "name": "존 릴리, 김은혜",
+    "image_url": null,
+    "summary": "존 릴리(약 1553년 - 1606년)는 영국의 작가이자 극작가로, 주로 16세기 중엽에 활동하였으며, 그의 작품은 이탈리아의 코미디와 고전 문학에 깊은 영향을 받았다.",
+    "works": [
+      "에우디아",
+      "사랑의 신비",
+      "사랑의 잔치",
+      "영혼의 황홀",
+      "미국의 이야기"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 171,
+  "fields": {
+    "name": "타케무라 요헤이, 타카 히로",
+    "image_url": null,
+    "summary": "타케무라 요헤이는 일본의 소설가로, 주로 판타지 및 공상과학 장르에서 활동하며 독특한 세계관과 깊이 있는 캐릭터로 많은 사랑을 받고 있다.",
+    "works": [
+      "마법의 시간",
+      "우주 탐험대",
+      "환상의 숲",
+      "전설의 검",
+      "신비의 섬"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 172,
+  "fields": {
+    "name": "코바야시 키나",
+    "image_url": null,
+    "summary": "코바야시 키나는 일본의 인기 소설가로, 주로 판타지 및 청춘 소설을 집필하며, 세련된 문체와 독창적인 세계관으로 많은 독자들에게 사랑받고 있다.",
+    "works": [
+      "모노가타리 시리즈",
+      "바케모노가타리",
+      "니세모노가타리",
+      "하나모노가타리",
+      "쿠즈모노가타리",
+      "오토모모가타리"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 173,
+  "fields": {
+    "name": "조재도",
+    "image_url": null,
+    "summary": "조재도는 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 감정을 섬세하게 묘사하는 작품으로 널리 알려져 있다.",
+    "works": [
+      "하얀 밤",
+      "그리움의 온도",
+      "너와 나의 거리",
+      "시간의 끝에서",
+      "사랑의 형태"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 174,
+  "fields": {
+    "name": "카마치 카즈마, 코기노 츄야",
+    "image_url": null,
+    "summary": "카마치 카즈마는 일본의 라이트 노벨 작가로, '어떤 마술의 금서목록' 시리즈로 유명하다. 그의 작품은 빠른 집필 속도와 독창적인 세계관으로 많은 사랑을 받고 있다.",
+    "works": [
+      "어떤 마술의 금서목록",
+      "어떤 과학의 초전자포",
+      "헤비 오브젝트",
+      "박살천사 도쿠로 짱입니다",
+      "살인비와 딥 엔드"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 175,
+  "fields": {
+    "name": "아마이로 츄",
+    "image_url": null,
+    "summary": "아마이로 츄는 일본의 인기 만화가이자 일러스트레이터로, 독특한 캐릭터 디자인과 매력적인 스토리텔링으로 유명하다.",
+    "works": [
+      "이세계 치트 마법사",
+      "소환된 용사와의 일상",
+      "마법의 학교",
+      "용사와 마녀의 이야기",
+      "신비한 숲의 친구들"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 176,
+  "fields": {
+    "name": "신현기",
+    "image_url": null,
+    "summary": "신현기는 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 유명하다.",
+    "works": [
+      "소음",
+      "그림자",
+      "파편",
+      "끝없는 여정",
+      "시간의 감옥",
+      "불가능한 사랑"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 177,
+  "fields": {
+    "name": "곤다이라 히츠지",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Yozakura-san_Chi_no_Daisakusen_logo.svg",
+    "summary": "곤다이라 히츠지는 일본의 인기 소설가로, 주로 판타지와 로맨스 장르에서 활동하고 있다.",
+    "works": [
+      "하늘의 나비",
+      "별빛의 연인",
+      "시간을 넘은 약속",
+      "꿈꾸는 소녀",
+      "마법사의 비밀"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 178,
+  "fields": {
+    "name": "최우용",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Replace_this_image_school-ko.svg",
+    "summary": "최우용은 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 잘 알려져 있다.",
+    "works": [
+      "소리 없는 외침",
+      "그리운 날들",
+      "어둠 속의 빛",
+      "고백",
+      "끝나지 않은 이야기"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 179,
+  "fields": {
+    "name": "애런 블레이비, 신수진",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/David_Cameron_official.jpg",
+    "summary": "애런 블레이비는 현대 판타지 및 공상과학 장르의 작가로, 독창적인 세계관과 매력적인 캐릭터들로 유명하다.",
+    "works": [
+      "더 시크릿 스카이",
+      "마법의 유산",
+      "기계의 심장",
+      "시간의 경계",
+      "영원의 문"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 180,
+  "fields": {
+    "name": "바너버스 파이퍼, 구지원",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Dark_shadows.svg",
+    "summary": "바너버스 파이퍼는 독창적인 상상력과 깊이 있는 캐릭터로 유명한 미국의 과학 소설 작가입니다.",
+    "works": [
+      "파이프의 전쟁",
+      "하늘의 불꽃",
+      "인간과 로봇",
+      "우주 탐사의 시작",
+      "시간의 경계"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 181,
+  "fields": {
+    "name": "요코야마 토무",
+    "image_url": null,
+    "summary": "요코야마 토무는 일본의 소설가로, 주로 범죄와 스릴러 장르에서 뛰어난 작품을 발표해왔다.",
+    "works": [
+      "악의",
+      "백의의 남자",
+      "하이재킹",
+      "사라진 증거",
+      "소설가의 수명"
+    ]
+  }
+},
+{
+  "model": "api.author",
+  "pk": 182,
+  "fields": {
+    "name": "와카마츠 타카히로, 노다 히로시",
+    "image_url": null,
+    "summary": "와카마츠 타카히로는 일본의 소설가이자 각본가로, 독특한 서사와 깊은 캐릭터 묘사로 유명하다.",
+    "works": [
+      "살아있는 자의 대화",
+      "내가 사랑하는 모든 것들",
+      "지금, 이 순간을 살고 있다",
+      "어둠 속의 고양이",
+      "바다의 끝에서 만난 너"
+    ]
+  }
+}
+]

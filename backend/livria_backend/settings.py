@@ -19,12 +19,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / '.env')
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG      = os.getenv('DEBUG', 'False') == 'True'
+DEBUG      = os.getenv('DEBUG', 'True') == 'True'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ALADIN_API_KEY    = os.getenv('ALADIN_API_KEY')
+ALADIN_BASE_URL   = os.getenv('ALADIN_BASE_URL')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+    }
+}
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -151,5 +164,15 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "http://70.12.102.104:5173",
 ]
 
+# 커스텀 유저 모델 설정
+AUTH_USER_MODEL = 'accounts.User'
+
+# 정적 파일
+STATIC_URL = '/static/'
+
+# 미디어(업로드된 이미지) 설정
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

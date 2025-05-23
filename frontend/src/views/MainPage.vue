@@ -1,0 +1,120 @@
+<template>
+  <div class="main-page">
+    <section>
+      <h2 @click="goToBestsellers" style="cursor: pointer">
+        오늘의 아리아 (베스트 셀러)
+      </h2>
+      <div class="book-grid">
+        <RouterLink
+          v-for="book in bestSellers"
+          :key="book.id"
+          :to="`/books/${book.id}`"
+          class="book-card"
+        >
+          <img :src="book.cover_url" alt="cover" />
+          <h4>{{ book.title }}</h4>
+          <p>{{ book.author_name }}</p>
+        </RouterLink>
+      </div>
+    </section>
+
+    <section v-if="!isLoggedIn">
+      <h2>연령별 추천 도서</h2>
+      <BookList :books="mainStore.ageRecs" />
+    </section>
+
+    <section>
+      <h2>많은 추천을 받은 도서 목록</h2>
+      <BookList :books="mainStore.topBooks" />
+    </section>
+
+    <section>
+      <h2>많이 선호한 음악 추천</h2>
+      <!-- 이곳은 추후 음악 컴포넌트로 교체 가능 -->
+      <BookList :books="mainStore.topBooks" />
+    </section>
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref, computed } from "vue";
+import axios from "axios";
+
+import { useMainStore } from "@/stores/main";
+import BookList from "@/components/BookList.vue";
+
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const mainStore = useMainStore();
+const isLoggedIn = computed(() => !!localStorage.token);
+
+const bestSellers = ref([]);
+
+onMounted(async () => {
+  try {
+    const res = await axios.get(
+      "http://localhost:8000/api/books/best-sellers/"
+    );
+    bestSellers.value = res.data;
+  } catch (err) {
+    console.error("베스트셀러 불러오기 실패:", err);
+  }
+});
+
+function goToBestsellers() {
+  router.push({ name: "BestSellers" }); // index.js에 이미 name으로 등록돼 있음
+}
+
+onMounted(async () => {
+  await Promise.all([mainStore.fetchBestSellers(), mainStore.fetchTopBooks()]);
+
+  if (!isLoggedIn.value) {
+    await mainStore.fetchAgeBased(20); // 예시: 20대 추천 도서
+  }
+});
+</script>
+
+<style scoped>
+.book-card {
+  background: black;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 글자색 상속 */
+  display: block;
+}
+.book-card:hover {
+  background-color: #222;
+  transform: scale(1.02);
+  transition: all 0.2s;
+}
+
+.main-page {
+  padding: 2rem;
+  color: white;
+}
+section {
+  margin-bottom: 3rem;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+.book-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.book-card {
+  background: black;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+}
+.book-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+</style>

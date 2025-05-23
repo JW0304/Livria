@@ -1,0 +1,214 @@
+<template>
+  <div class="signup-wrapper">
+    <div class="signup-box">
+      <div class="brand">
+        <img src="@/assets/logo.png" alt="Livria 로고" class="logo" />
+        <h1 class="brand-text">Livria</h1>
+      </div>
+
+      <form @submit.prevent="handleSignup">
+        <input v-model="username" placeholder="아이디를 입력하세요." required />
+        <input
+          v-model="password"
+          type="password"
+          placeholder="비밀번호를 입력하세요."
+          required
+        />
+        <input
+          v-model="nickname"
+          placeholder="닉네임을 입력하세요(3글자 이상)"
+          required
+        />
+        <input
+          v-model.number="age"
+          type="number"
+          placeholder="나이를 입력하세요."
+          required
+        />
+
+        <div class="tags">
+          <p class="tag-label">
+            태그를 선택하세요 (1개 이상)<br /><small
+              >* 태그를 기반으로 도서에 맞는 음악을 추천해드립니다.</small
+            >
+          </p>
+          <div class="tag-list">
+            <button
+              v-for="tag in allTags"
+              :key="tag"
+              type="button"
+              :class="{ selected: selectedTags.includes(tag) }"
+              @click="toggleTag(tag)"
+            >
+              {{ tag }}
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" :disabled="!isValid">
+          제출
+        </button>
+      </form>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from "vue";
+import { useRouter } from "vue-router";
+import { useAuthStore } from "@/stores/auth";
+import axios from "axios";
+
+const router = useRouter();
+const auth = useAuthStore();
+
+const username = ref("");
+const password = ref("");
+const nickname = ref("");
+const age = ref(null);
+const selectedTags = ref([]);
+
+const allTags = [
+  "슬픔과 외로움",
+  "사랑과 그리움",
+  "위로와 평안",
+  "에너지와 고조",
+  "몽환적이고 감성적인",
+];
+
+const toggleTag = (tag) => {
+  if (selectedTags.value.includes(tag)) {
+    selectedTags.value = selectedTags.value.filter((t) => t !== tag);
+  } else {
+    selectedTags.value.push(tag);
+  }
+};
+
+const isValid = computed(() => {
+  return (
+    username.value.length >= 1 &&
+    password.value.length >= 1 &&
+    nickname.value.length >= 3 &&
+    age.value >= 1 &&
+    selectedTags.value.length >= 1
+  );
+});
+
+const handleSignup = async () => {
+  const payload = {
+    username: username.value,
+    password: password.value,
+    email: "", // 이메일은 선택 사항. 필요하면 입력 받기
+    tags: selectedTags.value,
+  };
+
+  try {
+    const res = await axios.post(
+      "http://localhost:8000/api/auth/signup",
+      payload
+    );
+    alert("회원가입 성공! 🎉");
+    router.push("/login"); // 또는 바로 로그인 처리도 가능
+  } catch (err) {
+    const msg = err.response?.data?.error || "회원가입 중 오류 발생";
+    alert(msg);
+  }
+};
+</script>
+
+<style scoped>
+.signup-wrapper {
+  background: #111;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-box {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  width: 64px;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+.brand-text {
+  color: #b388f0;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #b388f0;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #444;
+  color: white;
+}
+
+.tag-label {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.tag-list button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background: #ccc;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tag-list button.selected {
+  background: #b388f0;
+  color: white;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #d17df4, #8d5cf6);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
