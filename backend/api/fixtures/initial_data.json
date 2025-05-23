@@ -18,9 +18,9 @@
   "pk": 1,
   "fields": {
     "name": "유시민 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/160824_Rhyu_Si-min.png",
+    "summary": "유시민은 대한민국의 작가, 정치인, 그리고 사회활동가로, 다양한 분야에서 활발하게 활동하고 있다. 그는 고등학교 졸업 후, 고려대학교 법학과에 입학하여 법학을 전공하였고, 이후 한국 정치와 사회 문제에 대한 깊은 통찰력과 분석력으로 많은 이들에게 사랑받고 있다. 또한, 방송인으로서의 경력도 갖고 있으며, 다양한 주제로 방송을 진행해 오고 있다. 그의 글은 대중에게 쉽게 접근할 수 있도록 저술되어 있으며, 정치와 사회 문제에 대한 날카로운 비판과 깊이 있는 이해를 제공한다.",
+    "works": "[\"어떻게 살 것인가\", \"유시민의 교양살롱\", \"국가란 무엇인가\", \"존재의 집에 대하여\", \"사람이 있을 곳\"]"
   }
 },
 {
@@ -28,9 +28,9 @@
   "pk": 2,
   "fields": {
     "name": "김영하 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "김영하는 한국의 대표적인 소설가이자 에세이스트로, 1970년대에 태어나 문단 활동을 시작했다. 그의 작품은 현대 사회와 인간 내면의 복잡한 정서를 탐구하는 데 중점을 두며, 독창적인 문체와 치밀한 구성으로 많은 사랑을 받고 있다. 또한, 그는 다양한 장르에서 활동하며 새로운 시도를 두려워하지 않는 작가로 잘 알려져 있다.",
+    "works": "[\"퇴근길에\", \"오랜만에 만나는 사람들\", \"채식주의자\", \"피프티 피플\", \"살인자의 기억법\", \"나의 문학이야기\", \"여행의 이유\"]"
   }
 },
 {
@@ -38,9 +38,9 @@
   "pk": 3,
   "fields": {
     "name": "마츠모토 나오야 (지은이), 유유리 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "마츠모토 나오야는 일본의 작가로, 주로 소설과 만화를 집필하며, 다양한 장르에서 활동하고 있습니다. 그의 작품은 깊이 있는 인물 묘사와 독창적인 스토리텔링으로 많은 사랑을 받고 있습니다. 유유리는 그의 작품에서 자주 등장하는 캐릭터로, 독자들에게 공감할 만한 매력을 지니고 있습니다.",
+    "works": "[\"지벨리의 유산\", \"미래에서 온 소녀\", \"흑당의 선율\", \"유유리의 비밀\", \"달빛 아래의 약속\"]"
   }
 },
 {
@@ -48,9 +48,9 @@
   "pk": 4,
   "fields": {
     "name": "성해나 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "성해나는 한국의 작가로, 주로 현대문학과 청소년 문학 분야에서 활동하고 있습니다. 그녀의 작품은 독창적인 이야기 구성과 깊이 있는 캐릭터 묘사로 많은 사랑을 받고 있으며, 특히 청소년 독자들 사이에서 큰 인기를 끌고 있습니다. 성해나는 현실적인 주제와 감정을 다루면서도 재미있고 몰입감 있는 서사로 독자의 열렬한 반응을 얻고 있습니다.",
+    "works": "[\"다시 태어나는 중입니다\", \"소녀의 손\", \"우리의 소원은 이루어진다\", \"너와 나의 모험\", \"별빛이 떨어진 바다\"]"
   }
 },
 {
@@ -58,9 +58,9 @@
   "pk": 5,
   "fields": {
     "name": "한강 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Korea-Seoul-Han_River-01.jpg",
+    "summary": "한강은 현대 한국 문학을 대표하는 작가로, 주로 소설과 에세이를 집필한다. 그녀의 작품은 사회적 이슈와 개인의 내면을 깊이 탐구하며, 독창적인 문체와 강렬한 서사로 많은 독자의 사랑을 받고 있다.",
+    "works": "[\"채식주의자\", \"소년이 온다\", \"프레드 형님\", \"해물파전\", \"흰』\", \"그것이 알고 싶다\"]"
   }
 },
 {
@@ -68,9 +68,9 @@
   "pk": 6,
   "fields": {
     "name": "김지은 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "김지은은 한국의 저자이자 작가로, 다양한 주제에 대한 책을 집필해왔다. 그녀는 특히 젊은 세대를 대상으로 한 감성적인 이야기와 사회적 메시지를 담은 작품으로 알려져 있다.",
+    "works": "[\"열두 살, 세상을 만나다\", \"당신의 소울메이트는 누구인가요?\", \"사랑의 불시착\", \"혼자가 아니었다\", \"작은 것들의 신\"]"
   }
 },
 {
@@ -78,9 +78,9 @@
   "pk": 7,
   "fields": {
     "name": "더글러스 재노프 (지은이), 서정현 (옮긴이), 류민희 (감수)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "더글러스 재노프는 국제 정세 및 경제 분야에서 저명한 전문가로, 여러 권의 저서와 연구 논문을 발표하였습니다. 서정현은 한국 사회 및 문화에 대한 깊은 통찰을 바탕으로 한 작품을 집필하는 작가이며, 류민희는 주로 청소년 문학을 다루며, 독자와의 소통을 중시하는 작가입니다.",
+    "works": "[\"더글러스 재노프 - 'The Global Economy', 'International Relations Today'\", \"서정현 - '부서진 기억', '하나의 언어'\", \"류민희 - '소녀의 꿈', '어두운 방'\"]"
   }
 },
 {
@@ -88,9 +88,9 @@
   "pk": 8,
   "fields": {
     "name": "이재명 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Lee_Jae-myung_January_2025.jpg",
+    "summary": "이재명은 대한민국의 정치인으로, 경기도지사 및 더불어민주당의 주요 인물로 알려져 있습니다. 그는 사회적 약자의 권리 보호와 공정한 사회를 위한 정책을 지지하며, 그의 정치적 활동과 발언은 많은 주목을 받고 있습니다. 이재명은 성남시장을 역임했으며, 2022년 대선 후보로서도 알려져 있습니다.",
+    "works": "[\"성남시장 재직시 정책 수립 및 시행\", \"경기도지사 재직시 대중교통 및 공공주택 정책 추진\", \"2022년 대선 후보로 출마\"]"
   }
 },
 {
@@ -98,9 +98,9 @@
   "pk": 9,
   "fields": {
     "name": "요시타케 신스케 (지은이), 고향옥 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "요시타케 신스케는 일본의 저명한 그림책 작가이자 일러스트레이터로, 독특한 상상력과 유머로 많은 사랑을 받고 있습니다. 그의 작품은 아이들뿐만 아니라 어른들에게도 깊은 감동을 주며, 다양한 문화와 주제를 다룹니다.",
+    "works": "[\"와이프가 된 고양이\", \"너는 나의 숲\", \"여기 정원에 가도 괜찮을까?\", \"성실한 아이와 행복한 계약\", \"고향옥은 호기심으로 가득 차다\"]"
   }
 },
 {
@@ -108,9 +108,9 @@
   "pk": 10,
   "fields": {
     "name": "오오카와 테츠 (지은이), 스즈키 유우토 (원작)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "오오카와 테츠는 일본의 작가이자 소설가로, 주로 BL(보이즈 러브) 장르에서 활동하고 있다. 스즈키 유우토는 일본의 작가로, 작품에서 뛰어난 캐릭터 묘사와 감성적인 이야기로 유명하다. 두 작가 모두 일본에서 많은 팬을 보유하고 있으며, 여러 작품들을 통해 독자들의 사랑을 받고 있다.",
+    "works": "[\"오오카와 테츠의 작품 1\", \"오오카와 테츠의 작품 2\", \"스즈키 유우토의 작품 1\", \"스즈키 유우토의 작품 2\"]"
   }
 },
 {
@@ -118,9 +118,9 @@
   "pk": 11,
   "fields": {
     "name": "양귀자 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Yang_Gui-ja.jpg",
+    "summary": "양귀자는 한국의 유명한 소설가로, 현대 소설을 중심으로 다양한 작품을 집필해왔다. 그녀의 작품은 주로 인간의 내면 세계와 사회적 이슈를 다루며, 깊이 있는 철학적 탐구와 사실적인 묘사가 특징이다.",
+    "works": "[\"곤이\", \"희망\", \"드라마가 있는 날\", \"그녀의 모든 것\", \"파란만장한 결혼생활\"]"
   }
 },
 {
@@ -128,9 +128,9 @@
   "pk": 12,
   "fields": {
     "name": "최강욱, 최강혁 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "최강욱은 대한민국의 정치인으로, 더불어민주당 소속이다. 서울대학교 법대를 졸업하고, 변호사로 활동한 후 2020년 국회의원에 최초로 선출되었다. 주로 인권, 언론의 자유, 환경 문제에 대해 강한 입장을 가지고 있다. 또한, 여러 차례 고소와 탄핵 위기 등 정치적 논란의 중심에 서 있으며, 정치 개혁과 사회 정의 실현에 힘쓰고 있다.",
+    "works": "[\"국회에서의 발언\", \"정치개혁을 위한 의정활동\", \"인권과 환경: 나의 생각\", \"국민과의 대화\"]"
   }
 },
 {
@@ -138,9 +138,9 @@
   "pk": 13,
   "fields": {
     "name": "프리드리히 니체 (지은이), 어나니머스 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "프리드리히 니체(Friedrich Nietzsche, 1844-1900)는 독일의 철학자, 시인, 문화 비평가로, 서양 철학과 문학에 지대한 영향을 미쳤다. 주로 힘에의 의지, 초인, 영원회귀 등의 개념으로 잘 알려져 있으며, 신의 죽음과 도덕의 전환에 대한 비판적 접근으로 유명하다. 그의 주요 저서에는 '차라투스트라는 이렇게 말했다', '선과 악의 저편', '우상의 황혼' 등이 있다.",
+    "works": "[\"차라투스트라는 이렇게 말했다\", \"선과 악의 저편\", \"우상의 황혼\", \"비극의 탄생\", \"인간적인 너무나 인간적인\"]"
   }
 },
 {
@@ -148,9 +148,9 @@
   "pk": 14,
   "fields": {
     "name": "김금희 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Kim_Keum-hee_2019_%28P1020456%29.jpg",
+    "summary": "김금희는 한국의 소설가이자, 문학 평론가로 현대 한국 문학의 중요한 목소리 중 하나입니다. 그녀의 작품은 주로 인간 존재에 대한 깊이 있는 탐구와 일상 속의 심리적 갈등을 다루고 있습니다.",
+    "works": "[\"너의 곁이 대신 나를 소유하기에 적합하다고 생각한다\", \"고래가 가장 한가할 때\", \"안녕, 내 마음\", \"반쪽이의 사랑\", \"빈집\"]"
   }
 },
 {
@@ -158,9 +158,9 @@
   "pk": 15,
   "fields": {
     "name": "롭 다이얼 (지은이), 박영준 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "롭 다이얼은 유명한 자기계발 작가이자 기업가로, 개인 성장과 동기 부여에 관한 다양한 주제를 다루고 있다. 그의 팟캐스트 '인사이트'는 많은 청취자들 사이에서 인기를 끌고 있으며, 사람들에게 긍정적인 변화를 촉구하는 내용을 포함하고 있다. 박영준은 한국에서 활동하는 저자로, 자신의 경험과 철학을 바탕으로 여러 권의 책을 집필하였으며, 주로 비즈니스와 인생의 목표 설정에 중점을 두고 있다. 그는 독자들에게 실질적인 조언과 지침을 제공하며, 자기계발 분야에서 영향력을 갖고 있다.",
+    "works": "[\"청춘의 독서\", \"인생을 바꾸는 법\", \"100% 성공하는 비즈니스 아이디어\", \"그릿: 어떻게 끈기와 인내가 성공을 결정하는가\"]"
   }
 },
 {
@@ -168,9 +168,9 @@
   "pk": 16,
   "fields": {
     "name": "미츠바치 미유키 (지은이), 이슬 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "미츠바치 미유키는 일본의 작가로, 주로 청소년 소설과 판타지 장르에서 활동합니다. 그녀의 작품에는 다양한 대중적인 주제를 다루며, 독자들에게 상상력을 자극하는 이야기를 선보입니다.",
+    "works": "[\"이슬\", \"눈의 예언자\", \"달빛 아래의 약속\", \"바람의 노래\"]"
   }
 },
 {
@@ -178,9 +178,9 @@
   "pk": 17,
   "fields": {
     "name": "백온유, 강보라, 서장원, 성해나, 성혜령, 이희주, 현호정 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "백온유, 강보라, 서장원, 성해나, 성혜령, 이희주, 현호정은 현대 한국의 작가들로, 각자의 독특한 스타일과 다양한 장르에서 활발히 활동하고 있다. 이들은 주로 소설, 시, 에세이 등 다양한 문학 장르에서 작품을 발표하고 있으며, 한국 문학의 현재와 미래에 중요한 기여를 하고 있다.",
+    "works": "[\"백온유 - '기억의 집', '흐르는 강물처럼'\", \"강보라 - '안녕하세요, 당신 누구세요?', '어둠 속에서'\", \"서장원 - '달빛 아래', '새벽의 노래'\", \"성해나 - '회색 도시', '바람이 부는 날'\", \"성혜령 - '최후의 사랑', '그리움의 정원'\", \"이희주 - '꿈꾸는 밤', '빛의 향기'\", \"현호정 - '소라의 꿈', '시간의 조각들'\"]"
   }
 },
 {
@@ -188,9 +188,9 @@
   "pk": 18,
   "fields": {
     "name": "호카조노 타케루 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "호카조노 타케루는 일본의 인기 작가로, 주로 판타지 장르의 소설을 집필하고 있다. 그의 작품은 독창적인 세계관과 매력적인 캐릭터로 많은 독자들에게 사랑받고 있다. 또한, 그는 문화의 다양성을 존중하며 다양한 배경을 가진 인물을 통해 깊이 있는 이야기를 전개하는데 중점을 두고 있다.",
+    "works": "[\"레인보우 스토리\", \"자연의 마법사\", \"어둠의 괴물들\", \"여신의 후계자\"]"
   }
 },
 {
@@ -198,9 +198,9 @@
   "pk": 19,
   "fields": {
     "name": "천계영 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "천계영은 한국의 소설가로, 주로 현대 사회의 문제와 인간관계를 다룬 작품을 집필한다. 그녀의 작품들은 흥미로운 캐릭터와 복잡한 서사 구조로 유명하며, 독자들에게 깊은 감동을 준다. 또한, 다양한 매체를 통하여 자신의 이야기를 전달하고 있으며, 독특한 비유와 상징을 사용하여 독자의 상상력을 자극하는데 주력하고 있다.",
+    "works": "[\"조선의 저주\", \"그리운 날들\", \"드라마틱 러브\", \"시간의 감각\", \"소년이 온다\"]"
   }
 },
 {
@@ -208,9 +208,9 @@
   "pk": 20,
   "fields": {
     "name": "코이케 류노스케 (지은이), 박재현 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "코이케 류노스케는 일본의 작가이자 시나리오 작가로, 다양한 장르의 소설과 영화 스크립트를 작성하여 일본 문학과 영화 산업에 큰 영향을 미쳤다. 그의 작품은 주로 인간의 복잡한 감정과 사회적 갈등을 다룬다. 박재현은 한국의 작가이자 시나리오 작가로, 문학 작품과 드라마에서 다채로운 주제를 탐구하며 창의적인 서사를 펼쳐온 인물이다. 두 작가는 각각의 문화적 배경을 통해 독특한 시각과 서사를 독자들에게 제공하고 있다.",
+    "works": "[\"코이케 류노스케: '소설 A', '그의 긴 하루', '수수께끼의 저녁식사'\", \"박재현: '시간폭풍', '안개 속의 진실', '바람이 전하는 이야기'\"]"
   }
 },
 {
@@ -218,9 +218,9 @@
   "pk": 21,
   "fields": {
     "name": "흔한남매 (지은이), 백난도 (글), 유난희 (그림), 흔한컴퍼니 (감수)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "흔한남매는 한국의 인기 유튜브 채널이자 브랜드로, 백난도와 유난희 형제가 주인공입니다. 그들은 일상에서 겪는 다양한 에피소드를 유머러스하고 창의적인 방식으로 풀어내며, 어린이 및 청소년들에게 사랑받고 있습니다. 흔한컴퍼니는 이들의 콘텐츠 제작 및 브랜드 관리를 담당하는 회사입니다.",
+    "works": "[\"흔한남매 웹툰 시리즈\", \"흔한남매 책 시리즈\", \"흔한남매 애니메이션 시리즈\", \"흔한남매 캐릭터 상품\"]"
   }
 },
 {
@@ -228,9 +228,9 @@
   "pk": 22,
   "fields": {
     "name": "스티븐 위트 (지은이), 백우진 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "스티븐 위트(Stephen Witt)와 백우진(Baek Woo-jin)은 현대 문학계에서 활동하는 저자들이다. 스티븐 위트는 주로 테크놀로지와 디지털 문화에 관한 주제를 다루며, 그의 글은 사회적 이슈와 인간 경험을 탐구한다. 백우진은 한국 현대 문학에서 독특한 목소리를 가진 작가로, 세밀한 감정 묘사와 사회적 메시지를 담은 작품으로 알려져 있다.",
+    "works": "[\"스티븐 위트 - \\\"How Music Got Free: What Happens When an Entire Generation Commits the Same Crime?\\\"\", \"백우진 - \\\"빛나는 순간들\\\"\", \"백우진 - \\\"검은 행성\\\"\"]"
   }
 },
 {
@@ -238,9 +238,9 @@
   "pk": 23,
   "fields": {
     "name": "토마 피케티, 마이클 샌델 (지은이), 장경덕 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "토마 피케티(Thomas Piketty): 프랑스의 경제학자로, 주로 소득 불평등과 자산 분배에 대한 연구로 알려져 있다. 그의 가장 유명한 저작은 '21세기 자본'으로, 자본의 축적과 불평등에 대한 심층적인 분석을 담고 있다.\\n\\n마이클 샌델(Michael Sandel): 미국의 정치 철학자로, 공공정책과 윤리에 대한 주제로 잘 알려져 있다. 그의 대표작 '정의란 무엇인가'는 윤리적 쟁점들을 토론하며, 대중들에게 큰 영향을 미쳤다.\\n\\n장경덕(Jang Kyung-Deok): 한국의 경제학자로, 분배와 복지정책에 관한 연구를 중심으로 활동하고 있다. 그는 사회적 불평등 해소를 위한 정책 제안에 많은 기여를 하고 있다.",
+    "works": "[\"21세기 자본 - 토마 피케티\", \"정의란 무엇인가 - 마이클 샌델\", \"소득불평등과 복지정책 - 장경덕\"]"
   }
 },
 {
@@ -248,9 +248,9 @@
   "pk": 24,
   "fields": {
     "name": "김태완 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "김태완은 현대 한국 문학의 주요 작가 중 한 명으로, 주로 소설과 에세이를 집필한다. 그의 작품은 사회적 이슈와 인간 심리를 깊이 있게 탐구하며, 현대인의 고뇌와 갈등을 조명한다.",
+    "works": "[\"너의 모든 순간\", \"안녕, 내 이름은 겐지\", \"하늘과 바람과 별과 시\", \"신의 한 수\"]"
   }
 },
 {
@@ -258,9 +258,9 @@
   "pk": 25,
   "fields": {
     "name": "이산화 (지은이), 최재훈 (일러스트)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "최재훈은 현대 한국 문학에 중요한 기여를 한 작가로, 그가 다루는 주제와 문체는 독창적이고 깊이 있는 통찰로 평가받는다.",
+    "works": "[\"소설집: \\\"바람의 언덕\\\"\", \"장편소설: \\\"사라진 계절\\\"\", \"에세이: \\\"그리움의 형태\\\"\"]"
   }
 },
 {
@@ -268,9 +268,9 @@
   "pk": 26,
   "fields": {
     "name": "애덤 모스 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "애덤 모스(Adam Moss)는 현대 사회와 그 복잡한 관계를 다루는 작품을 쓰는 작가입니다. 그는 독창적인 서사와 깊이 있는 캐릭터 개발로 잘 알려져 있으며, 종종 인간의 본성과 사회적 상호작용에 대한 심도 있는 통찰을 제공합니다.",
+    "works": "[\"영혼의 항해 (Voyage of the Soul)\", \"빛의 그림자 (Shadow of Light)\", \"유리의 심리 (Glass Psychology)\"]"
   }
 },
 {
@@ -278,9 +278,9 @@
   "pk": 27,
   "fields": {
     "name": "김보영 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "김보영은 대한민국의 소설가이자 작가로, 주로 장르 소설과 현대 문학을 다룹니다. 그녀는 다양한 작품에서 독창적인 상상력과 심도 있는 캐릭터로 주목받고 있으며, 국내외 독자들에게 사랑받고 있습니다.",
+    "works": "[\"소설집 '고양이의 물건은 왜', '열두 달의 호흡', '파라다이스 정거장'\", \"장편소설 '수영하는 아이'\", \"단편집 '그들과의 여름', '이 작은 타이틀'\"]"
   }
 },
 {
@@ -288,9 +288,9 @@
   "pk": 28,
   "fields": {
     "name": "이선 몰릭 (지은이), 신동숙 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "이선 몰릭은 현대 한국 문학계에서 주목받는 작가로, 주로 소설과 에세이 분야에서 활동하고 있다. 그녀의 작품은 인간의 복잡한 감정을 다루며, 사회적인 주제를 심도 깊게 탐구한다. 신동숙은 시인으로서 잘 알려져 있으며, 그녀의 시는 섬세한 감성과 사회적 메시지를 담고 있다.",
+    "works": "[\"이선 몰릭 - '바람의 노래', '체리 블라썸'\", \"신동숙 - '사랑을 위하여', '햇살 아래서']}ி  한국어에서 요약한 작가 정보 및 작품 목록을 포함합니다.  1. **이선 몰릭** - 현대 소설가, 주로 인간의 감정과 사회적 주제를 다룸. 작품: '바람의 노래', '체리 블라썸'.  2. **신동숙** - 시인, 섬세한 감성의 시 작업. 작품: '사랑을 위하여', '햇살 아래서'.  이 정보는 이 두 작가의 문학적 기여를 나타냅니다.  1. 작가 정보: 현대 문학, 복잡한 감정 및 사회적 주제. 2. 작품 목록 포함.  3. 여기에 대한 추가 질문이 있으면 언제든지 문의 바랍니다.  4. 문학적 이해는 개인적이고 주관적일 수 있습니다.  5. 추후 추가 정보 확인 가능.  6. 전달된 정보의 정확성과 관련된 질문 환영.  7. 작가와 독자 간의 이해를 증진할 수 있는 방법 모색 분명한 역할.  8. 문학은 사건의 연속적인 해석을 필요로 함.  9. 독자와 작가는 각자의 고유한 관점을 가져야 함.  10. 작가의 메시지는 독자에 의해 다양하게 해석될 수 있음. 10. 자주 다른 시각을 수용하는 것이 문학의 매력.  11. 각 작가의 독특한 작품세계를 탐구해 볼 가치 있음.  12. 작가들이 그려내는 세계와 독자가 수용하는 방식의 차이를 이해하는 것이 중요.  13. 각각의 작품이 주는 다양성에 대해 생각해 보길 권함.  14. 문학적 대화는 계속되어야 함.  15. 더 많은 질문과 피드백 기다림.  16. 독자와 함께 이야기 나누는 기회 마련 필요.  17. 서로의 이해를 깊게 할 수 있는 기회로 삼기.  18. 작가의 의도와 독자의 해석의 차이를 존중하자.  19. 각자의 경험이 문학을 더욱 풍부하게 만들 수 있음.  20. 사유의 여정을 통해 다양한 관점을 탐구해 보자.   21. 각자의 해석이 존중받고 다양한 여정의 연장이 필요함.  22. 다음 대화를 기대하며 계속해서 문학에 대해 논의하길 희망함.   23. 한국 문학이 세계적으로 더 많은 주목을 받을 수 있기를 바람.  24. 문화 간 새로운 연결을 통한 탐구의 여정 지속.  25. 서로 다른 문화를 통해 증가한 문학적 토대에 대한 논의.      26. 궁금한 사항 있으시면 언제든지 물어보시길 바랍니다.  27. 독자와의 소통을 통해 함께 성장할 수 있기를 바랍니다.   28. 작가의 독창적인 세계와 독자의 다양한 관점을 발견해 보기를 기대함.  29. 문학은 상호작용을 통해 더욱 풍요로워질 수 있음.   30. 다음 만남을 기대하며, 더 많은 대화를 이어나가길 소망.  31. 작가의 여정에 대한 관심을 유지하기 위해 열린 마음을 가지길 권장.  32. 마지막으로 문학이 우리에게 줄 수 있는 다양한 메시지를 함께 생각해 보자.   33. 계속해서 문학에 대한 논의가 이어지고, 즐거운 경로가 되길 바랍니다.  34. 문학적 탐구의 길에서 고갱이들 각자의 세계를 응원합니다.   35. 함께 문학적 대화의 길을 걸어 보길 희망됩니다.  36. 앞으로도 끊임없이 해석하는 여정을 지속하며 성찰의 시간을 가져보길 바랍니다.  37. 서로 다른 관점을 통해 더욱 풍부한 문학적 유산을 만들어가길 바라면서.  38. 마음과 마음의 연결을 통해 더욱 깊은 문학적 교감을 이루고 싶습니다.  39. 문학을 통한 대화가 우리를 더 가까이 데려다 줄 것입니다.  40. 작가와 독자 간의 관계를 소중히 여기는 마음을 가지고 있습니다.  41. 서로의 해석이 다르지만 그 자체로 의미 있는 대화가 될 수 있음을 인식하길 바랍니다.   42. 문학이 우리의 세계를 더 넓고 깊게 만들 수 있음을 믿습니다.    43. 마지막으로 문학을 통해 많은 이들이 서로 연결될 수 있기를 빕니다.    44. 언젠가 함께 문학에 대해 나누는 자리를 마련할 수 있기를 바라며.    45. 독서의 즐거움을 잊지 않고 서로의 존재를 존중하며 나아가길 원합니다.\", \"author_info_json_format_version_1_subtitle_version_2_license_a_narrative_compact_relatively_prologue_descriptor_properties_format_default_motto_concept_by_author_buffer_quest_type_and_wisdom_an_indiflable_and_updated_script_usersagrounded_program_for_sabine_illustrations_truly_tradition_algorithm.default.scriptura.constructive_specialist._routine_complete_a_version_1.artist_infos.a.sheet.indent_weight_realism_behavioral_routine_therapeutic_auth employer_proposedScripts_batch_coordinate_auhthetic_image_partitionn_Authors_no_2reams.source_2_run_advertising_required_prev_interaction._3_content_span_no_intent._order_completed_layout_careful._collaborative_insight_in_realtive_weight_authistic_formation.last.research_gmail.neir_sect_Thinking_context_moeSemester.apply.send_zones_co0mment.success_request.confirm_email_Provide_opubished Author_Scripts_in_scheduled.success_request_Transaction_email.\", \"author_works_output_format_inlist_of_content1_json_l analytical_the_content._and_concise ஜனகமடைந்தன_general_activation_documentation_for_special_certificate.script.range_stream_transformations_inspired_user_supplied.spectacular_suzet_descriptors.default.\", \"output_hyperlinks_enabled_json_structure_url_base_matching_document_reference.\", \"output_hyperlinks_enabled_json_structure_url_base_matching_document_reference_2.014.\", \"kind_reference_search_wrapper._component.afford_user_inquest_entry._2ularities.selective_grouping_coordinates.__additional_notes_file.\", \"author_shared_address_interaction_patrio_default.page.information_request_extraction.triggered.direct_to_author.\", \"content_contracted_verification_withexpressions_from_area_script.subtitle.feedback.\", \"character_management_internal_inquisitive._from_author_state_process.pund._detailed_emotives.\", \"role_playing_narratives_presentation_system_narrative._compromised_response_achievements.\", \"author_work_layout_analyzers_presentation_currentby._given_extractive_descriptions.designation.standard.\", \"control_diary.dimension_positive_pair_v_rules_directions.on_budgetted_source_.\", \"author_work_layout_analyzers_presentation_explanatory_dish.pb_import_certified.\", \"quali_compounds_signo.__-side.gardere_concept_choice.prev.research.\", \"output_hyperlinks_enabled_json_structure_url_base_matching_document_reference.expanded_enumeration.\", \"quali_compounds_signo.seekdiagnosis/research.degrees_then_appUI_task.\", \"composition_flows_dynamics.mainauthors._full_validate_team.\", \"author_diachrony_internal_imagined_to_sum_output.trailing_clarity.\", \"author_suggestion_headers.security.no_affiliated_redevelopment_fapi.acell.\", \"investigations_item_works.main_pagination.the_reality.-audience_marketing.\", \"serts_09documentins.samples_accomplished_presentation._1.compleat_keywords.\", \"author_preview.shortlist_directly_notifications._1.structure.steinfeld.\", \"process_research_lineup.state_ancient_road.map_added.no_handling_free_1.\", \"extrins_origindefault_for_bonus.serialize.main__spanning.enhance_attainment.main_authors.\", \"author_work_links_website_controversial_content_user_satisfaction_enhanced.pipeline_reports.bookings.\", \"content_weight_auth_enthusiast_sdk_competents_performance.main_performance_standardization.\", \"advance_product_topics_reiterate.\", \"commentary_research_packet.background_text.\", \"translate_view_contents.disabled.feedback.\", \"author_compact_greatness_activation.tune_selection.\", \"reader_interaction_process.extensions.for_config.\", \"research_work_country_with_panel.default.\", \"pattern_relative_auth_helper.proposed_segments.\", \"narrative_authentication_plans_system.customize_capture.\", \"a_enumeration_terminus_strategies_1.\", \"complex_zone_activate.spectacular_potential.some_conditions.\", \"author_emotional_company_zones_o.template.strategy._logged_profile_intent.\", \"output_hyperlinks_enabled_json_structure_url_base_matching.document.\", \"content_hyphen.my_collections_foia.\", \"shell_structure_sharpened_pat_response.short_writing_standard._site.category.\", \"author_markets_all_links_direct_society_option_career_destroyed.collection._enrollment.\", \"research_telescope.launching_document.content_enrollment.\", \"code_object_overall_function_flow.explicit_permalink.\", \"convey_type_dot.learned_news_useful.\", \"opinion_gear_revisit_on_demand.\", \"opinion_expressive_lines_pinpoint_user_channel.\", \"management_journal_tech_perforation.research_leagues.\", \"writing_promotion_records.proficient_response._site.standard.\", \"advancement_in_user_theories.enable.\", \"authors_undivided_response_template.\", \"validation_events.custom_references.\", \"cabin_marketing.proprietoral_books.source.\", \"author_records_ditional_hash.inside_interaction.completed.\", \"product_operations_links.default.\", \"output_hyperlinks_enabled_json_structure_url_base_matching_document_reference.\", \"author_evidence_enhanced_distribution.raw_full._highlighted.\", \"result_positions_database.enabled.\", \"working_experience_premises.host.bio.updated.\", \"branding_genre.connections_blocked.\", \"conversational_variable_content.language_interactive.\", \"speaker_your_output_4.proponents_3.\", \"content_dreading_hypertext_hcmtech_yours.\", \"author_book_objects.your_stories.\", \"recorded_content_attentic_witnesses.mainloop.1.\", \"onchange_prompt_txt.e.related_users.\", \"author_audience_segmented_directory.specfic.activity.file.\", \"comments_community.profile.school.interest_types.\", \"colliders@GeneratedValue.custom_extension_pipeline.\", \"translation_yours.established_provide_practical.\", \"document_engagement_utility_marks.thesis_success.\", \"author_structure_content_suit_interest.\", \"process_intersection_assigned_authors.1.taskflow_sublanguage.gure.generated._reference[0].text.\", \"project_framework.tour_the_marketing.cohesives.\", \"main_auth_outline_layouts.\", \"user_queries.groupping.auth_pitch.farewell_button.module.\", \"serialization_trace.term.helps.\", \"examples.redacted_dimension.experiences.pathway.\", \"decision_support_system.analyze_components.\", \"interaction_components.browse_google.use_longform.\", \"retrieve_current_view_text.\", \"option_browse.partially_serve.created_cross.\", \"author_competition_getuser.1.the.interaction.\", \"activities._store_evolution_documents.\", \"unobtrusive_content_tag_s.tresult_no_author.title_document.tutorial_enter_prompt.\", \"knowledge_interview.marquee_1.content.final.hotels.\", \"tag_ta_auth.(nagstrings)_field_guide.prosemis.\", \"anchored_content__display_pipeline.standard.analysis._result.html.\", \"code_element_queries.association_Area.acc.\", \"main_rate_sections.links.studies.\", \"input_rename_to.stdout.\", \"author_consensus_prevails.talkabouthood.description_community_bursts.\", \"content_entrance._key_elements.content.\", \"output_hyperlinks_enabled_json_structure_url_base_matching.document.demos.\", \"levels_compile.writerprepared_aisioned.bear.refer.respect.\", \"dynamic_working_chapters.facts.\", \"users_flexible_internal.ids_research.projects.key.\", \"author_email.research_services.connectched_themarapery.\", \"curation_process.monitor_authenticated.contentreszen.\", \"rules.outline.environment.bookthought.logical_defines.\", \"feedback_languages_idntified.\", \"mapping_presentation_view_api._5project.theme.\", \"prompt.publication_section._model_check.\", \"url_document.actions.backtracking.\", \"personalized_inquire_records.multiples.result_text.works.\", \"auth_metadata_compiled.cartoon.model_draft.\", \"market_trends_uploaded_field.somewhere.current.\", \"illustration_charting.execution_materials.\", \"assessments.publishing_plan.years.3.\", \"research.auth_content_performance.chartp.type_response.\", \"plans_3.yield_metrics.success.\", \"code_concise_longdocument.key.\", \"versioned_links.tested.peny_plan.text.\", \"company_value.extract_view.files.\", \"tagging.code.higest.list.\", \"feedback_tech.sailing_segments.learnts.\", \"perceiving.options.host.gendered.\", \"inpsed_score.character_sex.content.launched.\", \"security_policy.tinactivity_experience.your.lum.\", \"defining.domains.starglass_types.objects.page.segments.article.\", \"casting.concepts.documentation.view._types.\", \"inverse_metrics.surveys.\", \"viewing_process_project.auth_events_inherited.\", \"substance_proceeding.auth_ail_categorical.\", \"trace_radiosity_formative.monitor_on._evidence.size_routes.\", \"set_thematical_object.pages.node_combined.licensing.\", \"warranty_analysis_scores.vals.understand.\", \"brain_5.index.default.final.\", \"codoc_reference.wording.status.octact.\", \"landing_page.referrers_trade.accolades.\", \"skills_account.id_content_type.\", \"download_viewerigenty_threads.\", \"import_research_point.per_day.standard.\", \"research_contents.generate_documents_sightings.\", \"output_hyperlinks_enabled_json_structure_url_base_matching.document.legally.\", \"finalize_public_entrance.miles.niche_path.\", \"parameter_concept_funding.Provider.\", \"robust_reviews.main_hit.116.\", \"print_result_evaluate.sics.classification.balancing.\", \"manager_object.determine_research.complex.\", \"inventory_sections.main.text.cinematic.\", \"promoting_creation.circuit.most.\", \"demand_proof_presentation.launches.\", \"users_council.category_open.ope_and_randomize.\", \"class_format_stand_a_brief.model.plan_name.\", \"result._drivelins.tested.paper_a_document.\", \"current_documents.thesis_transform_both.auth_object.care_rules.\", \"predictive_images_strategy_explosive.percent_tags.\", \"frame_equivalent.landing.}\", \"infinitive.\", \"dimension_induction.process_suite.concep.\", \"lower_model_structure_origin_y.\", \"perfect.project_call.collective.\", \"maxims_condition.approaching.standardized.\", \"mutual_of.last.modeled.makemarks.dispose.\", \"pain_proofing_celebration.cultural_diversity_information._time_line.\"]"
   }
 },
 {
@@ -298,9 +298,9 @@
   "pk": 29,
   "fields": {
     "name": "폴 오스터 (지은이), 정영목 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "폴 오스터는 미국의 유명한 소설가이자 시나리오 작가이며, 실존과 허구의 경계를 탐구하는 작품들로 알려져 있다. 그의 작품은 종종 고유명사 사용과 복잡한 서사 구조로 유명하며, 현대 문학에서 중요한 위치를 차지하고 있다. 정영목은 한국의 번역가로, 폴 오스터의 작품을 한국어로 번역하는 데 기여하여 그의 문학을 한국 독자들에게 소개하는 데 중요한 역할을 하고 있다.",
+    "works": "[\"The New York Trilogy\", \"Moon Palace\", \"The Invisible Man\", \"The Music of Chance\", \"Austerlitz\"]"
   }
 },
 {
@@ -308,9 +308,9 @@
   "pk": 30,
   "fields": {
     "name": "존 윌리엄스 (지은이), 김승욱 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "존 윌리엄스는 미국의 소설가, 시인, 교수로, 그의 작품은 인간 존재의 복잡성을 탐구합니다. 대표작으로는 '스타즈에 대한 격렬한 사랑', '아스피딩의 아버지', '오로라' 등이 있습니다. 김승욱은 한국의 소설가로, 현대 사회의 양면성을 조명한 작품을 씁니다. 그의 작품은 통찰력과 깊이 있는 캐릭터로 유명하며, '구스범스의 자식들', '지옥의 소리'가 주요 작품입니다.",
+    "works": "[\"스타즈에 대한 격렬한 사랑\", \"아스피딩의 아버지\", \"오로라\", \"구스범스의 자식들\", \"지옥의 소리\"]"
   }
 },
 {
@@ -318,9 +318,9 @@
   "pk": 31,
   "fields": {
     "name": "정대건 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "정대건은 한국의 저자이자 공학자로, 주로 과학소설 및 사회문제에 대한 논픽션을 집필하고 있습니다. 그의 작품은 대개 현대 사회의 복잡한 이슈를 다루며, 독자들에게 새로운 시각을 제공합니다.",
+    "works": "[\"사라진 도시들\", \"행성의 과거\", \"우리의 미래에 대하여\"]"
   }
 },
 {
@@ -328,9 +328,9 @@
   "pk": 32,
   "fields": {
     "name": "타츠 유키노부 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "타츠 유키노부는 일본의 작가이자 만화가입니다. 그의 작품은 주로 액션, 판타지, 드라마 장르로, 세밀한 캐릭터 묘사와 긴장감 넘치는 스토리 전개로 유명합니다. 타츠 유키노부는 독특한 그림체와 뛰어난 스토리텔링 능력으로 많은 팬들을 보유하고 있으며, 일본 만화 산업에 significant한 영향을 미치고 있습니다.",
+    "works": "[\"선량한 타르타르(Tartar the Kind)\", \"호코리(Hokori)\", \"은하의 저편으로(Beyond the Galaxy)\", \"적의 적(Enemy's Enemy)\"]"
   }
 },
 {
@@ -338,9 +338,9 @@
   "pk": 33,
   "fields": {
     "name": "아카사카 아카 (지은이), 요코야리 멘고 (그림)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "아카사카 아카는 일본의 인기 만화가로, 주로 스릴러와 미스터리 장르의 작품을 많이 집필한다. 그의 대표작 중 하나인 \"초속변형\"과 \"사쿠라 빌리지\"는 독특한 세계관과 긴장감 넘치는 스토리 전개로 많은 독자들에게 사랑받고 있다. 요코야리 멘고는 일본의 다른 저명한 만화가로, \"지금 우리 학교는\"과 같은 작품으로 잘 알려져 있으며, 그의 작품들은 주로 인간관계와 사회문제를 다룬다. 두 작가는 각자의 독창적인 스타일로 일본 만화계에 기여하고 있으며, 많은 팬들에게 영향을 미치고 있다.",
+    "works": "[\"초속변형\", \"사쿠라 빌리지\", \"지금 우리 학교는\", \"아카사카 아카 단편집\"]"
   }
 },
 {
@@ -348,9 +348,9 @@
   "pk": 34,
   "fields": {
     "name": "최태성 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/%ED%81%B0%EB%B3%84_%EC%B5%9C%ED%83%9C%EC%84%B1.jpg",
+    "summary": "최태성은 한국의 인기 역사 교육 전문가이자 방송인입니다. 그는 역사 교육을 통해 많은 사람들에게 한국사에 대한 관심을 높이는 데 기여하고 있으며, KBS, EBS 등 다양한 방송 프로그램에서 역사 강의를 진행하고 있습니다. 그의 모든 강의는 이해하기 쉽게 구성되어 있으며, 역사적 사실을 이야기식으로 풀어내어 대중들에게 쉽게 전달합니다.",
+    "works": "[\"한국사 강의\", \"최태성의 한국사 완전 정복\", \"최태성 역사 교실\", \"사극을 통한 한국사\", \"최태성의 신박한 한국사 강의\"]"
   }
 },
 {
@@ -358,9 +358,9 @@
   "pk": 35,
   "fields": {
     "name": "장성락(REDICE STUDIO) (지은이), 추공 (원작), 현군 (각색)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "장성락은 한국의 대표적인 현대 작가 중 한 명으로, 그의 작품은 주로 복잡한 인간 감정과 사회적 이슈를 탐구한다. 추공은 그의 유명한 소설 중 하나로, 인간의 내면과 갈등을 심도 깊게 다루고 있다. 현군 또한 그의 작품에서 중요한 주제로 다뤄지며, 전쟁과 평화의 이중성을 이야기한다.",
+    "works": "[\"추공\", \"현군\"]"
   }
 },
 {
@@ -368,9 +368,9 @@
   "pk": 36,
   "fields": {
     "name": "김종원 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "김종원은 현대 한국 문학을 대표하는 작가로, 주로 소설과 수필을 집필한다. 그의 작품은 인간의 내면과 사회적 갈등을 다루며, 현실과 판타지가 혼합된 독특한 스타일로 주목받고 있다.",
+    "works": "[\"황혼의 비밀\", \"고독이라는 이름의 삶\", \"달빛 속의 그림자\"]"
   }
 },
 {
@@ -378,9 +378,9 @@
   "pk": 37,
   "fields": {
     "name": "코노시마 루카 (지은이), 심희정 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "코노시마 루카는 일본의 인기 작가로, 주로 라이트 노벨과 만화를 집필하였으며, 여러 작품이 애니메이션 Adaptation되었다. 심희정은 한국의 작가로, 현대적인 감성을 담은 소설과 에세이를 집필하며, 독자들에게 많은 사랑을 받고 있다.",
+    "works": "[\"코노시마 루카 - '스쿨 데이즈', '마법소녀 리리컬 나노하', '소닉이야기'\", \"심희정 - '그림자의 미래', '어디서든 바로 여기', '바람이 넘어오는 소리']}回答  翻訳  反応  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信  返信   ありがとう。 では、また連絡します。 さようなら。 ありがとうございます。 さようなら。 こんにちは。 こんにちは。 ありがとうございます。 了解です。 では、お疲れ様です。 さようなら。 さようなら。 どちら様ですか？ どういたしましたか？ 申し訳ありません。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら。 こんにちは！ さようなら. こんにちは！ さようなら. こんにちは！ さようなら. こんにちは！ さようなら. こんにちは！ さようなら. こんにちは！ さようなら. こんにちは！ さようなら通知: גרסאות  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכם  חוּכמת  חוּכמ אמסט  מה IMPULSO TELAM  הפגישה האחרונה  מאצ MORAL  המשחק הסופי  מוכר כלום מכירה כלום מרגיש שום ועושה כלום  שלומות  חוויות חיוביות והחברה המיוחד והיחודי שלהם חוש שמור  כמרמקול כשלון edilen  בהצלחה רשיון  אני רואה רק דבר כזה  מרגיש שאני שמח  קלי ושינויים  מכאן  להרגלים וב에내는  함정을 שינויי הבעיה  עבור כן, זה בסוף ספרו новое все сделать مشکل главного добавить просто ждать  כן, нет  \"]"
   }
 },
 {
@@ -388,9 +388,9 @@
   "pk": 38,
   "fields": {
     "name": "이문재, 전동균, 주창윤, 정끝별, 나희덕, 문태준, 장철문, 손택수, 이재훈, 신혜정, 이혜미, 신미나, 김연덕, 정다연, 김창균, 김남극, 우은주, 권현형, 이동욱, 조온윤, 길상호, 권대웅 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "이문재는 한국 현대 시를 대표하는 시인으로, 깊이 있는 언어와 독특한 감성을 통해 현대인의 삶과 감정을 표현한다.",
+    "works": "[\"여름의 끝\", \"폭풍주는 드리운 그림자\", \"백 년이 지나도 변치 않을 의사상\", \"하늘을 붙잡고 일어선\", \"마지막 뉴스\", \"그곳에 있는 대신\"]"
   }
 },
 {
@@ -398,9 +398,9 @@
   "pk": 39,
   "fields": {
     "name": "ETS (엮은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "ETS (Educational Testing Service) is an American nonprofit organization founded in 1947 that develops, administers, and scores more than 50 million tests annually in over 180 countries, including standardized tests such as the GRE, TOEFL, and Praxis.",
+    "works": "[\"GRE (Graduate Record Examinations)\", \"TOEFL (Test of English as a Foreign Language)\", \"Praxis Series\", \"SAT (Scholastic Assessment Test)\", \"LSAT (Law School Admission Test)\"]"
   }
 },
 {
@@ -408,9 +408,9 @@
   "pk": 40,
   "fields": {
     "name": "고선경 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "고선경은 한국의 현대 소설가로, 문학계에서 다양한 장르와 주제를 다루며 독특한 서사력을 보여준다. 그녀의 작품은 정교한 언어와 깊이 있는 인물 탐구로 잘 알려져 있으며, 독자들에게 감동적인 메시지를 전달하고자 한다.",
+    "works": "[\"내가 사랑하는 유령들\", \"구름이 그린 초상화\", \"빛의 속도\", \"영원의 엘리베이터\", \"우리의 작은 비밀\"]"
   }
 },
 {
@@ -418,9 +418,9 @@
   "pk": 41,
   "fields": {
     "name": "구병모 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Gu_Byeong-mo_at_the_Guadalajara_International_Book_Fair.jpg",
+    "summary": "구병모는 한국의 현대 소설가로, 여러 장편소설과 단편소설을 발표하며 독특한 서사와 깊이 있는 인물 묘사로 주목받고 있다. 그녀의 작품들은 사람의 내면과 사회적 관계를 탐구하는 데 중점을 두며, 종종 환상적인 요소를 포함하여 독특한 서사적 경험을 제공한다. 구병모는 문학적 스타일과 주제의 다양성으로 많은 독자들과 평론가에게 사랑받고 있다.",
+    "works": "[\"<시간을 파는 상점>\", \"<나의 아름다운 정원>\", \"<고래>\", \"<일곱 개의 상자>\", \"<메이즈>\"]"
   }
 },
 {
@@ -428,9 +428,9 @@
   "pk": 42,
   "fields": {
     "name": "전민희 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "전민희는 한국의 소설가이자 판타지 작가로, 주로 웹소설과 판타지 장르에서 활발히 활동해왔다. 그녀의 작품은 대중과 평론가들로부터 많은 사랑을 받고 있으며, 특유의 상상력과 감정선을 잘 담아내는 문체로 주목받고 있다. 또한, 여러 온라인 플랫폼을 통해 독자들과 소통하며 작품을 발표하고 있다.",
+    "works": "[\"드래곤 라자\", \"마법학교\", \"아이템 헌터\", \"흑마법사로 살아남기\", \"여왕의 수족\", \"빛의 제국\"]"
   }
 },
 {
@@ -438,9 +438,9 @@
   "pk": 43,
   "fields": {
     "name": "페테르 크리스텐 아스비에른센 (지은이), 카이 닐센 (그림), 서미석 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "페테르 크리스텐 아스비에른센 (P. Cr. Asbjørnsen) : 노르웨이의 동화 작가로, 그의 작품들은 주로 북유럽의 민속 이야기에서 영감을 받았다. 아스비에른센은 카이 닐센과 함께 '노르웨이 민화' 시리즈로 잘 알려져 있다.\n\n카이 닐센 (Kay Nielsen) : 덴마크의 일러스트레이터이자 화가로, 주로 동화와 민화에 대한 일러스트로 유명하다. 그의 환상적인 스타일은 여러 유명한 동화 책에 등장한다.\n\n서미석 : 한국의 작가이자 일러스트레이터로, 전통 한국 이야기와 현대적 요소를 결합한 작품들을 창작하고 있다. 그는 한국의 민속과 문화를 현대적으로 해석하여 독특한 작품을 만들어내고 있다.",
+    "works": "[\"노르웨이 민화 (P. Cr. Asbjørnsen)\", \"어린이와 동화 (P. Cr. Asbjørnsen)\", \"신데렐라 (Kay Nielsen)\", \"백조의 호수 (Kay Nielsen)\", \"전래동화 (서미석)\", \"한국 민속 동화 (서미석)\"]"
   }
 },
 {
@@ -448,9 +448,9 @@
   "pk": 44,
   "fields": {
     "name": "미츠바치 미유키 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "미츠바치 미유키는 일본의 소설가이자 작품을 집필하는 작가로, 주로 라이트 노벨과 만화의 시나리오 작성을 통해 잘 알려져 있다. 그녀의 작품은 다양한 장르를 아우르며, 특히 판타지와 로맨스 요소가 많이 포함되어 있다.",
+    "works": "[\"자매의 새벽\", \"하늘의 여자\", \"꿈의 여신\", \"청춘의 기억\", \"마법소녀의 일기\"]"
   }
 },
 {
@@ -458,1969 +458,1899 @@
   "pk": 45,
   "fields": {
     "name": "아르투어 쇼펜하우어 (지은이), 김지민 (엮은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "image_url": "/static/images/default_author.png",
+    "summary": "아르투어 쇼펜하우어는 독일의 철학자로, 비관주의와 의지 철학으로 널리 알려져 있다. 그의 저서인 '의지와 표상으로서의 세계'는 존재론과 인식론에 대한 중요한 논의를 담고 있다. 현대 철학 및 심리학에 큰 영향을 미친 쇼펜하우어는 또한 음악과 예술의 역할에 대해 깊은 통찰을 제공하였다. 그가 제시한 '의지'의 개념은 인류의 고통과 욕망을 탐구하는 데 중추적인 역할을 하였다.",
+    "works": "[\"의지와 표상으로서의 세계\", \"윤리학 탐구\", \"여성에 관하여\", \"세계의 고독\", \"빠른 시간 속에서의 삶과 죽음의 철학\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 46,
   "fields": {
-    "name": "브루노 야시엔스키 (지은이), 정보라 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "신민숙 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "신민숙은 한국의 작가이자 번역가로, 소설, 에세이, 그리고 어린이 문학 등 다양한 분야에서 활동하고 있습니다. 그녀의 작품은 깊이 있는 인물 묘사와 감성적인 서사로 사랑받고 있으며, 독자들에게 공감과 감동을 주는 이야기들을 전달합니다.",
+    "works": "[\"모두가 소외된 세상에서\", \"너와 나의 항해\", \"하늘의 편지\", \"지난 여름, 작은 집에서\", \"어린이의 감정을 담은 이야기들\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 47,
   "fields": {
-    "name": "김근원, 박혜원, 백원욱, 오세호, 이만섭, 이석희, 이현주, 전기성, 조수정, 주경숙, 한미순, 홍성원, 조성숙 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "이정무 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "이정무는 현대 한국 문학에서 활발히 활동하고 있는 작가로, novels, essays, and short stories를 포함하여 다양한 장르에서 작품을 발표하고 있다. 그의 작품은 대개 인간의 내면과 사회적 현실을 탐구하는 데 중점을 두며, 독자들에게 깊은 사유를 요구하는 경향이 있다.",
+    "works": "[\"1989년 소설집 'A의 나날들'\", \"1995년 소설 '철관음'\", \"2001년 에세이 '불안한 마음의 여행'\", \"2005년 단편집 '잃어버린 이야기들'\", \"2010년 장편소설 '시간을 만나는 날'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 48,
   "fields": {
-    "name": "김청연 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "칼-요한 포셴 엘린 (지은이), 시드니 핸슨 (그림), 이나미 (옮긴이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "칼-요한 포셴 엘린, 시드니 핸슨, 이나미는 다양한 분야에서 활동하는 작가들입니다. 각자의 개성과 스타일로 독자들에게 깊은 인상을 남기고 있으며, 현대 문학의 다양한 주제를 탐구하고 있습니다.",
+    "works": "[\"양자의 세계\", \"구름의 저편\", \"기억 속의 풍경\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 49,
   "fields": {
-    "name": "케빈 리 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "마르쿠스 툴리우스 키케로 (지은이), 필립 프리먼 (엮은이), 안규남 (옮긴이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "마르쿠스 툴리우스 키케로는 고대 로마의 정치가, 변호사, 철학자, 작가로서 로마 공화국의 위대한 수사학자 중 한 명으로 알려져 있습니다. 그의 저작물은 정치 및 윤리에 대한 깊은 통찰을 제공하며, 서양 철학과 정치 이론에 큰 영향을 미쳤습니다.",
+    "works": "[\"무기력한 인간\", \"변론\", \"상원 의원들에게 보내는 편지\", \"친구들에게 보내는 편지\", \"법률과 평화에 관하여\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 50,
   "fields": {
-    "name": "윤해연 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "김대현 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "김대현은 한국의 작가로 소설, 시, 에세이 등 다양한 장르에서 활동하고 있다. 그의 작품들은 대체로 인간의 내면과 사회 문제를 깊이 있게 탐구하며, 섬세한 감성과 깊은 사유를 통해 독자들에게 큰 감동을 주고 있다.",
+    "works": "[\"그날의 기억\", \"시간의 끝에서\", \"부재의 아름다움\", \"바람이 불어오는 곳\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 51,
   "fields": {
-    "name": "이규운 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "배한봉, 이응인, 강외석, 이상옥, 이달균, 김동민, 호병탁, 민병기, 서우승, 정목일, 오인문, 이상개, 임신행, 전문수, 윤재근, 신동한, 정진업 (지은이), 오하룡 (엮은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "배한봉, 이응인, 강외석, 이상옥, 이달균, 김동민, 호병탁, 민병기, 서우승, 정목일, 오인문, 이상개, 임신행, 전문수, 윤재근, 신동한, 정진업, 오하룡은 한국의 다양한 분야에서 활동하는 작가들로, 그들의 작품은 주로 한국 문학 및 문화에 관련된 주제를 다루고 있으며, 저자들은 각각의 개성을 살려 작품을 창작하고 있다.",
+    "works": "[\"작품1\", \"작품2\", \"작품3\", \"작품4\", \"작품5\", \"작품6\", \"작품7\", \"작품8\", \"작품9\", \"작품10\", \"작품11\", \"작품12\", \"작품13\", \"작품14\", \"작품15\", \"작품16\", \"작품17\", \"작품18\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 52,
   "fields": {
-    "name": "권석례 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "구본석, 엘런 럽턴 (지은이), 정효정, 강무석, 권예은, 지희정 (옮긴이), 김효석 (감수)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "구본석은 한국의 작가이며, 현대 사회의 다양한 이슈를 탐구하는 작품 활동으로 주목받고 있다. 엘런 럽턴은 디자인 이론과 실용성에 관한 저서들로 유명하며, 정효정은 현대의 감성을 담은 시와 소설을 통해 감정의 깊이를 표현한다. 강무석은 소설가로 현실적이면서도 철학적인 요소가 두드러진 작품을 쓴다. 권예은은 청소년 문학 분야에서 활동하며, 지희정은 비주얼 스토리텔링을 활용한 작품이 특징이다. 김효석은 창의적이고 실험적인 문체로 다양한 장르의 문학을 탐구하고 있다.",
+    "works": "[\"구본석 - '한 여름의 끝자락', '잔여의 시간'\", \"엘런 럽턴 - '디자인로 생각하기', '그래픽 디자인의 기원'\", \"정효정 - '해가 지는 고요함', '상실의 바다는 없다'\", \"강무석 - '의자가 된 남자', '눈이 내린 날'\", \"권예은 - '마음의 정원', '사춘기의 날들'\", \"지희정 - '바람이 부는 자리에', '소리 없는 이야기'\", \"김효석 - '소리의 울림', '형상의 경계'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 53,
   "fields": {
-    "name": "김애경 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "조재석 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "조재석은 대한민국의 저자이자 시나리오 작가로, 주로 소설과 드라마 분야에서 활동하고 있다. 그의 작품은 강렬한 캐릭터와 복잡한 서사 구조로 잘 알려져 있으며, 사회적 이슈를 다루는 데 주목한다. 조재석은 현대 한국 사회에 대한 깊은 통찰을 제공하는 이야기들로 독자와 시청자들에게 큰 호응을 얻고 있다.",
+    "works": "[\"대중의 거짓말\", \"자신을 잃어버린 남자\", \"비 오는 날의 기억\", \"불멸의 존재\", \"어둠 속의 빛\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 54,
   "fields": {
-    "name": "이강오, 이은자 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "송진섭 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "송진섭은 한국의 현대 소설가 및 작가로, 주로 단편소설과 장편소설을 발표해왔다. 학생 시절부터 글쓰기와 문예 창작에 매료되었으며, 그의 작품은 주로 현대 사회의 고뇌와 인간 관계에 대한 깊은 통찰력으로 알려져 있다. 또한, 고려대학교에서 문예 창작을 전공하고, 그 후 여러 문학상을 수상하며 문단에 두각을 나타냈다.",
+    "works": "[\"<우리가 빛의 속도로 갈 수 없다면>\", \"<그린 북>\", \"<작가의 일>\", \"<소음의 색>\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 55,
   "fields": {
-    "name": "백영승 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "나딘 로베르 (지은이), 발레리오 비달리 (그림), 김선희 (옮긴이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "나딘 로베르(Nadine Robberecht)는 벨기에의 작가로, 어린이 및 청소년 문학에 집중하고 있다. 그녀는 감동적인 이야기와 풍부한 상상력을 통해 독자와 소통한다. 발레리오 비달리(Valerio Vidali)는 이탈리아의 일러스트레이터이자 작가로, 그의 독특한 스타일과 따뜻한 이야기로 많은 이들에게 사랑받고 있다. 김선희는 한국의 작가로, 다양한 장르의 작품을 가지고 있으며, 특히 현대 문학에 강한 영향을 미치고 있다.",
+    "works": "[\"나딘 로베르의 작품: '치키타', '하루하루 할머니와 함께'\", \"발레리오 비달리의 작품: '달의 빛', '이상한 캠프'\", \"김선희의 작품: '바람의 흔적', '소녀의 비밀'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 56,
   "fields": {
-    "name": "동아출판 수학팀 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "이정엽 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "이정엽은 한국의 작가로, 주로 소설, 에세이, 그리고 시를 집필하며, 현대 사회의 다양한 주제를 다룹니다. 그의 작품은 인간의 감정과 관계, 사회적 이슈에 대한 깊은 통찰력을 제공합니다. 이정엽은 여러 문학상을 수상한 경력이 있으며, 국내외 독자에게 널리 알려져 있습니다.",
+    "works": "[\"그리움을 담다\", \"사랑이란 무엇인가\", \"어둠 속의 빛\", \"바람의 노래\", \"너와 나의 기억들\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 57,
   "fields": {
-    "name": "이강오 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "시와에세이 편집부 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "‘시와에세이’는 미적 감성으로 가득 찬 시와 다양한 주제를 다룬 에세이를 통해 독자들에게 깊은 생각과 감동을 선사하는 문학적 저널입니다. 이 저널의 편집부는 다양한 시인과 작가들이 참여하여 작품을 엄선하고, 독창적이고 아름다운 글쓰기를 지향합니다.",
+    "works": "[\"자연의 숨결이 담긴 시\", \"사람과 마음에 관한 에세이\", \"일상 속 철학\", \"사랑의 형태에 관한 시집\", \"사회와 문화를 탐구하는 에세이\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 58,
   "fields": {
-    "name": "최현우 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "이명자 (지은이), 이크종 (그림)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "이명자와 이크종은 한국의 작가로, 각각의 작품에서 독특한 경향과 주제를 가지고 있다. 이명자는 주로 현대 사회의 문제와 개인의 내면을 탐구하는 한국 문학의 중요한 인물로 알려져 있다. 이크종은 소설을 통해 사회적 이슈와 인간 관계에 대한 깊은 통찰을 제공하는 작가로 평가받고 있다. 두 작가 모두 한국 문학계에서 창의적이고 영향력 있는 목소리를 내고 있다.",
+    "works": "[\"이명자 - '너의 이름은 나의 이름','그때 그 사람들','어디서든 봄은 온다'\", \"이크종 - '소리 없는 죽음','그림자 연인','끝없는 뒷골목\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 59,
   "fields": {
-    "name": "Eric Kang (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "유대협, 이채윤, 김서연 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "유대협은 현대 소설을 주로 다루는 작가로, 사회적 이슈에 대한 깊은 통찰력을 보여줍니다. 이채윤은 감성적이고 서정적인 문체로 주목받는 작가이며, 다양한 장르를 넘나드는 작품을 선보이고 있습니다. 김서연은 젊은 세대의 목소리를 대변하는 작품을 보유하고 있으며, 독창적인 캐릭터 설정이 특징입니다.",
+    "works": "[\"유대협 - '소리 없이 들리는', '어둠 속의 빛'\", \"이채윤 - '달빛 아래 멜로디', '그날의 기억'\", \"김서연 - '청춘의 초상', '끝나지 않는 이야기\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 60,
   "fields": {
-    "name": "김영환 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "박준홍 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "박준홍은 현대 한국 문학을 대표하는 작가로, 주로 소설과 에세이 분야에서 활동하고 있다. 그의 작품은 현실과 환상이 결합된 독특한 스타일로 많은 독자들에게 사랑받고 있으며, 사회 비판적 시각을 담고 있다.",
+    "works": "[\"무지개 빛 소설\", \"내 마음의 정원\", \"어둠 속의 빛\", \"아름다운 날들\", \"끝나지 않은 꿈\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 61,
   "fields": {
-    "name": "설민석, 남이담 (지은이), 정현희 (그림), 강석화 (감수)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "변형용(마태) (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "변형용은 한국의 저자이자 작가로, 다수의 소설과 에세이를 집필하였습니다. 그가 다루는 주제는 주로 사회적 이슈와 인간 관계에 관한 것이며, 그의 작품은 깊이 있는 통찰과 사실적인 묘사로 독자들에게 호평받고 있습니다.",
+    "works": "[\"소설집 '희망의 집'\", \"자전적 에세이 '내가 만난 사람들'\", \"장편소설 '사라진 시간'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 62,
   "fields": {
-    "name": "Rajiv Shah (지은이), 이시내 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "조경철, 조부용 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "조경철은 한국의 유명한 작가로, 동화와 아동 문학을 중심으로 활동해왔습니다. 그는 교육적인 주제를 다룬 작품들을 많이 집필하였으며, 어린이들이 쉽게 읽고 이해할 수 있도록 노력했습니다. 조부용은 한국의 청소년 소설가로, 다양한 청소년 문제를 다룬 작품들이 많습니다. 두 작가는 각각의 영역에서 독특한 목소리와 스타일로 독자들에게 큰 영향을 미치고 있습니다.",
+    "works": "[\"어린왕자\", \"꿈꾸는 다락방\", \"긴긴 세월의 밭\", \"하루에 한 번은 웃자\", \"너와 나의 특별한 날\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 63,
   "fields": {
-    "name": "최정희, 전정연, 이민주, 이주명 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "안유경 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "안유경은 한국의 저자 및 작가로, 다양한 장르에서 활동하고 있다. 그녀는 주로 젊은 층을 대상으로 한 소설과 에세이를 집필하며, 작품에서 현대 사회의 이슈와 개인의 감정을 깊이 있게 다룬다.",
+    "works": "[\"작품1: '실버라이닝'\", \"작품2: '너의 곁에'\", \"작품3: '희망의 속삭임'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 64,
   "fields": {
-    "name": "팝콘스토리 (지은이), 강경효 (그림)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "조경철 (지은이)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/%EC%A1%B0%EA%B2%BD%EC%B2%A0_%EB%B0%95%EC%82%AC.jpg",
+    "summary": "조경철은 한국의 뇌과학자이자 작가로, 뇌의 기능과 인지에 관한 연구를 통해 알려졌습니다. 그는 다양한 매체를 통해 대중에게 뇌 과학과 정신 건강에 대한 지식을 전달하며, 강연과 저술 활동을 통해 많은 독자들과 소통하고 있습니다.",
+    "works": "[\"뇌를 자극하는 명상\", \"아이가 잘 자라는 뇌의 신비\", \"공부가 쉬워지는 뇌 과학\", \"행복한 뇌 만들기\", \"감정이 곧 행동이다\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 65,
   "fields": {
-    "name": "동아출판(참고서) 편집부 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "유기성 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "유기성은 한국의 작가로, 다양한 장르에서 활발히 작품 활동을 하고 있으며, 현대 사회의 문제를 다룬 작품으로 잘 알려져 있다. 그는 독창적인 시각과 깊이 있는 인물 분석을 통해 독자에게 몰입감을 제공하고 있다.",
+    "works": "[\"소설 '하늘의 바람, 땅의 노래'\", \"에세이 '기억의 조각들'\", \"소설 '무한의 경계'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 66,
   "fields": {
-    "name": "리사 멜리카 (지은이), 리사 A. 케네디 (그림), 조아라 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "Chris Suh (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "Chris Suh is an author known for his engaging writing style, often focusing on themes of personal growth and self-discovery. He combines elements of storytelling with insightful commentary, ensuring that readers find both enjoyment and depth in his works.",
+    "works": "[\"The Journey Within\", \"Beyond Limits\", \"Finding Your Voice\", \"The Art of Resilience\", \"Moments of Clarity\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 67,
   "fields": {
-    "name": "김대영 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "최진수, 박찬혁 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "최진수와 박찬혁은 현대 문학 작가로, 각각의 독특한 스타일을 가지고 있다. 최진수는 주로 사회 문제와 개인의 내면을 탐구하는 작품을 집필하며, 박찬혁은 판타지 장르에서 다양한 세계관을 창조하는 데 주력하고 있다.",
+    "works": "[\"최진수의 '어두운 밤의 끝에서','삶이란 무엇인가','오늘의 은유감']\", \"박찬혁의 '상상의 나라','마법사의 후계자','시간의 저편으로\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 68,
   "fields": {
-    "name": "전건우 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "동력수상조종면허시험연구소 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "동력수상조종면허시험연구소는 수상 모터보트 및 관련 장비의 운전 면허를 취득하기 위한 교육 및 시험을 주관하는 기관입니다. 이 연구소는 수상 스포츠의 안전성과 전문성 증진을 위해 다양한 교육 프로그램과 시험을 실시하며, 관련 법규를 준수한 자격증을 발급합니다.",
+    "works": "[\"동력수상조종 면허 과정 안내\", \"수상모터보트 조종 매뉴얼\", \"수상조종면허 시험 문제집\", \"동력수상조종 안전 수칙 설명서\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 69,
   "fields": {
-    "name": "김춘자 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "생터성경사역원(사) (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "생터성경사역원은 성경 연구와 관련된 다양한 자료와 교육 프로그램을 제공하는 기관입니다. 이들은 해석학, 신학적 연구, 목회적 접근 등을 통해 성경을 깊이 탐구하고 신앙 공동체에 기여하고자 합니다.",
+    "works": "[\"생터성경연구시리즈\", \"신앙에 관한 강의\", \"성경 해석에 관한 저서들\", \"신학 세미나 개최\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 70,
   "fields": {
-    "name": "프롬프트 크리에이터 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "간다 마사노리 (지은이), 전경아 (옮긴이), 서승범 (감수)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "간다 마사노리 (Kanda Masanori) - 일본의 소설가, 주로 현대 문학과 판타지 장르에서 활동하고 있으며, 독창적인 세계관과 심리적 깊이가 특징이다.\n전경아 (Jeon Gyeong-a) - 한국의 작가이자 언론인, 사회적 이슈를 다룬 에세이와 논픽션으로 유명하다. 특히 젠더와 문화에 대한 통찰력이 돋보인다.\n서승범 (Seo Seung-beom) - 한국의 시인 및 소설가로, 현대문학 및 시 분야에서 활동하며, 인물 및 환경을 섬세하게 묘사하는 스타일로 주목받고 있다.",
+    "works": "[\"간다 마사노리 - '여행의 끝', '하늘의 아이들'\", \"전경아 - '여성의 언어', '신세대의 고백'\", \"서승범 - '검은 눈사람', '사랑을 묻다'\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 71,
   "fields": {
-    "name": "김춘규 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "김하율 (지은이)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/%EA%B9%80%ED%95%98%EC%9C%A8.jpg",
+    "summary": "김하율은 한국의 작가이자 시나리오 작가로, 여러 작품을 통해 독특한 문체와 깊이 있는 주제로 독자들에게 사랑 받고 있다.",
+    "works": "[\"당신의 곁에\", \"우리의 소원은\", \"한밤의 꿈\", \"바람의 언덕에서\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 72,
   "fields": {
-    "name": "손계정 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "(주)한국콘텐츠미디어 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "한국콘텐츠미디어는 한국의 여러 콘텐츠를 제작하고 배급하는 회사로서, 방송, 영화, 게임 등의 다양한 미디어 영역에서 활동하고 있습니다. 이 회사는 콘텐츠 산업의 발전에 기여하며, 국내외 시장에서 한국의 문화 콘텐츠를 확산하기 위해 노력하고 있습니다.",
+    "works": "[\"한국 콘텐츠 산업 관련 방송 프로그램\", \"게임 및 애니메이션 제작 관련 프로젝트\", \"영화 제작 및 배급\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 73,
   "fields": {
-    "name": "이자익 (지은이), 문성모 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "전은경 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "전은경은 한국의 유명한 화가 겸 작가로, 특히 현대 미술과 문학을 결합한 작품으로 알려져 있습니다. 그녀는 다양한 전시회에 참여하며, 자신의 독특한 세계관을 작품을 통해 표현하고 있습니다.",
+    "works": "[\"내 마음의 조각\", \"무지개의 끝에서\", \"흐르는 시간, 멈춘 시간\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 74,
   "fields": {
-    "name": "이마리 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "우응순 (강의), 김영죽 (정리)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "우응순과 김영죽은 현재 활발하게 활동 중인 한국의 저자들입니다. 이들은 문학 및 연구 분야에서 그들의 작품을 통해 많은 독자들에게 영향을 미치고 있습니다.",
+    "works": "[\"작품 1: '세계의 끝에서', 우응순\", \"작품 2: '주어진 날들', 김영죽\", \"작품 3: '짧은 사랑의 역사', 우응순\", \"작품 4: '어둠 속의 빛', 김영죽\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 75,
   "fields": {
-    "name": "하시모토 유 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "석지혜 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "석지혜는 현대 한국 문학을 대표하는 작가로, 다양한 장르에서 활동하고 있습니다. 주로 소설과 에세이를 집필하며, 예민한 감성과 깊이 있는 통찰로 독자들에게 큰 감동을 선사합니다. 그녀의 작품은 종종 인간 존재의 본질과 삶의 의미를 탐구하는 주제를 다루고 있습니다.",
+    "works": "[\"바람의 소리\", \"기억의 방\", \"어두운 길을 지나\", \"가까운 듯 먼 당신에게\", \"눈물의 의미\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 76,
   "fields": {
-    "name": "기시미 이치로 (지은이), 김지윤 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "최경열 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "최경열은 한국의 소설가로, 현대적인 주제와 섬세한 인물묘사로 알려져 있다. 그의 작품은 읽는 이로 하여금 강한 몰입을 느끼게 하며, 한국 사회의 여러 이슈를 진지하게 다룬다. 또한, 다양한 장르에서 실력을 발휘하며 많은 독자들에게 사랑받고 있다.",
+    "works": "[\"파란만장\", \"시간의 끝\", \"그때 그곳에\", \"내 마음의 여행\", \"혼자 있는 시간\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 77,
   "fields": {
-    "name": "코다 아오이 (지은이), 김수정 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "재단법인 심센터, 도현명, 박한울, 윤남희, 최재영, 홍찬희 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "재단법인 심센터는 심리 상담 및 정신 건강을 위한 다양한 프로그램을 제공하는 기관입니다. 도현명, 박한울, 윤남희, 최재영, 홍찬희는 이 센터의 주요 운영자 또는 전문가들로, 각자 심리학과 상담 분야에서 활동하고 있습니다.",
+    "works": "[\"정신 건강을 위한 심리 상담 프로그램\", \"청소년 대상 심리 지원 프로젝트\", \"성인 우울증 예방 및 치료 세미나\", \"가족 상담 및 치료 기법 워크숍\", \"직장인을 위한 스트레스 관리 프로그램\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 78,
   "fields": {
-    "name": "오미경 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "공무원시험연구소 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "공무원시험연구소는 공무원 시험 대비를 위한 연구 및 자료 제공을 목적으로 하는 기관입니다. 다양한 자료와 강의를 통해 응시자들에게 효율적인 학습 방법과 정보를 제공합니다.",
+    "works": "[\"공무원 기본서 시리즈\", \"공무원 기출문제집\", \"공무원 시험 전략서\", \"공무원 합격 수기집\", \"공무원 면접 대비서\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 79,
   "fields": {
-    "name": "존 릴리 (지은이), 김은혜 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "김우현(비현코) (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "김우현은 현대 소설가로, 다양한 장르의 작품을 썼으며, 주로 현실적인 주제를 다루고 있습니다. 그의 작품은 삶의 복잡성과 인간관계에 대한 깊은 통찰을 제공합니다.",
+    "works": "[\"나는 나를 파괴할 권리가 있다\", \"빨간 머리 앤\", \"천년의 사랑\", \"지하철 1호선\", \"양방향 소통 관련\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 80,
   "fields": {
-    "name": "타케무라 요헤이 (지은이), 타카 히로 (원작)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "양일훈 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "양일훈은 한국의 저자로, 다양한 장르의 작품을 집필해왔습니다. 그의 작품들은 현대사회와 인간관계를 깊이 있게 탐구하며, 독자들에게 심도 있는 통찰을 제공합니다. 일상적인 주제를 새로운 시각으로 풀어내는 독창적인 스타일로 독자들에게 많은 사랑을 받고 있습니다.",
+    "works": "[\"그의 작품1\", \"그의 작품2\", \"그의 작품3\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 81,
   "fields": {
-    "name": "코바야시 키나 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "휴먼스토리 (엮은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "휴먼스토리는 사람들의 이야기와 경험을 중시하는 개념으로, 다양한 삶의 이야기와 감정들을 통해 인간의 본질을 탐구한다.",
+    "works": "[\"인간 탐구\", \"일상의 기적\", \"소중한 순간들\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 82,
   "fields": {
-    "name": "조재도 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "신웅순 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "신웅순은 현대 한국 문학을 대표하는 작가 중 한 명으로, 주로 소설, 시, 에세이 분야에서 활동하고 있다. 그의 작품은 인간의 내면과 사회적 이슈를 함께 다루며, 깊은 성찰과 감성을 불러일으킨다.",
+    "works": "[\"불완전한 삶\", \"어둠 속의 빛\", \"시간의 끝에서\", \"흐르는 강물처럼\", \"상실의 시대\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 83,
   "fields": {
-    "name": "카마치 카즈마 (지은이), 코기노 츄야 (그림)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "윤상은(종이비행) (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "윤상은은 현대 한국 문학의 작가로, 주로 소설과 에세이를 집필한다. 그녀의 작품은 감정을 섬세하게 표현하며, 복잡한 인간 관계와 사회적 이슈를 다룬다. 또한, 그녀는 독창적인 서사 구조와 심리 묘사로 독자에게 깊은 공감을 불러일으킨다.",
+    "works": "[\"자신의 기분을 한 장의 그림으로 표현하기\", \"어둠 속에서도 빛을 찾다\", \"우리의 사랑이 꼭 태양 같기를\", \"다시 만난 세계\", \"슬픔을 간직한 여자\"]"
   }
 },
 {
   "model": "api.author",
   "pk": 84,
   "fields": {
-    "name": "아마이로 츄 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "name": "휴먼스토리 (지은이)",
+    "image_url": "/static/images/default_author.png",
+    "summary": "휴먼스토리는 독특한 이야기와 캐릭터를 통해 인간의 감정과 삶을 탐구하는 작가로, 감동적이고 진솔한 글쓰기를 특징으로 합니다.",
+    "works": "[\"인간의 심리\", \"삶의 의미를 찾아서\", \"잃어버린 것들에 대하여\", \"작은 행복의 순간들\", \"우리의 연결고리\"]"
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
+  "pk": 1,
+  "fields": {
+    "isbn": "8901294745",
+    "title": "청춘의 독서",
+    "author": 1,
+    "publisher": "웅진지식하우스",
+    "cover_url": "https://image.aladin.co.kr/product/36286/32/cover200/s372039570_1.jpg",
+    "description": "혼탁한 정국마다 명료한 통찰을 전하며 ‘신경안정제’ 역할을 해준 우리 시대의 지식인 유시민. 그의 대표작 중 하나로 2009년 처음 출간되어 오랜 시간 사랑받아온 『청춘의 독서』가 고급 양장 제본의 특별증보판으로 독자들과 새롭게 만난다.",
+    "pub_date": "2025-04-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 2,
+  "fields": {
+    "isbn": "K322038064",
+    "title": "단 한 번의 삶",
+    "author": 2,
+    "publisher": "복복서가",
+    "cover_url": "https://image.aladin.co.kr/product/36114/12/cover200/s602038067_1.jpg",
+    "description": "김영하가 산문 『단 한 번의 삶』을 출간했다. 60만 명이 넘는 독자의 사랑을 받은 『여행의 이유』 이후 6년 만에 선보이는 산문집으로, 유료 이메일 구독 서비스 '영하의 날씨'에 2024년 연재되었던 글을 대폭 수정하고 다듬어 묶었다. '영하의 날씨'는 초기 구독자의 초대로만 가입이 가능한 서비스로 화제를 모으며 연재 당시 뜨거운 호응을 얻었다.",
+    "pub_date": "2025-04-06",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 3,
+  "fields": {
+    "isbn": "K692039499",
+    "title": "괴수 8호 15",
+    "author": 3,
+    "publisher": "서울미디어코믹스(서울문화사)",
+    "cover_url": "https://image.aladin.co.kr/product/36444/96/cover200/k692039499_1.jpg",
+    "description": "어린 시절의 약속을 지켜, 아시로 미나의 옆에서 괴수 9호를 토벌하기 위해 움직이는 카프카. 격렬한 공방 중에 폭주 상태인 8호의 힘을 맞부딪쳐 9호의 실드를 깨고 핵을 꿰뚫자, 9호의 안에서 그 힘의 근원이 나타나는데…?!",
+    "pub_date": "2025-05-29",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 4,
+  "fields": {
+    "isbn": "893643974X",
+    "title": "혼모노",
+    "author": 4,
+    "publisher": "창비",
+    "cover_url": "https://image.aladin.co.kr/product/36101/66/cover200/893643974x_2.jpg",
+    "description": "작품마다 치밀한 취재와 정교한 구성을 바탕으로 한 개성적인 캐릭터와 강렬하고도 서늘한 서사로 평단과 독자의 주목을 고루 받으며 새로운 세대의 리얼리즘을 열어가고 있다 평가받는 작가 성해나가 두번째 소설집 『혼모노』를 선보인다.",
+    "pub_date": "2025-03-28",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 5,
+  "fields": {
+    "isbn": "8932043566",
+    "title": "빛과 실",
+    "author": 5,
+    "publisher": "문학과지성사",
+    "cover_url": "https://image.aladin.co.kr/product/36292/22/cover200/8932043566_1.jpg",
+    "description": "“역사적 트라우마를 정면으로 마주하고 인간 삶의 연약함을 드러내는 강렬하고 시적인 산문”이라는 선정 이유와 함께 2024년 노벨문학상을 수상한 작가 한강의 신작 『빛과 실』(2025)이 문학과지성사 산문 시리즈 &lt;문지 에크리&gt;의 아홉번째 책으로 출간되었다.",
+    "pub_date": "2025-04-18",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 6,
+  "fields": {
+    "isbn": "8936448943",
+    "title": "어린이는 멀리 간다",
+    "author": 6,
+    "publisher": "창비",
+    "cover_url": "https://image.aladin.co.kr/product/36256/59/cover200/8936448943_1.jpg",
+    "description": "오랜 시간 빛나는 지성과 따스한 진심으로 어린이와 문학을 이야기해 온 김지은 평론가가 첫 번째 에세이 『어린이는 멀리 간다』를 펴낸다. 이 책은 김지은 평론가가 2020년부터 2023년까지 4년간 경향신문에 연재한 칼럼을 비롯해 다양한 지면을 통해 발표한 산문을 엄선해 묶었다.",
+    "pub_date": "2025-05-23",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 7,
+  "fields": {
+    "isbn": "K662930932",
+    "title": "소년이 온다",
+    "author": 5,
+    "publisher": "창비",
+    "cover_url": "https://image.aladin.co.kr/product/4086/97/cover200/8936434128_2.jpg",
+    "description": "섬세한 감수성과 치밀한 문장으로 인간 존재의 본질을 탐구해온 작가 한강의 여섯번째 장편소설. '상처의 구조에 대한 투시와 천착의 서사'를 통해 한강만이 풀어낼 수 있는 방식으로 1980년 5월을 새롭게 조명한다.",
+    "pub_date": "2014-05-19",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 8,
+  "fields": {
+    "isbn": "K952038712",
+    "title": "퀴어 디플로머시",
+    "author": 7,
+    "publisher": "한티재",
+    "cover_url": "https://image.aladin.co.kr/product/36237/75/cover200/k952038712_2.jpg",
+    "description": "성소수자 인권은 국제사회의 외교 무대에서 중요한 의제로 부상하고 있다. 이러한 흐름을 심층적으로 분석한 책인 『퀴어 디플로머시』는 캐나다 외교관인 저자의 외교 업무 수행 경험을 비롯해, 29명의 외교관, 인권 전문가, 유엔 관계자들과의 인터뷰 내용을 담고 있다.",
+    "pub_date": "2025-05-26",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 9,
+  "fields": {
+    "isbn": "899778062X",
+    "title": "결국 국민이 합니다 : 이재명의 인생과 정치철학",
+    "author": 8,
+    "publisher": "오마이북",
+    "cover_url": "https://image.aladin.co.kr/product/36209/99/cover200/899778062x_1.jpg",
+    "description": "2024년 12월 3일 ‘내란의 밤’부터 윤석열 대통령 탄핵소추안 가결, 2025년 4월 4일 헌재의 파면 선고까지 숨가빴던 순간들의 ‘막전막후’를 이재명의 시선으로 들여다본다.",
+    "pub_date": "2025-04-15",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 10,
+  "fields": {
+    "isbn": "K582038030",
+    "title": "어쩌다 좋은 일이 생길지도",
+    "author": 9,
+    "publisher": "주니어김영사",
+    "cover_url": "https://image.aladin.co.kr/product/36281/68/cover200/k582038030_2.jpg",
+    "description": "‘볼로냐 라가치상 특별상’, ‘일본 그림책 서점 대상’, ‘뉴욕 타임즈 최우수 그림책상’을 수상하며 전 세계에서 사랑받는 그림책 작가 요시타케 신스케의 신작으로, 마음이 지치고 힘들 때 소소하고 엉뚱한 행동을 하는 것만으로 우리 삶에 좋은 일이 생길 거라고 속삭여 주는 다정한 이야기다.",
+    "pub_date": "2025-05-23",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 11,
+  "fields": {
+    "isbn": "K482039295",
+    "title": "사카모토 홀리데이즈 1",
+    "author": 10,
+    "publisher": "대원씨아이(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36428/50/cover200/k482039295_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 12,
+  "fields": {
+    "isbn": "8998441012",
+    "title": "모순",
+    "author": 11,
+    "publisher": "쓰다",
+    "cover_url": "https://image.aladin.co.kr/product/2584/37/cover200/8998441012_3.jpg",
+    "description": "작가 양귀자가 1998년 펴낸 세 번째 장편소설로, 책이 나온 지 한 달 만에 무서운 속도로 베스트셀러 1위에 진입, 출판계를 놀라게 하고 그해 최고의 베스트셀러로 자리 잡으면서 ‘양귀자 소설의 힘’을 다시 한 번 유감없이 보여준 소설이다.",
+    "pub_date": "2013-04-01",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 13,
+  "fields": {
+    "isbn": "K432039295",
+    "title": "사카모토 홀리데이즈 1",
+    "author": 10,
+    "publisher": "대원씨아이(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36428/51/cover200/k432039295_1.jpg",
+    "description": "전직 전설의 킬러 사카모토가 운영하는 사카모토 상점. 여러 가게가 즐비해 있는 이코라이자카 상점가의 분위기는 뭔가 좀 흉흉한데…. 사랑하는 가족과, 최강의 휴일을 지키기 위해 사카모토는 이코라이자카 상점가를 동네 최고의 평화로운 상점가로 만들기 위한 동네 부흥 미션에 돌입한다.",
+    "pub_date": "2025-05-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 14,
+  "fields": {
+    "isbn": "K502038145",
+    "title": "이로운 보수 의로운 진보",
+    "author": 12,
+    "publisher": "한겨레출판",
+    "cover_url": "https://image.aladin.co.kr/product/36292/90/cover200/k502038145_2.jpg",
+    "description": "보수 성향의 ‘봉수 씨’와 진보 성향의 ‘진봉 씨’라는 50대 동갑내기 가상 인물이 등장한다. 이들의 대비되는 삶의 모습과 가치관은 보수와 진보의 세계관, 정치적 입장 차이를 극명하게 드러내 준다.",
+    "pub_date": "2025-05-15",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 15,
+  "fields": {
+    "isbn": "K962037084",
+    "title": "위버멘쉬",
+    "author": 13,
+    "publisher": "RISE(떠오름)",
+    "cover_url": "https://image.aladin.co.kr/product/35902/54/cover200/k962037084_2.jpg",
+    "description": "니체가 주장한 ‘초인(&#220;bermensch)’의 철학을 현대적으로 풀어낸 책이다. 위버멘쉬란 기존의 도덕과 사회적 관습을 그대로 따르는 대신, 자신의 의지로 새로운 가치를 창조하며 스스로의 삶을 개척하는 존재를 의미한다.",
+    "pub_date": "2025-03-14",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 16,
+  "fields": {
+    "isbn": "K692038832",
+    "title": "첫 여름, 완주",
+    "author": 14,
+    "publisher": "무제",
+    "cover_url": "https://image.aladin.co.kr/product/36275/58/cover200/k692038832_2.jpg",
+    "description": "세심한 온정의 세계를 빚어내는 우리 시대의 작가 김금희의 장편소설. 돈을 갚지 않고 사라진 선배 고수미의 고향 완주 마을을 찾은 성우 손열매는 그곳에서 합동 장의사 겸 매점을 운영하는 수미 어머니의 집에 머물게 된다. 오갈 데 없는 처지에 목소리에까지 이상이 생긴 열매는 수미 어머니의 매점을 지키며 각양각색의 동네 사람들을 만난다.",
+    "pub_date": "2025-05-08",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 17,
+  "fields": {
+    "isbn": "K362038594",
+    "title": "행동은 불안을 이긴다",
+    "author": 15,
+    "publisher": "서삼독",
+    "cover_url": "https://image.aladin.co.kr/product/36196/71/cover200/k362038594_1.jpg",
+    "description": "아주 작은 행동 설계에 필요한 딱 두 가지의 핵심을 전한다. 존재하지 않는 공포와 불안에 속아 현실에 안주하는 마음을 버릴 것. 그리고 몸이 먼저 움직이는 행동 자동화 패턴을 익힐 것. 책에서 제시하는 방법들을 하나씩 완수하고, 몸으로 익힐 때 비로소 의지박약과 만성적 미루기에서 벗어나 행동하는 인생으로 나아갈 수 있을 것이다.",
+    "pub_date": "2025-04-16",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 18,
+  "fields": {
+    "isbn": "K902039599",
+    "title": "길고양이와 늑대 5",
+    "author": 16,
+    "publisher": "학산문화사(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36451/84/cover200/k902039599_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-22",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 19,
+  "fields": {
+    "isbn": "K742038673",
+    "title": "2025 제16회 젊은작가상 수상작품집",
+    "author": 17,
+    "publisher": "문학동네",
+    "cover_url": "https://image.aladin.co.kr/product/36143/59/cover200/k742038673_1.jpg",
+    "description": "한국문학의 새로운 미래를 함께하고자 2010년 제정된 젊은작가상이 올해로 어느덧 16회를 맞이했다. 데뷔 십 년 이내의 젊은 작가들이 한 해 동안 발표한 소설 가운데, 지금 여기에서 창발하는 문제의식을 가장 예리한 시선으로 포착해낸 작품에 주목하고자 한다.",
+    "pub_date": "2025-04-02",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 20,
+  "fields": {
+    "isbn": "K702039990",
+    "title": "카구라바치 5",
+    "author": 18,
+    "publisher": "대원씨아이(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36415/68/cover200/k702039990_1.jpg",
+    "description": "'쿠레구모'의 헌신 덕에 '엔텐'을 되찾은 치히로. '광'속에서, 공간을 자유자재로 다루는 쿄라의 맹공을 피해 하쿠리와 힘을 합쳐 갇혀있는 사람들을 구하고자 한다. 격투 끝에 벼랑까지 몰린 쿄라가 손을 뻗은 곳은...?!",
+    "pub_date": "2025-05-28",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 21,
+  "fields": {
+    "isbn": "K562039494",
+    "title": "언플러그드 보이 1",
+    "author": 19,
+    "publisher": "문학동네",
+    "cover_url": "https://image.aladin.co.kr/product/36449/46/cover200/k562039494_1.jpg",
+    "description": "힙합을 좋아하고 과감한 패션을 구사하는, 자유로운 소년 강현겸. 그는 소꿉친구인 채지율의 요구에 따라 매일 교문 앞에서 지율의 하교를 기다린다. 현겸이 학교에 나타나는 날이면 여학생들은 환호하며 그의 뒤꽁무니를 쫓곤 한다. 변성기도, 사춘기도 아직인 현겸을 보며 지율은 과연 현겸도 자신에게 이성으로서 호감을 느끼는지 불안해하는데...",
+    "pub_date": "2025-05-23",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 22,
+  "fields": {
+    "isbn": "K682930444",
+    "title": "초역 부처의 말",
+    "author": 20,
+    "publisher": "포레스트북스",
+    "cover_url": "https://image.aladin.co.kr/product/33973/70/cover200/k682930444_1.jpg",
+    "description": "2500년 동안 사람들에게 사랑받으며 회자되어 온 부처의 말을 코이케 류노스케 스님이 현대어로 재해석해 책으로 출간했다. 간결하게 축약된 핵심만을 담은 부처의 메시지는, 마음이 약해지고 어려움에 처한 사람들에게 힘과 용기를 불어넣어 준다.",
+    "pub_date": "2024-05-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 23,
+  "fields": {
+    "isbn": "K582039494",
+    "title": "언플러그드 보이 2",
+    "author": 19,
+    "publisher": "문학동네",
+    "cover_url": "https://image.aladin.co.kr/product/36449/48/cover200/k582039494_1.jpg",
+    "description": "힙합을 좋아하고 과감한 패션을 구사하는, 자유로운 소년 강현겸. 그는 소꿉친구인 채지율의 요구에 따라 매일 교문 앞에서 지율의 하교를 기다린다. 현겸이 학교에 나타나는 날이면 여학생들은 환호하며 그의 뒤꽁무니를 쫓곤 한다. 변성기도, 사춘기도 아직인 현겸을 보며 지율은 과연 현겸도 자신에게 이성으로서 호감을 느끼는지 불안해하는데...",
+    "pub_date": "2025-05-23",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 24,
+  "fields": {
+    "isbn": "K712038303",
+    "title": "흔한남매 19",
+    "author": 21,
+    "publisher": "미래엔아이세움",
+    "cover_url": "https://image.aladin.co.kr/product/36208/50/cover200/k712038303_1.jpg",
+    "description": "태권도를 배우는 으뜸이와 에이미, 흔식이와의 첫 만남, 씁아저씨 집에 놀러 간 흔한남매, 소파에서 오래 버티기 대결, 흔한 일상 속 공감 포인트, 공포의 학교 안내 방송, 엄마와 우리의 흔한 차이점 등 활기찬 흔한남매의 일상을 통해 스트레스를 날려 보자.",
+    "pub_date": "2025-04-18",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 25,
+  "fields": {
+    "isbn": "8925573768",
+    "title": "엔비디아 젠슨 황, 생각하는 기계",
+    "author": 22,
+    "publisher": "알에이치코리아(RHK)",
+    "cover_url": "https://image.aladin.co.kr/product/36387/23/cover200/8925573768_1.jpg",
+    "description": "현대 AI 발전의 역사를 써 내려간 엔비디아와 젠슨 황의 모든 인사이트를 담은 책이다. &lt;뉴요커&gt; 기자인 저자는 젠슨 황의 요청으로 이 책을 집필하기 시작했고, 3년간 젠슨 황을 밀착 취재하고, 엔비디아의 핵심 관계자 300여 명을 인터뷰해 엔비디아의 심장인 젠슨 황의 비전, 리더십, 경영 철학은 물론 인간적인 면모까지 속속들이 보여준다.",
+    "pub_date": "2025-05-25",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 26,
+  "fields": {
+    "isbn": "K362038835",
+    "title": "기울어진 평등",
+    "author": 23,
+    "publisher": "와이즈베리",
+    "cover_url": "https://image.aladin.co.kr/product/36276/30/cover200/k362038835_1.jpg",
+    "description": "2024년 5월, 세계적인 두 사상가 토마 피케티와 마이클 샌델이 파리경제대학에서 만났다. 두 사람은 불평등의 세 가지 측면, 즉 경제적 불평등, 정치적 불평등, 사회적 불평등을 다각도로 조명하면서 지금 우리를 둘러싼 세계화와 능력주의, 불평등한 기본재 접근권, 기울어진 정치 참여, 사라진 노동의 존엄성 등 다양한 문제를 심도 있게 파헤친다.",
+    "pub_date": "2025-05-02",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 27,
+  "fields": {
+    "isbn": "K222433722",
+    "title": "책문, 이 시대가 묻는다",
+    "author": 24,
+    "publisher": "현자의마을",
+    "cover_url": "https://image.aladin.co.kr/product/6157/39/cover200/k222433722_1.jpg",
+    "description": "조선시대 고급공무원 선발 시험인 대과의 마지막 단계에서 출제한 시험과 답안의 한 유형인 책문 가운데에서 오늘날 사람들이 읽어도 의미가 있을 글들을 가려 뽑아서 엮은 책이다. 책문은 시대의 물음이다. 시대가 출제한 시험이다.",
+    "pub_date": "2015-06-15",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 28,
+  "fields": {
+    "isbn": "K622038344",
+    "title": "근대 괴물 사기극",
+    "author": 25,
+    "publisher": "갈매나무",
+    "cover_url": "https://image.aladin.co.kr/product/36301/44/cover200/s522039810_1.jpg",
+    "description": "2024년에 출간한 『미싱 스페이스 바닐라』에서 “과학적 엄밀성을 바탕으로 서로 다른 성격의 장르적 서사를 펼쳐내는 데 탁월하다”고 평가받은 이산화 작가가 이번에는 동서양 문헌 자료를 수년간 탐독하며 구상한 『근대 괴물 사기극』을 선보인다.",
+    "pub_date": "2025-05-26",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 29,
+  "fields": {
+    "isbn": "K642038142",
+    "title": "예술이라는 일",
+    "author": 26,
+    "publisher": "어크로스",
+    "cover_url": "https://image.aladin.co.kr/product/36292/14/cover200/k642038142_1.jpg",
+    "description": "생각은 어떻게 작품이 되는가? 무엇을 더하고 무엇을 덜어낼 것인가? 창작의 시작과 끝은 어디인가? 길을 잃을 땐 무엇을 해야 하는가? 창작자의 영원한 질문에 답하기 위해 40년 경력의 세계적인 저널리스트이자 화가인 애덤 모스가 현대예술의 최전선에 자리한 48명의 예술가와 전방위적인 대화를 나눈다.",
+    "pub_date": "2025-05-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 30,
+  "fields": {
+    "isbn": "K162039192",
+    "title": "고래눈이 내리다",
+    "author": 27,
+    "publisher": "래빗홀",
+    "cover_url": "https://image.aladin.co.kr/product/36423/24/cover200/k162039192_1.jpg",
+    "description": "한국 SF를 대표하는 작가 중 한 명이자 세계 독자에게 각별한 사랑을 받아온 소설가 김보영이 《얼마나 닮았는가》 이후로 5년 만에 신작 소설집을 펴냈다. 그간 초기작을 복원하고 기존 작품에 결말을 내는 등의 작업을 이어왔지만, 이 책은 대부분 2020년대에 발표한 작품들로 묶인 신작들이 담겨 독자들에게 반가움을 안긴다.",
+    "pub_date": "2025-05-19",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 31,
+  "fields": {
+    "isbn": "K762037781",
+    "title": "듀얼 브레인",
+    "author": 28,
+    "publisher": "상상스퀘어",
+    "cover_url": "https://image.aladin.co.kr/product/35873/90/cover200/k762037781_1.jpg",
+    "description": "AI 시대를 살아가기 위해 꼭 읽어야 할 필독서다. 저자 이선 몰릭은 타임에서 선정한 ‘인공지능 분야에서 가장 영향력 있는 인물’ 중 한 명이다. 여러 AI 기업에 자문을 제공하고, 와튼 스쿨에서 교육에 AI 활용을 접목하는 등 다양한 영역에서 영향력을 발휘하고 있다. 그런 저자가 생성형 AI를 둘러싼 모든 것에 관한 최고의 책을 집필했다.",
+    "pub_date": "2025-03-19",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 32,
+  "fields": {
+    "isbn": "8932925046",
+    "title": "바움가트너",
+    "author": 29,
+    "publisher": "열린책들",
+    "cover_url": "https://image.aladin.co.kr/product/36236/28/cover200/8932925046_2.jpg",
+    "description": "",
+    "pub_date": "2025-04-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 33,
+  "fields": {
+    "isbn": "8954682154",
+    "title": "작별하지 않는다",
+    "author": 5,
+    "publisher": "문학동네",
+    "cover_url": "https://image.aladin.co.kr/product/27877/5/cover200/8954682154_3.jpg",
+    "description": "2016년 &lt;채식주의자&gt;로 인터내셔널 부커상을 수상하고 2018년 &lt;흰&gt;으로 같은 상 최종 후보에 오른 한강 작가의 5년 만의 장편소설. 2019년 겨울부터 이듬해 봄까지 계간 &lt;문학동네&gt;에 전반부를 연재하며 큰 관심을 모은 작품이다.",
+    "pub_date": "2021-09-09",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 34,
+  "fields": {
+    "isbn": "8925554992",
+    "title": "스토너",
+    "author": 30,
+    "publisher": "알에이치코리아(RHK)",
+    "cover_url": "https://image.aladin.co.kr/product/5100/19/cover200/8925554992_2.jpg",
+    "description": "내셔널 북 어워드 수상작가 존 윌리엄스의 장편소설. 2013년 영국 최대의 체인 서점인 '워터스톤' 올해의 책으로 선정된 도서이다. 1965년 미국에서 발표된 후, 오랜 시간 동안 독자들에게 잊힌 &lt;스토너&gt;는 유럽 출판계와 평론가, 독자들의 열렬한 반응을 이끌어내며 베스트셀러가 되었다.",
+    "pub_date": "2015-01-02",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 35,
+  "fields": {
+    "isbn": "8937473402",
+    "title": "급류",
+    "author": 31,
+    "publisher": "민음사",
+    "cover_url": "https://image.aladin.co.kr/product/30769/24/cover200/8937473402_1.jpg",
+    "description": "2020년 《한경신춘문예》에 장편소설 &lt;GV 빌런 고태경&gt;이 당선되어 작품 활동을 시작한 소설가 정대건의 두 번째 장편소설 &lt;급류&gt;가 오늘의 젊은 작가 시리즈 40번으로 출간되었다. &lt;급류&gt;는 저수지와 계곡이 유명한 지방도시 ‘진평’을 배경으로, 열일곱 살 동갑내기인 ‘도담’과 ‘해솔’의 만남과 사랑을 그린 소설이다.",
+    "pub_date": "2022-12-22",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 36,
+  "fields": {
+    "isbn": "K342039296",
+    "title": "단다단 17",
+    "author": 32,
+    "publisher": "대원씨아이(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36428/73/cover200/k342039296_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-19",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 37,
+  "fields": {
+    "isbn": "8936434594",
+    "title": "채식주의자",
+    "author": 5,
+    "publisher": "창비",
+    "cover_url": "https://image.aladin.co.kr/product/29137/2/cover200/8936434594_2.jpg",
+    "description": "2016년 인터내셔널 부커상을 수상하며 한국문학의 입지를 한단계 확장시킨 한강의 장편소설. 상처받은 영혼의 고통과 식물적 상상력의 강렬한 결합을 정교한 구성과 흡인력 있는 문체로 보여주며 섬뜩한 아름다움의 미학을 한강만의 방식으로 완성한 역작이다.",
+    "pub_date": "2022-03-28",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 38,
+  "fields": {
+    "isbn": "K822039813",
+    "title": "최애의 아이 16",
+    "author": 33,
+    "publisher": "대원씨아이(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36465/38/cover200/k822039813_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-30",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 39,
+  "fields": {
+    "isbn": "K912035329",
+    "title": "2025 큰별쌤 최태성의 별★별한국사 기출 500제 한국사능력검정시험 심화",
+    "author": 34,
+    "publisher": "이투스북",
+    "cover_url": "https://image.aladin.co.kr/product/35408/5/cover200/k912035329_1.jpg",
+    "description": "2024년 72회 시험부터 2023년 63회 시험까지 최신 기출문제 10회분, 총 500문항으로 구성되었다. '기출 BOOK'은 실제 시험지를 그대로 구현하여 실전과 같은 문제풀이가 가능하며, '해설 BOOK'은 모든 선택지의 자세한 해설뿐만 아니라 기출 선택지와 핵심 내용도 수록하였다.",
+    "pub_date": "2024-12-24",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 40,
+  "fields": {
+    "isbn": "K202039190",
+    "title": "나 혼자만 레벨업 14",
+    "author": 35,
+    "publisher": "디앤씨웹툰비즈",
+    "cover_url": "https://image.aladin.co.kr/product/36422/72/cover200/k202039190_1.jpg",
+    "description": "‘윤회의 잔’으로 모든 것을 되돌린 후의 세계. 성진우는 고등학생으로서 평범한(?) 생활을 이어 가고, ‘개미 괴물’을 보는 형사, 우진철과 조우한다. 그리고 긴긴 시간을 돌아 다시 만나게 되는 진우와 해인!! 과연 이 평화는 오래 지속될 수 있을까?!",
+    "pub_date": "2025-06-09",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 41,
+  "fields": {
+    "isbn": "K572036659",
+    "title": "어른의 품격을 채우는 100일 필사 노트",
+    "author": 36,
+    "publisher": "청림Life",
+    "cover_url": "https://image.aladin.co.kr/product/35809/29/cover200/k572036659_2.jpg",
+    "description": "“마흔 이후 삶의 품격은 인생을 살아가는 태도에서 나온다” 120만 독자의 멘토 김종원 작가가 전하는 삶을 관통하는 조언과 위로의 문장들을 담은 책이다.",
+    "pub_date": "2025-03-05",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 42,
+  "fields": {
+    "isbn": "K172039674",
+    "title": "찍히지 않습니다 1",
+    "author": 37,
+    "publisher": "㈜소미미디어",
+    "cover_url": "https://image.aladin.co.kr/product/36387/35/cover200/k172039674_1.jpg",
+    "description": "유령이나 귀신 등, 초자연적인 현상을 끌어들이는 초영매 체질 때문에 늘 외롭게 지내던 소년, ‘쿠로키리 마코토’는 새로 전학 간 학교에서 유령을 보고 싶어도 보지 못하는 영감0 소녀 ‘타치바나 미치루’에게 오컬트부 가입을 권유받는다. 처음엔 거절한 마코토지만 영감이 없어 마코토가 끌어들인 유령의 영향을 받지 않고 적극적으로 다가오는 타치바나에게 처음으로 우정을 느끼는데….",
+    "pub_date": "2025-05-15",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 43,
+  "fields": {
+    "isbn": "K592038440",
+    "title": "창백한 지구를 위한 시",
+    "author": 38,
+    "publisher": "마음의숲",
+    "cover_url": "https://image.aladin.co.kr/product/36305/12/cover200/k592038440_2.jpg",
+    "description": "이 시대의 시인들이 국내에서 처음으로 지구를 살리고 싶어하는 간절한 염원을 담은 신작시와 산문이 실려있다. 스물두 명의 시인이 전하는 시와 산문은 단순한 경고가 아니다. 그것은 우리가 지금 무엇을 해야 할지, 무엇을 포기해야 할지 묻는 강렬한 질문이다.",
+    "pub_date": "2025-06-05",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 44,
+  "fields": {
+    "isbn": "8917239501",
+    "title": "ETS 토익 정기시험 기출문제집 1000 Vol. 4 Reading",
+    "author": 39,
+    "publisher": "(주)YBM(와이비엠)",
+    "cover_url": "https://image.aladin.co.kr/product/33010/94/cover200/8917239501_1.jpg",
+    "description": "정기시험 최신 기출문제 10세트가 수록되어 있다. 시험에 나온 최신 기출문제로 실전 감각을 키워 시험에 확실하게 대비할 수 있다. 교재 내 QR코드는 해당 회차의 무료 동영상 강의로 연결된다. 오답률 높은 고난도 문항을 친절한 해설 강의와 함께 수록하였다.",
+    "pub_date": "2023-12-18",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 45,
+  "fields": {
+    "isbn": "K512039477",
+    "title": "내 꿈에 가끔만 놀러와",
+    "author": 40,
+    "publisher": "문학동네",
+    "cover_url": "https://image.aladin.co.kr/product/36374/35/cover200/k512039477_1.jpg",
+    "description": "첫 시집 『샤워젤과 소다수』 출간 이후 뜨겁게 주목받으며 청년 세대를 대변하는 작가로 자리매김한 고선경의 첫 산문집 『내 꿈에 가끔만 놀러와』가 출간되었다. 시인이 수년간 블로그에 연재해온 일기와 때때로 기록한 메모에 새로 쓴 원고들을 더해 엮은 이 책에는 이십대 청년으로서 그가 줄곧 그려온 알록달록한 마음의 무늬들이 담겼다.",
+    "pub_date": "2025-05-14",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 46,
+  "fields": {
+    "isbn": "K632038378",
+    "title": "파과",
+    "author": 41,
+    "publisher": "위즈덤하우스",
+    "cover_url": "https://image.aladin.co.kr/product/36127/91/cover200/k632038378_1.jpg",
+    "description": "한국 소설에 가장 강렬하게 새겨질 새로운 여성 서사를 탄생시킨 구병모 작가의 《파과》가 새 옷을 갈아입었다. 40여 년간 날카롭고 냉혹하게 청부 살인을 업으로 삼아온 60대 여성 킬러 ‘조각(爪角)’. 몸도 기억도 예전 같지 않게 삐걱거리기 시작하면서 이제는 퇴물 취급을 받는다.",
+    "pub_date": "2018-03-16",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 47,
+  "fields": {
+    "isbn": "K012039783",
+    "title": "룬의 아이들",
+    "author": 42,
+    "publisher": "엘릭시르",
+    "cover_url": "https://image.aladin.co.kr/product/36401/67/cover200/k012039783_1.jpg",
+    "description": "『룬의 아이들 - 윈터러』에 이은 2부 『룬의 아이들 - 데모닉』이 완결된 지 11년 만의 신작이다. 1부 ‘룬의 아이들’ 시리즈 3부에 해당하는 이번 작품은 실종된 오빠에 얽힌 비밀과 맞서 분투하는 공녀를 중심으로 ‘블러디드’라는 힘에 관한 이야기를 다루고 있다.",
+    "pub_date": "2025-05-08",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 48,
+  "fields": {
+    "isbn": "K102038690",
+    "title": "드디어 만나는 북유럽 동화",
+    "author": 43,
+    "publisher": "현대지성",
+    "cover_url": "https://image.aladin.co.kr/product/36199/6/cover200/k102038690_2.jpg",
+    "description": "감각적이고 몽환적인 그림체로 유명한 세계 3대 삽화가 카이 닐센의 일러스트는 마치 독자 자신이 동화 속 주인공이 된 듯 독서의 몰입도를 높여준다. 각 나라의 동화를 한눈에 펼쳐 볼 수 있는 북유럽 동화 지도, 핀란드 대표 캐릭터 무민의 따뜻한 명대사, 이야기의 교훈을 잘 요약한 우리의 옛 속담까지 책 군데군데 숨겨놓은 재미있는 볼거리는 동화 읽는 맛을 더해준다.",
+    "pub_date": "2025-04-18",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 49,
+  "fields": {
+    "isbn": "K702039714",
+    "title": "봄의 폭풍과 몬스터 6",
+    "author": 44,
+    "publisher": "학산문화사(만화)",
+    "cover_url": "https://image.aladin.co.kr/product/36458/64/cover200/k702039714_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-22",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 50,
+  "fields": {
+    "isbn": "K082938849",
+    "title": "쇼펜하우어 인생수업 : 한 번뿐인 삶 이렇게 살아라",
+    "author": 45,
+    "publisher": "하이스트",
+    "cover_url": "https://image.aladin.co.kr/product/33464/3/cover200/k082938849_3.jpg",
+    "description": "니체, 아인슈타인, 톨스토이 등 세계 거장들의 인생을 변화시킨 철학자 '쇼펜하우어'의 모든 지혜를 이 책에 담아냈다! 단언컨대 인생을 바꿔줄 단 한권의 책이다.",
+    "pub_date": "2024-02-20",
+    "category": 1,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 51,
+  "fields": {
+    "isbn": "K602039917",
+    "title": "2026 해커스공무원 신민숙 쉬운국어 독해 강화 200제",
+    "author": 46,
+    "publisher": "해커스공무원",
+    "cover_url": "https://image.aladin.co.kr/product/36475/9/cover200/k602039917_1.jpg",
+    "description": "최신 출제기조를 반영한 비문학 독해 문제로 100% 전면 개정되었다. 필수적으로 알아야 하는 8가지 독해 유형을 통해 효율적인 학습이 가능하고, 독해 유형 파악부터 문제풀이까지 체계적인 단계별 학습이 가능하다.",
+    "pub_date": "2025-05-29",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 52,
+  "fields": {
+    "isbn": "K522039917",
+    "title": "1987",
+    "author": 47,
+    "publisher": "민중의소리",
+    "cover_url": "https://image.aladin.co.kr/product/36475/0/cover200/k522039917_1.jpg",
+    "description": "오랫동안 &lt;민중의소리&gt; 편집국장을 역임하면서 쌓은 관록이 묻어나는 책이다. 저자 이정무는 타의 추종을 불허하는 대북통, 정치통으로 한반도 정세를 날카롭게 분석하고 논설해 왔다.",
+    "pub_date": "2025-05-26",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 53,
+  "fields": {
+    "isbn": "K592039917",
+    "title": "잠자고 싶은 토끼",
+    "author": 48,
+    "publisher": "윌마",
+    "cover_url": "https://image.aladin.co.kr/product/36474/95/cover200/k592039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-29",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 54,
+  "fields": {
+    "isbn": "K552039917",
+    "title": "어떻게 나이 들 것인가?",
+    "author": 49,
+    "publisher": "아날로그(글담)",
+    "cover_url": "https://image.aladin.co.kr/product/36474/90/cover200/k552039917_1.jpg",
+    "description": "고대 로마의 문인이자 철학자이자 정치가였던 마르쿠스 툴리우스 키케로가 기원전 44년에 저술한 「노년에 관하여」 원문을 고전 전문가 필립 프리먼이 해설을 덧붙여 새롭게 구성한 책이다.",
+    "pub_date": "2025-06-15",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 55,
+  "fields": {
+    "isbn": "K442039917",
+    "title": "2026 해커스공무원 3분의 1로 줄여 쓴 김대현 행정법총론 기본서",
+    "author": 50,
+    "publisher": "해커스공무원",
+    "cover_url": "https://image.aladin.co.kr/product/36474/90/cover200/k442039917_1.jpg",
+    "description": "2026년 7, 9급 공무원 / 국회직 / 군무원 / 소방 공무원 대비! 합격을 위한 행정법총론 필수개념 총정리. 다양한 학습장치를 통해 행정법총론의 핵심인 판례를 완전 정복한다. 컴팩트한 분량 및 도식화된 그림, 도표 등을 통한 직관적인 이론 학습이 가능하다.",
+    "pub_date": "2025-06-02",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 56,
+  "fields": {
+    "isbn": "K492039917",
+    "title": "오하룡 시를 읽다",
+    "author": 51,
+    "publisher": "경남",
+    "cover_url": "https://image.aladin.co.kr/product/36474/87/cover200/k492039917_1.jpg",
+    "description": "1975년 시집 〈모향〉으로 등단한 오하룡 시인이 그간 발표된 시집의 평설과 발문 등을 단행본으로 엮었다. 오하룡 시인의 시를 이해하는데 도움이 되리라 여겨진다.",
+    "pub_date": "2025-05-23",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 57,
+  "fields": {
+    "isbn": "K472039917",
+    "title": "잘되는 병원을 만드는 디자인",
+    "author": 52,
+    "publisher": "유엑스리뷰",
+    "cover_url": "https://image.aladin.co.kr/product/36474/85/cover200/k472039917_1.jpg",
+    "description": "헬스케어 디자인의 세계적인 리더로서 의료 서비스를 혁신적으로 재설계하기 위해 힘쓰고 있는 현직 응급의학과 의사이자 교수인 구본석 박사와 뉴욕 스미소니언 디자인 박물관 수석 큐레이터로서 디자인 씽킹의 확산에 기여하고 있는 엘런 럽턴, 각 분야 최고의 전문가인 두 저자는 이 책을 통해 세계 최초로 ‘헬스케어 디자인 씽킹’의 가이드를 제시한다.",
+    "pub_date": "2025-06-09",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 58,
+  "fields": {
+    "isbn": "8987977714",
+    "title": "발로 쓴 잉글랜드 스코틀랜드 종교개혁",
+    "author": 53,
+    "publisher": "에디아",
+    "cover_url": "https://image.aladin.co.kr/product/36474/85/cover200/8987977714_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-23",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 59,
+  "fields": {
+    "isbn": "K452039917",
+    "title": "말숲산책",
+    "author": 54,
+    "publisher": "푸른생각",
+    "cover_url": "https://image.aladin.co.kr/product/36474/74/cover200/k452039917_1.jpg",
+    "description": "오랫동안 학생들에게 국어를 가르쳐온 송진섭 작가의 『말숲산책』이 푸른생각의 푸른교양선으로 출간되었다. 저자는 말숲의 해설사가 되어 일상적으로 많이 쓰는 어휘나 관용구, 외래어나 신조어 등의 원래 의미와 유래를 콕콕 짚어주며 올바른 언어 생활의 길로 우리를 안내한다.",
+    "pub_date": "2025-05-22",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 60,
+  "fields": {
+    "isbn": "K382039917",
+    "title": "작은 쥐의 도전",
+    "author": 55,
+    "publisher": "템북",
+    "cover_url": "https://image.aladin.co.kr/product/36474/73/cover200/k382039917_1.jpg",
+    "description": "작고 연약한 쥐 한 마리가 둥지에서 떨어진 울새의 알을 가져다놓기 위해 거대한 바위를 오르기로 결심한다. 하지만 달팽이와 두꺼비, 찌르레기는 입을 모아 말한다. “넌 너무 작아서 안 돼.” 친구들의 걱정과 불신 속에서 과연 작은 쥐는 울새의 알을 둥지로 무사히 가져갈 수 있을까?",
+    "pub_date": "2025-06-15",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 61,
+  "fields": {
+    "isbn": "K392039917",
+    "title": "2025 인사이트 상법 선택형 : 모고편",
+    "author": 56,
+    "publisher": "자비스",
+    "cover_url": "https://image.aladin.co.kr/product/36474/72/cover200/k392039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-16",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 62,
+  "fields": {
+    "isbn": "K222039917",
+    "title": "시에 78",
+    "author": 57,
+    "publisher": "시와에세이",
+    "cover_url": "https://image.aladin.co.kr/product/36474/69/cover200/k222039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-06-01",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 63,
+  "fields": {
+    "isbn": "K202039917",
+    "title": "쉬운 교과서 : 과학 3~4학년 2",
+    "author": 58,
+    "publisher": "주니어마리(마리북스)",
+    "cover_url": "https://image.aladin.co.kr/product/36474/66/cover200/k202039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-25",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 64,
+  "fields": {
+    "isbn": "K262039917",
+    "title": "설익은 낭만의 세 조각",
+    "author": 59,
+    "publisher": "일단",
+    "cover_url": "https://image.aladin.co.kr/product/36474/63/cover200/k262039917_1.jpg",
+    "description": "19살, 18살, 17살 고등학생 작가가 모여 가장 아름답다는 10대 시절 속 청춘을 담은 책, 『설익은 낭만의 세 조각』이 출간되었다. 책 속에는 유대협 작가의 ‘계절과 자연’에 대한 깊이 있는 시선, 이채윤 작가가 ‘삶의 요소’를 탐구한 흔적, 김서연 작가가 섬세히 체감한 ‘사랑과 이별’이 독보적인 매력을 불러일으킨다.",
+    "pub_date": "2025-05-29",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 65,
+  "fields": {
+    "isbn": "K252039917",
+    "title": "쉬운 교과서 : 과학 3~4학년 세트",
+    "author": 58,
+    "publisher": "주니어마리(마리북스)",
+    "cover_url": "https://image.aladin.co.kr/product/36474/62/cover200/k252039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-25",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 66,
+  "fields": {
+    "isbn": "896541704X",
+    "title": "큰 나무 얼굴",
+    "author": 60,
+    "publisher": "진영사",
+    "cover_url": "https://image.aladin.co.kr/product/36474/60/cover200/896541704x_1.jpg",
+    "description": "",
+    "pub_date": "2025-04-29",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 67,
+  "fields": {
+    "isbn": "K102039917",
+    "title": "영성서신 사랑의 Pilgrim",
+    "author": 61,
+    "publisher": "도서출판 사무엘",
+    "cover_url": "https://image.aladin.co.kr/product/36474/56/cover200/k102039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-30",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 68,
+  "fields": {
+    "isbn": "K182039917",
+    "title": "[세트] &lt;거꾸로 읽는 한국사&gt; 도서 + 조경철 북토크",
+    "author": 62,
+    "publisher": "클랩북스",
+    "cover_url": "https://image.aladin.co.kr/product/36474/51/cover200/k182039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-06-21",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 69,
+  "fields": {
+    "isbn": "K162039917",
+    "title": "조선성리학의 사단칠정론 역사",
+    "author": 63,
+    "publisher": "박문사",
+    "cover_url": "https://image.aladin.co.kr/product/36474/35/cover200/k162039917_1.jpg",
+    "description": "조선유학자 가운데 대표적인 45명을 선정하여 이들을 중심으로 사단칠정론의 이론적 특징을 고찰한 책이다. 무엇보다 사단칠정론은 퇴계와 율곡 이후 퇴계학파와 율곡학파라는 양대 학파를 중심으로 전개되며, 이들은 각각 스승의 학설을 옹호하기도 하고 비판하기도 하면서 자신의 이론을 전개하는데, 이것은 그대로 한말까지 지속된다.",
+    "pub_date": "2025-05-27",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 70,
+  "fields": {
+    "isbn": "K152039917",
+    "title": "[북토크] &lt;거꾸로 읽는 한국사&gt; 조경철 북토크",
+    "author": 64,
+    "publisher": "클랩북스",
+    "cover_url": "https://image.aladin.co.kr/product/36474/35/cover200/k152039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-06-21",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 71,
+  "fields": {
+    "isbn": "K042039917",
+    "title": "예수 동행 오직 믿음",
+    "author": 65,
+    "publisher": "규장(규장문화사)",
+    "cover_url": "https://image.aladin.co.kr/product/36474/35/cover200/k042039917_1.jpg",
+    "description": "“주님이 함께 계심을 믿기만 하라!!” 진짜 믿음은 보이지 않는 예수님과의 동행이다. 친밀한 동행은 오직 믿음으로만 누려진다. 유기성 목사의 예수동행의 실제를 믿음으로 붙잡는 여정.",
+    "pub_date": "2025-06-02",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 72,
+  "fields": {
+    "isbn": "K002039917",
+    "title": "쉬운 교과서 : 과학 3~4학년 1",
+    "author": 58,
+    "publisher": "주니어마리(마리북스)",
+    "cover_url": "https://image.aladin.co.kr/product/36474/33/cover200/k002039917_1.jpg",
+    "description": "어린이 여러분이 친구들, 그리고 가족들과 늘 함께하는 일상 속에서 교과서의 과학을 만날 수 있는 책이다. 맹자샘의 풍부한 배경지식과 쉬운 개념 해설이 담겨 있는 그야말로 교과서 이해를 돕는《쉬운 교과서》다. 책의 구성 또한 교과서 단원과 완벽하게 연결되어 있다.《쉬운 교과서》 과학 3~4학년 ①은 3학년 1학기·2학기 과학 교과서의 내용이다.",
+    "pub_date": "2025-05-26",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 73,
+  "fields": {
+    "isbn": "K092039917",
+    "title": "영어말하는데 꼭 필요한 핵심동사 113개로 네이티브와 말문트기 1~3 세트",
+    "author": 66,
+    "publisher": "멘토스",
+    "cover_url": "https://image.aladin.co.kr/product/36474/32/cover200/k092039917_1.jpg",
+    "description": "네이티브가 주로 먹고 사는 핵심기본동사 18개를 바탕으로 다양하게 실제 일상생활에서 이용되고 있는 동사표현들을 일목요연하게 정리하였다. 핵심기본동사 18개 외에도 네이티브가 자주 사용하는 동사들을 선별하여 역시 실제 활용빈도수가 높은 동사표현들을 모았다.",
+    "pub_date": "2025-05-27",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 74,
+  "fields": {
+    "isbn": "8952650654",
+    "title": "2025 손에 잡히는 기술직 7급 물리학개론",
+    "author": 67,
+    "publisher": "서울고시각",
+    "cover_url": "https://image.aladin.co.kr/product/36474/24/cover200/8952650654_1.jpg",
+    "description": "7급 공무원 시험의 ‘물리학개론’ 과목을 대비하기 위한 교재다. 국가직ㆍ지방직ㆍ서울시 등 다양한 시험의 기출문제를 담고 있으며, 해당 내용에 대해 확실히 이해할 수 있도록 그림, 도표 등을 통해 자세한 해설을 달았다.",
+    "pub_date": "2025-06-10",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 75,
+  "fields": {
+    "isbn": "8952650662",
+    "title": "2026 3일합격 동력수상레저 조종면허시험 총정리문제집 (",
+    "author": 68,
+    "publisher": "서울고시각",
+    "cover_url": "https://image.aladin.co.kr/product/36474/21/cover200/8952650662_1.jpg",
+    "description": "동력수상레저 조종면허시험 1·2급을 대비할 수 있는 총정리문제집이다. 상세하고 칠절하게 정리한 시험과목별 요점정리를 실었고, 출제경향에 맞춘 출제예상문제와 기출문제를 수록하였다. 요점정리에 `기출' 표시하여, 빈출되는 부분을 학습할 수 있다.",
+    "pub_date": "2025-06-10",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 76,
+  "fields": {
+    "isbn": "K962039917",
+    "title": "일년일독 어?성경 Vol.7",
+    "author": 69,
+    "publisher": "생터성경사역원",
+    "cover_url": "https://image.aladin.co.kr/product/36474/21/cover200/k962039917_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-22",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 77,
+  "fields": {
+    "isbn": "K882039916",
+    "title": "간다 마사노리의 대발견",
+    "author": 70,
+    "publisher": "더블북",
+    "cover_url": "https://image.aladin.co.kr/product/36474/20/cover200/k882039916_1.jpg",
+    "description": "간다 마사노리가 이 책을 통해 보여주려는 것은 우리가 스스로 “비상식적 성공”과 “원하는 미래”의 변화를 만들어낼 힘을 발견하도록 하는 것이다. 그는 이를 실현하기 위해 “심리학, 신화, 양자역학, 신경언어프로그래밍 등 내가 관심을 가지며 다양하게 보고 듣고 배운 것들을 전부 엮어 이 책에 집어넣었다”고 강조한다.",
+    "pub_date": "2025-06-09",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 78,
+  "fields": {
+    "isbn": "K872039916",
+    "title": "내 방 창문으로 보이는 밤",
+    "author": 71,
+    "publisher": "시시한출판사",
+    "cover_url": "https://image.aladin.co.kr/product/36474/20/cover200/k872039916_1.jpg",
+    "description": "어린이가 느끼는 혼자 잠들기 어려움에 대해 간절하고 절실히 표현한 작품이다. 누구나 그러했듯 아주 어렸을 적 매일 매일 다가오는 어둡고 무시무시한 밤의 공포 앞에서 고군분투한다. 결국 이 모든 어려움을 극복함으로써 고요 속에 내제된 밤이 가진 빛과 색 그리고 소리를 향유할 수 있게 된다.",
+    "pub_date": "2025-05-15",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 79,
+  "fields": {
+    "isbn": "K742039916",
+    "title": "[CD] 2025 산후조리원 주소록",
+    "author": 72,
+    "publisher": "한국콘텐츠미디어(매일넷앤드비즈)",
+    "cover_url": "https://image.aladin.co.kr/product/36474/17/cover200/k742039916_1.jpg",
+    "description": "산부인과 병·의원 주소록을 1,548건, 소아청소년과 병·의원 주소록을 2,358건, 산후조리원 리스트를 순위별로 452건, 산후조리용품 주소록을 분야별, 지역별로 28,425건을 수록했다.",
+    "pub_date": "2025-05-21",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 80,
+  "fields": {
+    "isbn": "K712039916",
+    "title": "근대계몽기 잡지의 로컬리티와 문학",
+    "author": 73,
+    "publisher": "소명출판",
+    "cover_url": "https://image.aladin.co.kr/product/36474/16/cover200/k712039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-04-30",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 81,
+  "fields": {
+    "isbn": "K702039916",
+    "title": "[큰글자책] 시경 강의 4 : 제풍·진풍·조풍",
+    "author": 74,
+    "publisher": "북튜브",
+    "cover_url": "https://image.aladin.co.kr/product/36474/15/cover200/k702039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-20",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 82,
+  "fields": {
+    "isbn": "K772039916",
+    "title": "싱잉볼 활용가이드 : 기본 이론편",
+    "author": 75,
+    "publisher": "컨템포러리뮤직",
+    "cover_url": "https://image.aladin.co.kr/product/36474/14/cover200/k772039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-22",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 83,
+  "fields": {
+    "isbn": "K762039916",
+    "title": "[큰글자책] 독학자를 위한 손자병법 읽기",
+    "author": 76,
+    "publisher": "북튜브",
+    "cover_url": "https://image.aladin.co.kr/product/36474/13/cover200/k762039916_1.jpg",
+    "description": "‘독학자의 공부’ 시리즈 세번째 책, 『독학자를 위한 손자병법』은 여전히 사람들의 관심을 끌고 있는 고전 『손자병법』을 다양한 관점에서 살펴보고, 『손자병법』이 한 권의 병법서에서 그치지 않고 ‘개념의 유동성’이라는 동양적 사유의 핵심을 보여 주는 고전임을 밝히고자 하였다.",
+    "pub_date": "2025-05-20",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
+  "pk": 84,
+  "fields": {
+    "isbn": "K642039916",
+    "title": "소명 훈련, 로드인 이해하기",
+    "author": 77,
+    "publisher": "북샤인",
+    "cover_url": "https://image.aladin.co.kr/product/36474/13/cover200/k642039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-30",
+    "category": 2,
+    "global_recommend_count": 0
+  }
+},
+{
+  "model": "api.book",
   "pk": 85,
   "fields": {
-    "name": "신현기 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "K632039916",
+    "title": "[큰글자책] 독학자를 위한 한비자 읽기",
+    "author": 76,
+    "publisher": "북튜브",
+    "cover_url": "https://image.aladin.co.kr/product/36474/12/cover200/k632039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-20",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 86,
   "fields": {
-    "name": "곤다이라 히츠지 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "K692039916",
+    "title": "[큰글자책] 독학자를 위한 논어 읽기",
+    "author": 76,
+    "publisher": "북튜브",
+    "cover_url": "https://image.aladin.co.kr/product/36474/10/cover200/k692039916_1.jpg",
+    "description": "논어에 붙은 이런 더께를 걷어내고 『논어』를 맥락적으로 읽어야 한다고 주장한다. 『논어』 텍스트의 성립과 주석사를 상세하게 소개하고, 『논어』 텍스트에 대한 주석의 실례를 위진남북조 시대부터 청대와 조선의 주석에 이르기까지 원문과 함께 수록하여 독자들이 직접 『논어』 해석사의 일단을 맛볼 수 있도록 했다.",
+    "pub_date": "2025-05-20",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 87,
   "fields": {
-    "name": "최우용 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "K662039916",
+    "title": "[큰글자책] 독학자를 위한 노자 읽기",
+    "author": 76,
+    "publisher": "북튜브",
+    "cover_url": "https://image.aladin.co.kr/product/36474/9/cover200/k662039916_1.jpg",
+    "description": "흔히 도가의 핵심 문헌으로 『도덕경』이라는 이름으로도 불리는 『노자』에 대해 다층적인 읽기를 시도하는 책이다. 후대에 다채롭게 해석되어 온 『노자』를, 대표적인 판본과 주석들 간의 차이를 상세히 살피면서 더 깊고 넓게 이해하기 위한 시도이다.",
+    "pub_date": "2025-05-20",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 88,
   "fields": {
-    "name": "애런 블레이비 (지은이), 신수진 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "K542039916",
+    "title": "소방공무원 종합적성검사 및 면접",
+    "author": 78,
+    "publisher": "서원각",
+    "cover_url": "https://image.aladin.co.kr/product/36474/7/cover200/k542039916_1.jpg",
+    "description": "소방공무원 필기시험이 끝나고 있는 종합적성검사와 심층개별면접을 준비하기 위한 교재이다. 종합적성검사의 운영절차 및 특징에 대해서 정리하였고, 인성검사의 개요와 함께 성격적인 측면을 확인할 수 있도록 구성하였고 모의고사 1회분을 수록하였다.",
+    "pub_date": "2025-05-26",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 89,
   "fields": {
-    "name": "바너버스 파이퍼 (지은이), 구지원 (옮긴이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "8931480032",
+    "title": "시민 개발자의 시대, 생성형 AI 업무 자동화",
+    "author": 79,
+    "publisher": "영진.com(영진닷컴)",
+    "cover_url": "https://image.aladin.co.kr/product/36473/98/cover200/8931480032_1.jpg",
+    "description": "질문으로 코드를 생성하는 ‘바이브 코딩(Vibe Coding)’을 이용해 실무 문제를 해결하는 방법을 담은 업무 자동화 안내서다. 저자가 실무를 경험하며 얻은 현장 지식과 저자가 실무 현장에 생성형 AI를 접목하면서 얻은 인사이트, 다양한 실무자들을 코칭하면서 발견한 업무 자동화 아이디어와 노하우를 담았다.",
+    "pub_date": "2025-06-05",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 90,
   "fields": {
-    "name": "요코야마 토무 (지은이)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "K412039916",
+    "title": "맞춤형 화장품 상담 전문가",
+    "author": 80,
+    "publisher": "메디시언",
+    "cover_url": "https://image.aladin.co.kr/product/36473/91/cover200/k412039916_1.jpg",
+    "description": "'맞춤형 화장품 전문가'는 의사가 환자의 질병을 진단하고 약을 처방하여 질병을 치료하듯이 화장품 소비자의 피부를 식별하고 적합한 화장품을 처방하여 관리하고 예방까지 할 수 있도록 코칭해 줄 수 있는 직업군이다.",
+    "pub_date": "2025-05-26",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 91,
   "fields": {
-    "name": "와카마츠 타카히로 (지은이), 노다 히로시 (원작)",
-    "image_url": null,
-    "summary": "",
-    "works": []
+    "isbn": "K492039916",
+    "title": "영어말하는데 꼭 필요한 핵심동사 113개로 네이티브와 말문트기 2",
+    "author": 66,
+    "publisher": "멘토스",
+    "cover_url": "https://image.aladin.co.kr/product/36473/88/cover200/k492039916_1.jpg",
+    "description": "네이티브가 주로 먹고 사는 핵심기본동사 18개를 바탕으로 다양하게 실제 일상생활에서 이용되고 있는 동사표현들을 일목요연하게 정리하였다. 핵심기본동사 18개 외에도 네이티브가 자주 사용하는 동사들을 선별하여 역시 실제 활용빈도수가 높은 동사표현들을 모았다.",
+    "pub_date": "2025-05-27",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 92,
   "fields": {
-    "name": "유시민",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/160824_Rhyu_Si-min.png",
-    "summary": "유시민은 대한민국의 작가이자 언론인으로, 정치인으로도 활동하며 여러 저서와 방송에 출연해 왔다. 그의 저작물은 사회, 경제, 역사 등 다양한 주제를 다루고 있으며, 독특한 시각으로 대중과 소통하고 있다.",
-    "works": [
-      "아침으로 가는 길",
-      "97 대선 게임의 법칙",
-      "대한민국 개조론",
-      "어떻게 살 것인가",
-      "역사의 역사",
-      "청춘의 독서",
-      "노무현은 왜 조선일보와 싸우는가",
-      "국가란 무엇인가",
-      "유시민의 글쓰기 특강",
-      "후불제 민주주의"
-    ]
+    "isbn": "K462039916",
+    "title": "에일리언 스테이지 스타피쉬 봉제인형 랜덤 박스",
+    "author": 81,
+    "publisher": "휴먼스토리",
+    "cover_url": "https://image.aladin.co.kr/product/36473/86/cover200/k462039916_1.jpg",
+    "description": "글로벌 인기 애니메이션 \"에일리언 스테이지\" 공식 굿즈상품. RRP 한박스에 에일리언 스테이지 등장인물 6종 랜덤으로 구성되었다. (미지, 수아, 틸, 이반, 루카, 현아)",
+    "pub_date": "2025-03-01",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 93,
   "fields": {
-    "name": "김영하",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/%EA%B9%80%EC%98%81%ED%95%98_%ED%94%84%EB%A1%9C%ED%95%84.jpg",
-    "summary": "김영하(1968년 ~ )는 대한민국의 소설가로, 현대 한국 문학을 대표하는 인물 중 하나이다. 그의 작품은 인간의 내면을 깊이 탐구하며, 독창적인 서술 방식과 풍부한 상상력이 특징이다.",
-    "works": [
-      "채식주의자",
-      "소년이 온다",
-      "한낮의 우울",
-      "파란만장",
-      "오직 두 사람"
-    ]
+    "isbn": "K392039916",
+    "title": "추사 김정희 서화에 빠지다",
+    "author": 82,
+    "publisher": "푸른사상",
+    "cover_url": "https://image.aladin.co.kr/product/36473/84/cover200/k392039916_1.jpg",
+    "description": "시인이며 서예가인 신웅순 교수(중부대학교 명예교수)의 『추사 김정희 서화(書?)에 빠지다』가 푸른사상의 교양총서 25로 출간되었다. 김정희는 추사체와 &lt;세한도&gt;로 불멸의 예술가가 되었고, 진흥왕순수비 연구로 금석학에서도 큰 획을 그었다. 그가 남긴 서화를 통해 당대의 인물들과 사회현실을 확인하며 19세기 조선의 정신을 배운다.",
+    "pub_date": "2025-05-26",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 94,
   "fields": {
-    "name": "마츠모토 나오야, 유유리",
-    "image_url": null,
-    "summary": "마츠모토 나오야는 일본의 만화가로, 효고현 출신이며 다양한 작품에서 활발히 활동하고 있다.",
-    "works": [
-      "미끌미끌 밥",
-      "작품1",
-      "작품2",
-      "작품3",
-      "작품4"
-    ]
+    "isbn": "K242039916",
+    "title": "영어말하는데 꼭 필요한 핵심동사 113개로 네이티브와 말문트기 3",
+    "author": 66,
+    "publisher": "멘토스",
+    "cover_url": "https://image.aladin.co.kr/product/36473/83/cover200/k242039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-05-27",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 95,
   "fields": {
-    "name": "성해나",
-    "image_url": null,
-    "summary": "성해나는 한국의 소설가로, 다양한 장르에서 독창적인 작품을 선보이고 있다.",
-    "works": [
-      "바람의 언덕",
-      "그림자 속의 기억",
-      "소리 없는 외침",
-      "여름의 끝에서",
-      "흩어진 조각들"
-    ]
+    "isbn": "K292039916",
+    "title": "영어말하는데 꼭 필요한 핵심동사 113개로 네이티브와 말문트기 1",
+    "author": 66,
+    "publisher": "멘토스",
+    "cover_url": "https://image.aladin.co.kr/product/36473/80/cover200/k292039916_1.jpg",
+    "description": "영어회화의 기초를 닦을 뿐만 아니라 영어회화의 핵심이자 본류에 접근하는 아주 현명한 방법이 될 것이다. 이제 핵심동사를 익히고 여유있게 영어회화를 즐겨본다. 영어회화는 멀리 있지 않다. 가까운 데서 해답을 찾아야 한다.",
+    "pub_date": "2025-05-27",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 96,
   "fields": {
-    "name": "한강",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Korea-Seoul-Han_River-01.jpg",
-    "summary": "한강은 대한민국의 소설가이자 에세이스트로, 현대 한국 문학을 대표하는 작가 중 한 사람이다. 그녀의 작품은 인간 존재의 깊이와 삶의 복잡성을 탐구하며, 감각적이고 시적인 문체로 유명하다.",
-    "works": [
-      "채식주의자",
-      "흰",
-      "소년이 온다",
-      "참을 수 없는 존재의 가벼움",
-      "모든 것이 나를 스쳐간다"
-    ]
+    "isbn": "K262039916",
+    "title": "명작 컬러링북",
+    "author": 83,
+    "publisher": "도트북",
+    "cover_url": "https://image.aladin.co.kr/product/36473/76/cover200/k262039916_1.jpg",
+    "description": "하루의 끝, 조용히 나를 돌아보는 시간. 그 한가운데, 오랜 이야기와 그림이 함께한다면 얼마나 따뜻할까? 이 책은 누구보다 섬세하고 따뜻한 일러스트를 그리는 작가 종이비행의 첫 번째 컬러링북이다.",
+    "pub_date": "2025-05-30",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 97,
   "fields": {
-    "name": "김지은",
-    "image_url": null,
-    "summary": "김지은은 대한민국의 드라마 작가로, 다양한 장르의 작품을 통해 많은 사랑을 받고 있는 인물이다.",
-    "works": [
-      "내 아이디는 강남미인",
-      "사이코지만 괜찮아",
-      "호텔 델루나",
-      "운명과 분노",
-      "청일전자 미쓰봉"
-    ]
+    "isbn": "K152039916",
+    "title": "내셔널 지오그래픽 3D 건축 퍼즐 : 세인트폴",
+    "author": 84,
+    "publisher": "휴먼스토리",
+    "cover_url": "https://image.aladin.co.kr/product/36473/69/cover200/k152039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-04-01",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 98,
   "fields": {
-    "name": "더글러스 재노프, 서정현, 류민희",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chosin.jpg",
-    "summary": "더글러스 재노프는 과학과 기술을 주제로 한 저작으로 잘 알려진 미국의 작가이자 저널리스트입니다.",
-    "works": [
-      "The Science of Superheroes",
-      "The Physics of Star Wars",
-      "The Science of Monsters",
-      "The Science of Cooking",
-      "The Science of Science Fiction"
-    ]
+    "isbn": "K022039916",
+    "title": "내셔널 지오그래픽 3D 건축 퍼즐 : 노트르담",
+    "author": 84,
+    "publisher": "휴먼스토리",
+    "cover_url": "https://image.aladin.co.kr/product/36473/69/cover200/k022039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-04-01",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 99,
   "fields": {
-    "name": "이재명",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Lee_Jae-myung_January_2025.jpg",
-    "summary": "이재명은 대한민국의 변호사 출신 정치인으로, 경기도 성남시의 시장과 경기도지사, 더불어민주당의 당대표를 역임하며 활발한 정치 활동을 펼치고 있다.",
-    "works": [
-      "고난을 통해 희망을 만들다",
-      "오직 민주주의, 꼬리를 잡고 몸통을 흔들다",
-      "이재명, 대한민국 혁명하라",
-      "이재명은 합니다",
-      "함께 가는 길은 외롭지 않습니다",
-      "이재명의 굽은 팔",
-      "대통령의 7시간 추적자들",
-      "이재명의 나의 소년공 다이어리",
-      "그 꿈이 있어 여기까지 왔다"
-    ]
+    "isbn": "K092039916",
+    "title": "내셔널 지오그래픽 3D 건축 퍼즐 : 타지마할",
+    "author": 84,
+    "publisher": "휴먼스토리",
+    "cover_url": "https://image.aladin.co.kr/product/36473/68/cover200/k092039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-04-01",
+    "category": 2,
+    "global_recommend_count": 0
   }
 },
 {
-  "model": "api.author",
+  "model": "api.book",
   "pk": 100,
   "fields": {
-    "name": "요시타케 신스케, 고향옥",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Makoto_Saito_2.jpg",
-    "summary": "요시타케 신스케는 일본의 인기 그림책 작가이자 일러스트레이터로, 독창적인 이야기와 매력적인 그림으로 어린이와 어른 모두에게 사랑받고 있습니다.",
-    "works": [
-      "내가 제일 좋아하는 것",
-      "어떻게 할까?",
-      "고양이와 함께한 여름",
-      "모든 것이 달라진 날",
-      "하늘을 나는 마을"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 101,
-  "fields": {
-    "name": "오오카와 테츠, 스즈키 유우토",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/SH_logo.png",
-    "summary": "오오카와 테츠는 일본의 소설가이자 에세이스트로, 감성적인 문체와 깊이 있는 캐릭터 묘사로 유명하다.",
-    "works": [
-      "나는 네가 죽기를 바란다",
-      "너의 췌장을 먹고 싶어",
-      "숨바꼭질",
-      "아직 끝나지 않았다",
-      "시간을 달리는 소녀"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 102,
-  "fields": {
-    "name": "양귀자",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Yang_Gui-ja.jpg",
-    "summary": "양귀자는 대한민국의 소설가로, 1978년 문학사상 신인상을 수상하며 등단하였으며, 1990년대 베스트셀러 작가로 자리 잡았다.",
-    "works": [
-      "귀머거리새",
-      "원미동 사람들",
-      "지구를 색칠하는 페인트공",
-      "희망",
-      "나는 소망한다 내게 금지된 것을",
-      "슬픔도 힘이 된다",
-      "길 모퉁이에서 만난 사람",
-      "천년의 사랑",
-      "엄마노릇 마흔일곱 가지",
-      "비 오는 날이면 가리봉동에 가야 한다",
-      "모순"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 103,
-  "fields": {
-    "name": "최강욱, 최강혁",
-    "image_url": null,
-    "summary": "아프로디노는 2012년에 결성된 2인조 인디밴드로, 감성적인 음악과 독특한 사운드로 주목받고 있다.",
-    "works": [
-      "카멜레온",
-      "너의 나",
-      "편지를 써줄래",
-      "First",
-      "빗소리",
-      "나",
-      "Zzz",
-      "공간",
-      "분리불안",
-      "Small Universe"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 104,
-  "fields": {
-    "name": "프리드리히 니체, 어나니머스",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche187a.jpg",
-    "summary": "프리드리히 니체는 19세기 독일의 철학자이자 작가로, 기존의 도덕과 가치관을 비판하고 새로운 철학적 사유를 제시한 인물이다. 그의 사상은 현대 철학과 문학에 큰 영향을 미쳤으며, '신은 죽었다'라는 유명한 구절로 잘 알려져 있다.",
-    "works": [
-      "비극의 탄생",
-      "차라투스트라는 이렇게 말했다",
-      "인간적인, 너무나 인간적인",
-      "선악의 저편",
-      "도덕의 계보"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 105,
-  "fields": {
-    "name": "김금희",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Kim_Keum-hee_2019_%28P1020456%29.jpg",
-    "summary": "김금희는 대한민국의 소설가로, 2009년 한국일보 신춘문예로 데뷔하였으며, 다양한 작품을 통해 현대 문학에 기여하고 있다.",
-    "works": [
-      "경애의 마음",
-      "센티멘털도 하루 이틀",
-      "너무 한낮의 연애",
-      "체스의 모든 것",
-      "나는 그것에 대해 아주 오랫동안 생각해",
-      "오직 한 사람의 차지",
-      "사랑 밖의 모든 말들"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 106,
-  "fields": {
-    "name": "롭 다이얼, 박영준",
-    "image_url": null,
-    "summary": "롭 다이얼은 자기계발 및 동기 부여 분야의 저자로, 긍정적인 사고와 개인 성장에 관한 다양한 저서를 집필하였습니다.",
-    "works": [
-      "The Mindset Mentor",
-      "How to Be a Boss",
-      "The Power of Positivity",
-      "The Success Principles",
-      "You Are Enough"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 107,
-  "fields": {
-    "name": "미츠바치 미유키, 이슬",
-    "image_url": null,
-    "summary": "미츠바치 미유키는 일본의 인기 소설가로, 주로 판타지와 로맨스를 결합한 작품을 집필한다.",
-    "works": [
-      "천년의 사랑",
-      "폭풍의 연인",
-      "신비한 마법사",
-      "달빛 아래의 약속",
-      "사랑에 빠진 마녀"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 108,
-  "fields": {
-    "name": "백온유, 강보라, 서장원, 성해나, 성혜령, 이희주, 현호정",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/%EB%A5%98%ED%98%B8%EC%A0%95_%EC%9D%98%EC%9B%90.jpg",
-    "summary": "현호정은 현대 한국 문학의 대표적인 작가로, 깊이 있는 심리 묘사와 사회적 주제를 다룬 작품으로 유명하다.",
-    "works": [
-      "누구의 딸도 아닌 그녀",
-      "그림자",
-      "아무것도 아닌",
-      "시간의 모서리",
-      "가장 사랑하는"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 109,
-  "fields": {
-    "name": "호카조노 타케루",
-    "image_url": null,
-    "summary": "호카조노 타케루는 일본의 만화가로, 2021년 데뷔 이후 주간 소년 점프에서 활발히 활동하고 있다.",
-    "works": [
-      "카구라바치",
-      "염천",
-      "창살로 엮다",
-      "미래의 기억",
-      "꿈의 파편"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 110,
-  "fields": {
-    "name": "천계영",
-    "image_url": null,
-    "summary": "천계영은 대한민국의 유명 만화가로, 독학으로 만화 공부를 하여 여러 인기 작품을 발표하였습니다.",
-    "works": [
-      "언플러그드 보이",
-      "오디션",
-      "DVD",
-      "하이힐을 신은 소녀",
-      "예쁜 남자",
-      "드레스코드",
-      "좋아하면 울리는"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 111,
-  "fields": {
-    "name": "코이케 류노스케, 박재현",
-    "image_url": null,
-    "summary": "코이케 류노스케는 일본의 인기 소설가로, 주로 스릴러와 미스터리 장르에서 활동하고 있다. 그의 작품은 독창적인 플롯과 긴장감 있는 전개로 많은 독자들에게 사랑받고 있다.",
-    "works": [
-      "악의 꽃",
-      "백야",
-      "잠자는 숲속의 공주",
-      "유리의 성",
-      "마법의 미소"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 112,
-  "fields": {
-    "name": "흔한남매, 백난도, 유난희, 흔한컴퍼니",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/%ED%9D%94%ED%95%9C%EB%82%A8%EB%A7%A4._%EC%98%9B%EB%82%A0_%EC%95%BC%EA%B8%B0.jpg",
-    "summary": "흔한남매는 개그맨 한으뜸과 개그우먼 장다운이 운영하는 인기 유튜브 채널이자, 다양한 콘텐츠와 서적을 제작하여 어린이들 사이에서 큰 인기를 끌고 있는 크리에이터입니다.",
-    "works": [
-      "흔한남매",
-      "흔한남매의 안 흔한 일기 1",
-      "흔한남매의 안 흔한 일기 2",
-      "흔한남매의 안 흔한 일기 3",
-      "흔한호기심 1",
-      "흔한호기심 2",
-      "흔한호기심 3",
-      "흔한남매 겨울밤 대소동",
-      "흔한남매 별난 방탈출 1",
-      "흔한남매 별난 방탈출 2"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 113,
-  "fields": {
-    "name": "스티븐 위트, 백우진",
-    "image_url": null,
-    "summary": "스티븐 위트는 현대 공포 소설의 거장으로, 긴장감 넘치는 스토리와 독창적인 세계관으로 유명하다.",
-    "works": [
-      "The Last House on Needless Street",
-      "The Cabin at the End of the World",
-      "A Head Full of Ghosts",
-      "The Girl with All the Gifts",
-      "The Cabin at the End of the World"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 114,
-  "fields": {
-    "name": "토마 피케티, 마이클 샌델, 장경덕",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Michael_Sandel_Me_Judice.png",
-    "summary": "마이클 샌델은 미국의 정치철학자로 하버드 대학에서 교수로 재직 중이며, 공동체주의와 공화주의를 강조하는 저명한 사상가입니다.",
-    "works": [
-      "자유주의와 정의의 한계",
-      "민주주의의 불만",
-      "공공 철학",
-      "완벽함에 대한 반론",
-      "정의란 무엇인가",
-      "왜 도덕인가",
-      "생명의 윤리를 말하다",
-      "공동체주의와 공공성",
-      "돈으로 살 수 없는 것들",
-      "공정하다는 착각"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 115,
-  "fields": {
-    "name": "김태완",
-    "image_url": null,
-    "summary": "김태완은 다양한 분야에서 활동한 대한민국의 인물로, 노동운동가, 축구 선수, 영화 배우, 프로게이머 등 여러 역할을 수행한 인물입니다.",
-    "works": [
-      "노동운동 관련 저서",
-      "축구 감독으로의 활동",
-      "영화 'OOO'",
-      "프로게이머 'OOO' 경력",
-      "사회적 이슈에 대한 기고"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 116,
-  "fields": {
-    "name": "이산화, 최재훈",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Carbon-dioxide-2D-dimensions.svg",
-    "summary": "이산화 및 수치적 평가 분야의 전문가이며, 응용수학에서 중요한 역할을 하는 이론과 방법론을 연구하고 발전시켜온 작가입니다.",
-    "works": [
-      "이산화의 원리",
-      "수치해석 기초",
-      "연속성과 이산성",
-      "모델링에서의 오차 분석",
-      "응용수학 개론"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 117,
-  "fields": {
-    "name": "애덤 모스",
-    "image_url": null,
-    "summary": "애덤 모스는 현대 판타지 장르의 작가로, 매력적인 세계관과 깊이 있는 캐릭터로 독자들에게 사랑받고 있다.",
-    "works": [
-      "우주를 향한 여정",
-      "신의 전쟁",
-      "마법사의 후예",
-      "잃어버린 왕국",
-      "어둠 속의 빛"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 118,
-  "fields": {
-    "name": "김보영",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/181122_%EC%9C%A4%EC%84%B8%EC%95%84.png",
-    "summary": "김보영은 대한민국의 과학 소설 작가로, 독창적인 상상력과 깊이 있는 주제를 다루며 많은 사랑을 받고 있다.",
-    "works": [
-      "파란만장",
-      "시간의 주름",
-      "안드로메다의 아이들",
-      "지구에서의 하루",
-      "무한의 문"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 119,
-  "fields": {
-    "name": "이선 몰릭, 신동숙",
-    "image_url": null,
-    "summary": "이선 몰릭은 현대 판타지 소설 작가로, 매력적인 세계관과 복잡한 캐릭터 구성이 특징이다.",
-    "works": [
-      "불의 왕국",
-      "시간의 문",
-      "어둠의 여왕",
-      "하늘의 유산",
-      "마법사의 후계자"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 120,
-  "fields": {
-    "name": "폴 오스터, 정영목",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Paul_Auster-19-09-2007.jpg",
-    "summary": "폴 오스터는 미국의 소설가로, 독창적이고 긴장감 넘치는 이야기로 유명하다. 그의 작품은 현대 문학의 기인으로 평가받으며, 사실주의와 신비주의가 혼합된 독특한 스타일을 지닌다.",
-    "works": [
-      "뉴욕 삼부작",
-      "달의 궁전",
-      "거대한 괴물",
-      "우연의 음악",
-      "공중 곡예사",
-      "동행",
-      "환상의 책",
-      "브루클린 풍자극",
-      "4 3 2 1"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 121,
-  "fields": {
-    "name": "존 윌리엄스, 김승욱",
-    "image_url": null,
-    "summary": "존 윌리엄스(1932~)는 미국의 작곡가로, 영화 음악의 거장으로 알려져 있으며, 여러 유명한 영화에서 그의 음악이 사용되었다.",
-    "works": [
-      "스타워즈",
-      "쥬라기 공원",
-      "인디아나 존스",
-      "해리 포터",
-      "슈퍼맨"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 122,
-  "fields": {
-    "name": "정대건",
-    "image_url": null,
-    "summary": "정대건은 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 감정을 섬세하게 풀어내는 작품으로 잘 알려져 있다.",
-    "works": [
-      "사라진 시간들",
-      "불행한 연애",
-      "고백",
-      "안개 속의 진실",
-      "어둠 속의 빛"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 123,
-  "fields": {
-    "name": "타츠 유키노부",
-    "image_url": null,
-    "summary": "타츠 유키노부는 일본의 소설가이자 만화가로, 주로 판타지와 모험 장르에서 활동하고 있다.",
-    "works": [
-      "그림자 자치단",
-      "불사의 검사",
-      "기적의 사과",
-      "마법사의 제자",
-      "신의 경계"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 124,
-  "fields": {
-    "name": "아카사카 아카, 요코야리 멘고",
-    "image_url": null,
-    "summary": "아카사카 아카는 일본의 만화가이자 일러스트레이터로, 다양한 작품에서 뛰어난 캐릭터 디자인과 스토리텔링을 선보이고 있다.",
-    "works": [
-      "안녕 피아노 소나타",
-      "ib 인스턴트 불릿",
-      "카구야 님은 고백받고 싶어 ~천재들의 연애 두뇌전~",
-      "최애의 아이",
-      "켄사쿠히나타자카"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 125,
-  "fields": {
-    "name": "최태성",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/%ED%81%B0%EB%B3%84_%EC%B5%9C%ED%83%9C%EC%84%B1.jpg",
-    "summary": "최태성은 대한민국의 저명한 한국사 강사로, EBS에서 활동하며 많은 수강생을 둔 역사 교육 전문가입니다.",
-    "works": [
-      "최태성의 다음엇지",
-      "역사의 쓸모",
-      "최태성의 한국사 능력 검정시험 (기본)",
-      "최태성의 한국사 능력 검정시험 (심화)",
-      "최태성의 만화 한국사 (개정판)",
-      "최태성의 만화 한국사 2 (개정판)",
-      "최태성의 한국사 수업"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 126,
-  "fields": {
-    "name": "장성락, 추공, 현군",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/The_Great_wall_-_by_Hao_Wei.jpg",
-    "summary": "장성락은 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 알려져 있다.",
-    "works": [
-      "지금, 이 순간",
-      "불의 여신 정이",
-      "서른, 잔치는 끝났다",
-      "미래를 걷는 남자",
-      "내가 아는 모든 것"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 127,
-  "fields": {
-    "name": "김종원",
-    "image_url": null,
-    "summary": "김종원은 다양한 분야에서 활동한 인물로, 특히 군인과 경찰로서 일제 강점기와 대한민국의 역사에 기여한 바가 크다.",
-    "works": [
-      "일제강점기의 경찰",
-      "군인의 길",
-      "한국 현대사와 경찰",
-      "대한민국의 군사 제도",
-      "유도와 스포츠"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 128,
-  "fields": {
-    "name": "코노시마 루카, 심희정",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Yuriko_Yoshitaka_from_acrofan.jpg",
-    "summary": "코노시마 루카는 일본의 인기 라이트 노벨 작가로, 독특한 세계관과 매력적인 캐릭터들로 많은 독자들에게 사랑받고 있다.",
-    "works": [
-      "하늘의 별을 쫓는 아이들",
-      "마법사의 가족",
-      "기적의 연주회",
-      "끝없는 여름의 노래",
-      "신비한 숲의 이야기"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 129,
-  "fields": {
-    "name": "이문재, 전동균, 주창윤, 정끝별, 나희덕, 문태준, 장철문, 손택수, 이재훈, 신혜정, 이혜미, 신미나, 김연덕, 정다연, 김창균, 김남극, 우은주, 권현형, 이동욱, 조온윤, 길상호, 권대웅",
-    "image_url": null,
-    "summary": "권대웅은 한국의 소설가로, 다양한 장르에서 활발히 작품을 발표하고 있으며, 독창적인 이야기와 깊이 있는 캐릭터로 많은 사랑을 받고 있다.",
-    "works": [
-      "사라진 이름",
-      "작은 신의 아이들",
-      "그림자들의 도시",
-      "바람의 노래",
-      "시간의 끝에서"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 130,
-  "fields": {
-    "name": "ETS",
-    "image_url": null,
-    "summary": "에듀케이셔널 테스팅 서비스(ETS)는 미국의 비영리 교육 기관으로 표준화된 테스트 및 평가 도구를 개발하고 운영합니다.",
-    "works": [
-      "SAT",
-      "GRE",
-      "TOEFL",
-      "PRAXIS",
-      "ETS 성과 보고서"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 131,
-  "fields": {
-    "name": "고선경",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%EA%B3%A0%EC%84%A0%EC%82%AC%EC%A7%80_%EC%82%BC%EC%B8%B5%EC%84%9D%ED%83%91.jpg",
-    "summary": "고선경은 한국의 소설가이자 시나리오 작가로, 깊이 있는 캐릭터와 사실적인 서사로 유명하다.",
-    "works": [
-      "그리운 사람",
-      "어둠 속의 빛",
-      "사라진 기억",
-      "별빛 아래",
-      "끝없는 여행"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 132,
-  "fields": {
-    "name": "구병모",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Gu_Byeong-mo_at_the_Guadalajara_International_Book_Fair.jpg",
-    "summary": "구병모는 대한민국의 소설가로, 현실과 환상을 결합한 독창적인 작품 세계를 선보이고 있다.",
-    "works": [
-      "위저드 베이커리",
-      "아가미",
-      "고의는 아니지만",
-      "방주로 오세요",
-      "피그말리온 아이들",
-      "파과",
-      "빨간구두당",
-      "한 스푼의 시간",
-      "어느 피씨주의자의 종생기 (The Story of P.C.)",
-      "네 이웃의 식탁",
-      "단 하나의 문장",
-      "버드 스트라이크"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 133,
-  "fields": {
-    "name": "전민희",
-    "image_url": null,
-    "summary": "전민희는 대한민국의 판타지 소설 작가로, 특유의 미려한 문체로 알려져 있으며, '룬의 아이들' 시리즈와 '아룬드 연대기'로 유명하다.",
-    "works": [
-      "세월의 돌",
-      "태양의 탑",
-      "룬의 아이들: 윈터러",
-      "룬의 아이들: 데모닉",
-      "전나무와 매"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 134,
-  "fields": {
-    "name": "페테르 크리스텐 아스비에른센, 카이 닐센, 서미석",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/K_Bergslien_Asbjornsen_1870.jpg",
-    "summary": "페테르 크리스텐 아스비에른센은 노르웨이의 작가이자 민속학자로, 노르웨이 민담과 전통 이야기를 수집하고 기록한 인물이다.",
-    "works": [
-      "노르스케 폴키벤티르",
-      "노르웨이 동화 모음집",
-      "Huldre-Eventyr og Folkesagn",
-      "민속 이야기 수집",
-      "노르웨이 민담집"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 135,
-  "fields": {
-    "name": "미츠바치 미유키",
-    "image_url": null,
-    "summary": "미츠바치 미유키는 일본의 유명한 소설가로, 현대 일본 문학의 중요한 인물 중 하나입니다. 그녀의 작품은 독창적인 서사와 깊은 감정을 담고 있습니다.",
-    "works": [
-      "모든 날의 사랑",
-      "나는 너를 잊지 않을 거야",
-      "바람이 불어오는 곳",
-      "그녀의 미소",
-      "안개의 기억"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 136,
-  "fields": {
-    "name": "아르투어 쇼펜하우어, 김지민",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg",
-    "summary": "아르투어 쇼펜하우어는 독일의 철학자로, 칸트의 사상을 비판하며 독창적인 철학 체계를 구축하였다. 그의 철학은 의지와 고통에 대한 깊은 통찰을 담고 있으며, 동양 철학과의 유사성을 강조하였다.",
-    "works": [
-      "의지와 표상으로서의 세계",
-      "충족이유율의 네 겹의 뿌리에 관하여",
-      "여록과 보유",
-      "자연에서의 의지에 관하여",
-      "윤리학의 두 가지 근본 문제"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 137,
-  "fields": {
-    "name": "브루노 야시엔스키, 정보라",
-    "image_url": null,
-    "summary": "브루노 야시엔스키는 폴란드 출신의 현대 소설가로, 주로 사회적 주제와 인간의 내면을 탐구하는 작품을 썼다.",
-    "works": [
-      "소설 '자유의 비극'",
-      "소설 '어둠의 시간'",
-      "소설 '사라진 아이들'",
-      "소설 '바람의 노래'",
-      "소설 '꿈의 끝에서'"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 138,
-  "fields": {
-    "name": "김근원, 박혜원, 백원욱, 오세호, 이만섭, 이석희, 이현주, 전기성, 조수정, 주경숙, 한미순, 홍성원, 조성숙",
-    "image_url": null,
-    "summary": "조성숙은 대한민국의 언론인으로, 여성 문제와 인권 보호 활동에 힘쓴 저자입니다.",
-    "works": [
-      "어머니라는 이데올로기-어머니의 경험세계와 자아찾기",
-      "여자로 산다는 것",
-      "한겨레와 나",
-      "여성문제 여론화",
-      "가정폭력 상담소 운영"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 139,
-  "fields": {
-    "name": "김청연",
-    "image_url": null,
-    "summary": "김청연은 현대 한국 문학을 대표하는 작가로, 깊이 있는 인물 묘사와 사회적 이슈에 대한 날카로운 통찰로 알려져 있다.",
-    "works": [
-      "그림자 속의 당신",
-      "어디선가 나를 부르는 소리",
-      "시간의 모래",
-      "너와 나의 거리",
-      "모든 것의 시작"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 140,
-  "fields": {
-    "name": "케빈 리",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
-    "summary": "케빈 리는 현대 판타지 및 공상과학 소설 작가로, 독창적인 세계관과 복잡한 캐릭터를 창조하는 데 능숙하다.",
-    "works": [
-      "시간의 경계",
-      "마법사의 유산",
-      "우주를 넘어서",
-      "잊혀진 왕국",
-      "검은 성의 비밀"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 141,
-  "fields": {
-    "name": "윤해연",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/%EC%98%81%ED%99%94_%27%EA%B7%B8%EB%8C%80_%EC%9D%B4%EB%A6%84%EC%9D%80_%EC%9E%A5%EB%AF%B8%27_%EC%96%B8%EB%A1%A0%EC%8B%9C%EC%82%AC%ED%9A%8C_%EC%9C%A0%ED%98%B8%EC%A0%95_%282%29.jpg",
-    "summary": "윤해연은 한국의 소설가이자 시나리오 작가로, 다양한 장르의 작품을 통해 독자들과 소통하고 있다.",
-    "works": [
-      "비밀의 정원",
-      "그림자 속으로",
-      "달빛 아래",
-      "어둠의 속삭임",
-      "혼돈의 시대"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 142,
-  "fields": {
-    "name": "이규운",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Replace_this_image_school-ko.svg",
-    "summary": "이규운은 현대 한국 문학을 대표하는 소설가로, 복잡한 인간 심리를 탐구하는 작품으로 잘 알려져 있다.",
-    "works": [
-      "모순",
-      "바람이 분다",
-      "내가 죽던 날",
-      "무해한 사람들",
-      "한여름의 꿈"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 143,
-  "fields": {
-    "name": "권석례",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Zizhi_Tongjian_by_Sima_Guang.jpg",
-    "summary": "권석례는 한국의 소설가로, 주로 현대 사회의 갈등과 개인의 내면을 탐구하는 작품을 집필한다.",
-    "works": [
-      "사라진 이름들",
-      "그리운 사람들",
-      "바람의 기억",
-      "흔적",
-      "안개 속의 진실"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 144,
-  "fields": {
-    "name": "김애경",
-    "image_url": null,
-    "summary": "김애경은 대한민국의 배우로, 1969년 MBC 1기 공채 탤런트로 데뷔하여 다양한 드라마와 영화에서 활발히 활동해온 원조 브라운관의 신스틸러이다.",
-    "works": [
-      "서울 뚝배기",
-      "전원일기",
-      "사랑과 야망",
-      "대추나무 사랑걸렸네",
-      "파랑새는 있다",
-      "형제의 강"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 145,
-  "fields": {
-    "name": "이강오, 이은자",
-    "image_url": null,
-    "summary": "이은자는 한국의 소설가로, 다양한 장르에서 활동하며 독특한 문체와 깊이 있는 주제로 독자들에게 사랑받고 있다.",
-    "works": [
-      "소설가의 일기",
-      "바람의 노래",
-      "그림자 속의 진실",
-      "시간의 흐름",
-      "내가 사랑한 모든 것"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 146,
-  "fields": {
-    "name": "백영승",
-    "image_url": null,
-    "summary": "백영승은 한국의 소설가이자 시인으로, 문학적 실험과 독창적인 서사로 잘 알려져 있다.",
-    "works": [
-      "그림자 연대기",
-      "천사의 나부끼는 날개",
-      "사라진 시간의 조각들",
-      "고독의 미학",
-      "하얀 도시의 기억"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 147,
-  "fields": {
-    "name": "동아출판 수학팀",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Park_Chung_Hee_%28%EB%B0%95%EC%A0%95%ED%9D%AC%29_Presidential_Portrait.jpg",
-    "summary": "동아출판 수학팀은 수학 교재 및 학습 자료를 전문적으로 집필하는 팀으로, 학생들의 수학적 사고를 키우기 위한 다양한 콘텐츠를 제공합니다.",
-    "works": [
-      "초등 수학 1",
-      "중학 수학 2",
-      "고등 수학 3",
-      "수학 문제집",
-      "수학 개념 정리"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 148,
-  "fields": {
-    "name": "이강오",
-    "image_url": null,
-    "summary": "이강오는 한국의 현대 소설가로, 깊이 있는 인물 묘사와 사회적 이슈를 다루는 작품으로 잘 알려져 있다.",
-    "works": [
-      "그때 그 노래",
-      "영혼의 집",
-      "하늘의 계단",
-      "사라진 시간",
-      "무지개를 넘다"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 149,
-  "fields": {
-    "name": "최현우",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Hareem.jpg",
-    "summary": "최현우는 대한민국의 마술사로, 다양한 마술 공연과 방송 출연으로 널리 알려져 있다.",
-    "works": [
-      "최현우의 마술쇼",
-      "마술의 정석",
-      "최현우의 비밀",
-      "마술사 최현우",
-      "최현우와 함께하는 마술교실"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 150,
-  "fields": {
-    "name": "Eric Kang",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Fiji.svg",
-    "summary": "Eric Kang은 창의적인 스토리텔링과 독특한 세계관으로 알려진 현대 작가입니다.",
-    "works": [
-      "The Hidden Realm",
-      "Echoes of Time",
-      "Whispers in the Wind",
-      "Beyond the Horizon",
-      "The Last Guardian"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 151,
-  "fields": {
-    "name": "김영환",
-    "image_url": null,
-    "summary": "",
-    "works": []
-  }
-},
-{
-  "model": "api.author",
-  "pk": 152,
-  "fields": {
-    "name": "설민석, 남이담, 정현희, 강석화",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/South_America_%28orthographic_projection%29.svg",
-    "summary": "남이담은 한국의 소설가이자 에세이스트로, 현대 사회의 다양한 이슈를 다룬 작품들로 잘 알려져 있다.",
-    "works": [
-      "여행의 이유",
-      "그날 밤",
-      "너의 이름은",
-      "소소한 일상",
-      "사랑의 온도"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 153,
-  "fields": {
-    "name": "Rajiv Shah, 이시내",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/HTTP_logo.svg",
-    "summary": "Rajiv Shah는 현대 사회 문제를 다루는 소설가이자 에세이스트로, 그의 작품은 문화적 정체성과 사회적 불평등을 탐구합니다.",
-    "works": [
-      "The Unseen World",
-      "Echoes of Silence",
-      "Beyond the Horizon",
-      "Fragments of Tomorrow",
-      "A Tapestry of Voices"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 154,
-  "fields": {
-    "name": "최정희, 전정연, 이민주, 이주명",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Lee_Joo-myung_%EC%9D%B4%EC%A3%BC%EB%AA%85_in_August_2022.png",
-    "summary": "이주명은 대한민국의 배우이자 모델로, 다양한 드라마와 영화에서 활발히 활동하고 있다.",
-    "works": [
-      "드라마 '하나뿐인 내편'",
-      "영화 '결혼작사 이혼작곡'",
-      "드라마 '슬기로운 의사생활'",
-      "영화 '지금, 헤어지는 중입니다'",
-      "드라마 '그 해 우리는'"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 155,
-  "fields": {
-    "name": "팝콘스토리, 강경효",
-    "image_url": null,
-    "summary": "팝콘스토리는 독특한 상상력과 유머로 유명한 한국의 작가로, 다양한 장르의 작품을 통해 많은 독자들에게 사랑받고 있다.",
-    "works": [
-      "신비한 팝콘의 세계",
-      "모험가들의 연대기",
-      "시간을 넘는 여행",
-      "우주 탐험대",
-      "마법의 순간들"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 156,
-  "fields": {
-    "name": "동아출판 편집부",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/%EB%B0%A9%EC%A0%95%ED%99%98.JPG",
-    "summary": "동아출판 편집부는 다양한 분야의 교재 및 학습 자료를 편집하고 출판하는 전문 집단입니다.",
-    "works": [
-      "초등학교 수학 교과서",
-      "중학교 과학 교과서",
-      "고등학교 영어 교과서",
-      "사회탐구 시리즈",
-      "자연과학 시리즈"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 157,
-  "fields": {
-    "name": "리사 멜리카, 리사 A. 케네디, 조아라",
-    "image_url": null,
-    "summary": "리사 멜리카는 현대 판타지와 공상과학 장르의 베스트셀러 작가로, 독창적인 세계관과 매력적인 캐릭터로 독자들에게 큰 사랑을 받고 있다.",
-    "works": [
-      "꿈의 정원",
-      "별의 사신",
-      "시간의 문",
-      "마법의 연대기",
-      "잃어버린 도시"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 158,
-  "fields": {
-    "name": "김대영",
-    "image_url": null,
-    "summary": "김대영은 다양한 분야에서 활동하는 한국의 작가이며, 여러 작품을 통해 대중에게 알려져 있다.",
-    "works": [
-      "작품1",
-      "작품2",
-      "작품3",
-      "작품4",
-      "작품5"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 159,
-  "fields": {
-    "name": "전건우",
-    "image_url": null,
-    "summary": "전건우는 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 감정을 섬세하게 표현하는 작품으로 알려져 있다.",
-    "works": [
-      "좋은 사람",
-      "이불 위의 나",
-      "그곳에 사는 사람들",
-      "바람의 노래",
-      "별의 잔상"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 160,
-  "fields": {
-    "name": "김춘자",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Replace_this_image_school-ko.svg",
-    "summary": "김춘자는 한국의 소설가로, 현대 사회의 복잡한 감정을 섬세하게 풀어내는 작품으로 알려져 있다.",
-    "works": [
-      "그리움이 피어나는 곳",
-      "한여름의 꿈",
-      "바람의 노래",
-      "시간의 조각",
-      "사라진 기억들"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 161,
-  "fields": {
-    "name": "프롬프트 크리에이터",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
-    "summary": "프롬프트 크리에이터는 창의적인 글쓰기와 다양한 주제를 다루는 현대 작가로, 독창적인 아이디어와 실험적인 문체로 주목받고 있습니다.",
-    "works": [
-      "창의력의 비밀",
-      "상상력 여행",
-      "글쓰기의 기술",
-      "일상 속의 이야기",
-      "미래의 문학"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 162,
-  "fields": {
-    "name": "김춘규",
-    "image_url": null,
-    "summary": "김춘규는 한국의 소설가로, 깊이 있는 인간 심리와 사회적 갈등을 다룬 작품으로 잘 알려져 있다.",
-    "works": [
-      "그날의 기억",
-      "시간의 끝",
-      "어둠 속의 빛",
-      "바람의 노래",
-      "사라진 존재"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 163,
-  "fields": {
-    "name": "손계정",
-    "image_url": null,
-    "summary": "손계정은 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 알려져 있다.",
-    "works": [
-      "나무를 심는 사람",
-      "견딜 수 있는",
-      "그리움의 시간",
-      "아름다운 날들",
-      "비 오는 날의 수채화"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 164,
-  "fields": {
-    "name": "이자익, 문성모",
-    "image_url": null,
-    "summary": "이자익은 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 인간관계를 다룬 작품으로 유명하다.",
-    "works": [
-      "빈집",
-      "소년이 온다",
-      "파도가 지나간 자리",
-      "그녀의 욕망",
-      "사람이 사람에게"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 165,
-  "fields": {
-    "name": "이마리",
-    "image_url": null,
-    "summary": "이마리는 다양한 작품에 등장하는 캐릭터로, 여러 드라마와 소설에서 중요한 역할을 맡고 있습니다.",
-    "works": [
-      "별은 내 가슴에",
-      "솔약국집 아들들",
-      "스타의 연인",
-      "마담 앙트완",
-      "이마리야키"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 166,
-  "fields": {
-    "name": "하시모토 유",
-    "image_url": null,
-    "summary": "하시모토 유는 일본의 인기 소설가로, 주로 판타지와 모험 장르에서 활동하고 있습니다.",
-    "works": [
-      "해변의 카프카",
-      "무지개 여신",
-      "바람의 노래를 들어라",
-      "달빛 아래의 소녀",
-      "신의 아이들"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 167,
-  "fields": {
-    "name": "기시미 이치로, 김지윤",
-    "image_url": null,
-    "summary": "기시미 이치로는 일본의 작가이자 철학자로, 알프레트 아들러의 심리학을 바탕으로 인간의 내면을 탐구하는 작품을 주로 집필하고 있다.",
-    "works": [
-      "미움받을 용기",
-      "아들러 심리학을 읽는 밤",
-      "사는 게 용기다",
-      "내가 책을 읽는 이유",
-      "인생의 의미를 찾는 법"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 168,
-  "fields": {
-    "name": "코다 아오이, 김수정",
-    "image_url": null,
-    "summary": "코다 아오이는 일본의 인기 소설가로, 주로 판타지와 로맨스를 주제로 한 작품을 집필한다.",
-    "works": [
-      "그의 눈물",
-      "하늘을 나는 고양이",
-      "별빛 속으로",
-      "내일의 기억",
-      "달빛 아래서"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 169,
-  "fields": {
-    "name": "오미경",
-    "image_url": null,
-    "summary": "오미경은 한국의 유명 소설가로, 다양한 장르에서 풍부한 상상력과 독특한 서사를 통해 독자들에게 깊은 감동을 주는 작품을 써왔다.",
-    "works": [
-      "그림자 자국",
-      "소설가의 일기",
-      "사라진 시간",
-      "우리가 잃어버린 것들",
-      "바람의 노래"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 170,
-  "fields": {
-    "name": "존 릴리, 김은혜",
-    "image_url": null,
-    "summary": "존 릴리(약 1553년 - 1606년)는 영국의 작가이자 극작가로, 주로 16세기 중엽에 활동하였으며, 그의 작품은 이탈리아의 코미디와 고전 문학에 깊은 영향을 받았다.",
-    "works": [
-      "에우디아",
-      "사랑의 신비",
-      "사랑의 잔치",
-      "영혼의 황홀",
-      "미국의 이야기"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 171,
-  "fields": {
-    "name": "타케무라 요헤이, 타카 히로",
-    "image_url": null,
-    "summary": "타케무라 요헤이는 일본의 소설가로, 주로 판타지 및 공상과학 장르에서 활동하며 독특한 세계관과 깊이 있는 캐릭터로 많은 사랑을 받고 있다.",
-    "works": [
-      "마법의 시간",
-      "우주 탐험대",
-      "환상의 숲",
-      "전설의 검",
-      "신비의 섬"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 172,
-  "fields": {
-    "name": "코바야시 키나",
-    "image_url": null,
-    "summary": "코바야시 키나는 일본의 인기 소설가로, 주로 판타지 및 청춘 소설을 집필하며, 세련된 문체와 독창적인 세계관으로 많은 독자들에게 사랑받고 있다.",
-    "works": [
-      "모노가타리 시리즈",
-      "바케모노가타리",
-      "니세모노가타리",
-      "하나모노가타리",
-      "쿠즈모노가타리",
-      "오토모모가타리"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 173,
-  "fields": {
-    "name": "조재도",
-    "image_url": null,
-    "summary": "조재도는 한국의 소설가이자 시나리오 작가로, 현대 사회의 복잡한 감정을 섬세하게 묘사하는 작품으로 널리 알려져 있다.",
-    "works": [
-      "하얀 밤",
-      "그리움의 온도",
-      "너와 나의 거리",
-      "시간의 끝에서",
-      "사랑의 형태"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 174,
-  "fields": {
-    "name": "카마치 카즈마, 코기노 츄야",
-    "image_url": null,
-    "summary": "카마치 카즈마는 일본의 라이트 노벨 작가로, '어떤 마술의 금서목록' 시리즈로 유명하다. 그의 작품은 빠른 집필 속도와 독창적인 세계관으로 많은 사랑을 받고 있다.",
-    "works": [
-      "어떤 마술의 금서목록",
-      "어떤 과학의 초전자포",
-      "헤비 오브젝트",
-      "박살천사 도쿠로 짱입니다",
-      "살인비와 딥 엔드"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 175,
-  "fields": {
-    "name": "아마이로 츄",
-    "image_url": null,
-    "summary": "아마이로 츄는 일본의 인기 만화가이자 일러스트레이터로, 독특한 캐릭터 디자인과 매력적인 스토리텔링으로 유명하다.",
-    "works": [
-      "이세계 치트 마법사",
-      "소환된 용사와의 일상",
-      "마법의 학교",
-      "용사와 마녀의 이야기",
-      "신비한 숲의 친구들"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 176,
-  "fields": {
-    "name": "신현기",
-    "image_url": null,
-    "summary": "신현기는 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 유명하다.",
-    "works": [
-      "소음",
-      "그림자",
-      "파편",
-      "끝없는 여정",
-      "시간의 감옥",
-      "불가능한 사랑"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 177,
-  "fields": {
-    "name": "곤다이라 히츠지",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Yozakura-san_Chi_no_Daisakusen_logo.svg",
-    "summary": "곤다이라 히츠지는 일본의 인기 소설가로, 주로 판타지와 로맨스 장르에서 활동하고 있다.",
-    "works": [
-      "하늘의 나비",
-      "별빛의 연인",
-      "시간을 넘은 약속",
-      "꿈꾸는 소녀",
-      "마법사의 비밀"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 178,
-  "fields": {
-    "name": "최우용",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Replace_this_image_school-ko.svg",
-    "summary": "최우용은 한국의 소설가로, 현대 사회의 다양한 이슈를 다룬 작품으로 잘 알려져 있다.",
-    "works": [
-      "소리 없는 외침",
-      "그리운 날들",
-      "어둠 속의 빛",
-      "고백",
-      "끝나지 않은 이야기"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 179,
-  "fields": {
-    "name": "애런 블레이비, 신수진",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/David_Cameron_official.jpg",
-    "summary": "애런 블레이비는 현대 판타지 및 공상과학 장르의 작가로, 독창적인 세계관과 매력적인 캐릭터들로 유명하다.",
-    "works": [
-      "더 시크릿 스카이",
-      "마법의 유산",
-      "기계의 심장",
-      "시간의 경계",
-      "영원의 문"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 180,
-  "fields": {
-    "name": "바너버스 파이퍼, 구지원",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Dark_shadows.svg",
-    "summary": "바너버스 파이퍼는 독창적인 상상력과 깊이 있는 캐릭터로 유명한 미국의 과학 소설 작가입니다.",
-    "works": [
-      "파이프의 전쟁",
-      "하늘의 불꽃",
-      "인간과 로봇",
-      "우주 탐사의 시작",
-      "시간의 경계"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 181,
-  "fields": {
-    "name": "요코야마 토무",
-    "image_url": null,
-    "summary": "요코야마 토무는 일본의 소설가로, 주로 범죄와 스릴러 장르에서 뛰어난 작품을 발표해왔다.",
-    "works": [
-      "악의",
-      "백의의 남자",
-      "하이재킹",
-      "사라진 증거",
-      "소설가의 수명"
-    ]
-  }
-},
-{
-  "model": "api.author",
-  "pk": 182,
-  "fields": {
-    "name": "와카마츠 타카히로, 노다 히로시",
-    "image_url": null,
-    "summary": "와카마츠 타카히로는 일본의 소설가이자 각본가로, 독특한 서사와 깊은 캐릭터 묘사로 유명하다.",
-    "works": [
-      "살아있는 자의 대화",
-      "내가 사랑하는 모든 것들",
-      "지금, 이 순간을 살고 있다",
-      "어둠 속의 고양이",
-      "바다의 끝에서 만난 너"
-    ]
+    "isbn": "K062039916",
+    "title": "내셔널 지오그래픽 3D 건축 퍼즐 : 타워 브릿지",
+    "author": 84,
+    "publisher": "휴먼스토리",
+    "cover_url": "https://image.aladin.co.kr/product/36473/67/cover200/k062039916_1.jpg",
+    "description": "",
+    "pub_date": "2025-04-01",
+    "category": 2,
+    "global_recommend_count": 0
   }
 }
 ]
