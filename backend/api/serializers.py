@@ -1,47 +1,45 @@
 from rest_framework import serializers
-from .models import Book, Review
+from .models import Book, Author, Category, EmotionTag, Review
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['name']
+
+
+class AuthorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Author
+        fields = ['name', 'image_url', 'summary', 'works']
+
 
 class BookSerializer(serializers.ModelSerializer):
+    author   = AuthorSerializer()
+    category = CategorySerializer()
+
     class Meta:
-        model = Book
+        model  = Book
         fields = [
-            "id",
-            "isbn",
-            "title",
-            "publisher",
-            "cover_url",
-            "description",
-            "pub_date",
-            "category",
-            "global_recommend_count",
+            'id',
+            'isbn',
+            'title',
+            'publisher',
+            'cover_url',
+            'description',
+            'pub_date',
+            'category',
+            'global_recommend_count',
+            'author',
         ]
 
 
-class BookDetailSerializer(BookSerializer):
-    author_name    = serializers.CharField(source="author.name", read_only=True)
-    author_image   = serializers.URLField(source="author.image_url", read_only=True)
-    author_summary = serializers.CharField(source="author.summary", read_only=True)
-    author_works   = serializers.ListField(source="author.works", read_only=True)
-
-    class Meta(BookSerializer.Meta):
-        fields = BookSerializer.Meta.fields + [
-            "author_name",
-            "author_image",
-            "author_summary",
-            "author_works",
-        ]
+class EmotionTagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model  = EmotionTag
+        fields = ['name']
 
 
 class ReviewSerializer(serializers.ModelSerializer):
-    user = serializers.StringRelatedField(read_only=True)
-    book = serializers.StringRelatedField(read_only=True)
-
     class Meta:
-        model = Review
-        fields = [
-            "id",
-            "user",
-            "book",
-            "content",
-            "created_at",
-        ]
+        model  = Review
+        fields = ['id', 'book', 'user', 'content', 'created_at']

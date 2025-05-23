@@ -172,6 +172,8 @@ AUTH_USER_MODEL = 'accounts.User'
 
 # 정적 파일
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+DEFAULT_AUTHOR_IMAGE = STATIC_URL + 'images/default_author.png'
 
 # 미디어(업로드된 이미지) 설정
 MEDIA_URL = '/media/'
