@@ -81,13 +81,25 @@ export const router = createRouter({
 });
 
 // 전역 네비게이션 가드 (로그인 필요 페이지 접근 제어)
-router.beforeEach((to, from, next) => {
-  const authStore = useAuthStore();
-  if (to.meta.requiresAuth && !authStore.token) {
-    next("/login");
-  } else {
-    next();
+router.beforeEach(async (to, from, next) => {
+  const auth = useAuthStore()
+
+  // 토큰은 있는데 유저 정보는 없으면 → 사용자 정보 불러오기
+  if (auth.token && !auth.user) {
+    try {
+      await auth.fetchMe()
+    } catch (err) {
+      // fetchMe 실패 시 토큰 무효화
+      auth.logout()
+    }
   }
-});
+
+  // 로그인 필요한 페이지인데 로그인 안 되어 있으면 → 로그인 페이지로
+  if (to.meta.requiresAuth && !auth.user) {
+    next({ name: 'Login' })
+  } else {
+    next()
+  }
+})
 
 export default router;

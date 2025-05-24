@@ -15,7 +15,7 @@ export const useProfileStore = defineStore("profile", {
   actions: {
     async fetchMe() {
       const { data } = await axios.get("/api/auth/users/me", {
-        headers: { Authorization: `Token ${localStorage.token}` },
+        headers: { Authorization: `Token ${localStorage.getItem('token')}` },
       });
       this.$patch({
         nickname: data.nickname,
@@ -37,7 +37,7 @@ export const useProfileStore = defineStore("profile", {
       await axios.patch("/api/auth/users/me", form, {
         headers: {
           "Content-Type": "multipart/form-data",
-          Authorization: `Token ${localStorage.token}`,
+          Authorization: `Token ${localStorage.getItem('token')}`,
         },
       });
       // 변경 반영

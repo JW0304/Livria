@@ -15,7 +15,7 @@ class EmotionTag(models.Model):
         return self.name
 
 class User(AbstractUser):
-    nickname       = models.CharField(max_length=50, blank=True)
+    nickname       = models.CharField(max_length=30, blank=True)
     age            = models.PositiveIntegerField(null=True, blank=True)
     # 업로드된 프로필 이미지 파일
     avatar         = models.ImageField(

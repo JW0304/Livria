@@ -7,30 +7,16 @@
       </div>
 
       <form @submit.prevent="handleSignup">
-        <input v-model="username" placeholder="아이디를 입력하세요." required />
-        <input
-          v-model="password"
-          type="password"
-          placeholder="비밀번호를 입력하세요."
-          required
-        />
-        <input
-          v-model="nickname"
-          placeholder="닉네임을 입력하세요(3글자 이상)"
-          required
-        />
-        <input
-          v-model.number="age"
-          type="number"
-          placeholder="나이를 입력하세요."
-          required
-        />
+        <input v-model="username" placeholder="아이디 (최대 30자)" maxlength="30" required />
+        <input v-model="password" type="password" placeholder="비밀번호 (최대 30자)" maxlength="30" required />
+        <input v-model="passwordCheck" type="password" placeholder="비밀번호 재입력" maxlength="30" required />
+        <input v-model="nickname" placeholder="닉네임 (최대 30자)" maxlength="30" required />
+        <input v-model.number="age" type="number" min="1" max="110" placeholder="나이 (1~110)" required />
 
         <div class="tags">
           <p class="tag-label">
-            태그를 선택하세요 (1개 이상)<br /><small
-              >* 태그를 기반으로 도서에 맞는 음악을 추천해드립니다.</small
-            >
+            태그를 선택하세요 (1개 이상)<br />
+            <small>* 태그를 기반으로 도서에 맞는 음악을 추천해드립니다.</small>
           </p>
           <div class="tag-list">
             <button
@@ -59,11 +45,12 @@ import { useRouter } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 import axios from "axios";
 
-const router = useRouter();
 const auth = useAuthStore();
+const router = useRouter();
 
 const username = ref("");
 const password = ref("");
+const passwordCheck = ref("");
 const nickname = ref("");
 const age = ref(null);
 const selectedTags = ref([]);
@@ -86,29 +73,34 @@ const toggleTag = (tag) => {
 
 const isValid = computed(() => {
   return (
-    username.value.length >= 1 &&
-    password.value.length >= 1 &&
-    nickname.value.length >= 3 &&
+    typeof age.value === 'number' &&
     age.value >= 1 &&
+    age.value <= 110 &&
+    username.value.length >= 1 &&
+    username.value.length <= 30 &&
+    password.value.length >= 1 &&
+    password.value.length <= 30 &&
+    password.value === passwordCheck.value &&
+    nickname.value.length >= 1 &&
+    nickname.value.length <= 30 &&
     selectedTags.value.length >= 1
   );
 });
 
 const handleSignup = async () => {
-  const payload = {
-    username: username.value,
-    password: password.value,
-    email: "", // 이메일은 선택 사항. 필요하면 입력 받기
-    tags: selectedTags.value,
-  };
-
   try {
-    const res = await axios.post(
-      "http://localhost:8000/api/auth/signup",
-      payload
-    );
+    const payload = {
+      username: username.value,
+      password: password.value,
+      nickname: nickname.value,
+      age: age.value,
+      tags: selectedTags.value,
+    };
+
+    const res = await axios.post("http://localhost:8000/api/auth/signup", payload); // ← 여기 수정됨
+    auth.setToken(res.data.token);
     alert("회원가입 성공! 🎉");
-    router.push("/login"); // 또는 바로 로그인 처리도 가능
+    router.push("/login");
   } catch (err) {
     const msg = err.response?.data?.error || "회원가입 중 오류 발생";
     alert(msg);
@@ -122,7 +114,6 @@ const handleSignup = async () => {
   display: flex;
   justify-content: center;
 }
-
 .signup-box {
   background: #1e1e1e;
   padding: 2rem;
@@ -132,14 +123,12 @@ const handleSignup = async () => {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
 .brand {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
 }
-
 .logo {
   width: 64px;
   margin-bottom: 0.5rem;
@@ -151,14 +140,6 @@ const handleSignup = async () => {
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
-
-.title {
-  color: #b388f0;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
 input {
   display: block;
   width: 100%;
@@ -169,21 +150,18 @@ input {
   background-color: #444;
   color: white;
 }
-
 .tag-label {
   text-align: left;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   color: #ccc;
 }
-
 .tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: flex-start;
 }
-
 .tag-list button {
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
@@ -193,12 +171,10 @@ input {
   cursor: pointer;
   font-weight: bold;
 }
-
 .tag-list button.selected {
   background: #b388f0;
   color: white;
 }
-
 .submit-btn {
   margin-top: 1rem;
   width: 100%;

@@ -12,6 +12,14 @@
 import { ref } from 'vue'
 import Header from '@/components/Header.vue'
 import OverlayMenu from './components/OverlayMenu.vue'
+import { onMounted } from 'vue'
+import { useAuthStore } from '@/stores/auth'
+
+const auth = useAuthStore()
+
+onMounted(() => {
+  auth.fetchMe()
+})
 
 const menuOpen = ref(false)
 </script>
