@@ -98,7 +98,7 @@ class UserViewSet(viewsets.ViewSet):
 
     @action(detail=False, methods=['patch'], url_path='me')
     def update_me(self, request):
-        """PATCH /api/auth/users/me"""
+        """PATCH /api/users/me"""
         serializer = UserUpdateSerializer(
             request.user, data=request.data, partial=True
         )

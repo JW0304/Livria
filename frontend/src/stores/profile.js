@@ -14,8 +14,10 @@ export const useProfileStore = defineStore("profile", {
   }),
   actions: {
     async fetchMe() {
-      const { data } = await axios.get("/api/auth/users/me", {
-        headers: { Authorization: `Token ${localStorage.getItem('token')}` },
+      const { data } = await axios.get("/api/users/me", {
+        headers: { 
+          Authorization: `Token ${localStorage.getItem('token')}`
+        },
       });
       this.$patch({
         nickname: data.nickname,
@@ -34,7 +36,7 @@ export const useProfileStore = defineStore("profile", {
       // payload: { avatar (File), default_avatar, status_message, emotion_tags, ... }
       const form = new FormData();
       Object.entries(payload).forEach(([k, v]) => form.append(k, v));
-      await axios.patch("/api/auth/users/me", form, {
+      await axios.patch("/api/users/me", form, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Token ${localStorage.getItem('token')}`,

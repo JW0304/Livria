@@ -26,7 +26,7 @@ const menuOpen = ref(false)
 
 <style>
 .main-content {
-  margin-top: 60px; /* 헤더가 고정이면 */
+  margin-top: 20px; /* 헤더가 고정이면 */
   padding: 2rem;
 }
 
