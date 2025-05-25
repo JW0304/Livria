@@ -28,7 +28,7 @@ def get_musicgen_model():
         # CPU 환경에서 로드 (device 지정)
         model = MusicGen.get_pretrained(MODEL_NAME, device="cpu")
         # 30초까지 생성하도록 설정
-        model.set_generation_params(duration=30.0)
+        model.set_generation_params(duration=10.0)
         _model_instance = model
     return _model_instance
 
