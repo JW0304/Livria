@@ -20,15 +20,15 @@ class Author(models.Model):
         return self.name
 
 class Book(models.Model):
-    isbn                   = models.CharField(max_length=20, unique=True)
-    title                  = models.CharField(max_length=200)
-    author                 = models.ForeignKey(Author,   on_delete=models.CASCADE)
-    publisher              = models.CharField(max_length=100, blank=True)
-    cover_url              = models.URLField(blank=True)
-    description            = models.TextField(blank=True)
-    pub_date               = models.DateField(null=True, blank=True)
-    category               = models.ForeignKey(Category, on_delete=models.CASCADE)
-    genre                  = models.ForeignKey(Genre,    on_delete=models.SET_NULL, null=True, blank=True)
+    isbn        = models.CharField(max_length=20, unique=True)
+    title       = models.CharField(max_length=200)
+    author      = models.ForeignKey(Author, on_delete=models.CASCADE)
+    publisher   = models.CharField(max_length=100, blank=True)
+    cover_url   = models.URLField(blank=True)
+    description = models.TextField(blank=True)
+    pub_date    = models.DateField(null=True, blank=True)
+    category    = models.ForeignKey(Category, on_delete=models.CASCADE)
+    genre       = models.ForeignKey(Genre, on_delete=models.SET_NULL, null=True, blank=True)
     global_recommend_count = models.IntegerField(default=0)
     def __str__(self):
         return self.title
@@ -39,9 +39,28 @@ class EmotionTag(models.Model):
         return self.name
 
 class Review(models.Model):
-    book       = models.ForeignKey(Book,                    on_delete=models.CASCADE)
+    book       = models.ForeignKey(Book, on_delete=models.CASCADE)
     user       = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     content    = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return f"Review by {self.user}"
+
+class Music(models.Model):
+    """
+    각 도서(Book)에 대해 생성된 음악 조각을 저장합니다.
+    """
+    book       = models.ForeignKey(
+        Book,
+        on_delete=models.CASCADE,
+        related_name='musics'
+    )
+    tag        = models.CharField(max_length=50)  # 예: "슬픔과 외로움"
+    audio_file = models.FileField(
+        upload_to='book_music/',
+        help_text='Generated music clip for this book+tag'
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.book.title} — {self.tag}'
