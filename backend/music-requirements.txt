@@ -1,0 +1,9 @@
+torch==2.1.0
+torchaudio==2.1.0
+audiocraft @ git+https://github.com/facebookresearch/audiocraft.git@896ec7c47f5e5d1e5aa1e4b260c4405328bf009d
+einops==0.8.1
+transformers==4.52.3
+accelerate==1.7.0
+xformers==0.0.22.post7        # 선택
+ffmpy==0.5.0                  # pydub/ffmpeg 브리지
+pydub==0.25.1                 # WAV→MP3 변환
