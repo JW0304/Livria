@@ -1,27 +1,13 @@
-<template>
-  <div class="pagination">
-    <button @click="goTo(page - 1)" :disabled="page <= 1">◀</button>
-
-    <button
-      v-for="p in visiblePages"
-      :key="p"
-      :class="{ active: p === page }"
-      @click="goTo(p)"
-    >
-      {{ p }}
-    </button>
-
-    <button @click="goTo(page + 1)" :disabled="page >= totalPages">▶</button>
-  </div>
-</template>
-
 <script setup>
 import { computed } from "vue";
 
 const props = defineProps({
-  page: Number, // 현재 페이지
-  total: Number, // 전체 아이템 개수
-  perPage: (Number = 12), // 한 페이지당 아이템 수
+  page: Number,
+  total: Number,
+  perPage: {
+    type: Number,
+    default: 12,
+  },
 });
 const emit = defineEmits(["change"]);
 
@@ -42,27 +28,3 @@ function goTo(p) {
   }
 }
 </script>
-
-<style scoped>
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 2rem 0;
-}
-button {
-  padding: 0.5rem 1rem;
-  background: #222;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-button.active {
-  background: #e91e63;
-  font-weight: bold;
-}
-button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-</style>

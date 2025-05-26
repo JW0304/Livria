@@ -17,11 +17,19 @@
 
     <!-- 우측: 인증 버튼 -->
     <div class="auth-buttons">
-      <button v-if="!isLoggedIn" @click="goLogin">로그인</button>
-      <button v-if="!isLoggedIn" @click="goSignup">회원가입</button>
-      <RouterLink v-if="isLoggedIn" to="/mypage">{{ username }}</RouterLink>
-      <button v-if="isLoggedIn" @click="logout">로그아웃</button>
+      <template v-if="auth.user">
+        <RouterLink to="/mypage" class="nickname">
+          <img :src="avatarUrl" class="avatar" />
+          {{ auth.user.nickname }}님
+        </RouterLink>
+        <button @click="logout">로그아웃</button>
+      </template>
+      <template v-else>
+        <button @click="goLogin">로그인</button>
+        <button @click="goSignup">회원가입</button>
+      </template>
     </div>
+
   </header>
 </template>
 
@@ -37,6 +45,11 @@ const query = ref("");
 const isLoggedIn = computed(() => !!auth.token);
 const username = computed(() => auth.user?.nickname || "마이페이지");
 
+const avatarUrl = computed(() => {
+  const defaultAvatar = auth.user?.default_avatar || 'default1'
+  return `/avatars/${defaultAvatar}.png`
+})
+
 const onSearch = () => {
   if (query.value.trim()) {
     router.push({ name: "Search", query: { q: query.value.trim() } });
@@ -51,13 +64,41 @@ function goSignup() {
   router.push("/signup");
 }
 
-function logout() {
-  auth.logout();
-  router.push("/");
+const logout = () => {
+  auth.logout()
+  router.push('/')
 }
+
 </script>
 
 <style scoped>
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.auth-buttons button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nickname {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nickname:hover {
+  text-decoration: underline;
+}
+
 .app-header {
   display: flex;
   align-items: center;

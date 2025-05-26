@@ -15,7 +15,9 @@ export const useProfileStore = defineStore("profile", {
   actions: {
     async fetchMe() {
       const { data } = await axios.get("/api/auth/users/me", {
-        headers: { Authorization: `Token ${localStorage.token}` },
+        headers: {
+          Authorization: `Token ${localStorage.getItem("token")}`,
+        },
       });
       this.$patch({
         nickname: data.nickname,
@@ -24,20 +26,22 @@ export const useProfileStore = defineStore("profile", {
         defaultAvatar: data.default_avatar,
         statusMessage: data.status_message,
         emotionTags: Array.isArray(data.emotion_tags)
-          ? data.emotion_tags.map(tag => (typeof tag === 'string' ? tag : tag.name))
+          ? data.emotion_tags.map((tag) =>
+              typeof tag === "string" ? tag : tag.name
+            )
           : [],
         favorites: data.favorites ?? [],
         readBooks: data.read_books ?? [],
-      })
+      });
     },
     async updateMe(payload) {
       // payload: { avatar (File), default_avatar, status_message, emotion_tags, ... }
       const form = new FormData();
       Object.entries(payload).forEach(([k, v]) => form.append(k, v));
-      await axios.patch("/api/auth/users/me", form, {
+      await axios.patch("/api/users/me", form, {
         headers: {
           "Content-Type": "multipart/form-data",
-          Authorization: `Token ${localStorage.token}`,
+          Authorization: `Token ${localStorage.getItem("token")}`,
         },
       });
       // 변경 반영

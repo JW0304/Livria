@@ -30,7 +30,9 @@ class AuthViewSet(viewsets.ViewSet):
             user = User.objects.create_user(
                 username=request.data['username'],
                 password=request.data['password'],
-                email=request.data.get('email', '')
+                email=request.data.get('email', ''),
+                nickname=request.data.get('nickname'),
+                age=request.data.get('age')
             )
         except IntegrityError:
             return Response(
@@ -43,7 +45,13 @@ class AuthViewSet(viewsets.ViewSet):
             user.emotion_tags.add(tag)
 
         token, _ = Token.objects.get_or_create(user=user)
+        # serialized_user = UserSerializer(user)
+
         return Response({'token': token.key}, status=status.HTTP_201_CREATED)
+        # return Response({
+        #     'token': token.key,
+        #     'user': serialized_user.data
+        # })
 
     @action(
         detail=False,
@@ -71,11 +79,20 @@ class AuthViewSet(viewsets.ViewSet):
             )
         token, _ = Token.objects.get_or_create(user=user)
         return Response({'token': token.key})
+        # return Response({
+        #     'token': token.key,
+        #     'user': serialized_user.data
+        # })
 
 
 class UserViewSet(viewsets.ViewSet):
     parser_classes     = [MultiPartParser, FormParser]
     permission_classes = [permissions.IsAuthenticated]
+
+    @action(detail=False, methods=['get'], url_path='me')
+    def retrieve_me(self, request):
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)
 
     @action(
         detail=False,

@@ -7,6 +7,9 @@ from .views import AuthViewSet, UserViewSet
 router = DefaultRouter(trailing_slash=False)
 router.register(r'',  AuthViewSet, basename='auth')
 router.register(r'users', UserViewSet, basename='users')
+# router.register(r'auth/users', AuthViewSet, basename='auth-user')
+# router.register(r'auth', AuthViewSet, basename='auth')           # ✅ signup/login은 여기
+# router.register(r'users', UserViewSet, basename='users')         # ✅ me (GET/PATCH)는 여기
 
 urlpatterns = [
     path('', include(router.urls)),
