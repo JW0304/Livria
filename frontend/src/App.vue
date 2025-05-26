@@ -18,6 +18,12 @@ const menuOpen = ref(false);
 </script>
 
 <style>
+/* * {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+} */
+
 .main-content {
   margin-top: 20px;
   padding: 2rem;

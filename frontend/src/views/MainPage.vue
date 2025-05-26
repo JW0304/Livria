@@ -140,6 +140,7 @@ h2 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-items: center;
 }
 .book-card {
   background: black;
