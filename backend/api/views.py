@@ -19,8 +19,9 @@ class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
     # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['category', 'genre']
+    search_fields = ['title', 'author__name']
     def get_permissions(self):
         # list/retrieve(GET) 은 누구나, 나머지(POST/PUT/PATCH/DELETE)는 인증된 사용자
         if self.action in ['list', 'retrieve']:

@@ -151,14 +151,65 @@
         </div>
       </section>
 
-      <!-- 댓글 섹션 -->
-      <section class="comments">
-        <h4>감상평</h4>
-        <div class="comment-box">
-          <p>이거 실화냐 가슴이 웅장해진다..</p>
-          <small>By 사용자명</small>
+      <!-- 리뷰 섹션 -->
+      <div class="card">
+        <span class="title">{{ reviews.length }}건의 감상평이 있습니다.</span>
+
+        <div v-for="review in reviews" :key="review.id" class="review">
+          <div class="user-row">
+            <img
+              :src="review.user_avatar || '/default-avatar.png'"
+              alt="프로필"
+              class="avatar"
+            />
+            <!-- 내용 -->
+            <div class="review-content">
+              <div class="review-info">
+                <strong>{{ review.user }}</strong>
+                <span class="time">{{ formatDate(review.created_at) }}</span>
+              </div>
+
+              <div v-if="editingId === review.id">
+                <textarea
+                  v-model="editedContent"
+                  rows="3"
+                  class="edit-textarea"
+                ></textarea>
+                <div class="edit-buttons">
+                  <button @click="updateReview(review.id)">저장</button>
+                  <button @click="cancelEdit">취소</button>
+                </div>
+              </div>
+
+              <p v-else>{{ review.content }}</p>
+            </div>
+
+            <!-- 오른쪽 상단 수정/삭제 -->
+            <div
+              v-if="review.user === currentUser"
+              class="review-controls right"
+            >
+              <button @click="editReview(review)">수정</button>
+              <button @click="deleteReview(review.id)">삭제</button>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <!-- 리뷰 입력창 -->
+        <div v-if="isLoggedIn">
+          <textarea
+            v-model="newContent"
+            placeholder="감상평을 남겨보세요..."
+          ></textarea>
+          <div class="formatting">
+            <button @click="submitReview" class="submit-btn">➤</button>
+          </div>
+        </div>
+        <div v-else class="login-prompt">
+          <p>리뷰 작성은 로그인 후 가능합니다.</p>
+          <button @click="alert('로그인이 필요한 활동입니다.')">➤</button>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -174,14 +225,22 @@ const route = useRoute();
 const book = ref(null);
 const emotionTags = ref([]);
 const selectedTag = ref(null);
+const content = ref("");
+const token = localStorage.getItem("token");
 
 // <audio> DOM 참조 저장용
 const audioRefs = reactive({});
 const playingId = ref(null);
 const currentTime = reactive({});
 const duration = reactive({});
-
 const isLoggedIn = computed(() => !!auth.token);
+
+// 리뷰 기능
+const currentUser = localStorage.getItem("nickname") || "익명";
+const reviews = ref([]);
+const newContent = ref("");
+const editingId = ref(null);
+const editedContent = ref("");
 
 // 선택된 태그에 따라 필터링
 const filteredMusics = computed(() => {
@@ -252,8 +311,67 @@ function vote(id, type) {
   // …기존 좋아요/싫어요 처리 로직…
 }
 
+const fetchReviews = async () => {
+  const { data } = await axios.get(`/api/reviews/?book=${route.params.id}`);
+  reviews.value = data;
+};
+
+const submitReview = async () => {
+  if (!newContent.value.trim()) return;
+  await axios.post(
+    "/api/reviews/",
+    {
+      book: route.params.id,
+      content: newContent.value,
+    },
+    {
+      headers: { Authorization: `Token ${token}` },
+    }
+  );
+  newContent.value = "";
+  fetchReviews();
+};
+
+const deleteReview = async (id) => {
+  await axios.delete(`/api/reviews/${id}/`, {
+    headers: { Authorization: `Token ${token}` },
+  });
+  fetchReviews();
+};
+
+const editReview = (review) => {
+  editingId.value = review.id;
+  editedContent.value = review.content;
+};
+
+const cancelEdit = () => {
+  editingId.value = null;
+  editedContent.value = "";
+};
+
+const updateReview = async (id) => {
+  if (!editedContent.value.trim()) return;
+  await axios.patch(
+    `/api/reviews/${id}/`,
+    {
+      content: editedContent.value,
+    },
+    {
+      headers: { Authorization: `Token ${token}` },
+    }
+  );
+  editingId.value = null;
+  editedContent.value = "";
+  fetchReviews();
+};
+
+const formatDate = (iso) => {
+  const date = new Date(iso);
+  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+};
+
 onMounted(() => {
-  Promise.all([fetchBookDetail(), fetchEmotionTags()]);
+  Promise.all([fetchBookDetail(), fetchEmotionTags(), fetchReviews()]);
 });
 </script>
 
@@ -348,14 +466,17 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
+  margin-bottom: 2rem; /* 음악과 리뷰 사이 공간 */
 }
 .card {
-  position: relative;
-  width: 260px;
-  height: 130px;
-  background: linear-gradient(to right, #5807a3, #4563eb, #6f80e0, #dbd194);
-  border-radius: 10px;
-  padding: 10px;
+  max-width: 1000px; /* 기존보다 넓게 */
+  width: 100%;
+  margin: 2rem auto;
+  margin-top: 2rem;
+  background: linear-gradient(to right, #c084f5, #f9e58e);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: black;
 }
 .top {
   display: flex;
@@ -471,5 +592,112 @@ onMounted(() => {
   bottom: -10px;
   right: 0;
   padding-right: 10px;
+}
+
+.card {
+  background: linear-gradient(to right, #c084f5, #f9e58e);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: black;
+  /* 이미 되어 있음 */
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.review {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.user-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+.review-controls.right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.review-controls.right button {
+  font-size: 0.75rem;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+.review-controls.right button:hover {
+  color: black;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+.review-content {
+  flex-grow: 1;
+  max-width: 85%;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  flex: 1;
+  word-wrap: break-word;
+  white-space: pre-line; /* 줄바꿈 반영 */
+}
+.review-info {
+  font-size: 0.8rem;
+  color: gray;
+  margin-bottom: 0.2rem;
+}
+.review-controls {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+.review-controls button,
+.edit-buttons button {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+  cursor: pointer;
+}
+.review-controls button:hover,
+.edit-buttons button:hover {
+  color: #000;
+}
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.formatting {
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-btn {
+  border: none;
+  background: #805ad5;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 </style>

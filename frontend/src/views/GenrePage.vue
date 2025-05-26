@@ -4,7 +4,9 @@
     <div class="genre-filter">
       <span>카테고리</span>
       <button
-        :class="{ selected: route.params.id === undefined }"
+        :class="{
+          selected: route.params.id === undefined || route.params.id === 'all',
+        }"
         @click="changeGenre('all')"
       >
         전체
@@ -12,8 +14,8 @@
       <button
         v-for="g in allGenres"
         :key="g.id"
-        :class="{ selected: g.id === parseInt(route.params.id) }"
-        @click="changeGenre(g.id)"
+        :class="{ selected: route.params.id === String(g.id) }"
+        @click="changeGenre(String(g.id))"
       >
         {{ g.name }}
       </button>
@@ -65,7 +67,6 @@ const route = useRoute();
 const router = useRouter();
 
 const books = ref([]);
-const genreName = ref("");
 const allGenres = ref([]);
 const totalBooks = ref(0);
 
@@ -76,55 +77,55 @@ const paginatedBooks = computed(() => {
   const start = (page.value - 1) * perPage;
   return books.value.slice(start, start + perPage);
 });
-
 const totalPages = computed(() => Math.ceil(books.value.length / perPage));
 
 function nextPage() {
   if (page.value < totalPages.value) page.value++;
 }
-
 function prevPage() {
   if (page.value > 1) page.value--;
 }
-
 function goToFirst() {
   page.value = 1;
 }
-
 function goToLast() {
   page.value = totalPages.value;
 }
 
 function changeGenre(id) {
-  if (id === "all") {
-    router.push(`/genre`);
-  } else {
-    router.push(`/genre/${id}`);
-  }
+  // 항상 /genre/<id> 형태로 이동
+  router.push(id === "all" ? `/genre/all` : `/genre/${id}`);
 }
 
 async function fetchGenreBooks(genreId) {
-  const { data } = await axios.get("/api/genres/");
-  allGenres.value = data;
+  // 장르 목록은 공통으로 API에서 가져옴
+  const { data: genres } = await axios.get("/api/genres/");
+  allGenres.value = genres;
 
-  if (!genreId) {
-    // 전체 책 목록
-    books.value = data.flatMap((g) => g.books);
-    genreName.value = "전체";
+  if (!genreId || genreId === "all") {
+    // 전체 도서
+    const { data: allBooks } = await axios.get("/api/books/");
+    books.value = allBooks;
   } else {
-    const genre = data.find((g) => g.id === parseInt(genreId));
-    books.value = genre ? genre.books : [];
-    genreName.value = genre ? genre.name : "";
+    // 특정 장르 도서
+    const { data: genreBooks } = await axios.get(
+      `/api/books/?genre=${genreId}`
+    );
+    books.value = genreBooks;
   }
 
   totalBooks.value = books.value.length;
   page.value = 1;
 }
 
-onMounted(() => fetchGenreBooks(route.params.id));
+onMounted(() => {
+  fetchGenreBooks(route.params.id);
+});
 watch(
   () => route.params.id,
-  (id) => fetchGenreBooks(id)
+  (id) => {
+    fetchGenreBooks(id);
+  }
 );
 </script>
 
@@ -169,12 +170,19 @@ watch(
   background: #111;
   padding: 1rem;
   border-radius: 0.5rem;
+  text-decoration: none;
 }
 .book-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 6px;
+}
+.book-title,
+.book-author {
+  color: white;
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
 }
 .pagination {
   display: flex;

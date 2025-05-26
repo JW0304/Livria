@@ -50,7 +50,10 @@
       <h3 class="section-title">장르</h3>
       <ul>
         <li>
-          <RouterLink to="/genre" :class="{ active: $route.path === '/genre' }">
+          <RouterLink
+            to="/genre/all"
+            :class="{ active: $route.path === '/genre/all' }"
+          >
             전체
           </RouterLink>
         </li>

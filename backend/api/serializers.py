@@ -68,9 +68,13 @@ class GenreSerializer(serializers.ModelSerializer):
 class ReviewSerializer(serializers.ModelSerializer):
     # user 는 읽기 전용 필드로만 노출
     user = serializers.StringRelatedField(read_only=True)
+    user_avatar = serializers.SerializerMethodField()
+
+    def get_user_avatar(self, obj):
+        return obj.user.get_avatar_url() if obj.user.get_avatar_url() else None
 
     class Meta:
         model  = Review
-        fields = ('id', 'book', 'user', 'content', 'created_at')
+        fields = ('id', 'book', 'user', 'user_avatar', 'content', 'created_at')
         read_only_fields = ('id', 'user', 'created_at')
     
