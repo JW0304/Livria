@@ -1,19 +1,26 @@
 from rest_framework import serializers
 from .models import Book, Review, Author, Category, Genre, EmotionTag, Music, MusicReaction
 
+class SimilarBookSerializer(serializers.ModelSerializer):
+    """
+    추천 도서 4권에 대해 id, title, cover_url만 직렬화
+    """
+    class Meta:
+        model = Book
+        fields = ('id', 'title', 'cover_url')
+
 class AuthorSerializer(serializers.HyperlinkedModelSerializer):
     books = serializers.HyperlinkedRelatedField(
         many=True, read_only=True, view_name='book-detail'
     )
     class Meta:
         model  = Author
-        fields = ['url','id','name','summary','books']
-
+        fields = ['url', 'id', 'name', 'summary', 'books']
 
 class EmotionTagSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model  = EmotionTag
-        fields = ['url','id','name']
+        fields = ['url', 'id', 'name']
 
 class MusicSerializer(serializers.ModelSerializer):
     audio_url = serializers.SerializerMethodField()
@@ -25,7 +32,7 @@ class MusicSerializer(serializers.ModelSerializer):
     def get_audio_url(self, obj):
         request = self.context.get("request")
         return request.build_absolute_uri(obj.audio_file.url)
-    
+
 class MusicReactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = MusicReaction
@@ -33,6 +40,7 @@ class MusicReactionSerializer(serializers.ModelSerializer):
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     musics = MusicSerializer(many=True, read_only=True)
+    similar_books = SimilarBookSerializer(many=True, read_only=True)
 
     url = serializers.HyperlinkedIdentityField(view_name="book-detail", read_only=True)
     author           = serializers.HyperlinkedRelatedField(read_only=True, view_name='author-detail')
@@ -54,11 +62,12 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
             'category', 'category_name',
             'genre', 'genre_name',
             'author', 'author_name', 'author_summary', 'author_image_url',
-            'global_recommend_count', 'musics'
+            'global_recommend_count',
+            'musics',
+            'similar_books',  # 추가된 추천 도서 필드
         ]
 
 class CategorySerializer(serializers.ModelSerializer):
-    # 기존 Hyperlinked = URL만 돌려주던 부분을 BookSerializer로 교체
     books = BookSerializer(many=True, read_only=True, context={'request': None})
     class Meta:
         model  = Category
@@ -71,13 +80,12 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'books']
 
 class ReviewSerializer(serializers.ModelSerializer):
-    # user 는 읽기 전용 필드로만 노출
     user = serializers.StringRelatedField(read_only=True)
     user_avatar = serializers.SerializerMethodField()
     book_cover_url = serializers.SerializerMethodField()
-    book_id = serializers.IntegerField(source='book.id', read_only=True)  # ✅ 책 상세 페이지 이동용
+    book_id = serializers.IntegerField(source='book.id', read_only=True)
 
-    book = serializers.PrimaryKeyRelatedField(queryset=Book.objects.all())  # 👈 이거 추가
+    book = serializers.PrimaryKeyRelatedField(queryset=Book.objects.all())
 
     def get_user_avatar(self, obj):
         request = self.context.get('request')
@@ -85,11 +93,12 @@ class ReviewSerializer(serializers.ModelSerializer):
         return request.build_absolute_uri(url) if url else None
     
     def get_book_cover_url(self, obj):
-        return obj.book.cover_url  # Book 모델에 `cover_url` 필드가 있어야 함
-    
+        return obj.book.cover_url
+
     class Meta:
         model  = Review
-        fields = ['id', 'book_id', 'book_cover_url', 'book', 'user', 'user_avatar', 'content', 'created_at']
-        # fields = ('id', 'book', 'user', 'user_avatar', 'content', 'created_at')
+        fields = [
+            'id', 'book_id', 'book_cover_url', 'book',
+            'user', 'user_avatar', 'content', 'created_at'
+        ]
         read_only_fields = ['id', 'user', 'created_at', 'user_avatar']
-    

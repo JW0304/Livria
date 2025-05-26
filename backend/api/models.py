@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.db.models import JSONField
 
 User = get_user_model()
 
@@ -33,6 +34,16 @@ class Book(models.Model):
     author                   = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name='books')
     category                 = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='books')
     genre                    = models.ForeignKey(Genre,    on_delete=models.SET_NULL, null=True, related_name='books')
+    
+     # --- 임베딩과 추천 도서 필드 ---
+    embedding = JSONField(blank=True, null=True)
+    similar_books = models.ManyToManyField(
+        'self',
+        related_name='recommended_for',
+        blank=True,
+        symmetrical=False,
+        help_text='상위 4권의 유사 도서'
+    )
     def __str__(self):
         return self.title
 
