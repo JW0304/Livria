@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header @toggleMenu="menuOpen = !menuOpen"></Header>
+    <Header @toggleMenu="menuOpen = !menuOpen" />
     <OverlayMenu v-if="menuOpen" @close="menuOpen = false" />
     <main class="main-content">
       <router-view />
@@ -9,27 +9,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import Header from '@/components/Header.vue'
-import OverlayMenu from './components/OverlayMenu.vue'
-import { onMounted } from 'vue'
-import { useAuthStore } from '@/stores/auth'
+import { ref } from "vue";
+import Header from "@/components/Header.vue";
+import OverlayMenu from "@/components/OverlayMenu.vue";
 
-const auth = useAuthStore()
-
-onMounted(() => {
-  auth.fetchMe()
-})
-
-const menuOpen = ref(false)
+const menuOpen = ref(false);
+// 더 이상 auth.fetchMe()를 호출하지 않습니다.
 </script>
 
 <style>
 .main-content {
-  margin-top: 20px; /* 헤더가 고정이면 */
+  margin-top: 20px;
   padding: 2rem;
 }
-
 body {
   background-color: black;
   color: white;

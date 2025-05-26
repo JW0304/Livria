@@ -28,8 +28,6 @@
 
 <script setup>
 import { ref } from "vue";
-import axios from 'axios';
-
 import { useRouter } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 
@@ -40,20 +38,13 @@ const password = ref("");
 
 const handleLogin = async () => {
   try {
-    const res = await axios.post('http://localhost:8000/api/auth/login', {
-      username: username.value,
-      password: password.value
-    });
-
-    auth.setToken(res.data.token);
-    auth.user = res.data.user  // ✅ 이 줄 추가! 닉네임/나이 등 저장
-    router.push('/');
+    await auth.login({ username: username.value, password: password.value });
+    router.push("/");
   } catch (err) {
     console.error(err);
     alert("로그인 실패! 아이디와 비밀번호를 확인해 주세요.");
   }
 };
-
 
 const goSignup = () => router.push("/signup");
 const goReset = () => router.push("/reset-password");
