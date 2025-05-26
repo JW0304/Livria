@@ -1,6 +1,6 @@
 <template>
   <div class="best-sellers-page">
-    <h1>📚 베스트셀러 목록</h1>
+    <h1>블로거 추천 도서</h1>
     <div
       v-for="book in books"
       :key="book.id"
@@ -52,9 +52,7 @@ function goToDetail(bookId) {
 
 onMounted(async () => {
   try {
-    const res = await axios.get(
-      "http://localhost:8000/api/books/best-sellers/"
-    );
+    const res = await axios.get("http://localhost:8000/api/books/?category=3");
     books.value = res.data.map((book) => ({
       id: book.id,
       title: book.title,

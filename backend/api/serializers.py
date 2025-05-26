@@ -15,7 +15,20 @@ class EmotionTagSerializer(serializers.HyperlinkedModelSerializer):
         model  = EmotionTag
         fields = ['url','id','name']
 
+class MusicSerializer(serializers.ModelSerializer):
+    audio_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Music
+        fields = ["id", "tag", "audio_url"]
+
+    def get_audio_url(self, obj):
+        request = self.context.get("request")
+        return request.build_absolute_uri(obj.audio_file.url)
+
 class BookSerializer(serializers.HyperlinkedModelSerializer):
+    musics = MusicSerializer(many=True, read_only=True)
+
     url = serializers.HyperlinkedIdentityField(view_name="book-detail", read_only=True)
     author           = serializers.HyperlinkedRelatedField(read_only=True, view_name='author-detail')
     category         = serializers.HyperlinkedRelatedField(read_only=True, view_name='category-detail')
@@ -36,7 +49,7 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
             'category', 'category_name',
             'genre', 'genre_name',
             'author', 'author_name', 'author_summary', 'author_image_url',
-            'global_recommend_count'
+            'global_recommend_count', 'musics'
         ]
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -61,8 +74,3 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ('id', 'book', 'user', 'content', 'created_at')
         read_only_fields = ('id', 'user', 'created_at')
     
-class MusicSerializer(serializers.HyperlinkedModelSerializer):
-    book = serializers.HyperlinkedRelatedField(read_only=True, view_name='book-detail')
-    class Meta:
-        model  = Music
-        fields = ['url','id','book','tag','audio_file','created_at']

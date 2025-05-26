@@ -5,19 +5,20 @@
       <ul>
         <li><RouterLink to="/" exact>메인</RouterLink></li>
         <li><RouterLink to="/bestsellers">베스트 셀러</RouterLink></li>
-        <li><RouterLink to="/recommendations">오늘의 아리아</RouterLink></li>
-        <li><RouterLink to="/authors">신착 도서</RouterLink></li>
-        <li><RouterLink to="/reviews">블로거 추천 도서</RouterLink></li>
+        <li><RouterLink to="/bestsellers">오늘의 아리아</RouterLink></li>
+        <li><RouterLink to="/newbook">신착 도서</RouterLink></li>
+        <li><RouterLink to="/recommendations">블로거 추천 도서</RouterLink></li>
+        <li><RouterLink to="/reviews">도서 리뷰</RouterLink></li>
       </ul>
 
       <h3 class="section-title">카테고리</h3>
       <ul>
-        <li v-for="cat in categories" :key="cat.name">
+        <li v-for="category in categories" :key="category.name">
           <RouterLink
-            :to="`/category/${cat.name}`"
-            :class="{ active: $route.path === `/category/${cat.name}` }"
+            :to="`/genres/${category.name}`"
+            :class="{ active: $route.path === `/category/${category.name}` }"
           >
-            {{ cat.name }}
+            {{ category.name }}
           </RouterLink>
         </li>
       </ul>
@@ -30,6 +31,7 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 
 const categories = [
+  { name: "전체" },
   { name: "소설/시/희곡" },
   { name: "경제/경영" },
   { name: "자기계발" },

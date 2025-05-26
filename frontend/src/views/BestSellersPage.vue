@@ -1,6 +1,6 @@
 <template>
   <div class="best-sellers-page">
-    <h1>📚 베스트셀러 목록</h1>
+    <h1>베스트셀러</h1>
     <div
       v-for="book in books"
       :key="book.id"
@@ -47,7 +47,7 @@ const router = useRouter();
 const books = ref([]);
 
 function goToDetail(bookId) {
-  router.push(`/books/${bookId}`)
+  router.push(`/books/${bookId}`);
 }
 
 onMounted(async () => {

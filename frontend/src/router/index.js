@@ -61,7 +61,6 @@ const routes = [
     path: "/newbook",
     name: "Newbook",
     component: NewBookPage,
-    meta: { requiresAuth: true },
   },
   {
     path: "/readhistory",

@@ -19,10 +19,10 @@
       </div>
     </section>
 
-    <section v-if="isLoggedIn">
+    <!-- <section v-if="isLoggedIn">
       <h2>오늘의 아리아</h2>
       <BookList :books="mainStore.ageRecs" />
-    </section>
+    </section> -->
 
     <section>
       <h2>새로 도착한 도서</h2>
@@ -42,8 +42,20 @@
     </section>
 
     <section>
-      <h2>블로거가 추천한 도서</h2>
-      <BookList :books="mainStore.topBooks" />
+      <h2>블로거 추천 도서</h2>
+      <router-link to="/recommendations" class="more-link">더보기</router-link>
+      <div class="book-grid">
+        <RouterLink
+          v-for="book in recommendedBooks"
+          :key="book.id"
+          :to="`/books/${book.id}`"
+          class="book-card"
+        >
+          <img :src="book.cover_url" alt="cover" />
+          <h4>{{ book.title }}</h4>
+          <p>{{ book.author_name }}</p>
+        </RouterLink>
+      </div>
     </section>
 
     <!-- <section>
@@ -68,21 +80,18 @@ const isLoggedIn = computed(() => !!localStorage.token);
 
 const bestSellers = ref([]);
 const newBooks = ref([]);
+const recommendedBooks = ref([]);
 
 onMounted(async () => {
   try {
-    // const bestsellerRes = await axios.get("/api/books/?categories=1");
-    // bestSellers.value = bestsellerRes.data.slice(0, 3); // 상위 3개
+    const bestsellerRes = await axios.get("/api/books/?category=1");
+    bestSellers.value = bestsellerRes.data.slice(0, 6); // 상위 3개
 
-    // const newBookRes = await axios.get("/api/books/?categories=2");
-    // newBooks.value = newBookRes.data.slice(0, 3); // 신간도 상위 3개 (원하면 더)
+    const newBookRes = await axios.get("/api/books/?category=2");
+    newBooks.value = newBookRes.data.slice(0, 6); // 신간도 상위 3개 (원하면 더)
 
-    const bestsellerRes = await axios.get("/api/books/?categories=1");
-    bestSellers.value = bestsellerRes.data.slice(0, 3); // 상위 3개
-
-    const newBookRes = await axios.get("/api/books/?categories=2");
-    newBooks.value = newBookRes.data.slice(0, 3); // 신간도 상위 3개 (원하면 더)
-
+    const recommendationsRes = await axios.get("/api/books/?category=3");
+    recommendedBooks.value = recommendationsRes.data.slice(0, 6);
   } catch (err) {
     console.error("도서 데이터 불러오기 실패:", err);
   }

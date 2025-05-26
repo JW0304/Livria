@@ -1,14 +1,13 @@
 <template>
   <div class="my-page">
-      <section class="profile-card">
-
+    <section class="profile-card">
       <!-- 수정 모드일 때 -->
       <div v-if="isEditing" class="edit-mode">
         <div class="avatar-selection">
           <p>기본 프로필 이미지 선택</p>
           <div class="avatar-options">
             <img
-              v-for="([filename, label]) in avatarChoices"
+              v-for="[filename, label] in avatarChoices"
               :key="filename"
               :src="`/avatars/${filename}.png`"
               :class="{ selected: editedDefaultAvatar === filename }"
@@ -44,22 +43,28 @@
       <!-- 보기 모드일 때 -->
       <div v-else>
         <img :src="avatarUrl" alt="avatar" class="avatar" />
-        
+
         <div class="info">
           <div class="top-row">
-            <h1>{{ profileStore.nickname || '나의 닉네임' }}</h1>
+            <h1>{{ profileStore.nickname || "나의 닉네임" }}</h1>
             <p>
-              {{ userStore.username || '나의 아이디' }} /
-              {{ profileStore.age ?? '나이 비공개' }}
+              {{ userStore.username || "나의 아이디" }} /
+              {{ profileStore.age ?? "나이 비공개" }}
             </p>
-            <button @click="isEditing = true" class="edit-btn">내 정보 수정하기</button>
+            <button @click="isEditing = true" class="edit-btn">
+              내 정보 수정하기
+            </button>
           </div>
-          
+
           <!-- 메시지 박스 -->
           <!-- <textarea v-model="editMessage" class="message-box" placeholder="나의 한마디를 작성할 수 있습니다."></textarea>
            -->
 
-          <p class="message-box">{{ profileStore.statusMessage || '나의 한마디를 작성할 수 있습니다.' }}</p>
+          <p class="message-box">
+            {{
+              profileStore.statusMessage || "나의 한마디를 작성할 수 있습니다."
+            }}
+          </p>
 
           <p color="lightgray">내가 선택한 태그</p>
           <div class="tags">
@@ -84,10 +89,8 @@
               {{ tag }}
             </button>
           </div> -->
-
-
         </div>
-    </div>
+      </div>
     </section>
 
     <!-- 도서 섹션 -->
@@ -146,14 +149,14 @@ const avatarChoices = [
 
 // 안 씀, 아래를 씀 (avataUrl)
 const currentAvatar = computed(() => {
-  if (profileStore.avatarUrl) return profileStore.avatarUrl
-  return `/avatars/${profileStore.defaultAvatar || 'default1'}.png`
-})
+  if (profileStore.avatarUrl) return profileStore.avatarUrl;
+  return `/avatars/${profileStore.defaultAvatar || "default1"}.png`;
+});
 
 const avatarUrl = computed(() => {
-  const defaultAvatar = auth.user?.default_avatar || 'default1'
-  return `/avatars/${defaultAvatar}.png`
-})
+  const defaultAvatar = auth.user?.default_avatar || "default1";
+  return `/avatars/${defaultAvatar}.png`;
+});
 
 function toggleTag(tag) {
   if (editedTags.value.includes(tag)) {
@@ -324,5 +327,4 @@ onMounted(async () => {
   gap: 1rem;
   margin-top: 1rem;
 }
-
 </style>
