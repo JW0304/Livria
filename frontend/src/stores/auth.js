@@ -16,9 +16,17 @@ export const useAuthStore = defineStore("auth", {
       console.log("[setToken] 토큰 설정 완료:", token);
     },
 
+    setUser(user) {
+      this.user = user;
+      localStorage.setItem("user", JSON.stringify(user)); // ✅ 닉네임 포함해서 저장
+    },
+
+    // 로그아웃시 필요
     clearToken() {
       this.token = "";
+      this.user = null; // 🔥 이거도 추가해!
       localStorage.removeItem("token");
+      localStorage.removeItem("user"); // 🔥 유저 정보도 제거!
       delete axios.defaults.headers.common["Authorization"];
       console.log("[clearToken] 토큰 제거 완료");
     },
@@ -28,10 +36,10 @@ export const useAuthStore = defineStore("auth", {
         const { data } = await axios.post("/api/auth/login", credentials);
         const tok = data.token ?? data.key;
         if (!tok) throw new Error("로그인 응답에 토큰이 없습니다");
-        this.setToken(tok);
 
-        this.user = data.user;
-        localStorage.setItem("user", JSON.stringify(data.user));
+        this.setToken(tok);
+        this.setUser(data.user); // ✅ 이거 하나로 충분
+
         this.error = "";
         console.log("[login] 로그인 성공:", this.user);
       } catch (err) {

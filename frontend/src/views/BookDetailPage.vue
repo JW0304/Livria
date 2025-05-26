@@ -240,7 +240,7 @@ const duration = reactive({});
 const isLoggedIn = computed(() => !!auth.token);
 
 // 리뷰 기능
-const currentUser = localStorage.getItem("nickname") || "익명";
+const currentUser = computed(() => auth.user?.username || "익명");
 const reviews = ref([]);
 const newContent = ref("");
 const editingId = ref(null);
