@@ -40,18 +40,18 @@ class AuthViewSet(viewsets.ViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
+        # 감정 태그 추가
         for name in request.data.get('tags', []):
             tag, _ = EmotionTag.objects.get_or_create(name=name)
             user.emotion_tags.add(tag)
 
         token, _ = Token.objects.get_or_create(user=user)
-        # serialized_user = UserSerializer(user)
+        serialized_user = UserSerializer(user)
 
-        return Response({'token': token.key}, status=status.HTTP_201_CREATED)
-        # return Response({
-        #     'token': token.key,
-        #     'user': serialized_user.data
-        # })
+        return Response({
+            'token': token.key,
+            'user': serialized_user.data
+        })
 
     @action(
         detail=False,
@@ -66,7 +66,7 @@ class AuthViewSet(viewsets.ViewSet):
         """
         username = request.data.get('username')
         password = request.data.get('password')
-        # Django authenticate 사용 (DRF request가 아닌 Django HttpRequest 필요)
+
         user = authenticate(
             request=request._request,
             username=username,
@@ -77,12 +77,14 @@ class AuthViewSet(viewsets.ViewSet):
                 {'error': 'invalid credentials'},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
         token, _ = Token.objects.get_or_create(user=user)
-        return Response({'token': token.key})
-        # return Response({
-        #     'token': token.key,
-        #     'user': serialized_user.data
-        # })
+        serialized_user = UserSerializer(user)
+
+        return Response({
+            'token': token.key,
+            'user': serialized_user.data
+        })
 
 
 class UserViewSet(viewsets.ViewSet):
@@ -90,21 +92,17 @@ class UserViewSet(viewsets.ViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     @action(detail=False, methods=['get'], url_path='me')
-    def retrieve_me(self, request):
-        serializer = UserSerializer(request.user)
-        return Response(serializer.data)
+    def get_me(self, request):
+        """✅ 사용자 정보 반환용 GET 핸들러"""
+        return Response(UserSerializer(request.user).data)
 
-    @action(
-        detail=False,
-        methods=['patch'],       # ← 이 부분이 반드시 있어야 PATCH 요청을 받습니다
-        url_path='me'
-    )
+    @action(detail=False, methods=['patch'], url_path='me')
+    
     def update_me(self, request):
-        """PATCH /api/auth/users/me"""
+        """PATCH /api/users/me"""
         serializer = UserUpdateSerializer(
             request.user, data=request.data, partial=True
         )
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(UserSerializer(request.user).data)
-
