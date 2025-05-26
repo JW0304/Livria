@@ -16,6 +16,7 @@ import ReviewListPage from "@/views/ReviewListPage.vue";
 import NewBookPage from "@/views/NewBookPage.vue";
 import ReadHistoryPage from "@/views/ReadHistoryPage.vue";
 import NotFound from "@/views/NotFound.vue";
+import GenrePage from "@/views/GenrePage.vue";
 
 // Pinia 스토어 (로그인 확인용)
 import { useAuthStore } from "@/stores/auth";
@@ -47,6 +48,12 @@ const routes = [
     path: "/category/:name",
     name: "Category",
     component: CategoryPage,
+    props: true,
+  },
+  {
+    path: "/genre/:id",
+    name: "Genre",
+    component: GenrePage,
     props: true,
   },
   { path: "/search", name: "Search", component: SearchPage },

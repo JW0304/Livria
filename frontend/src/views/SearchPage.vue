@@ -1,7 +1,7 @@
 <template>
   <div class="search-page">
     <div class="filters">
-      <div class="filter-group">
+      <!-- <div class="filter-group">
         <p class="filter-title">태그</p>
         <button
           v-for="tag in tags"
@@ -11,9 +11,9 @@
         >
           {{ tag }}
         </button>
-      </div>
+      </div> -->
 
-      <div class="filter-group">
+      <!-- <div class="filter-group">
         <p class="filter-title">카테고리</p>
         <button
           v-for="category in categories"
@@ -23,7 +23,7 @@
         >
           {{ category }}
         </button>
-      </div>
+      </div> -->
     </div>
 
     <section v-if="loading">불러오는 중...</section>
@@ -55,7 +55,7 @@ const results = ref([]);
 const fetchSearchResults = async (query) => {
   loading.value = true;
   try {
-    const res = await axios.get("http://localhost:8000/api/books/search/", {
+    const res = await axios.get("http://localhost:8000/api/search/", {
       params: { q: query },
     });
     results.value = res.data.books; // ✅ API 응답 구조 기준
@@ -71,9 +71,14 @@ onMounted(() => {
     fetchSearchResults(route.query.q);
   }
 });
-watch(() => route.query.q, (newQuery) => {
-  if (newQuery) fetchSearchResults(newQuery);
-});
+
+watch(
+  () => route.query.q,
+  (newQuery) => {
+    console.log("watch triggered, query:", newQuery);
+    if (newQuery) fetchSearchResults(newQuery);
+  }
+);
 
 const tags = [
   "슬픔과 외로움",

@@ -11,14 +11,19 @@
         <li><RouterLink to="/reviews">도서 리뷰</RouterLink></li>
       </ul>
 
-      <h3 class="section-title">카테고리</h3>
+      <h3 class="section-title">장르</h3>
       <ul>
-        <li v-for="category in categories" :key="category.name">
+        <li>
+          <RouterLink to="/genre" :class="{ active: $route.path === '/genre' }">
+            전체
+          </RouterLink>
+        </li>
+        <li v-for="genre in genres" :key="genre.name">
           <RouterLink
-            :to="`/genres/${category.name}`"
-            :class="{ active: $route.path === `/category/${category.name}` }"
+            :to="`/genre/${genre.id}`"
+            :class="{ active: $route.path === `/genre/${genre.id}` }"
           >
-            {{ category.name }}
+            {{ genre.name }}
           </RouterLink>
         </li>
       </ul>
@@ -27,19 +32,19 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
-const route = useRoute();
+import { ref, onMounted } from "vue";
+import axios from "axios";
 
-const categories = [
-  { name: "전체" },
-  { name: "소설/시/희곡" },
-  { name: "경제/경영" },
-  { name: "자기계발" },
-  { name: "인문/교양" },
-  { name: "취미/실용" },
-  { name: "어린이/청소년" },
-  { name: "과학" },
-];
+const genres = ref([]);
+
+onMounted(async () => {
+  try {
+    const res = await axios.get("/api/genres/");
+    genres.value = res.data;
+  } catch (err) {
+    console.error("장르 목록 로딩 실패:", err);
+  }
+});
 </script>
 
 <style scoped>
@@ -88,16 +93,14 @@ a {
   display: inline-block;
 }
 
-/* 현재 선택된 메뉴: 보라색 */
 a.active {
   color: #b388f0;
 }
 
-/* hover 시 그라데이션 효과 */
 a:hover {
   background: linear-gradient(to right, #d17df4, #8d5cf6);
-  background-clip: text; /* 표준 속성 */
-  -webkit-background-clip: text; /* 크롬, 사파리 등 웹킷 계열 */
+  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 </style>
