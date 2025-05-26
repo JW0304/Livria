@@ -4,71 +4,59 @@
       <h1>리뷰 목록 페이지</h1>
     </header>
 
-    <section class="review-grid">
+    <div class="review-grid">
       <div
         v-for="review in reviews"
         :key="review.id"
-        class="review-card"
-        @click="goToDetail(review.id)"
+        class="myCard"
+        @click="goToDetail(review.book_id)"
       >
-        <img :src="review.cover" alt="cover" />
-        <div class="review-info">
-          <p class="review-title">{{ review.title }}</p>
-          <p class="review-subtitle">{{ review.subtitle }}</p>
+        <div class="innerCard">
+          <!-- 앞면: 책 표지 전체 -->
+          <div class="frontSide">
+            <img
+              :src="review.book_cover_url"
+              alt="책 커버"
+              class="cover-full"
+            />
+          </div>
+
+          <!-- 뒷면: 프로필 + 닉네임 + 리뷰 + 날짜 -->
+          <div class="backSide">
+            <img :src="review.user_avatar" alt="프로필" class="avatar" />
+            <p class="username">{{ review.user }}</p>
+            <p class="review-snippet">"{{ review.content }}"</p>
+            <p class="date">{{ formatDate(review.created_at) }}</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
 
-const router = useRouter()
+const router = useRouter();
+const reviews = ref([]);
 
-const reviews = ref([
-  {
-    id: 1,
-    title: 'BAC',
-    subtitle: 'Love Me',
-    cover: '/images/book1.png',
-  },
-  {
-    id: 2,
-    title: 'BAC',
-    subtitle: 'Love Me',
-    cover: '/images/book2.png',
-  },
-  {
-    id: 3,
-    title: 'BAC',
-    subtitle: 'Love Me',
-    cover: '/images/book3.png',
-  },
-  {
-    id: 4,
-    title: 'BAC',
-    subtitle: 'Love Me',
-    cover: '/images/book4.png',
-  },
-  {
-    id: 5,
-    title: 'BAC',
-    subtitle: 'Love Me',
-    cover: '/images/book5.png',
-  },
-  {
-    id: 6,
-    title: 'BAC',
-    subtitle: 'Love Me',
-    cover: '/images/book6.png',
-  },
-])
-
-function goToDetail(id) {
-  router.push(`/reviews/${id}`)
+async function fetchReviews() {
+  const { data } = await axios.get("/api/reviews/");
+  reviews.value = data;
 }
+
+function goToDetail(bookId) {
+  router.push(`/books/${bookId}`);
+}
+
+function formatDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString();
+}
+
+onMounted(fetchReviews);
 </script>
 
 <style scoped>
@@ -77,48 +65,103 @@ function goToDetail(id) {
   color: white;
   padding: 1rem;
 }
+
+.review-header h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .review-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  justify-items: center;
-  margin-top: 2rem;
-}
-.review-card {
-  background: #fe8851;
-  border-radius: 16px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  width: 150px;
-  height: 220px;
-  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.2rem;
   justify-content: center;
-  align-items: center;
-  transition: transform 0.2s;
 }
-.review-card:hover {
-  transform: scale(1.05);
+
+.myCard {
+  background-color: transparent;
+  width: 140px;
+  height: 200px;
+  perspective: 1000px;
 }
-.review-card img {
+
+.innerCard {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 16px;
-  object-fit: cover;
-}
-.review-info {
-  position: absolute;
   text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.3);
+}
+
+.frontSide {
+  background: #000;
+}
+
+.cover-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* 뒷면 스타일 */
+.backSide {
+  transform: rotateY(180deg);
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   color: white;
-  z-index: 2;
+  padding: 0.6rem;
+  font-size: 0.75rem;
+  gap: 0.4rem;
+  text-align: center;
 }
-.review-title {
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.username {
+  font-size: 0.85rem;
   font-weight: bold;
-  font-size: 1.2rem;
 }
-.review-subtitle {
-  font-size: 0.9rem;
+
+.review-snippet {
+  font-size: 0.7rem;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.date {
+  font-size: 0.65rem;
   opacity: 0.8;
 }
 </style>

@@ -69,6 +69,8 @@ class ReviewSerializer(serializers.ModelSerializer):
     # user 는 읽기 전용 필드로만 노출
     user = serializers.StringRelatedField(read_only=True)
     user_avatar = serializers.SerializerMethodField()
+    book_cover_url = serializers.SerializerMethodField()
+    book_id = serializers.IntegerField(source='book.id', read_only=True)  # ✅ 책 상세 페이지 이동용
 
     book = serializers.PrimaryKeyRelatedField(queryset=Book.objects.all())  # 👈 이거 추가
 
@@ -77,9 +79,12 @@ class ReviewSerializer(serializers.ModelSerializer):
         url = obj.user.get_avatar_url()
         return request.build_absolute_uri(url) if url else None
     
+    def get_book_cover_url(self, obj):
+        return obj.book.cover_url  # Book 모델에 `cover_url` 필드가 있어야 함
+    
     class Meta:
         model  = Review
-        fields = ['id', 'book', 'user', 'user_avatar', 'content', 'created_at']
+        fields = ['id', 'book_id', 'book_cover_url', 'book', 'user', 'user_avatar', 'content', 'created_at']
         # fields = ('id', 'book', 'user', 'user_avatar', 'content', 'created_at')
         read_only_fields = ['id', 'user', 'created_at', 'user_avatar']
     
