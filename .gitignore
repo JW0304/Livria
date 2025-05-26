@@ -1,13 +1,33 @@
-from django.contrib.auth.models import AbstractUser
-from django.db import models
+__pycache__/
+*.pyc
 
-class EmotionTag(models.Model):
-    name = models.CharField(max_length=30, unique=True)
-    def __str__(self): return self.name
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-class User(AbstractUser):
-    nickname       = models.CharField(max_length=50, blank=True)
-    age            = models.PositiveIntegerField(null=True, blank=True)
-    avatar_url     = models.URLField(blank=True)
-    status_message = models.TextField(blank=True)
-    emotion_tags   = models.ManyToManyField(EmotionTag, blank=True)
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+*.tsbuildinfo

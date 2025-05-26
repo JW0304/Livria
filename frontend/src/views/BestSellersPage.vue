@@ -53,7 +53,7 @@ function goToDetail(bookId) {
 onMounted(async () => {
   try {
     const res = await axios.get(
-      "http://localhost:8000/api/books/best-sellers/"
+      "http://localhost:8000/api/books/?categories/1"
     );
     books.value = res.data.map((book) => ({
       id: book.id,

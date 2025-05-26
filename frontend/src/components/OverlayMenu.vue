@@ -4,10 +4,10 @@
       <h3 class="section-title">바로가기</h3>
       <ul>
         <li><RouterLink to="/" exact>메인</RouterLink></li>
-        <li><RouterLink to="/best-sellers">베스트 셀러</RouterLink></li>
+        <li><RouterLink to="/bestsellers">베스트 셀러</RouterLink></li>
         <li><RouterLink to="/recommendations">오늘의 아리아</RouterLink></li>
-        <li><RouterLink to="/authors">작가 별 책 목록</RouterLink></li>
-        <li><RouterLink to="/reviews">리뷰 목록</RouterLink></li>
+        <li><RouterLink to="/authors">신착 도서</RouterLink></li>
+        <li><RouterLink to="/reviews">블로거 추천 도서</RouterLink></li>
       </ul>
 
       <h3 class="section-title">카테고리</h3>

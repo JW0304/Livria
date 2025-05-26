@@ -8,14 +8,15 @@
         </div>
         <div class="info">
           <h2>{{ book.title }}</h2>
-          <p class="author">{{ book.author_name || '작자 미상' }}</p>
+          <p class="author">{{ book.author_name || "저자 미상" }}</p>
           <ul class="meta">
             <li>ISBN: {{ book.isbn }}</li>
-            <li>출판일: {{ book.pub_date || '정보 없음' }}</li>
-            <li>장르 ID: {{ book.category }}</li>
-            <li>추천 수: {{ book.global_recommend_count }}</li>
+            <li>출판일: {{ book.pub_date || "출판일 미상" }}</li>
+            <li>장르: {{ book.genre_name || "장르 미상" }}</li>
+            <!-- <li>카테고리: {{ book.category_name || "카테고리 미상" }}</li> -->
+            <!-- <li>추천 수: {{ book.global_recommend_count }}</li> -->
           </ul>
-          <p class="summary">{{ book.description || '줄거리 없음' }}</p>
+          <p class="summary">{{ book.description || "줄거리 없음" }}</p>
         </div>
         <div class="icons">
           <span>♡</span>
@@ -25,17 +26,21 @@
 
       <!-- 작가 소개 -->
       <section class="author-info">
-        <div class="avatar">
+        <div class="author-avatar">
           <img
-            v-if="book.author_info?.image_url"
-            :src="book.author_info.image_url"
-            alt="author"
-            class="author-img"
+            :src="book.author_image_url"
+            alt="작가 사진"
+            class="avatar-img"
+            @error="(e) => (e.target.src = '/images/default_author.png')"
           />
         </div>
-        <div class="bio">
-          <h3>작가 소개</h3>
-          <p>{{ book.author_info?.summary || '작가 소개 정보 없음' }}</p>
+        <div class="author-text">
+          <h3 class="author-name">{{ book.author_name }}</h3>
+          <div class="author-summary-box">
+            <p class="author-summary">
+              {{ book.author_summary || "작가 소개가 없습니다." }}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -45,7 +50,7 @@
         <div class="tag-list">
           <span class="tag">슬픔과 외로움</span>
           <span class="tag">사랑과 그리움</span>
-          <span class="tag">위로와 울먹</span>
+          <span class="tag">위로와 평온</span>
         </div>
       </section>
 
@@ -75,21 +80,25 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import axios from 'axios'
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import axios from "axios";
 
-const route = useRoute()
-const book = ref(null)
+const route = useRoute();
+const book = ref(null);
 
 onMounted(async () => {
   try {
-    const res = await axios.get(`http://localhost:8000/api/books/${route.params.id}/`)
-    book.value = res.data
+    const res = await axios.get(
+      `http://localhost:8000/api/books/${route.params.id}/`
+    );
+    book.value = res.data;
   } catch (err) {
-    console.error('책 상세 정보 불러오기 실패:', err)
+    console.error("책 상세 정보 불러오기 실패:", err);
   }
-})
+});
+
+console.log(book);
 </script>
 
 <style scoped>
@@ -141,5 +150,50 @@ onMounted(async () => {
   background: linear-gradient(to right, #ff758c, #ff7eb3);
   padding: 1rem;
   border-radius: 1rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.author-avatar {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #555;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.author-text {
+  flex-grow: 1;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.author-summary-box {
+  background-color: #333;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  white-space: pre-line;
 }
 </style>

@@ -2,7 +2,8 @@
   <div class="main-page">
     <section>
       <h2 @click="goToBestsellers" style="cursor: pointer">
-        오늘의 아리아 (베스트 셀러)
+        베스트 셀러
+        <router-link to="/bestsellers" class="more-link">더보기</router-link>
       </h2>
       <div class="book-grid">
         <RouterLink
@@ -18,21 +19,37 @@
       </div>
     </section>
 
-    <section v-if="!isLoggedIn">
-      <h2>연령별 추천 도서</h2>
+    <section v-if="isLoggedIn">
+      <h2>오늘의 아리아</h2>
       <BookList :books="mainStore.ageRecs" />
     </section>
 
     <section>
-      <h2>많은 추천을 받은 도서 목록</h2>
-      <BookList :books="mainStore.topBooks" />
+      <h2>새로 도착한 도서</h2>
+      <router-link to="/newbook" class="more-link">더보기</router-link>
+      <div class="book-grid">
+        <RouterLink
+          v-for="book in newBooks"
+          :key="book.id"
+          :to="`/books/${book.id}`"
+          class="book-card"
+        >
+          <img :src="book.cover_url" alt="cover" />
+          <h4>{{ book.title }}</h4>
+          <p>{{ book.author_name }}</p>
+        </RouterLink>
+      </div>
     </section>
 
     <section>
-      <h2>많이 선호한 음악 추천</h2>
-      <!-- 이곳은 추후 음악 컴포넌트로 교체 가능 -->
+      <h2>블로거가 추천한 도서</h2>
       <BookList :books="mainStore.topBooks" />
     </section>
+
+    <!-- <section>
+      <h2>많이 선호한 음악 추천</h2>
+      <BookList :books="mainStore.topBooks" />
+    </section> -->
   </div>
 </template>
 
@@ -50,15 +67,24 @@ const mainStore = useMainStore();
 const isLoggedIn = computed(() => !!localStorage.token);
 
 const bestSellers = ref([]);
+const newBooks = ref([]);
 
 onMounted(async () => {
   try {
-    const res = await axios.get(
-      "http://localhost:8000/api/books/best-sellers/"
-    );
-    bestSellers.value = res.data;
+    // const bestsellerRes = await axios.get("/api/books/?categories=1");
+    // bestSellers.value = bestsellerRes.data.slice(0, 3); // 상위 3개
+
+    // const newBookRes = await axios.get("/api/books/?categories=2");
+    // newBooks.value = newBookRes.data.slice(0, 3); // 신간도 상위 3개 (원하면 더)
+
+    const bestsellerRes = await axios.get("/api/books/?categories=1");
+    bestSellers.value = bestsellerRes.data.slice(0, 3); // 상위 3개
+
+    const newBookRes = await axios.get("/api/books/?categories=2");
+    newBooks.value = newBookRes.data.slice(0, 3); // 신간도 상위 3개 (원하면 더)
+
   } catch (err) {
-    console.error("베스트셀러 불러오기 실패:", err);
+    console.error("도서 데이터 불러오기 실패:", err);
   }
 });
 
@@ -116,5 +142,11 @@ h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 6px;
+}
+
+.more-link {
+  font-size: 0.9rem;
+  color: #aaa;
+  cursor: pointer;
 }
 </style>

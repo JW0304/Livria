@@ -9,21 +9,6 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
         model  = Author
         fields = ['url','id','name','summary','books']
 
-class CategorySerializer(serializers.HyperlinkedModelSerializer):
-    books = serializers.HyperlinkedRelatedField(
-        many=True, read_only=True, view_name='book-detail'
-    )
-    class Meta:
-        model  = Category
-        fields = ['url', 'id', 'name', 'books']
-
-class GenreSerializer(serializers.HyperlinkedModelSerializer):
-    books = serializers.HyperlinkedRelatedField(
-        many=True, read_only=True, view_name='book-detail'
-    )
-    class Meta:
-        model  = Genre
-        fields = ['url', 'id', 'name', 'books']
 
 class EmotionTagSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -31,34 +16,50 @@ class EmotionTagSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url','id','name']
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
-    author   = serializers.HyperlinkedRelatedField(
-        read_only=True, view_name='author-detail'
-    )
-    category = serializers.HyperlinkedRelatedField(
-        read_only=True, view_name='category-detail'
-    )
-    genre    = serializers.HyperlinkedRelatedField(
-        read_only=True, view_name='genre-detail'
-    )
+    url = serializers.HyperlinkedIdentityField(view_name="book-detail", read_only=True)
+    author           = serializers.HyperlinkedRelatedField(read_only=True, view_name='author-detail')
+    category         = serializers.HyperlinkedRelatedField(read_only=True, view_name='category-detail')
+    genre            = serializers.HyperlinkedRelatedField(read_only=True, view_name='genre-detail')
+
+    author_name      = serializers.CharField(source='author.name', read_only=True)
+    author_summary   = serializers.CharField(source='author.summary', read_only=True)
+    author_image_url = serializers.CharField(source='author.image_url', read_only=True)
+    
+    category_name    = serializers.CharField(source='category.name', read_only=True)
+    genre_name       = serializers.CharField(source='genre.name', read_only=True)
+
     class Meta:
-        model  = Book
+        model = Book
         fields = [
-            'url','id','isbn','title','publisher','cover_url',
-            'description','pub_date','category','genre',
-            'global_recommend_count','author'
+            'url', 'id', 'isbn', 'title', 'publisher', 'cover_url',
+            'description', 'pub_date',
+            'category', 'category_name',
+            'genre', 'genre_name',
+            'author', 'author_name', 'author_summary', 'author_image_url',
+            'global_recommend_count'
         ]
 
+class CategorySerializer(serializers.ModelSerializer):
+    # 기존 Hyperlinked = URL만 돌려주던 부분을 BookSerializer로 교체
+    books = BookSerializer(many=True, read_only=True, context={'request': None})
+    class Meta:
+        model  = Category
+        fields = ['id', 'name', 'books']
 
-class ReviewSerializer(serializers.HyperlinkedModelSerializer):
-    book = serializers.HyperlinkedRelatedField(read_only=True, view_name='book-detail')
-    user = serializers.HyperlinkedRelatedField(read_only=True, view_name='user-detail')
+class GenreSerializer(serializers.ModelSerializer):
+    books = BookSerializer(many=True, read_only=True, context={'request': None})
+    class Meta:
+        model  = Genre
+        fields = ['id', 'name', 'books']
+
+class ReviewSerializer(serializers.ModelSerializer):
+    # user 는 읽기 전용 필드로만 노출
+    user = serializers.StringRelatedField(read_only=True)
+
     class Meta:
         model  = Review
-        fields = ['url','id','book','user','content','created_at']
-    def create(self, validated_data):
-        # 작성자는 요청한 user로 설정
-        request = self.context.get('request')
-        return Review.objects.create(user=request.user, **validated_data)
+        fields = ('id', 'book', 'user', 'content', 'created_at')
+        read_only_fields = ('id', 'user', 'created_at')
     
 class MusicSerializer(serializers.HyperlinkedModelSerializer):
     book = serializers.HyperlinkedRelatedField(read_only=True, view_name='book-detail')
