@@ -20,7 +20,7 @@
       <template v-if="auth.user">
         <RouterLink to="/mypage" class="nickname">
           <img :src="avatarUrl" class="avatar" />
-          {{ auth.user.nickname }}님
+          {{ profile.nickname || auth.user.nickname }}님
         </RouterLink>
         <button @click="logout">로그아웃</button>
       </template>
