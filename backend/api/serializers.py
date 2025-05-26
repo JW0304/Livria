@@ -70,11 +70,16 @@ class ReviewSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(read_only=True)
     user_avatar = serializers.SerializerMethodField()
 
-    def get_user_avatar(self, obj):
-        return obj.user.get_avatar_url() if obj.user.get_avatar_url() else None
+    book = serializers.PrimaryKeyRelatedField(queryset=Book.objects.all())  # 👈 이거 추가
 
+    def get_user_avatar(self, obj):
+        request = self.context.get('request')
+        url = obj.user.get_avatar_url()
+        return request.build_absolute_uri(url) if url else None
+    
     class Meta:
         model  = Review
-        fields = ('id', 'book', 'user', 'user_avatar', 'content', 'created_at')
-        read_only_fields = ('id', 'user', 'created_at')
+        fields = ['id', 'book', 'user', 'user_avatar', 'content', 'created_at']
+        # fields = ('id', 'book', 'user', 'user_avatar', 'content', 'created_at')
+        read_only_fields = ['id', 'user', 'created_at', 'user_avatar']
     

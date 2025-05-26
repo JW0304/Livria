@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model, authenticate
 from django.db import IntegrityError
 from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 
@@ -88,21 +88,35 @@ class AuthViewSet(viewsets.ViewSet):
 
 
 class UserViewSet(viewsets.ViewSet):
-    parser_classes     = [MultiPartParser, FormParser]
     permission_classes = [permissions.IsAuthenticated]
+    parser_classes = [JSONParser, MultiPartParser, FormParser]
 
-    @action(detail=False, methods=['get'], url_path='me')
-    def get_me(self, request):
-        """✅ 사용자 정보 반환용 GET 핸들러"""
-        return Response(UserSerializer(request.user).data)
+    @action(detail=False, methods=['get', 'patch'], url_path='me')
+    def me(self, request):
+        """
+        GET  /api/auth/users/me   → 현재 사용자 정보 반환
+        PATCH /api/auth/users/me   → 사용자 정보 업데이트
+        """
+        if request.method == 'GET':
+            # UserSerializer 호출 시 context={'request': request} 추가
+            serializer = UserSerializer(
+                request.user,
+                context={'request': request}
+            )
+            return Response(serializer.data)
 
-    @action(detail=False, methods=['patch'], url_path='me')
-    
-    def update_me(self, request):
-        """PATCH /api/users/me"""
-        serializer = UserUpdateSerializer(
-            request.user, data=request.data, partial=True
+        # PATCH 처리
+        update_serializer = UserUpdateSerializer(
+            request.user,
+            data=request.data,
+            partial=True
         )
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(UserSerializer(request.user).data)
+        update_serializer.is_valid(raise_exception=True)
+        update_serializer.save()
+
+        # 업데이트 후에도 context 포함해서 전체 필드 응답
+        serializer = UserSerializer(
+            request.user,
+            context={'request': request}
+        )
+        return Response(serializer.data)

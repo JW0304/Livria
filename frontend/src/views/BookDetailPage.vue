@@ -156,12 +156,16 @@
         <span class="title">{{ reviews.length }}건의 감상평이 있습니다.</span>
 
         <div v-for="review in reviews" :key="review.id" class="review">
+          <!-- 디버깅 콘솔 로그 -->
+          {{ console.log("🧪 currentUser:", currentUser) }}
+          {{ console.log("🔍 review.user:", review.user) }}
           <div class="user-row">
             <img
-              :src="review.user_avatar || '/default-avatar.png'"
+              :src="review.user_avatar || '/avatars/default2.png'"
               alt="프로필"
               class="avatar"
             />
+            {{ console.log("[user_avatar]", review.user_avatar) }}
             <!-- 내용 -->
             <div class="review-content">
               <div class="review-info">
@@ -316,8 +320,10 @@ const fetchReviews = async () => {
   reviews.value = data;
 };
 
+// 리뷰 작성
 const submitReview = async () => {
   if (!newContent.value.trim()) return;
+
   await axios.post(
     "/api/reviews/",
     {
@@ -332,25 +338,9 @@ const submitReview = async () => {
   fetchReviews();
 };
 
-const deleteReview = async (id) => {
-  await axios.delete(`/api/reviews/${id}/`, {
-    headers: { Authorization: `Token ${token}` },
-  });
-  fetchReviews();
-};
-
-const editReview = (review) => {
-  editingId.value = review.id;
-  editedContent.value = review.content;
-};
-
-const cancelEdit = () => {
-  editingId.value = null;
-  editedContent.value = "";
-};
-
+// 리뷰 수정
 const updateReview = async (id) => {
-  if (!editedContent.value.trim()) return;
+  // if (!editedContent.value.trim()) return;
   await axios.patch(
     `/api/reviews/${id}/`,
     {
@@ -363,6 +353,26 @@ const updateReview = async (id) => {
   editingId.value = null;
   editedContent.value = "";
   fetchReviews();
+};
+
+// 리뷰 삭제
+const deleteReview = async (id) => {
+  await axios.delete(`/api/reviews/${id}/`, {
+    headers: { Authorization: `Token ${token}` },
+  });
+  fetchReviews();
+};
+
+// 리뷰 수정
+const editReview = (review) => {
+  editingId.value = review.id;
+  editedContent.value = review.content;
+};
+
+// 리뷰 수정 취소
+const cancelEdit = () => {
+  editingId.value = null;
+  editedContent.value = "";
 };
 
 const formatDate = (iso) => {

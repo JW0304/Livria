@@ -9,7 +9,7 @@ from api.serializers import BookSerializer
 User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
-    avatar_url     = serializers.SerializerMethodField()
+    avatar_url = serializers.SerializerMethodField()
     default_avatar = serializers.CharField(read_only=True)
     emotion_tags   = serializers.SlugRelatedField(
         many=True, slug_field='name', queryset=EmotionTag.objects.all()
@@ -28,7 +28,14 @@ class UserSerializer(serializers.ModelSerializer):
         read_only_fields = ['username', 'email']
 
     def get_avatar_url(self, obj):
-        return obj.get_avatar_url()
+        request = self.context.get("request")
+        # obj.avatar 는 ImageField, 실제 저장된 파일이 있는 경우
+        if obj.avatar:
+            url = obj.avatar.url  # 보통 "/media/avatars/xxx.png"
+            # request 가 있다면 절대 URI 로 바꿔주고, 없으면 상대경로 그대로 리턴
+            return request.build_absolute_uri(url) if request else url
+        # 이미지가 없으면 빈 문자열 반환
+        return ""
 
 class UserUpdateSerializer(serializers.ModelSerializer):
     emotion_tags   = serializers.ListField(

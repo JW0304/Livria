@@ -33,40 +33,51 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
+import { useProfileStore } from "@/stores/profile";
 
 const router = useRouter();
 const auth = useAuthStore();
+const profile = useProfileStore();
+
 const query = ref("");
 
-const isLoggedIn = computed(() => !!auth.token);
-const username = computed(() => auth.user?.nickname || "마이페이지");
-
-const avatarUrl = computed(() => {
-  const defaultAvatar = auth.user?.default_avatar || "default1";
-  return `/avatars/${defaultAvatar}.png`;
+// 앱이 처음 로드될 때, 토큰이 있으면 프로필 정보를 미리 가져옵니다.
+onMounted(() => {
+  if (auth.token) {
+    profile.fetchMe().catch(() => {
+      // 실패해도 헤더는 로그인 상태 유지
+    });
+  }
 });
 
+// 검색
 const onSearch = () => {
   if (query.value.trim()) {
     router.push({ name: "Search", query: { q: query.value.trim() } });
   }
 };
 
+// 로그인/회원가입/로그아웃
 function goLogin() {
   router.push("/login");
 }
-
 function goSignup() {
   router.push("/signup");
 }
-
 const logout = () => {
   auth.logout();
   router.push("/");
 };
+
+// 헤더용 아바타 URL: 프로필 스토어의 avatarUrl이 우선, 없으면 defaultAvatar로
+const avatarUrl = computed(() => {
+  return (
+    profile.avatarUrl || `/avatars/${profile.defaultAvatar || "default1"}.png`
+  );
+});
 </script>
 
 <style scoped>
@@ -89,6 +100,9 @@ const logout = () => {
 }
 
 .nickname {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -160,12 +174,6 @@ const logout = () => {
   color: white;
   cursor: pointer;
   font-size: 1.2rem;
-}
-
-/* 우측 인증 버튼 */
-.auth-buttons {
-  display: flex;
-  gap: 1rem;
 }
 
 .hamburger {
