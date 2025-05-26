@@ -156,6 +156,8 @@ onMounted(fetchReviews);
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  /* 표준 속성도 같이 써주기 (지원하는 브라우저만 적용됨) */
+  line-clamp: 2;
   text-overflow: ellipsis;
   max-width: 100%;
 }
