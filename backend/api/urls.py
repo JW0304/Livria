@@ -9,7 +9,8 @@ from .views import (
     GenreViewSet,
     EmotionTagViewSet,
     MusicViewSet,
-    ReviewViewSet
+    ReviewViewSet,
+    BookRecommendationView
 )
 
 router = DefaultRouter()
@@ -23,4 +24,5 @@ router.register(r'reviews',     ReviewViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('books/<int:book_id>/recommendations/', BookRecommendationView.as_view(), name='book-recommendations'),
 ]  + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

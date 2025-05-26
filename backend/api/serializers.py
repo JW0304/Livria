@@ -28,6 +28,7 @@ class MusicSerializer(serializers.ModelSerializer):
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     musics = MusicSerializer(many=True, read_only=True)
+    recommended_books = serializers.SerializerMethodField()
 
     url = serializers.HyperlinkedIdentityField(view_name="book-detail", read_only=True)
     author           = serializers.HyperlinkedRelatedField(read_only=True, view_name='author-detail')
@@ -49,8 +50,14 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
             'category', 'category_name',
             'genre', 'genre_name',
             'author', 'author_name', 'author_summary', 'author_image_url',
-            'global_recommend_count', 'musics'
+            'global_recommend_count', 'musics','recommended_books',
         ]
+    def get_recommended_books(self, obj):
+        # 유사한 책을 추천하는 방법 수정: 무한루프 방지
+        recommended_books = obj.recommended_books.all()
+        
+        # 해당 추천 책들을 간략하게 직렬화합니다.
+        return BookSerializer(recommended_books, many=True, context=self.context).data
 
 class CategorySerializer(serializers.ModelSerializer):
     # 기존 Hyperlinked = URL만 돌려주던 부분을 BookSerializer로 교체

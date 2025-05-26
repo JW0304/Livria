@@ -10,7 +10,27 @@ from .serializers import (
     ReviewSerializer,
     MusicSerializer
 )
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
+
+class BookRecommendationView(APIView):
+    """
+    유사한 책들을 추천하는 API
+    """
+    def get(self, request, book_id):
+        try:
+            # 책 정보 조회
+            book = Book.objects.get(id=book_id)
+            # 추천 책들 직렬화
+            serializer = BookSerializer(book, context={'request': request})
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Book.DoesNotExist:
+            return Response({'detail': 'Book not found.'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({'detail': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        
 class BookViewSet(viewsets.ModelViewSet):
     """
     도서 CRUD (읽기: 모두, 쓰기/수정/삭제: 인증 사용자)

@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.postgres.fields import ArrayField
+
 
 class Category(models.Model):
     name = models.CharField(max_length=50, unique=True)
@@ -30,6 +32,13 @@ class Book(models.Model):
     author                   = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name='books')
     category                 = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='books')
     genre                    = models.ForeignKey(Genre,    on_delete=models.SET_NULL, null=True, related_name='books')
+    # ─── 새로 추가 ───────────────────────────────────────────────────────────
+    embedding = models.JSONField(null=True, blank=True)
+    recommended_books = models.ManyToManyField(
+        'self', blank=True,
+        help_text="유사도 상위 N권을 미리 저장"
+    )
+
     def __str__(self):
         return self.title
 

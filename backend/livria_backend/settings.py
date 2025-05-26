@@ -27,6 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ALADIN_API_KEY    = os.getenv('ALADIN_API_KEY')
 ALADIN_BASE_URL   = os.getenv('ALADIN_BASE_URL')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+UPSTAGE_API_KEY= os.getenv('UPSTAGE_API_KEY')
 
 DATABASES = {
     'default': {
