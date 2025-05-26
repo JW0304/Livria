@@ -16,9 +16,22 @@
           </ul>
           <p class="summary">{{ book.description || "줄거리 없음" }}</p>
         </div>
+        <!-- 읽음/찜 토글 아이콘 -->
         <div class="icons">
-          <span>♡</span>
-          <span>🔒</span>
+          <span
+            class="icon heart"
+            :class="{ active: isInRead(book.id) }"
+            @click.stop="toggleRead(book.id)"
+          >
+            {{ isInRead(book.id) ? "❤️ 읽음" : "♡ 읽기" }}
+          </span>
+          <span
+            class="icon lock"
+            :class="{ active: isInFav(book.id) }"
+            @click.stop="toggleFavorite(book.id)"
+          >
+            {{ isInFav(book.id) ? "🔓 찜 취소" : "🔒 찜하기" }}
+          </span>
         </div>
       </section>
 
@@ -41,27 +54,6 @@
           </div>
         </div>
       </section>
-
-      <!-- 태그 -->
-      <!-- <section class="tags">
-        <h2>오늘 당신의 감정은?</h2>
-        <div class="tag-list">
-          <button
-            v-for="tag in Tags"
-            :key="tag.id"
-            :class="{
-              selected: selectedTagIds.includes(tag.id),
-              unselected: !selectedTagIds.includes(tag.id),
-            }"
-            @click="toggleTag(tag.id)"
-          >
-            {{ tag.name }}
-          </button>
-        </div>
-        <div v-if="isLoggedIn" class="edit-tags">
-          <button @click="saveEmotionTags">태그 수정</button>
-        </div>
-      </section> -->
 
       <!-- 태그 선택 -->
       <section class="tags">
@@ -98,7 +90,6 @@
             </div>
           </div>
 
-          <!-- 실제 오디오 엘리먼트 -->
           <audio
             :src="music.audio_url"
             :ref="(el) => (audioRefs[music.id] = el)"
@@ -108,7 +99,6 @@
           ></audio>
 
           <div class="controls">
-            <!-- 재생/일시정지 버튼 -->
             <button class="play-btn" @click="togglePlay(music.id)">
               <span
                 v-if="playingId === music.id && !audioRefs[music.id]?.paused"
@@ -117,7 +107,6 @@
               <span v-else>▶</span>
             </button>
 
-            <!-- 좋아요/싫어요 -->
             <button @click="vote(music.id, 'up')">
               👍 {{ music.upvotes }}
             </button>
@@ -125,7 +114,6 @@
               👎 {{ music.downvotes }}
             </button>
 
-            <!-- 다운로드 (로그인된 사용자만) -->
             <a
               v-if="isLoggedIn"
               :href="music.audio_url"
@@ -135,7 +123,6 @@
             >
           </div>
 
-          <!-- 진행 바 -->
           <div class="time">
             <div
               class="elapsed"
@@ -154,19 +141,13 @@
       <!-- 리뷰 섹션 -->
       <div class="card">
         <span class="title">{{ reviews.length }}건의 감상평이 있습니다.</span>
-
         <div v-for="review in reviews" :key="review.id" class="review">
-          <!-- 디버깅 콘솔 로그 -->
-          {{ console.log("🧪 currentUser:", currentUser) }}
-          {{ console.log("🔍 review.user:", review.user) }}
           <div class="user-row">
             <img
               :src="review.user_avatar || '/avatars/default2.png'"
               alt="프로필"
               class="avatar"
             />
-            {{ console.log("[user_avatar]", review.user_avatar) }}
-            <!-- 내용 -->
             <div class="review-content">
               <div class="review-info">
                 <strong>{{ review.user }}</strong>
@@ -188,7 +169,6 @@
               <p v-else>{{ review.content }}</p>
             </div>
 
-            <!-- 오른쪽 상단 수정/삭제 -->
             <div
               v-if="review.user === currentUser"
               class="review-controls right"
@@ -199,11 +179,11 @@
           </div>
         </div>
 
-        <!-- 리뷰 입력창 -->
-        <div v-if="isLoggedIn">
+        <div v-if="isLoggedIn" class="new-review">
           <textarea
             v-model="newContent"
             placeholder="감상평을 남겨보세요..."
+            rows="3"
           ></textarea>
           <div class="formatting">
             <button @click="submitReview" class="submit-btn">➤</button>
@@ -222,166 +202,173 @@
 import { ref, reactive, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
+import { useProfileStore } from "@/stores/profile";
 import axios from "axios";
 
 const auth = useAuthStore();
+const profile = useProfileStore();
 const route = useRoute();
+
 const book = ref(null);
 const emotionTags = ref([]);
 const selectedTag = ref(null);
-const content = ref("");
-const token = localStorage.getItem("token");
 
-// <audio> DOM 참조 저장용
+// 오디오 재생 참조
 const audioRefs = reactive({});
 const playingId = ref(null);
 const currentTime = reactive({});
 const duration = reactive({});
+
 const isLoggedIn = computed(() => !!auth.token);
 
-// 리뷰 기능
-const currentUser = computed(() => auth.user?.username || "익명");
+// 리뷰
 const reviews = ref([]);
 const newContent = ref("");
 const editingId = ref(null);
 const editedContent = ref("");
 
-// 선택된 태그에 따라 필터링
-const filteredMusics = computed(() => {
-  if (!book.value?.musics) return [];
-  return book.value.musics.filter(
-    (m) => !selectedTag.value || m.tag === selectedTag.value
-  );
-});
+// 현재 사용자
+const currentUser = computed(() => auth.user?.username || "");
 
-// 재생 / 일시정지 토글
+// 읽음/찜 ID 리스트
+const readIds = computed(() => profile.readBooks.map((b) => b.id));
+const favIds = computed(() => profile.favorites.map((b) => b.id));
+
+const isInRead = (id) => readIds.value.includes(id);
+const isInFav = (id) => favIds.value.includes(id);
+
+// 읽음 토글
+async function toggleRead(bookId) {
+  if (!auth.token) {
+    alert("로그인이 필요합니다.");
+    return;
+  }
+  if (isInRead(bookId)) {
+    await axios.delete(`/api/auth/users/me/read_books/${bookId}`);
+  } else {
+    await axios.post(`/api/auth/users/me/read_books/${bookId}`);
+  }
+  await profile.fetchMe();
+}
+
+// 찜 토글
+async function toggleFavorite(bookId) {
+  if (!auth.token) {
+    alert("로그인이 필요합니다.");
+    return;
+  }
+  if (isInFav(bookId)) {
+    await axios.delete(`/api/auth/users/me/favorites/${bookId}`);
+  } else {
+    await axios.post(`/api/auth/users/me/favorites/${bookId}`);
+  }
+  await profile.fetchMe();
+}
+
+// 오디오 제어
 function togglePlay(id) {
   const audio = audioRefs[id];
   if (!audio) return;
   if (playingId.value && playingId.value !== id) {
-    const prev = audioRefs[playingId.value];
-    prev && !prev.paused && prev.pause();
+    audioRefs[playingId.value]?.pause();
   }
   if (audio.paused) {
-    audio.play().catch((err) => console.error("play() failed:", err));
+    audio.play().catch(console.error);
     playingId.value = id;
   } else {
     audio.pause();
   }
 }
-
-// 재생 위치 업데이트
 function onTimeUpdate(id, e) {
   currentTime[id] = e.target.currentTime;
 }
 function onLoadedMetadata(id, e) {
   duration[id] = e.target.duration;
 }
-
-// 진행 바 퍼센트 계산
 function playProgress(music) {
   const t = currentTime[music.id] || 0;
   const d = duration[music.id] || 1;
   return Math.floor((t / d) * 100);
 }
-
-// 시간 포맷 (m:ss)
 function formatTime(sec) {
   const m = Math.floor(sec / 60);
   const s = String(Math.floor(sec % 60)).padStart(2, "0");
   return `${m}:${s}`;
 }
 
-// 상세 정보 불러오기
-async function fetchBookDetail() {
-  const res = await axios.get(`/api/books/${route.params.id}/`);
-  book.value = res.data;
-  if (book.value.musics.length && !selectedTag.value) {
-    selectedTag.value = book.value.musics[0].tag;
-  }
-}
-async function fetchEmotionTags() {
-  const res = await axios.get("/api/emotion-tags/");
-  emotionTags.value = res.data;
-}
-
-// 태그 선택
+// 태그 필터
+const filteredMusics = computed(() => {
+  if (!book.value?.musics) return [];
+  return book.value.musics.filter(
+    (m) => !selectedTag.value || m.tag === selectedTag.value
+  );
+});
 function selectTag(name) {
   selectedTag.value = name;
 }
 
-// 투표 로직 (생략 가능)
-function vote(id, type) {
-  // …기존 좋아요/싫어요 처리 로직…
+// 상세 정보 로드
+async function fetchBookDetail() {
+  const { data } = await axios.get(`/api/books/${route.params.id}/`);
+  book.value = data;
+  if (data.musics?.length && !selectedTag.value) {
+    selectedTag.value = data.musics[0].tag;
+  }
+}
+async function fetchEmotionTags() {
+  const { data } = await axios.get("/api/emotion-tags/");
+  emotionTags.value = data;
 }
 
-const fetchReviews = async () => {
+// 리뷰 API
+async function fetchReviews() {
   const { data } = await axios.get(`/api/reviews/?book=${route.params.id}`);
   reviews.value = data;
-};
-
-// 리뷰 작성
-const submitReview = async () => {
+}
+async function submitReview() {
   if (!newContent.value.trim()) return;
-
   await axios.post(
     "/api/reviews/",
-    {
-      book: route.params.id,
-      content: newContent.value,
-    },
-    {
-      headers: { Authorization: `Token ${token}` },
-    }
+    { book: route.params.id, content: newContent.value },
+    { headers: { Authorization: `Token ${auth.token}` } }
   );
   newContent.value = "";
   fetchReviews();
-};
-
-// 리뷰 수정
-const updateReview = async (id) => {
-  // if (!editedContent.value.trim()) return;
+}
+async function updateReview(id) {
   await axios.patch(
     `/api/reviews/${id}/`,
-    {
-      content: editedContent.value,
-    },
-    {
-      headers: { Authorization: `Token ${token}` },
-    }
+    { content: editedContent.value },
+    { headers: { Authorization: `Token ${auth.token}` } }
   );
   editingId.value = null;
   editedContent.value = "";
   fetchReviews();
-};
-
-// 리뷰 삭제
-const deleteReview = async (id) => {
+}
+async function deleteReview(id) {
   await axios.delete(`/api/reviews/${id}/`, {
-    headers: { Authorization: `Token ${token}` },
+    headers: { Authorization: `Token ${auth.token}` },
   });
   fetchReviews();
-};
-
-// 리뷰 수정
-const editReview = (review) => {
+}
+function editReview(review) {
   editingId.value = review.id;
   editedContent.value = review.content;
-};
-
-// 리뷰 수정 취소
-const cancelEdit = () => {
+}
+function cancelEdit() {
   editingId.value = null;
   editedContent.value = "";
-};
+}
+function formatDate(iso) {
+  const d = new Date(iso);
+  return `${d.toLocaleDateString()} ${d.toLocaleTimeString()}`;
+}
 
-const formatDate = (iso) => {
-  const date = new Date(iso);
-  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
-};
-
-onMounted(() => {
-  Promise.all([fetchBookDetail(), fetchEmotionTags(), fetchReviews()]);
+onMounted(async () => {
+  await Promise.all([fetchBookDetail(), fetchEmotionTags(), fetchReviews()]);
+  if (auth.token) {
+    await profile.fetchMe();
+  }
 });
 </script>
 
@@ -403,7 +390,19 @@ onMounted(() => {
   border-radius: 6px;
 }
 .icons {
-  font-size: 1.5rem;
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.1s;
+}
+.icon.active {
+  transform: scale(1.2);
+  opacity: 0.7;
 }
 .author-info {
   display: flex;
@@ -462,27 +461,17 @@ onMounted(() => {
 .tag.selected {
   background: linear-gradient(to right, #c210e6, #f03482, #ff7eb3);
 }
-.comments {
-  margin-top: 2rem;
-}
-.comment-box {
-  background: linear-gradient(to right, #ff758c, #ff7eb3);
-  padding: 1rem;
-  border-radius: 1rem;
-}
-/* ——————— Spotify 스타일 카드 ——————— */
 .music {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
-  margin-bottom: 2rem; /* 음악과 리뷰 사이 공간 */
+  margin-bottom: 2rem;
 }
 .card {
-  max-width: 1000px; /* 기존보다 넓게 */
+  max-width: 1000px;
   width: 100%;
   margin: 2rem auto;
-  margin-top: 2rem;
   background: linear-gradient(to right, #c084f5, #f9e58e);
   padding: 1rem;
   border-radius: 1rem;
@@ -513,16 +502,9 @@ onMounted(() => {
   margin: 0;
 }
 .title-2 {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 12px;
   margin: 0;
-}
-.playing {
-  display: flex;
-  justify-content: center;
-  gap: 1px;
-  width: 30px;
-  height: 20px;
 }
 .greenline {
   background-color: #f0ff67;
@@ -596,22 +578,12 @@ onMounted(() => {
 }
 .time_now {
   bottom: -10px;
-  left: 2;
+  left: 2px;
 }
 .time_full {
   bottom: -10px;
   right: 0;
   padding-right: 10px;
-}
-
-.card {
-  background: linear-gradient(to right, #c084f5, #f9e58e);
-  padding: 1rem;
-  border-radius: 1rem;
-  color: black;
-  /* 이미 되어 있음 */
-  display: flex;
-  flex-direction: column;
 }
 .title {
   display: block;
@@ -630,19 +602,17 @@ onMounted(() => {
   position: relative;
 }
 .review-controls.right {
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 0.3rem;
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  gap: 0.3rem;
 }
 .review-controls.right button {
-  font-size: 0.75rem;
   background: none;
   border: none;
   color: #666;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 .review-controls.right button:hover {
@@ -653,53 +623,33 @@ onMounted(() => {
   height: 40px;
   border-radius: 50%;
   margin-right: 0.8rem;
+  object-fit: cover;
 }
 .review-content {
   flex-grow: 1;
-  max-width: 85%;
   background: #fff;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  flex: 1;
-  word-wrap: break-word;
-  white-space: pre-line; /* 줄바꿈 반영 */
+  white-space: pre-line;
 }
 .review-info {
   font-size: 0.8rem;
   color: gray;
   margin-bottom: 0.2rem;
 }
-.review-controls {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0.5rem;
-}
-.review-controls button,
-.edit-buttons button {
-  justify-content: flex-end;
-  background: none;
-  border: none;
-  color: #444;
-  font-size: 0.8rem;
-  margin: 0.2rem 0;
-  cursor: pointer;
-}
-.review-controls button:hover,
-.edit-buttons button:hover {
-  color: #000;
-}
-textarea {
+.textarea,
+.edit-textarea {
   width: 100%;
   border: none;
-  border-radius: 10px;
-  margin-top: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
+.edit-buttons,
 .formatting {
   display: flex;
-  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 .submit-btn {
   border: none;
@@ -709,6 +659,9 @@ textarea {
   font-size: 1.2rem;
   border-radius: 50%;
   cursor: pointer;
-  margin-top: 0.5rem;
+}
+.login-prompt {
+  margin-top: 1rem;
+  color: #ccc;
 }
 </style>

@@ -10,6 +10,7 @@ from rest_framework.authtoken.models import Token
 
 from .models import EmotionTag
 from .serializers import UserSerializer, UserUpdateSerializer
+from api.models import Book
 
 User = get_user_model()
 
@@ -86,37 +87,78 @@ class AuthViewSet(viewsets.ViewSet):
             'user': serialized_user.data
         })
 
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    사용자 정보 조회/수정 + 읽음/찜 토글
+    """
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    lookup_field = 'pk'
 
-class UserViewSet(viewsets.ViewSet):
-    permission_classes = [permissions.IsAuthenticated]
-    parser_classes = [JSONParser, MultiPartParser, FormParser]
+    def get_serializer_class(self):
+        # PATCH /users/me/ 에는 업데이트용 직렬화기 사용
+        if self.action in ['update_me', 'partial_update_me']:
+            return UserUpdateSerializer
+        return UserSerializer
 
-    @action(detail=False, methods=['get', 'patch'], url_path='me')
-    def me(self, request):
+    @action(detail=False, methods=['get'], url_path='me')
+    def get_me(self, request):
         """
-        GET  /api/auth/users/me   → 현재 사용자 정보 반환
-        PATCH /api/auth/users/me   → 사용자 정보 업데이트
+        GET /api/auth/users/me
+        현재 로그인한 사용자의 정보 반환
         """
-        if request.method == 'GET':
-            # UserSerializer 호출 시 context={'request': request} 추가
-            serializer = UserSerializer(
-                request.user,
-                context={'request': request}
-            )
-            return Response(serializer.data)
-
-        # PATCH 처리
-        update_serializer = UserUpdateSerializer(
-            request.user,
-            data=request.data,
-            partial=True
-        )
-        update_serializer.is_valid(raise_exception=True)
-        update_serializer.save()
-
-        # 업데이트 후에도 context 포함해서 전체 필드 응답
-        serializer = UserSerializer(
-            request.user,
-            context={'request': request}
-        )
+        serializer = UserSerializer(request.user, context={'request': request})
         return Response(serializer.data)
+
+    @action(detail=False, methods=['patch'], url_path='me')
+    def update_me(self, request):
+        """
+        PATCH /api/auth/users/me
+        현재 로그인한 사용자의 정보 일부 수정
+        """
+        serializer = UserUpdateSerializer(request.user, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        # 수정 후 최신 정보 리턴
+        out = UserSerializer(request.user, context={'request': request}).data
+        return Response(out)
+
+    @action(detail=False, methods=['post', 'delete'], url_path=r'me/favorites/(?P<book_pk>[^/.]+)')
+    def favorites(self, request, book_pk=None):
+        """
+        POST   /api/auth/users/me/favorites/{book_pk}   -> 찜 추가
+        DELETE /api/auth/users/me/favorites/{book_pk}   -> 찜 해제
+        """
+        user = request.user
+        try:
+            book = Book.objects.get(pk=book_pk)
+        except Book.DoesNotExist:
+            return Response({'detail': 'Book not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if request.method == 'POST':
+            user.favorites.add(book)
+            return Response({'detail': 'Added to favorites.'}, status=status.HTTP_201_CREATED)
+
+        # DELETE
+        user.favorites.remove(book)
+        return Response({'detail': 'Removed from favorites.'}, status=status.HTTP_204_NO_CONTENT)
+
+    @action(detail=False, methods=['post', 'delete'], url_path=r'me/read_books/(?P<book_pk>[^/.]+)')
+    def read_books(self, request, book_pk=None):
+        """
+        POST   /api/auth/users/me/read_books/{book_pk}  -> 읽음 추가
+        DELETE /api/auth/users/me/read_books/{book_pk}  -> 읽음 해제
+        """
+        user = request.user
+        try:
+            book = Book.objects.get(pk=book_pk)
+        except Book.DoesNotExist:
+            return Response({'detail': 'Book not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if request.method == 'POST':
+            user.read_books.add(book)
+            return Response({'detail': 'Marked as read.'}, status=status.HTTP_201_CREATED)
+
+        # DELETE
+        user.read_books.remove(book)
+        return Response({'detail': 'Unmarked as read.'}, status=status.HTTP_204_NO_CONTENT)

@@ -25,8 +25,9 @@
             class="tag"
             :class="{ selected: selectedTags[book.id] === tag }"
             @click.stop="selectTag(book.id, tag)"
-            >{{ tag }}</span
           >
+            {{ tag }}
+          </span>
         </div>
 
         <!-- 오디오 컨트롤 -->
@@ -66,9 +67,24 @@
           >
         </div>
 
+        <!-- 즐겨찾기·찜 토글 아이콘 -->
         <div class="icons">
-          <span class="icon">♡</span>
-          <span class="icon">👜</span>
+          <!-- 읽음(하트) -->
+          <span
+            class="icon favorite"
+            :class="{ active: favorites.has(book.id) }"
+            @click.stop="toggleFavorite(book.id)"
+          >
+            {{ favorites.has(book.id) ? "❤️" : "🤍" }}
+          </span>
+          <!-- 찜(가방) -->
+          <span
+            class="icon wish"
+            :class="{ active: wishes.has(book.id) }"
+            @click.stop="toggleWish(book.id)"
+          >
+            {{ wishes.has(book.id) ? "🛍️" : "👜" }}
+          </span>
         </div>
       </div>
     </div>
@@ -92,6 +108,10 @@ const playingId = ref(null);
 const currentTime = reactive({});
 const duration = reactive({});
 
+// 읽음(favorite)·찜(wish) 상태: Set<bookId>
+const favorites = ref(new Set());
+const wishes = ref(new Set());
+
 function goToDetail(id) {
   router.push({ name: "BookDetail", params: { id } });
 }
@@ -100,19 +120,24 @@ async function fetchBooks() {
   const { data } = await axios.get("/api/books/?category=1");
   books.value = data.map((book) => {
     const tags = book.musics.map((m) => m.tag);
-    selectedTags[book.id] = "사랑과 그리움";
+    selectedTags[book.id] = tags[0] || "";
     return { ...book, tags };
   });
+
+  // 로그인 상태라면, 읽음·찜 초기 상태 불러오기
+  if (isLoggedIn.value) {
+    const me = await axios.get("/api/auth/users/me");
+    me.data.read_books.forEach((b) => favorites.value.add(b.id));
+    me.data.favorites.forEach((b) => wishes.value.add(b.id));
+  }
 }
 
 onMounted(fetchBooks);
 
 function selectTag(bookId, tag) {
   if (selectedTags[bookId] === tag) return;
-  if (playingId.value === bookId) {
-    audioRefs[bookId]?.pause();
-    playingId.value = null;
-  }
+  audioRefs[bookId]?.pause();
+  playingId.value = null;
   selectedTags[bookId] = tag;
   currentTime[bookId] = 0;
   duration[bookId] = 0;
@@ -152,6 +177,38 @@ function formatTime(sec) {
   const m = Math.floor(sec / 60);
   const s = String(Math.floor(sec % 60)).padStart(2, "0");
   return `${m}:${s}`;
+}
+
+// ——— 즐겨찾기(읽음) 토글 ———
+async function toggleFavorite(bookId) {
+  if (!isLoggedIn.value) return alert("로그인이 필요합니다.");
+  try {
+    if (favorites.value.has(bookId)) {
+      await axios.delete(`/api/auth/users/me/read_books/${bookId}`);
+      favorites.value.delete(bookId);
+    } else {
+      await axios.post(`/api/auth/users/me/read_books/${bookId}`);
+      favorites.value.add(bookId);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// ——— 찜(wish) 토글 ———
+async function toggleWish(bookId) {
+  if (!isLoggedIn.value) return alert("로그인이 필요합니다.");
+  try {
+    if (wishes.value.has(bookId)) {
+      await axios.delete(`/api/auth/users/me/favorites/${bookId}`);
+      wishes.value.delete(bookId);
+    } else {
+      await axios.post(`/api/auth/users/me/favorites/${bookId}`);
+      wishes.value.add(bookId);
+    }
+  } catch (err) {
+    console.error(err);
+  }
 }
 </script>
 
@@ -206,7 +263,7 @@ function formatTime(sec) {
 }
 .tag.selected {
   background: linear-gradient(to right, #5807a3, #4563eb, #6f80e0, #dbd194);
-  border-color: #ffffff;
+  border-color: #fff;
 }
 .audio-controls {
   display: flex;
@@ -246,7 +303,13 @@ function formatTime(sec) {
 .icons {
   display: flex;
   gap: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
+}
+.icon {
+  cursor: pointer;
+}
+.icon.active {
+  filter: drop-shadow(0 0 4px #ffeb3b);
 }
 </style>
