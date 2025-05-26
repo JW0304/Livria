@@ -20,7 +20,7 @@
       <template v-if="auth.user">
         <RouterLink to="/mypage" class="nickname">
           <img :src="avatarUrl" class="avatar" />
-          {{ profile.nickname || auth.user.nickname }}님
+          {{ auth.user.nickname }}님
         </RouterLink>
         <button @click="logout">로그아웃</button>
       </template>
@@ -112,22 +112,13 @@ const avatarUrl = computed(() => {
 }
 
 .app-header {
-  position: fixed; /* 화면 고정 */
-  top: 0; /* 위에서 0px */
-  left: 0;
-  right: 0;
-  z-index: 1000; /* 다른 요소보다 위에 있도록 */
-  background: black; /* 배경색 안 넣으면 투명하게 뜸 */
-  color: white;
-  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+  background: black;
+  color: white;
   gap: 1rem;
-}
-
-body {
-  padding-top: 70px; /* 헤더 높이만큼 띄워줘야 함 (정확한 높이는 조절 가능) */
 }
 
 /* 좌측 정렬 */

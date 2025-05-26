@@ -93,41 +93,34 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    parser_classes = [JSONParser, MultiPartParser, FormParser]
     lookup_field = 'pk'
 
-    def get_serializer_class(self):
-        # PATCH /users/me/ 에는 업데이트용 직렬화기 사용
-        if self.action in ['update_me', 'partial_update_me']:
-            return UserUpdateSerializer
-        return UserSerializer
+    @action(detail=False, methods=['get', 'patch'], url_path='me')
+    def me(self, request):
+        """
+        GET  /api/auth/users/me     → 현재 사용자 정보 반환  
+        PATCH /api/auth/users/me    → 사용자 정보 업데이트
+        """
+        if request.method == 'GET':
+            serializer = UserSerializer(request.user, context={'request': request})
+            return Response(serializer.data)
 
-    @action(detail=False, methods=['get'], url_path='me')
-    def get_me(self, request):
-        """
-        GET /api/auth/users/me
-        현재 로그인한 사용자의 정보 반환
-        """
+        # PATCH
+        update_serializer = UserUpdateSerializer(request.user, data=request.data, partial=True)
+        update_serializer.is_valid(raise_exception=True)
+        update_serializer.save()
+
+        # 변경된 정보 다시 반환
         serializer = UserSerializer(request.user, context={'request': request})
         return Response(serializer.data)
-
-    @action(detail=False, methods=['patch'], url_path='me')
-    def update_me(self, request):
-        """
-        PATCH /api/auth/users/me
-        현재 로그인한 사용자의 정보 일부 수정
-        """
-        serializer = UserUpdateSerializer(request.user, data=request.data, partial=True)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        # 수정 후 최신 정보 리턴
-        out = UserSerializer(request.user, context={'request': request}).data
-        return Response(out)
 
     @action(detail=False, methods=['post', 'delete'], url_path=r'me/favorites/(?P<book_pk>[^/.]+)')
     def favorites(self, request, book_pk=None):
         """
-        POST   /api/auth/users/me/favorites/{book_pk}   -> 찜 추가
-        DELETE /api/auth/users/me/favorites/{book_pk}   -> 찜 해제
+        POST   /api/auth/users/me/favorites/{book_pk}   → 찜 추가  
+        DELETE /api/auth/users/me/favorites/{book_pk}   → 찜 해제
         """
         user = request.user
         try:
@@ -139,15 +132,14 @@ class UserViewSet(viewsets.ModelViewSet):
             user.favorites.add(book)
             return Response({'detail': 'Added to favorites.'}, status=status.HTTP_201_CREATED)
 
-        # DELETE
         user.favorites.remove(book)
         return Response({'detail': 'Removed from favorites.'}, status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=False, methods=['post', 'delete'], url_path=r'me/read_books/(?P<book_pk>[^/.]+)')
     def read_books(self, request, book_pk=None):
         """
-        POST   /api/auth/users/me/read_books/{book_pk}  -> 읽음 추가
-        DELETE /api/auth/users/me/read_books/{book_pk}  -> 읽음 해제
+        POST   /api/auth/users/me/read_books/{book_pk}   → 읽음 추가  
+        DELETE /api/auth/users/me/read_books/{book_pk}   → 읽음 해제
         """
         user = request.user
         try:
@@ -159,6 +151,5 @@ class UserViewSet(viewsets.ModelViewSet):
             user.read_books.add(book)
             return Response({'detail': 'Marked as read.'}, status=status.HTTP_201_CREATED)
 
-        # DELETE
         user.read_books.remove(book)
         return Response({'detail': 'Unmarked as read.'}, status=status.HTTP_204_NO_CONTENT)
