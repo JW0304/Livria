@@ -666,6 +666,7 @@ onMounted(() => {
 }
 .review-controls button,
 .edit-buttons button {
+  justify-content: flex-end;
   background: none;
   border: none;
   color: #444;
