@@ -1,5 +1,8 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 class Category(models.Model):
     name = models.CharField(max_length=50, unique=True)
@@ -50,6 +53,7 @@ class Music(models.Model):
     """
     각 도서(Book)에 대해 생성된 음악 조각을 저장합니다.
     """
+
     book       = models.ForeignKey(
         Book,
         on_delete=models.CASCADE,
@@ -64,3 +68,11 @@ class Music(models.Model):
 
     def __str__(self):
         return f'{self.book.title} — {self.tag}'
+    
+class MusicReaction(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    music = models.ForeignKey(Music, on_delete=models.CASCADE)
+    is_like = models.BooleanField()  # True = 좋아요, False = 싫어요
+
+    class Meta:
+        unique_together = ('user', 'music')  # 한 유저당 하나의 반응만

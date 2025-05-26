@@ -1,6 +1,9 @@
-from rest_framework import viewsets, permissions, filters
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework import viewsets, permissions, filters, status
 from django_filters.rest_framework import DjangoFilterBackend
-from .models      import Book, Author, Category, Genre, EmotionTag, Review, Music
+from .models      import Book, Author, Category, Genre, EmotionTag, Review, Music, MusicReaction
 from .serializers import (
     BookSerializer,
     AuthorSerializer,
@@ -8,7 +11,8 @@ from .serializers import (
     GenreSerializer,
     EmotionTagSerializer,
     ReviewSerializer,
-    MusicSerializer
+    MusicSerializer,
+    MusicReactionSerializer
 )
 
 class BookViewSet(viewsets.ModelViewSet):
@@ -91,3 +95,17 @@ class MusicViewSet(viewsets.ModelViewSet):
     queryset = Music.objects.select_related('book').all()
     serializer_class   = MusicSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def react_music(request, music_id):
+    is_like = request.data.get('is_like')
+    if is_like is None:
+        return Response({'error': 'is_like 값이 필요합니다.'}, status=400)
+
+    reaction, created = MusicReaction.objects.update_or_create(
+        user=request.user,
+        music_id=music_id,
+        defaults={'is_like': is_like}
+    )
+    return Response({'detail': '반응 저장 완료'})

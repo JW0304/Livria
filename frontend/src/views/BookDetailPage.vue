@@ -107,11 +107,20 @@
               <span v-else>▶</span>
             </button>
 
-            <button @click="vote(music.id, 'up')">
-              👍 {{ music.upvotes }}
+            <button
+              class="like-btn"
+              :class="{ liked: isLiked[music.id] }"
+              @click="toggleLike(music.id)"
+            >
+              👍 좋아요
             </button>
-            <button @click="vote(music.id, 'down')">
-              👎 {{ music.downvotes }}
+
+            <button
+              class="dislike-btn"
+              :class="{ disliked: isDisliked[music.id] }"
+              @click="toggleDislike(music.id)"
+            >
+              👎 싫어요
             </button>
 
             <a
@@ -226,6 +235,92 @@ const reviews = ref([]);
 const newContent = ref("");
 const editingId = ref(null);
 const editedContent = ref("");
+
+// 좋아요 및 싫어요 상태
+const isLiked = reactive({});
+const isDisliked = reactive({});
+
+async function toggleLike(musicId) {
+  if (!auth.token) {
+    alert("로그인이 필요합니다.");
+    return;
+  }
+
+  // 좋아요 취소
+  if (isLiked[musicId]) {
+    await axios.post(
+      `/api/music/${musicId}/react/`,
+      { is_like: false },
+      {
+        headers: { Authorization: `Token ${auth.token}` },
+      }
+    );
+    isLiked[musicId] = false;
+  } else {
+    // 싫어요가 선택된 경우 취소
+    if (isDisliked[musicId]) {
+      await axios.post(
+        `/api/music/${musicId}/react/`,
+        { is_like: true },
+        {
+          headers: { Authorization: `Token ${auth.token}` },
+        }
+      );
+      isDisliked[musicId] = false;
+    }
+
+    // 좋아요 선택
+    await axios.post(
+      `/api/music/${musicId}/react/`,
+      { is_like: true },
+      {
+        headers: { Authorization: `Token ${auth.token}` },
+      }
+    );
+    isLiked[musicId] = true;
+  }
+}
+
+async function toggleDislike(musicId) {
+  if (!auth.token) {
+    alert("로그인이 필요합니다.");
+    return;
+  }
+
+  // 싫어요 취소
+  if (isDisliked[musicId]) {
+    await axios.post(
+      `/api/music/${musicId}/react/`,
+      { is_like: true },
+      {
+        headers: { Authorization: `Token ${auth.token}` },
+      }
+    );
+    isDisliked[musicId] = false;
+  } else {
+    // 좋아요가 선택된 경우 취소
+    if (isLiked[musicId]) {
+      await axios.post(
+        `/api/music/${musicId}/react/`,
+        { is_like: false },
+        {
+          headers: { Authorization: `Token ${auth.token}` },
+        }
+      );
+      isLiked[musicId] = false;
+    }
+
+    // 싫어요 선택
+    await axios.post(
+      `/api/music/${musicId}/react/`,
+      { is_like: false },
+      {
+        headers: { Authorization: `Token ${auth.token}` },
+      }
+    );
+    isDisliked[musicId] = true;
+  }
+}
 
 // 현재 사용자
 const currentUser = computed(() => auth.user?.username || "");
@@ -351,6 +446,30 @@ async function deleteReview(id) {
   });
   fetchReviews();
 }
+
+async function vote(musicId, direction) {
+  if (!auth.token) {
+    alert("로그인이 필요합니다.");
+    return;
+  }
+
+  const is_like = direction === "up";
+  try {
+    await axios.post(
+      `/api/music/${musicId}/react/`,
+      { is_like },
+      {
+        headers: {
+          Authorization: `Token ${auth.token}`,
+        },
+      }
+    );
+    console.log(`✅ ${is_like ? "좋아요" : "싫어요"} 저장 완료`);
+  } catch (err) {
+    console.error("❌ 반응 저장 실패", err);
+  }
+}
+
 function editReview(review) {
   editingId.value = review.id;
   editedContent.value = review.content;
@@ -368,6 +487,26 @@ onMounted(async () => {
   await Promise.all([fetchBookDetail(), fetchEmotionTags(), fetchReviews()]);
   if (auth.token) {
     await profile.fetchMe();
+  }
+
+  // localStorage에서 상태 불러오기
+  const savedLikes = localStorage.getItem("liked");
+  const savedDislikes = localStorage.getItem("disliked");
+
+  if (savedLikes) {
+    isLiked = JSON.parse(savedLikes);
+  }
+
+  if (savedDislikes) {
+    isDisliked = JSON.parse(savedDislikes);
+  }
+
+  // 나머지 데이터 로드
+  fetchBookDetail();
+  fetchEmotionTags();
+  fetchReviews();
+  if (auth.token) {
+    profile.fetchMe();
   }
 });
 </script>
@@ -663,5 +802,13 @@ onMounted(async () => {
 .login-prompt {
   margin-top: 1rem;
   color: #ccc;
+}
+
+.liked {
+  color: #9b5de5; /* 보라색 */
+}
+
+.disliked {
+  color: #9b5de5; /* 보라색 */
 }
 </style>

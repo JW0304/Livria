@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Book, Review, Author, Category, Genre, EmotionTag, Music
+from .models import Book, Review, Author, Category, Genre, EmotionTag, Music, MusicReaction
 
 class AuthorSerializer(serializers.HyperlinkedModelSerializer):
     books = serializers.HyperlinkedRelatedField(
@@ -25,6 +25,11 @@ class MusicSerializer(serializers.ModelSerializer):
     def get_audio_url(self, obj):
         request = self.context.get("request")
         return request.build_absolute_uri(obj.audio_file.url)
+    
+class MusicReactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MusicReaction
+        fields = ['music', 'is_like']
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     musics = MusicSerializer(many=True, read_only=True)
