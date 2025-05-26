@@ -29,7 +29,6 @@
         <button @click="goSignup">회원가입</button>
       </template>
     </div>
-
   </header>
 </template>
 
@@ -46,9 +45,9 @@ const isLoggedIn = computed(() => !!auth.token);
 const username = computed(() => auth.user?.nickname || "마이페이지");
 
 const avatarUrl = computed(() => {
-  const defaultAvatar = auth.user?.default_avatar || 'default1'
-  return `/avatars/${defaultAvatar}.png`
-})
+  const defaultAvatar = auth.user?.default_avatar || "default1";
+  return `/avatars/${defaultAvatar}.png`;
+});
 
 const onSearch = () => {
   if (query.value.trim()) {
@@ -65,10 +64,9 @@ function goSignup() {
 }
 
 const logout = () => {
-  auth.logout()
-  router.push('/')
-}
-
+  auth.logout();
+  router.push("/");
+};
 </script>
 
 <style scoped>

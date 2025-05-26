@@ -48,6 +48,7 @@ import { ref, onMounted, watch, computed } from "vue";
 import { useRoute } from "vue-router";
 import axios from "axios";
 
+const query = ref("");
 const route = useRoute();
 const loading = ref(false);
 const results = ref([]);
@@ -55,7 +56,7 @@ const results = ref([]);
 const fetchSearchResults = async (query) => {
   loading.value = true;
   try {
-    const res = await axios.get("http://localhost:8000/api/search/", {
+    const res = await axios.get("/api/books/?search/", {
       params: { q: query },
     });
     results.value = res.data.books; // ✅ API 응답 구조 기준
@@ -65,6 +66,19 @@ const fetchSearchResults = async (query) => {
     loading.value = false;
   }
 };
+
+function searchBooks() {
+  if (!query.value) return;
+
+  axios
+    .get(`/api/books/?search=${query.value}`)
+    .then((res) => {
+      books.value = res.data.results || res.data; // pagination 여부에 따라 분기
+    })
+    .catch((err) => {
+      console.error("검색 실패:", err);
+    });
+}
 
 onMounted(() => {
   if (route.query.q) {

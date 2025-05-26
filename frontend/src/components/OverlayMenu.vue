@@ -3,12 +3,48 @@
     <nav class="menu">
       <h3 class="section-title">바로가기</h3>
       <ul>
-        <li><RouterLink to="/" exact>메인</RouterLink></li>
-        <li><RouterLink to="/bestsellers">베스트 셀러</RouterLink></li>
-        <li><RouterLink to="/bestsellers">오늘의 아리아</RouterLink></li>
-        <li><RouterLink to="/newbook">신착 도서</RouterLink></li>
-        <li><RouterLink to="/recommendations">블로거 추천 도서</RouterLink></li>
-        <li><RouterLink to="/reviews">도서 리뷰</RouterLink></li>
+        <li>
+          <RouterLink to="/" :class="{ active: $route.path === '/' }"
+            >메인</RouterLink
+          >
+        </li>
+        <li>
+          <RouterLink
+            to="/bestsellers"
+            :class="{ active: $route.path === '/bestsellers' }"
+          >
+            베스트 셀러
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/aria" :class="{ active: $route.path === '/aria' }">
+            오늘의 아리아
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/newbook"
+            :class="{ active: $route.path === '/newbook' }"
+          >
+            신착 도서
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/recommendations"
+            :class="{ active: $route.path === '/recommendations' }"
+          >
+            블로거 추천 도서
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/reviews"
+            :class="{ active: $route.path === '/reviews' }"
+          >
+            도서 리뷰
+          </RouterLink>
+        </li>
       </ul>
 
       <h3 class="section-title">장르</h3>
