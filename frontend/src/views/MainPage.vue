@@ -25,8 +25,10 @@
     </section> -->
 
     <section>
-      <h2>새로 도착한 도서</h2>
-      <router-link to="/newbook" class="more-link">더보기</router-link>
+      <h2>
+        새로 도착한 도서
+        <router-link to="/newbook" class="more-link">더보기</router-link>
+      </h2>
       <div class="book-grid">
         <RouterLink
           v-for="book in newBooks"
@@ -42,8 +44,12 @@
     </section>
 
     <section>
-      <h2>블로거 추천 도서</h2>
-      <router-link to="/recommendations" class="more-link">더보기</router-link>
+      <h2>
+        블로거 추천 도서
+        <router-link to="/recommendations" class="more-link"
+          >더보기</router-link
+        >
+      </h2>
       <div class="book-grid">
         <RouterLink
           v-for="book in recommendedBooks"
@@ -120,10 +126,26 @@ onMounted(async () => {
   color: inherit; /* 글자색 상속 */
   display: block;
 }
+
+.book-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px; /* 책 커버 둥글게 */
+}
+
+.book-card h4 {
+  margin: 0;
+}
+
+.book-card p {
+  color: gray; /* 저자 글씨 색상 회색으로 */
+  margin-top: 0.25rem;
+}
+
 .book-card:hover {
-  background-color: #222;
+  background-color: #0f0f0f;
   transform: scale(1.02);
-  transition: all 0.2s;
+  transition: all 0.24s;
 }
 
 .main-page {
@@ -135,7 +157,11 @@ section {
 }
 h2 {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between; /* 제목과 더보기 링크를 양쪽으로 정렬 */
+  align-items: center;
 }
+
 .book-grid {
   display: grid;
   gap: 1rem;
@@ -158,5 +184,6 @@ h2 {
   font-size: 0.9rem;
   color: #aaa;
   cursor: pointer;
+  text-decoration: none; /* 더보기 링크 밑줄 제거 */
 }
 </style>
