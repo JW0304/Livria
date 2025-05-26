@@ -1,12 +1,14 @@
 from rest_framework import viewsets, permissions
-from .models      import Book, Author, Category, Genre, EmotionTag, Review
+from django_filters.rest_framework import DjangoFilterBackend
+from .models      import Book, Author, Category, Genre, EmotionTag, Review, Music
 from .serializers import (
     BookSerializer,
     AuthorSerializer,
     CategorySerializer,
     GenreSerializer,
     EmotionTagSerializer,
-    ReviewSerializer
+    ReviewSerializer,
+    MusicSerializer
 )
 
 class BookViewSet(viewsets.ModelViewSet):
@@ -17,27 +19,21 @@ class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category', 'genre']
+
 class AuthorViewSet(viewsets.ReadOnlyModelViewSet):
-    """
-    작가 목록/상세 (읽기만)
-    """
-    queryset         = Author.objects.all()
+    queryset = Author.objects.prefetch_related('books').all()
     serializer_class = AuthorSerializer
     permission_classes = [permissions.AllowAny]
 
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
-    """
-    카테고리(베스트셀러/신간/블로거 추천) 읽기
-    """
-    queryset         = Category.objects.all()
+    queryset = Category.objects.prefetch_related('books').all()
     serializer_class = CategorySerializer
     permission_classes = [permissions.AllowAny]
 
 class GenreViewSet(viewsets.ReadOnlyModelViewSet):
-    """
-    장르(사용자 정의 7개) 읽기
-    """
-    queryset         = Genre.objects.all()
+    queryset = Genre.objects.prefetch_related('books').all()
     serializer_class = GenreSerializer
     permission_classes = [permissions.AllowAny]
 
@@ -55,4 +51,13 @@ class ReviewViewSet(viewsets.ModelViewSet):
     """
     queryset         = Review.objects.select_related('book','user').all()
     serializer_class = ReviewSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class MusicViewSet(viewsets.ModelViewSet):
+    """
+    자동생성 음악 기록의 CRUD
+    """
+    queryset = Music.objects.select_related('book').all()
+    serializer_class   = MusicSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

@@ -6,6 +6,7 @@ from .views import (
     CategoryViewSet,
     GenreViewSet,
     EmotionTagViewSet,
+    MusicViewSet,
     ReviewViewSet
 )
 
@@ -14,6 +15,7 @@ router.register(r'books',       BookViewSet)
 router.register(r'authors',     AuthorViewSet)
 router.register(r'categories',  CategoryViewSet)
 router.register(r'genres',      GenreViewSet)
+router.register(r'musics',        MusicViewSet)
 router.register(r'emotion-tags',EmotionTagViewSet)
 router.register(r'reviews',     ReviewViewSet)
 

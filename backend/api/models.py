@@ -20,16 +20,16 @@ class Author(models.Model):
         return self.name
 
 class Book(models.Model):
-    isbn        = models.CharField(max_length=20, unique=True)
-    title       = models.CharField(max_length=200)
-    author      = models.ForeignKey(Author, on_delete=models.CASCADE)
-    publisher   = models.CharField(max_length=100, blank=True)
-    cover_url   = models.URLField(blank=True)
-    description = models.TextField(blank=True)
-    pub_date    = models.DateField(null=True, blank=True)
-    category    = models.ForeignKey(Category, on_delete=models.CASCADE)
-    genre       = models.ForeignKey(Genre, on_delete=models.SET_NULL, null=True, blank=True)
-    global_recommend_count = models.IntegerField(default=0)
+    isbn                     = models.CharField(max_length=20, unique=True)
+    title                    = models.CharField(max_length=255)
+    publisher                = models.CharField(max_length=255, blank=True)
+    cover_url                = models.URLField(blank=True)
+    description              = models.TextField(blank=True)
+    pub_date                 = models.DateField(null=True, blank=True)
+    global_recommend_count   = models.IntegerField(default=0)
+    author                   = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name='books')
+    category                 = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='books')
+    genre                    = models.ForeignKey(Genre,    on_delete=models.SET_NULL, null=True, related_name='books')
     def __str__(self):
         return self.title
 
