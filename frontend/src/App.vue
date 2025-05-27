@@ -65,10 +65,10 @@ body {
 body {
   background: linear-gradient(
     45deg,
-    #45023e,
+    #310231,
     #000000,
-    hsl(277, 94%, 13%),
-    #24043b5c
+    hsl(310, 100%, 13%),
+    #3502585c
   );
   background-size: 400% 400%;
   background-attachment: fixed;

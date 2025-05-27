@@ -300,6 +300,12 @@ function slideNext(section) {
   z-index: 1;
 }
 
+section {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding-inline: 1rem;
+}
+
 /* 섹션 제목 */
 .section-title {
   font-family: "LINESeedKR-Bd";
@@ -310,8 +316,9 @@ function slideNext(section) {
   margin-bottom: 1rem;
 }
 .more-link {
-  font-size: 0.9rem;
-  color: #aaa;
+  font-family: "LINESeedKR-Bd";
+  font-size: 1rem;
+  color: #dbdada;
   text-decoration: none;
 }
 

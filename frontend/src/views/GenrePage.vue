@@ -31,6 +31,7 @@
         :key="book.id"
         :to="`/books/${book.id}`"
         class="book-card"
+        :style="cardStyleMap[book.id] || {}"
       >
         <img :src="book.cover_url" alt="book cover" />
         <p class="book-title">{{ book.title }}</p>
@@ -59,9 +60,10 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onMounted, watch, reactive } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import axios from "axios";
+import ColorThief from "colorthief";
 
 const route = useRoute();
 const router = useRouter();
@@ -69,9 +71,30 @@ const router = useRouter();
 const books = ref([]);
 const allGenres = ref([]);
 const totalBooks = ref(0);
+const cardStyleMap = reactive({});
 
 const page = ref(1);
-const perPage = 12;
+const perPage = 14;
+
+function applyColorThiefToBooks(books) {
+  for (let book of books) {
+    const img = new Image();
+    img.src = book.cover_url;
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const thief = new ColorThief();
+      const [r, g, b] = thief.getColor(img);
+      const pal = thief.getPalette(img, 5);
+      cardStyleMap[book.id] = {
+        background: `linear-gradient(
+          to bottom,
+          rgb(${r},${g},${b}),
+          rgb(${pal[1].join(",")})
+        )`,
+      };
+    };
+  }
+}
 
 const paginatedBooks = computed(() => {
   const start = (page.value - 1) * perPage;
@@ -116,6 +139,9 @@ async function fetchGenreBooks(genreId) {
 
   totalBooks.value = books.value.length;
   page.value = 1;
+
+  // ✅ 여기에 추가!
+  applyColorThiefToBooks(books.value);
 }
 
 onMounted(() => {
@@ -131,6 +157,7 @@ watch(
 
 <style scoped>
 .genre-page {
+  margin-top: 5rem;
   padding: 2rem;
   background: transparent;
   color: white;
@@ -146,32 +173,60 @@ watch(
   color: lightgray;
 }
 .genre-filter button {
-  background: #eee;
+  background: #333; /* 선택 안 됐을 때 진회색 */
   border: none;
   border-radius: 20px;
   padding: 0.3rem 0.8rem;
   cursor: pointer;
+  font-weight: bold;
+  color: #ccc; /* 연한 회색 글씨 */
+  transition: all 0.2s ease;
 }
+
+/* 선택된 버튼 */
 .genre-filter button.selected {
-  background: #a96acc;
+  background: linear-gradient(to right, #e718b4, #4cc2fe);
   color: white;
 }
+
+/* 선택된 버튼 호버 시 (더 밝은 그라데이션 + 확대) */
+.genre-filter button.selected:hover {
+  background: linear-gradient(to right, #ff42cc, #73d5ff);
+  transform: scale(1.05);
+}
+
+/* 선택 안 된 버튼 호버 시 (약간 밝게 + 살짝 커짐) */
+.genre-filter button:not(.selected):hover {
+  background: #555;
+  color: #eee;
+  transform: scale(1.03);
+}
+
 .result-count {
-  margin: 1rem 0;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  color: gray;
+  color: rgb(160, 160, 160);
 }
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(7, 1fr); /* ✅ 7개 고정 */
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .book-card {
-  background: #111;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  flex: 0 0 clamp(100px, 15vw, 180px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  background: #222; /* 기본 배경 – JS에서 덮어씌움 */
   text-decoration: none;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 .book-card img {
   width: 100%;
@@ -179,12 +234,32 @@ watch(
   object-fit: cover;
   border-radius: 6px;
 }
-.book-title,
-.book-author {
+.book-title {
+  font-weight: ;
   color: white;
   margin: 0.5rem 0 0;
   font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: none;
 }
+.book-author {
+  color: rgb(218, 217, 217);
+  font-size: 0.8rem;
+  margin: 0.5rem 0 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: none;
+
+  /* ✅ 추가 스타일 */
+
+  -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -196,12 +271,12 @@ watch(
   background: none;
   border: none;
   padding: 0.4rem 0.6rem;
-  color: white;
+  color: rgb(163, 163, 163);
   font-weight: bold;
   cursor: pointer;
 }
 .pagination button.current {
-  color: #a96acc;
+  color: #b31cb3;
   text-decoration: underline;
 }
 .pagination button:disabled {
