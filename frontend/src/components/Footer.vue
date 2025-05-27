@@ -14,14 +14,10 @@
 
 <script setup></script>
 
-<style lang="scss" scoped>
-/* Footer 스타일 */
+<style scoped lang="scss">
 footer {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #000000
-  ); /* 위쪽은 투명, 아래쪽은 검정색 */
+  /* 투명 배경으로 설정해 body 그라데이션이 그대로 보이게 처리 */
+  background: transparent;
   padding: 20px;
   color: rgb(148, 148, 148);
   text-align: center;
@@ -39,6 +35,19 @@ footer {
   .right {
     font-size: 16px;
     font-weight: bold;
+  }
+}
+
+/* 푸터 전용 키프레임 (필요 시 사용 가능) */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 </style>

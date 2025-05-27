@@ -1,13 +1,3 @@
-<!-- <template>
-  <div id="app">
-    <Header @toggleMenu="menuOpen = !menuOpen" />
-    <OverlayMenu v-if="menuOpen" @close="menuOpen = false" />
-    <main class="main-content">
-      <router-view />
-    </main>
-  </div>
-</template> -->
-
 <template>
   <div :class="['app-layout', { 'sidebar-open': menuOpen }]">
     <OverlayMenu :isOpen="menuOpen" />
@@ -28,69 +18,67 @@ import Footer from "@/components/Footer.vue";
 import OverlayMenu from "@/components/OverlayMenu.vue";
 
 const menuOpen = ref(false);
-// 더 이상 auth.fetchMe()를 호출하지 않습니다.
 </script>
 
 <style>
-.app-layout {
-  background-color: black;
-}
-
-/* * {
-  font-family: "Nanum Gothic Coding", monospace;
-  font-weight: 400;
-  font-style: normal;
-} */
-
-/* .app-layout {
-  display: flex;
-  transition: all 0.3s ease;
-  height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #9c4dff,
-    #ff6fd5,
-    #fbcf46
-  );
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-} */
-
-/* 레이아웃 설정 */
-
-.sidebar-open .main-wrapper {
-  margin-left: 240px;
-}
-
-.main-content {
-  margin-top: 20px;
-  padding: 2rem;
-  position: relative; /* 배경이 콘텐츠 위로 오지 않도록 */
-}
-
-/* 전체 HTML 및 Body의 높이를 100%로 설정 */
+/* --------------------------------------------------
+   전역 가로 스크롤 제거, body에 고정 그라데이션
+   -------------------------------------------------- */
 html,
 body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
-
 body {
-  background-color: transparent; /* body는 투명으로 처리 */
-  color: rgb(0, 0, 0);
-  margin: 0;
+  background: linear-gradient(45deg, #120127, #000000, #2b0244, #6b0262);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradientBG 15s ease infinite;
   font-family: sans-serif;
+  color: #000;
 }
 
+/* 최상위 레이아웃 */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* 사이드바 닫힘 시 메인/푸터 영역이 64px 밀려 나오도록 */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 64px;
+  transition: margin-left 0.3s ease;
+}
+
+/* 사이드바 열림 시(250px) */
+.sidebar-open .main-wrapper {
+  margin-left: 250px;
+}
+
+/* 헤더 / 콘텐츠 / 푸터 배치, 가로 스크롤 제거 */
+.main-content {
+  flex: 1;
+  margin-top: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* z-index 유지 */
 header {
-  z-index: 10; /* 헤더를 배경 위로 올림 */
+  z-index: 10;
 }
-
 .sidebar {
-  z-index: 20; /* 사이드바가 배경보다 위에 오도록 설정 */
+  z-index: 20;
 }
 
-/* 애니메이션 정의 */
+/* 그라데이션 애니메이션 */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;

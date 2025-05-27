@@ -7,7 +7,6 @@
       </h2>
       <div class="book-grid-wrapper">
         <button class="scroll-button left" @click="scrollLeft">‹</button>
-
         <div class="book-grid" ref="bookGrid">
           <div
             v-for="book in bestSellers"
@@ -30,15 +29,9 @@
             </div>
           </div>
         </div>
-
         <button class="scroll-button right" @click="scrollRight">›</button>
       </div>
     </section>
-
-    <!-- <section v-if="isLoggedIn">
-      <h2>오늘의 아리아</h2>
-      <BookList :books="mainStore.ageRecs" />
-    </section> -->
 
     <section>
       <h2>
@@ -79,124 +72,91 @@
         </RouterLink>
       </div>
     </section>
-
-    <!-- <section>
-      <h2>많이 선호한 음악 추천</h2>
-      <BookList :books="mainStore.topBooks" />
-    </section> -->
   </div>
 </template>
 
 <script setup>
 import { onMounted, ref, computed } from "vue";
 import axios from "axios";
-
 import { useMainStore } from "@/stores/main";
-import BookList from "@/components/BookList.vue";
-
 import { useRouter } from "vue-router";
 import ColorThief from "colorthief";
 
 const bestSellers = ref([]);
+const newBooks = ref([]);
+const recommendedBooks = ref([]);
+const openMenuId = ref(null);
+const bookGrid = ref(null);
+
+const router = useRouter();
+const mainStore = useMainStore();
+const isLoggedIn = computed(() => !!localStorage.token);
 
 const getCardStyle = (book) => {
-  const imageElement = new Image();
-  imageElement.src = book.cover_url;
-  imageElement.crossOrigin = "anonymous"; // CORS 문제 해결을 위한 속성 추가
+  const img = new Image();
+  img.src = book.cover_url;
+  img.crossOrigin = "anonymous";
   return new Promise((resolve) => {
-    imageElement.onload = () => {
-      const colorThief = new ColorThief();
-      const dominantColor = colorThief.getColor(imageElement); // 주요 색상 추출
-      const palette = colorThief.getPalette(imageElement, 5); // 색상 팔레트 추출
-
-      // 팔레트를 활용한 그라데이션 배경 설정
+    img.onload = () => {
+      const thief = new ColorThief();
+      const dom = thief.getColor(img);
+      const pal = thief.getPalette(img, 5);
       resolve({
-        background: `linear-gradient(to bottom, rgb(${dominantColor.join(
+        background: `linear-gradient(to bottom, rgb(${dom.join(
           ","
-        )}), rgb(${palette[1].join(",")}))`,
+        )}), rgb(${pal[1].join(",")}))`,
       });
     };
   });
 };
 
-const router = useRouter();
-
-const mainStore = useMainStore();
-const isLoggedIn = computed(() => !!localStorage.token);
-
-const newBooks = ref([]);
-const recommendedBooks = ref([]);
-
 function handleScroll() {
   const el = bookGrid.value;
   if (!el) return;
-
   const nearEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 50;
-  if (nearEnd && bestSellers.value.length < 50) {
-    loadMoreBooks(); // 조건은 적절히 조절
-  }
+  if (nearEnd && bestSellers.value.length < 50) loadMoreBooks();
 }
 
 function loadMoreBooks() {
-  // 예: 새 책 5개 추가 (데모용)
-  const moreBooks = bestSellers.value.slice(0, 5).map((b, i) => ({
+  const more = bestSellers.value.slice(0, 5).map((b, i) => ({
     ...b,
-    id: b.id + "_copy" + i, // 중복 방지용 ID
+    id: b.id + "_copy" + i,
   }));
-  bestSellers.value.push(...moreBooks);
+  bestSellers.value.push(...more);
 }
 
 onMounted(async () => {
   try {
-    const bestsellerRes = await axios.get("/api/books/?category=1");
-    bestSellers.value = bestsellerRes.data.slice(0, 15); // 상위 3개
-
-    const newBookRes = await axios.get("/api/books/?category=2");
-    newBooks.value = newBookRes.data.slice(0, 15); // 신간도 상위 3개 (원하면 더)
-
-    const recommendationsRes = await axios.get("/api/books/?category=3");
-    recommendedBooks.value = recommendationsRes.data.slice(0, 15);
-
-    const imageElement = document.querySelector("img");
-    const colorThief = new ColorThief();
-    const dominantColor = colorThief.getColor(imageElement); // 주요 색상 추출
-    const palette = colorThief.getPalette(imageElement, 5); // 색상 팔레트 추출
-    console.log(dominantColor, palette);
-  } catch (err) {
-    console.error("도서 데이터 불러오기 실패:", err);
-
-    bookGrid.value.addEventListener("scroll", handleScroll);
+    const res1 = await axios.get("/api/books/?category=1");
+    bestSellers.value = res1.data.slice(0, 15);
+    const res2 = await axios.get("/api/books/?category=2");
+    newBooks.value = res2.data.slice(0, 15);
+    const res3 = await axios.get("/api/books/?category=3");
+    recommendedBooks.value = res3.data.slice(0, 15);
+  } catch (e) {
+    console.error(e);
   }
+  bookGrid.value.addEventListener("scroll", handleScroll);
+
+  await Promise.all([mainStore.fetchBestSellers(), mainStore.fetchTopBooks()]);
+  if (!isLoggedIn.value) await mainStore.fetchAgeBased(20);
 });
 
 function goToBestsellers() {
-  router.push({ name: "BestSellers" }); // index.js에 이미 name으로 등록돼 있음
+  router.push({ name: "BestSellers" });
 }
-
-onMounted(async () => {
-  await Promise.all([mainStore.fetchBestSellers(), mainStore.fetchTopBooks()]);
-
-  if (!isLoggedIn.value) {
-    await mainStore.fetchAgeBased(20); // 예시: 20대 추천 도서
-  }
-});
-
-const openMenuId = ref(null);
 function toggleMenu(id) {
   openMenuId.value = openMenuId.value === id ? null : id;
 }
-function playBook(book) {
-  console.log("재생:", book);
+function playBook(b) {
+  console.log("재생:", b);
 }
-function likeBook(book) {
-  console.log("좋아요:", book);
+function likeBook(b) {
+  console.log("좋아요:", b);
 }
-function saveBook(book) {
-  console.log("찜하기:", book);
+function saveBook(b) {
+  console.log("찜하기:", b);
 }
-
-const bookGrid = ref(null);
-
 function scrollLeft() {
   bookGrid.value.scrollBy({ left: -800, behavior: "smooth" });
 }
@@ -206,15 +166,12 @@ function scrollRight() {
 </script>
 
 <style scoped>
-/* .book-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  justify-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto; 
-} */
+.main-page {
+  padding: 2rem;
+  color: white;
+  background: transparent; /* 이제 body 배경이 보입니다 */
+}
+
 .book-grid-wrapper {
   position: relative;
   overflow: hidden;
@@ -223,12 +180,49 @@ function scrollRight() {
 .book-grid {
   display: flex;
   gap: 0.5rem;
-  overflow-x: hidden; /* ✅ 스크롤 막기 */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 0.5rem 0;
 }
 
-/* 좌우 버튼 */
+/* 카드 크기를 키워서 한 줄에 보이는 수를 줄임 */
+.book-card {
+  flex: 0 0 auto;
+  width: clamp(150px, 20vw, 200px);
+  background: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* 이하 기존 스타일 그대로 유지 */
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.book-card h4 {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+.book-card p {
+  font-size: 0.75rem;
+  color: gray;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 .scroll-button {
   position: absolute;
   top: 50%;
@@ -249,112 +243,18 @@ function scrollRight() {
   right: 0;
 }
 
-.book-card img {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.book-card {
-  flex: 0 0 auto;
-  width: clamp(100px, 15vw, 180px);
-  background: black;
-  border-radius: 10px;
-  padding: 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-.book-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-}
-.book-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.05),
-    rgba(0, 0, 0, 0.3)
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 10px;
-  pointer-events: none;
-}
-.book-card:hover::after {
-  opacity: 1;
-}
-
-.book-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.book-card h4 {
-  margin: 0.5rem 0 0;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: white; /* 제목 흰색 */
-  text-decoration: none;
-}
-
-.book-card p {
-  font-size: 0.75rem;
-  color: gray;
-  margin-top: 0.25rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
-/* 스크롤 힌트용 오른쪽 화살표 버튼 */
-/* .book-grid::after {
-  content: "❯";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 0.2rem 0.5rem;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  pointer-events: none;
-} */
-
-.book-card:hover {
-  background-color: #0f0f0f;
-  transform: scale(1.02);
-  transition: all 0.24s;
-}
-
-.main-page {
-  padding: 2rem;
-  color: white;
-}
 section {
   margin-bottom: 3rem;
 }
 h2 {
   margin-bottom: 1rem;
   display: flex;
-  justify-content: space-between; /* 제목과 더보기 링크를 양쪽으로 정렬 */
+  justify-content: space-between;
   align-items: center;
 }
-
 .more-link {
   font-size: 0.9rem;
   color: #aaa;
-  cursor: pointer;
-  text-decoration: none; /* 더보기 링크 밑줄 제거 */
+  text-decoration: none;
 }
 </style>
