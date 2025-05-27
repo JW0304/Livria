@@ -18,6 +18,7 @@ import ReadHistoryPage from "@/views/ReadHistoryPage.vue";
 import NotFound from "@/views/NotFound.vue";
 import GenrePage from "@/views/GenrePage.vue";
 import FavoritesPage from "@/views/FavoritesPage.vue";
+import FavoritesList from "@/views/FavoritesList.vue";
 
 // Pinia 스토어 (로그인 확인용)
 import { useAuthStore } from "@/stores/auth";
@@ -75,6 +76,11 @@ const routes = [
     name: "Favorites",
     component: FavoritesPage,
     meta: { requiresAuth: true },
+  },
+  {
+    path: "/myfavorites",
+    name: "myfavorites",
+    component: FavoritesList,
   },
   {
     path: "/read-history",

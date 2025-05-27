@@ -13,4 +13,5 @@ router.register(r'users', UserViewSet, basename='users')
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('me/favorites', UserViewSet.as_view({'get': 'get_favorites'}), name='get_user_favorites'),
 ]

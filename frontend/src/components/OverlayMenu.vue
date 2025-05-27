@@ -17,8 +17,11 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/aria" :class="{ active: $route.path === '/aria' }">
-            오늘의 아리아
+          <RouterLink
+            to="/myfavorites"
+            :class="{ active: $route.path === '/myfavorites' }"
+          >
+            당신의 아리아
           </RouterLink>
         </li>
         <li>

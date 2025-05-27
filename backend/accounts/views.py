@@ -7,6 +7,7 @@ from rest_framework.decorators import action
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from api.serializers import BookSerializer
 
 from .models import EmotionTag
 from .serializers import UserSerializer, UserUpdateSerializer
@@ -134,6 +135,17 @@ class UserViewSet(viewsets.ModelViewSet):
 
         user.favorites.remove(book)
         return Response({'detail': 'Removed from favorites.'}, status=status.HTTP_204_NO_CONTENT)
+    
+     # 추가된 부분: 찜한 도서 목록을 반환하는 GET 요청
+    @action(detail=False, methods=['get'], url_path='me/favorites')
+    def get_favorites(self, request):
+        """
+        GET /api/auth/users/me/favorites → 찜한 도서 목록 반환
+        """
+        user = request.user
+        books = user.favorites.all()  # 유저가 찜한 도서 목록을 가져옵니다.
+        serialized_books = BookSerializer(books, many=True, context={'request': request})
+        return Response(serialized_books.data, status=status.HTTP_200_OK)
 
     @action(detail=False, methods=['post', 'delete'], url_path=r'me/read_books/(?P<book_pk>[^/.]+)')
     def read_books(self, request, book_pk=None):
