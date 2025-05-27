@@ -3,7 +3,7 @@
     <div class="footer-content">
       <div class="left">
         <p>© 2025 Livria</p>
-        <p>모든 권리 보유.</p>
+        <p>All rights reserved.</p>
       </div>
       <div class="right">
         <p>Livria</p>
@@ -19,7 +19,7 @@ footer {
   /* 투명 배경으로 설정해 body 그라데이션이 그대로 보이게 처리 */
   background: transparent;
   padding: 20px;
-  color: rgb(148, 148, 148);
+  color: rgb(139, 139, 139);
   text-align: center;
 }
 
@@ -29,7 +29,9 @@ footer {
   align-items: center;
 
   .left {
-    font-size: 14px;
+    font-size: 16px;
+    margin-left: 3rem;
+    text-align: left;
   }
 
   .right {

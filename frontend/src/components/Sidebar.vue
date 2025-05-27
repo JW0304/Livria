@@ -16,7 +16,6 @@
   background: #222;
   color: white;
   height: 100vh;
-  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;

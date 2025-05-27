@@ -2,6 +2,10 @@
   <div class="main-page">
     <!-- 배너 슬라이더 -->
     <div class="banner-slider">
+      <div class="banner-text">
+        <p class="kor">책과 함께하는 당신만의 선율</p>
+        <p class="eng">Your own melody with every page you turn</p>
+      </div>
       <div
         class="banner-track"
         :style="{ transform: `translateX(-${currentBanner * 100}%)` }"
@@ -227,18 +231,47 @@ function slideNext(section) {
 
 <style scoped>
 .main-page {
-  padding: 2rem;
   color: #fff;
   background: transparent;
 }
 
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  pointer-events: none;
+}
+
+.banner-text .kor {
+  font-family: "LINESeedKR-Bd", sans-serif;
+  font-size: 2.6rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin: 0.1rem 0;
+}
+
+.banner-text .eng {
+  font-family: "KimjungchulMyungjo-Bold";
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
 /* 배너 */
 .banner-slider {
-  width: 100%;
-  aspect-ratio: 16 / 5;
+  width: 100vw; /* ✅ 가로 화면 전체 */
+  height: auto;
+  aspect-ratio: 16 / 7; /* ✅ 비율 유지 */
+  margin: 0; /* ✅ 위 여백 제거 */
+  position: relative; /* ✅ 오버레이 포지션 기준 */
+  left: 50%;
+  transform: translateX(-50%); /* ✅ 가운데 정렬 */
   overflow: hidden;
-  margin-bottom: 2rem;
 }
+
 .banner-track {
   display: flex;
   transition: transform 0.5s ease;
@@ -249,17 +282,31 @@ function slideNext(section) {
 .banner-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /* ✅ 이미지를 채우되 비율 유지 */
   object-position: center;
-  background: transparent;
+  display: block;
+}
+
+/* ✅ 그림자 오버레이 추가 */
+.banner-slider::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%; /* 하단 40% 영역만 덮기 */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* 섹션 제목 */
 .section-title {
+  font-family: "LINESeedKR-Bd";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 .more-link {
@@ -279,7 +326,7 @@ function slideNext(section) {
 }
 .cards {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.75rem;
   transition: none;
 }
 
@@ -289,6 +336,7 @@ function slideNext(section) {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 .book-card:hover {
   transform: translateY(-4px);

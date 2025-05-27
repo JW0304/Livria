@@ -171,7 +171,7 @@ onMounted(async () => {
   left: 0;
   height: 100vh;
   background: #111;
-  width: 64px;
+  width: 90px;
   transition: width 0.3s ease;
   overflow: hidden; /* 스크롤 제거 */
   z-index: 1000;
@@ -187,6 +187,16 @@ onMounted(async () => {
   flex-direction: column;
 }
 
+.overlay-sidebar:not(.open) .menu {
+  margin-top: 3.5rem;
+}
+
+/* 사이드바 접혔을 때 (open 클래스가 없을 때만 적용) */
+.overlay-sidebar:not(.open) .nav-item {
+  padding-right: 1.2rem; /* 또는 1.5rem 등 원하는 만큼 조정 */
+  justify-content: center; /* 아이콘 중앙 정렬 느낌 */
+}
+
 .sidebar-nav {
   list-style: none;
   padding: 0;
@@ -198,9 +208,9 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: white;
+  color: rgb(173, 173, 173);
   font-weight: 500;
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
@@ -215,20 +225,22 @@ onMounted(async () => {
 }
 
 .nav-item:hover {
-  background-color: #222;
-  color: #b388f0;
+  /* background-color: #222; */
+  background: linear-gradient(to right, #E718B4, #4CC2FE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-item:hover .icon {
-  color: #b388f0;
+  color: #d327e3;
 }
 
 .nav-item.active {
-  color: #b388f0;
+  color: #d36be3;
 }
 
 .nav-item.active .icon {
-  color: #b388f0;
+  color: #d36be3;
 }
 .overlay {
   position: fixed;
@@ -244,7 +256,7 @@ onMounted(async () => {
 .section-title {
   color: #888;
   font-size: 0.85rem;
-  margin: 5rem 0 0.5rem;
+  margin: 2rem 0 0.5rem;
 }
 
 ul {
@@ -267,14 +279,13 @@ a {
 }
 
 a.active {
-  color: #b388f0;
+  color: #b636ab;
 }
 
 a:hover {
-  color: #b388f0;
-  background-clip: unset;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
+  background: linear-gradient(to right, #E718B4, #4CC2FE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .icon {
@@ -283,5 +294,6 @@ a:hover {
   color: #aaa;
   flex-shrink: 0;
   margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 </style>

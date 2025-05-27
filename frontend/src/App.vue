@@ -21,6 +21,38 @@ const menuOpen = ref(false);
 </script>
 
 <style>
+@font-face {
+  font-family: "GongGothicMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NoonnuBasicGothicRegular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KimjungchulMyungjo-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* --------------------------------------------------
    전역 가로 스크롤 제거, body에 고정 그라데이션
    -------------------------------------------------- */
@@ -31,7 +63,13 @@ body {
   overflow-x: hidden;
 }
 body {
-  background: linear-gradient(45deg, #120127, #000000, #2b0244, #6b0262);
+  background: linear-gradient(
+    45deg,
+    #45023e,
+    #000000,
+    hsl(277, 94%, 13%),
+    #24043b5c
+  );
   background-size: 400% 400%;
   background-attachment: fixed;
   animation: gradientBG 15s ease infinite;

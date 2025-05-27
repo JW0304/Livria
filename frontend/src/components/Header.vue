@@ -6,21 +6,21 @@
         <AlignJustify class="hamburger-icon" />
       </button>
       <RouterLink to="/" class="logo">
-        <img src="@/assets/Logo.png" alt="Livria Logo" class="logo-img" />
+        <img src="@/assets/whiteLogo.png" alt="Livria Logo" class="logo-img" />
         <span class="logo-text">Livria</span>
       </RouterLink>
     </div>
 
     <!-- 중앙: 검색창 -->
     <!-- <form @submit.prevent="onSearch" class="search-bar">
-      <input v-model="query" placeholder="책 제목/작가 검색" />
+      <input v-model="query" placeholder="책 제목 / 작가 검색" />
       <button type="submit">🔍</button>
     </form> -->
 
     <div class="search-bar">
       <input
         v-model="query"
-        placeholder="책 제목/작가 검색"
+        placeholder="책 제목 / 작가 검색"
         @keydown.enter.prevent="onSearch"
       />
       <span class="search-icon">
@@ -45,13 +45,13 @@
       <template v-if="auth.user">
         <RouterLink to="/mypage" class="nickname">
           <img :src="avatarUrl" class="avatar" />
-          {{ profile.nickname || auth.user.nickname }}님
+          {{ profile.nickname || auth.user.nickname }} 님
         </RouterLink>
-        <button @click="logout">로그아웃</button>
+        <button @click="logout" class="brand-text">로그아웃</button>
       </template>
       <template v-else>
-        <button @click="goLogin">로그인</button>
-        <button @click="goSignup">회원가입</button>
+        <button @click="goLogin" class="brand-text">로그인</button>
+        <button @click="goSignup" class="brand-text">회원가입</button>
       </template>
     </div>
   </header>
@@ -107,6 +107,12 @@ const avatarUrl = computed(() => {
 </script>
 
 <style scoped>
+.brand-text {
+  font-family: "LINESeedKR-Bd", sans-serif;
+  font-size: 20px;
+  color: #888;
+}
+
 .avatar {
   width: 32px;
   height: 32px;
@@ -117,6 +123,7 @@ const avatarUrl = computed(() => {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-right: 2rem;
 }
 .auth-buttons button {
   background: none;
@@ -126,6 +133,7 @@ const avatarUrl = computed(() => {
 }
 
 .nickname {
+  font-family: "LINESeedKR-Bd", sans-serif;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -163,28 +171,37 @@ const avatarUrl = computed(() => {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
   text-decoration: none;
+  opacity: 0.85; /* 0.0(완전 투명) ~ 1.0(완전 불투명) */
 }
 
 .logo-img {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
+  margin-left: 0.6rem;
 }
 
 .logo-text {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #b388f0;
+  /* font-weight: bold; */
+  font-family: "GongGothicMedium", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  color: #e4e4e4;
+  /* background: linear-gradient(to right, #e718b4, #4cc2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 /* 중앙 검색창 */
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #333;
+  background-color: #222222;
   border-radius: 2rem;
+  margin-top: 0.15rem;
   padding: 0.3rem 1rem;
   max-width: 400px;
   width: 100%;
