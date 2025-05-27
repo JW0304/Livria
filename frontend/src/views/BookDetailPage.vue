@@ -434,9 +434,9 @@ onMounted(async () => {
 
 <style scoped>
 .book-detail {
-  color: white;
-  background: #1a1a1a;
   padding: 2rem;
+  background: transparent;
+  color: white;
 }
 .book-info {
   display: flex;

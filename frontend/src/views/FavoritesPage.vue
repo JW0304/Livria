@@ -79,8 +79,8 @@ onMounted(loadFavorites);
 <style scoped>
 .favorites-page {
   padding: 2rem;
+  background: transparent;
   color: white;
-  background: #000;
 }
 .empty {
   text-align: center;

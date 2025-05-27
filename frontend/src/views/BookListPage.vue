@@ -29,5 +29,7 @@ onMounted(() => {
 <style scoped>
 .book-list-page {
   padding: 2rem;
+  background: transparent;
+  color: white;
 }
 </style>

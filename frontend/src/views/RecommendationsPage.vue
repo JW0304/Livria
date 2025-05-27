@@ -204,7 +204,7 @@ async function toggleWish(bookId) {
 <style scoped>
 .best-sellers-page {
   padding: 2rem;
-  background: black;
+  background: transparent;
   color: white;
 }
 .book-card {
@@ -212,9 +212,10 @@ async function toggleWish(bookId) {
   gap: 1.5rem;
   padding: 1rem;
   margin-bottom: 2rem;
-  border: 1px solid #444;
+  border: 1px solid #ffffff21;
   border-radius: 8px;
   cursor: pointer;
+  background: #00000088;
 }
 .book-image {
   width: 160px;

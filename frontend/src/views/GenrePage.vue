@@ -132,6 +132,7 @@ watch(
 <style scoped>
 .genre-page {
   padding: 2rem;
+  background: transparent;
   color: white;
   text-align: center;
 }

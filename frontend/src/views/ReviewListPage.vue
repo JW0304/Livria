@@ -61,9 +61,9 @@ onMounted(fetchReviews);
 
 <style scoped>
 .review-page {
-  background: #111;
+  padding: 2rem;
+  background: transparent;
   color: white;
-  padding: 1rem;
 }
 
 .review-header h1 {

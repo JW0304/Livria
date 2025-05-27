@@ -77,8 +77,8 @@ onMounted(loadReadBooks);
 <style scoped>
 .read-history-page {
   padding: 2rem;
+  background: transparent;
   color: white;
-  background: #000;
 }
 .empty {
   text-align: center;

@@ -223,8 +223,8 @@ async function toggleWish(bookId) {
 <style scoped>
 .favorites-page {
   padding: 2rem;
-  background: #000;
-  color: #fff;
+  background: transparent;
+  color: white;
 }
 .empty-message p {
   font-size: 1.2rem;

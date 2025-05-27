@@ -88,9 +88,9 @@ watch(
 
 <style scoped>
 .search-page {
-  background-color: #111;
-  color: white;
   padding: 2rem;
+  background: transparent;
+  color: white;
   min-height: 100vh;
 }
 .book-grid {

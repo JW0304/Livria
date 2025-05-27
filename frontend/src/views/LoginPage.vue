@@ -52,8 +52,11 @@ const goReset = () => router.push("/reset-password");
 
 <style scoped>
 .login-wrapper {
+  margin-top: 70px;
   background-color: black;
   min-height: 100vh;
+  background: transparent;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -82,7 +85,10 @@ const goReset = () => router.push("/reset-password");
 }
 .login-box {
   background-color: #1e1e1e;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3rem;
   border-radius: 12px;
   width: 320px;
   text-align: center;

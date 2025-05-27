@@ -39,6 +39,7 @@ onMounted(async () => {
 <style scoped>
 .category-page {
   padding: 2rem;
+  background: transparent;
   color: white;
 }
 .book-grid {

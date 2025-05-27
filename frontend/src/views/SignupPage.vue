@@ -7,11 +7,40 @@
       </div>
 
       <form @submit.prevent="handleSignup">
-        <input v-model="username" placeholder="아이디 (최대 30자)" maxlength="30" required />
-        <input v-model="password" type="password" placeholder="비밀번호 (최대 30자)" maxlength="30" required />
-        <input v-model="passwordCheck" type="password" placeholder="비밀번호 재입력" maxlength="30" required />
-        <input v-model="nickname" placeholder="닉네임 (최대 30자)" maxlength="30" required />
-        <input v-model.number="age" type="number" min="1" max="110" placeholder="나이 (1~110)" required />
+        <input
+          v-model="username"
+          placeholder="아이디 (최대 30자)"
+          maxlength="30"
+          required
+        />
+        <input
+          v-model="password"
+          type="password"
+          placeholder="비밀번호 (최대 30자)"
+          maxlength="30"
+          required
+        />
+        <input
+          v-model="passwordCheck"
+          type="password"
+          placeholder="비밀번호 재입력"
+          maxlength="30"
+          required
+        />
+        <input
+          v-model="nickname"
+          placeholder="닉네임 (최대 30자)"
+          maxlength="30"
+          required
+        />
+        <input
+          v-model.number="age"
+          type="number"
+          min="1"
+          max="110"
+          placeholder="나이 (1~110)"
+          required
+        />
 
         <div class="tags">
           <p class="tag-label">
@@ -73,7 +102,7 @@ const toggleTag = (tag) => {
 
 const isValid = computed(() => {
   return (
-    typeof age.value === 'number' &&
+    typeof age.value === "number" &&
     age.value >= 1 &&
     age.value <= 110 &&
     username.value.length >= 1 &&
@@ -97,7 +126,10 @@ const handleSignup = async () => {
       tags: selectedTags.value,
     };
 
-    const res = await axios.post("http://localhost:8000/api/auth/signup", payload); // ← 여기 수정됨
+    const res = await axios.post(
+      "http://localhost:8000/api/auth/signup",
+      payload
+    ); // ← 여기 수정됨
     auth.setToken(res.data.token);
     alert("회원가입 성공! 🎉");
     router.push("/login");
@@ -110,15 +142,24 @@ const handleSignup = async () => {
 
 <style scoped>
 .signup-wrapper {
-  background: #111;
+  margin-top: 60px;
+  padding: 2rem;
+  padding-right: 5px;
+  padding-left: 5px;
+  background: transparent;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .signup-box {
   background: #1e1e1e;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3rem;
+
   border-radius: 12px;
-  width: 400px;
+  width: 600px;
   color: white;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
