@@ -53,27 +53,6 @@ const menuOpen = ref(false);
 } */
 
 /* 레이아웃 설정 */
-.app-layout {
-  display: flex;
-  flex-direction: column;
-  position: relative; /* 자식 요소가 절대 위치를 가질 수 있도록 */
-  min-height: 100vh; /* 화면 최소 높이를 100vh로 설정 */
-  background: linear-gradient(
-    135deg,
-    #120127,
-    /* 검정색 */ #000000,
-    /* 보라색 */ #2b0244,
-    #6b0262
-  );
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite; /* 그라데이션 애니메이션 */
-  z-index: -1; /* 배경이 콘텐츠 아래로 가도록 설정 */
-}
-.main-wrapper {
-  flex-grow: 1;
-  transition: margin-left 0.3s ease;
-  margin-left: 60px;
-}
 
 .sidebar-open .main-wrapper {
   margin-left: 240px;
@@ -99,18 +78,12 @@ body {
   font-family: sans-serif;
 }
 
-/* 그라데이션 배경 애니메이션 */
-.app-layout::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, #360238, #000000, #190227, #c073d3);
-  background-size: 400% 400%; /* 그라데이션 영역 확대 */
-  animation: gradientBG 10s ease infinite; /* 그라데이션 애니메이션 */
-  z-index: -100; /* 배경이 콘텐츠 뒤로 가도록 설정 */
+header {
+  z-index: 10; /* 헤더를 배경 위로 올림 */
+}
+
+.sidebar {
+  z-index: 20; /* 사이드바가 배경보다 위에 오도록 설정 */
 }
 
 /* 애니메이션 정의 */

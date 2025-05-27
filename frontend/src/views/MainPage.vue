@@ -9,9 +9,14 @@
         <button class="scroll-button left" @click="scrollLeft">‹</button>
 
         <div class="book-grid" ref="bookGrid">
-          <div v-for="book in bestSellers" :key="book.id" class="book-card">
+          <div
+            v-for="book in bestSellers"
+            :key="book.id"
+            class="book-card"
+            :style="getCardStyle(book)"
+          >
             <RouterLink :to="`/books/${book.id}`">
-              <img :src="book.cover_url" alt="cover" />
+              <img :src="book.cover_url" alt="cover" ref="cardImage" />
               <h4>{{ book.title }}</h4>
               <p>{{ book.author_name }}</p>
             </RouterLink>
@@ -90,12 +95,35 @@ import { useMainStore } from "@/stores/main";
 import BookList from "@/components/BookList.vue";
 
 import { useRouter } from "vue-router";
+import ColorThief from "colorthief";
+
+const bestSellers = ref([]);
+
+const getCardStyle = (book) => {
+  const imageElement = new Image();
+  imageElement.src = book.cover_url;
+  imageElement.crossOrigin = "anonymous"; // CORS 문제 해결을 위한 속성 추가
+  return new Promise((resolve) => {
+    imageElement.onload = () => {
+      const colorThief = new ColorThief();
+      const dominantColor = colorThief.getColor(imageElement); // 주요 색상 추출
+      const palette = colorThief.getPalette(imageElement, 5); // 색상 팔레트 추출
+
+      // 팔레트를 활용한 그라데이션 배경 설정
+      resolve({
+        background: `linear-gradient(to bottom, rgb(${dominantColor.join(
+          ","
+        )}), rgb(${palette[1].join(",")}))`,
+      });
+    };
+  });
+};
+
 const router = useRouter();
 
 const mainStore = useMainStore();
 const isLoggedIn = computed(() => !!localStorage.token);
 
-const bestSellers = ref([]);
 const newBooks = ref([]);
 const recommendedBooks = ref([]);
 
@@ -128,6 +156,12 @@ onMounted(async () => {
 
     const recommendationsRes = await axios.get("/api/books/?category=3");
     recommendedBooks.value = recommendationsRes.data.slice(0, 15);
+
+    const imageElement = document.querySelector("img");
+    const colorThief = new ColorThief();
+    const dominantColor = colorThief.getColor(imageElement); // 주요 색상 추출
+    const palette = colorThief.getPalette(imageElement, 5); // 색상 팔레트 추출
+    console.log(dominantColor, palette);
   } catch (err) {
     console.error("도서 데이터 불러오기 실패:", err);
 
@@ -223,16 +257,15 @@ function scrollRight() {
 
 .book-card {
   flex: 0 0 auto;
-  width: clamp(100px, 15vw, 180px); /* 반응형 너비 */
+  width: clamp(100px, 15vw, 180px);
   background: black;
   border-radius: 10px;
   padding: 0.5rem;
   text-align: center;
-  text-decoration: none; /* 링크 밑줄 제거 */
+  text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-
 }
 .book-card:hover {
   transform: scale(1.05);
