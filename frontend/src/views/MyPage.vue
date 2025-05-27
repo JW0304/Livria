@@ -444,6 +444,10 @@ textarea {
 .book-author {
   font-size: 0.75rem;
   color: #ccc;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .empty {
   color: #777;

@@ -153,7 +153,7 @@
       </section>
 
       <!-- 리뷰 섹션 -->
-      <div class="card">
+      <div class="card review-section">
         <span class="title">{{ reviews.length }}건의 감상평이 있습니다.</span>
         <div v-for="review in reviews" :key="review.id" class="review">
           <div class="user-row">
@@ -164,8 +164,8 @@
             />
             <div class="review-content">
               <div class="review-info">
-                <strong>{{ review.user }}</strong>
-                <span class="time">{{ formatDate(review.created_at) }}</span>
+                <strong>{{ review.user }}&nbsp&nbsp&nbsp&nbsp</strong>
+                <span class="time"> {{ formatDate(review.created_at) }}</span>
               </div>
 
               <div v-if="editingId === review.id">
@@ -237,7 +237,14 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted, watch } from "vue";
+import {
+  ref,
+  reactive,
+  computed,
+  onMounted,
+  onBeforeUnmount,
+  watch,
+} from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 import { useProfileStore } from "@/stores/profile";
@@ -282,7 +289,7 @@ function togglePlay(id) {
   if (playingId.value && playingId.value !== id)
     audioRefs[playingId.value]?.pause();
   if (audio.paused) {
-    audio.play().catch(console.error);
+    audio.play();
     playingId.value = id;
   } else {
     audio.pause();
@@ -424,11 +431,6 @@ onMounted(async () => {
     fetchSimilarBooks(),
   ]);
   if (auth.token) await profile.fetchMe();
-
-  const savedLikes = localStorage.getItem("liked");
-  const savedDislikes = localStorage.getItem("disliked");
-  if (savedLikes) Object.assign(isLiked, JSON.parse(savedLikes));
-  if (savedDislikes) Object.assign(isDisliked, JSON.parse(savedDislikes));
 });
 </script>
 
@@ -527,6 +529,11 @@ onMounted(async () => {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
+}
+/* 음악 카드에 상대위치, 하단 공간 확보 */
+.music .card {
+  position: relative;
+  padding-bottom: 1.5rem;
 }
 .card {
   max-width: 1000px;
@@ -631,19 +638,21 @@ onMounted(async () => {
   border-radius: 3px;
   transition: width 0.1s linear;
 }
-.timetext {
+/* 플레이바 바로 아래로 위치 조정 */
+.music .card .time {
+  margin-bottom: 1rem;
+}
+.music .card .timetext {
   position: absolute;
-  font-size: 12px;
-  color: rgb(255, 255, 255);
+  bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: #ffffff;
 }
-.time_now {
-  bottom: -10px;
-  left: 2px;
+.music .card .time_now {
+  left: 0.75rem;
 }
-.time_full {
-  bottom: -10px;
-  right: 0;
-  padding-right: 10px;
+.music .card .time_full {
+  right: 0.75rem;
 }
 .review {
   display: flex;
@@ -671,16 +680,18 @@ onMounted(async () => {
   cursor: pointer;
 }
 .review-controls.right button:hover {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 .avatar {
-  width: 40px;
-  height: 40px;
+  margin-top: 14px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-right: 0.8rem;
   object-fit: cover;
 }
 .review-content {
+  margin-top: 10px;
   flex-grow: 1;
   background: #fff;
   padding: 0.5rem 1rem;
@@ -688,11 +699,12 @@ onMounted(async () => {
   white-space: pre-line;
 }
 .review-info {
+  margin-top: 10px;
   font-size: 0.8rem;
-  color: gray;
+  color: rgb(0, 0, 0);
   margin-bottom: 0.2rem;
 }
-.textarea,
+.new-review textarea,
 .edit-textarea {
   width: 100%;
   border: none;
@@ -702,9 +714,9 @@ onMounted(async () => {
 }
 .edit-buttons,
 .formatting {
+  margin-top: 10px;
   display: flex;
   gap: 0.5rem;
-  margin-top: 0.5rem;
 }
 .submit-btn {
   border: none;
@@ -716,8 +728,8 @@ onMounted(async () => {
   cursor: pointer;
 }
 .login-prompt {
-  margin-top: 1rem;
   color: #ccc;
+  margin-top: 1rem;
 }
 .liked {
   color: #ff6b6b;

@@ -310,12 +310,12 @@ function slideNext(section) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 0 0.5rem;
 }
 .book-card p {
   font-size: 0.75rem;
-  color: gray;
+  color: rgb(221, 221, 221);
   margin: 0.25rem 0 0.5rem;
   padding: 0 0.5rem;
   display: -webkit-box;
