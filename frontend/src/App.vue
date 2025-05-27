@@ -1,18 +1,8 @@
-<!-- <template>
-  <div id="app">
-    <Header @toggleMenu="menuOpen = !menuOpen" />
-    <OverlayMenu v-if="menuOpen" @close="menuOpen = false" />
-    <main class="main-content">
-      <router-view />
-    </main>
-  </div>
-</template> -->
-
 <template>
-  <div :class="['app-layout', { 'sidebar-open': menuOpen }]">
+  <div class="app-layout">
+    <Header @toggleMenu="menuOpen = !menuOpen" />
     <OverlayMenu :isOpen="menuOpen" />
     <div class="main-wrapper">
-      <Header @toggleMenu="menuOpen = !menuOpen" />
       <main class="main-content">
         <router-view />
       </main>
@@ -28,65 +18,84 @@ import Footer from "@/components/Footer.vue";
 import OverlayMenu from "@/components/OverlayMenu.vue";
 
 const menuOpen = ref(false);
-// 더 이상 auth.fetchMe()를 호출하지 않습니다.
 </script>
 
 <style>
-/* * {
-  font-family: "Nanum Gothic Coding", monospace;
-  font-weight: 400;
-  font-style: normal;
-} */
-
-/* .app-layout {
+/* 전체 레이아웃 */
+.app-layout {
   display: flex;
-  transition: all 0.3s ease;
-  height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #9c4dff,
-    #ff6fd5,
-    #fbcf46
-  );
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-} */
-
-/* 레이아웃 설정 */
-
-.sidebar-open .main-wrapper {
-  margin-left: 240px;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
+.app-layout::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #120127, #000000, #2b0244, #6b0262);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  z-index: -2; /* 배경을 콘텐츠보다 뒤로 */
+  pointer-events: none; /* 배경 클릭 무시 */
+}
+
+/* 메인 내용 */
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-left: 0; /* 사이드바 열릴 때 밀리도록 설정 */
+  transition: margin-left 0.3s ease; /* 사이드바 애니메이션 효과 */
+}
+
+/* 사이드바 */
+.overlay-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #111;
+  width: 64px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000; /* 사이드바가 배경보다 앞에 오도록 설정 */
+}
+
+.overlay-sidebar.open {
+  width: 250px;
+}
+
+/* 햄버거 버튼 */
+.hamburger-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 메인 콘텐츠 */
 .main-content {
   margin-top: 20px;
   padding: 2rem;
-  position: relative; /* 배경이 콘텐츠 위로 오지 않도록 */
-}
-
-/* 전체 HTML 및 Body의 높이를 100%로 설정 */
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  background-color: transparent; /* body는 투명으로 처리 */
-  color: rgb(0, 0, 0);
-  margin: 0;
-  font-family: sans-serif;
+  position: relative;
+  z-index: 1; /* 콘텐츠가 배경 위에 오도록 설정 */
 }
 
 header {
-  z-index: 10; /* 헤더를 배경 위로 올림 */
+  position: relative;
+  z-index: 1001; /* 헤더가 배경보다 앞에 오도록 설정 */
 }
 
-.sidebar {
-  z-index: 20; /* 사이드바가 배경보다 위에 오도록 설정 */
+footer {
+  position: relative;
+  z-index: 1001;
 }
 
-/* 애니메이션 정의 */
+/* 애니메이션: 배경 그라데이션 */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
