@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db.models import JSONField
-
+from api.utils import get_upstage_embedding
 User = get_user_model()
 
 class Category(models.Model):
@@ -43,7 +43,12 @@ class Book(models.Model):
         blank=True,
         symmetrical=False,
         help_text='상위 4권의 유사 도서'
+    
     )
+    def create_embedding(self):
+        if not self.embedding:
+            self.embedding = get_upstage_embedding(f"{self.title} {self.description}")
+            self.save()
     def __str__(self):
         return self.title
 
