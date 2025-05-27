@@ -2,7 +2,9 @@
   <header class="app-header">
     <!-- 좌측: 햄버거 + 로고 -->
     <div class="left">
-      <button @click="$emit('toggleMenu')" class="hamburger">☰</button>
+      <button @click="$emit('toggleMenu')" class="hamburger">
+        <AlignJustify class="hamburger-icon" />
+      </button>
       <RouterLink to="/" class="logo">
         <img src="@/assets/Logo.png" alt="Livria Logo" class="logo-img" />
         <span class="logo-text">Livria</span>
@@ -10,10 +12,33 @@
     </div>
 
     <!-- 중앙: 검색창 -->
-    <form @submit.prevent="onSearch" class="search-bar">
+    <!-- <form @submit.prevent="onSearch" class="search-bar">
       <input v-model="query" placeholder="책 제목/작가 검색" />
       <button type="submit">🔍</button>
-    </form>
+    </form> -->
+
+    <div class="search-bar">
+      <input
+        v-model="query"
+        placeholder="책 제목/작가 검색"
+        @keydown.enter.prevent="onSearch"
+      />
+      <span class="search-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="lucide"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#999"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </span>
+    </div>
 
     <!-- 우측: 인증 버튼 -->
     <div class="auth-buttons">
@@ -37,6 +62,7 @@ import { ref, computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 import { useProfileStore } from "@/stores/profile";
+import { AlignJustify } from "lucide-vue-next";
 
 const router = useRouter();
 const auth = useAuthStore();
@@ -112,13 +138,19 @@ const avatarUrl = computed(() => {
 }
 
 .app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px; /* 원하는 높이 조절 */
+  background: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background: black;
   color: white;
+  z-index: 1000; /* 다른 요소보다 위로 */
   gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* 선택 사항 */
 }
 
 /* 좌측 정렬 */
@@ -154,6 +186,37 @@ const avatarUrl = computed(() => {
   background-color: #333;
   border-radius: 2rem;
   padding: 0.3rem 1rem;
+  max-width: 400px;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.search-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #aaa;
+  flex-shrink: 0;
+}
+
+/* .search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 2rem;
+  padding: 0.3rem 1rem;
   flex-grow: 1;
   max-width: 400px;
 }
@@ -174,12 +237,19 @@ const avatarUrl = computed(() => {
   color: white;
   cursor: pointer;
   font-size: 1.2rem;
-}
+} */
 
 .hamburger {
   background: none;
-  color: white;
-  font-size: 1.5rem;
   border: none;
+  cursor: pointer;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
 }
 </style>

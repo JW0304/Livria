@@ -1,10 +1,22 @@
-<template>
+<!-- <template>
   <div id="app">
     <Header @toggleMenu="menuOpen = !menuOpen" />
     <OverlayMenu v-if="menuOpen" @close="menuOpen = false" />
     <main class="main-content">
       <router-view />
     </main>
+  </div>
+</template> -->
+
+<template>
+  <div :class="['app-layout', { 'sidebar-open': menuOpen }]">
+    <OverlayMenu :isOpen="menuOpen" />
+    <div class="main-wrapper">
+      <Header @toggleMenu="menuOpen = !menuOpen" />
+      <main class="main-content">
+        <router-view />
+      </main>
+    </div>
   </div>
 </template>
 
@@ -23,6 +35,21 @@ const menuOpen = ref(false);
   font-weight: 400;
   font-style: normal;
 } */
+
+.app-layout {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.main-wrapper {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+  margin-left: 60px;
+}
+
+.sidebar-open .main-wrapper {
+  margin-left: 240px;
+}
 
 .main-content {
   margin-top: 20px;
