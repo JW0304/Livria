@@ -1,22 +1,35 @@
 <template>
   <div class="main-page">
+    <!-- 배너 슬라이더 -->
+    <div class="banner-slider">
+      <div
+        class="banner-track"
+        :style="{ transform: `translateX(-${currentBanner * 100}%)` }"
+      >
+        <div class="banner-slide" v-for="(src, i) in bannerImages" :key="i">
+          <img :src="src" alt="banner" />
+        </div>
+      </div>
+    </div>
+
     <!-- 베스트 셀러 섹션 -->
     <section>
-      <h2 @click="goToBestsellers" style="cursor: pointer">
+      <h2 @click="goToBestsellers" class="section-title">
         베스트 셀러
         <router-link to="/bestsellers" class="more-link">더보기</router-link>
       </h2>
-      <div class="grid-container">
-        <button class="scroll-button left" @click="scrollLeft(bestGrid)">
-          ‹
-        </button>
-        <div class="book-grid-wrapper">
-          <div class="book-grid" ref="bestGrid">
+      <div class="slider-container">
+        <button class="slide-btn left" @click="slidePrev('best')">‹</button>
+        <div class="cards-wrapper">
+          <div class="cards">
             <div
-              v-for="book in bestSellers"
+              v-for="book in bestSellers.slice(
+                bestIndex,
+                bestIndex + visibleCount
+              )"
               :key="book.id"
               class="book-card"
-              :style="getCardStyle(book)"
+              :style="cardStyleMap[book.id] || {}"
             >
               <router-link :to="`/books/${book.id}`" class="card-link">
                 <img :src="book.cover_url" alt="cover" />
@@ -26,29 +39,25 @@
             </div>
           </div>
         </div>
-        <button class="scroll-button right" @click="scrollRight(bestGrid)">
-          ›
-        </button>
+        <button class="slide-btn right" @click="slideNext('best')">›</button>
       </div>
     </section>
 
     <!-- 새로 도착한 도서 섹션 -->
     <section>
-      <h2>
+      <h2 class="section-title">
         새로 도착한 도서
         <router-link to="/newbook" class="more-link">더보기</router-link>
       </h2>
-      <div class="grid-container">
-        <button class="scroll-button left" @click="scrollLeft(newGrid)">
-          ‹
-        </button>
-        <div class="book-grid-wrapper">
-          <div class="book-grid" ref="newGrid">
+      <div class="slider-container">
+        <button class="slide-btn left" @click="slidePrev('new')">‹</button>
+        <div class="cards-wrapper">
+          <div class="cards">
             <div
-              v-for="book in newBooks"
+              v-for="book in newBooks.slice(newIndex, newIndex + visibleCount)"
               :key="book.id"
               class="book-card"
-              :style="getCardStyle(book)"
+              :style="cardStyleMap[book.id] || {}"
             >
               <router-link :to="`/books/${book.id}`" class="card-link">
                 <img :src="book.cover_url" alt="cover" />
@@ -58,31 +67,30 @@
             </div>
           </div>
         </div>
-        <button class="scroll-button right" @click="scrollRight(newGrid)">
-          ›
-        </button>
+        <button class="slide-btn right" @click="slideNext('new')">›</button>
       </div>
     </section>
 
     <!-- 블로거 추천 도서 섹션 -->
     <section>
-      <h2>
+      <h2 class="section-title">
         블로거 추천 도서
         <router-link to="/recommendations" class="more-link"
           >더보기</router-link
         >
       </h2>
-      <div class="grid-container">
-        <button class="scroll-button left" @click="scrollLeft(recGrid)">
-          ‹
-        </button>
-        <div class="book-grid-wrapper">
-          <div class="book-grid" ref="recGrid">
+      <div class="slider-container">
+        <button class="slide-btn left" @click="slidePrev('rec')">‹</button>
+        <div class="cards-wrapper">
+          <div class="cards">
             <div
-              v-for="book in recommendedBooks"
+              v-for="book in recommendedBooks.slice(
+                recIndex,
+                recIndex + visibleCount
+              )"
               :key="book.id"
               class="book-card"
-              :style="getCardStyle(book)"
+              :style="cardStyleMap[book.id] || {}"
             >
               <router-link :to="`/books/${book.id}`" class="card-link">
                 <img :src="book.cover_url" alt="cover" />
@@ -92,74 +100,46 @@
             </div>
           </div>
         </div>
-        <button class="scroll-button right" @click="scrollRight(recGrid)">
-          ›
-        </button>
+        <button class="slide-btn right" @click="slideNext('rec')">›</button>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import axios from "axios";
+import { ref, computed, onMounted, onBeforeUnmount, reactive } from "vue";
 import { useRouter } from "vue-router";
+import axios from "axios";
 import ColorThief from "colorthief";
 import { useMainStore } from "@/stores/main";
 
-const bestSellers = ref([]);
-const newBooks = ref([]);
-const recommendedBooks = ref([]);
-
-const bestGrid = ref(null);
-const newGrid = ref(null);
-const recGrid = ref(null);
+// 배너 이미지
+import banner1 from "@/assets/banners/banner1.png";
+import banner2 from "@/assets/banners/banner2.png";
+import banner3 from "@/assets/banners/banner3.png";
+import banner4 from "@/assets/banners/banner4.png";
+import banner5 from "@/assets/banners/banner5.png";
 
 const router = useRouter();
 const mainStore = useMainStore();
 const isLoggedIn = computed(() => !!localStorage.token);
 
-const getCardStyle = (book) => {
-  const img = new Image();
-  img.src = book.cover_url;
-  img.crossOrigin = "anonymous";
-  return new Promise((resolve) => {
-    img.onload = () => {
-      const thief = new ColorThief();
-      const [r, g, b] = thief.getColor(img);
-      const pal = thief.getPalette(img, 5);
-      resolve({
-        background: `linear-gradient(to bottom, rgb(${r},${g},${b}), rgb(${pal[1].join(
-          ","
-        )}))`,
-      });
-    };
-  });
-};
+// 데이터
+const bestSellers = ref([]);
+const newBooks = ref([]);
+const recommendedBooks = ref([]);
 
-function scrollLeft(gridRef) {
-  const el = gridRef.value;
-  if (!el) return;
-  const card = el.querySelector(".book-card");
-  const gap = parseFloat(getComputedStyle(el).gap) || 0;
-  el.scrollTo({
-    left: el.scrollLeft - (card.offsetWidth + gap),
-    behavior: "smooth",
-  });
-}
+// 슬라이드 인덱스
+const visibleCount = 7;
+const bestIndex = ref(0);
+const newIndex = ref(0);
+const recIndex = ref(0);
 
-function scrollRight(gridRef) {
-  const el = gridRef.value;
-  if (!el) return;
-  const card = el.querySelector(".book-card");
-  const gap = parseFloat(getComputedStyle(el).gap) || 0;
-  el.scrollTo({
-    left: el.scrollLeft + (card.offsetWidth + gap),
-    behavior: "smooth",
-  });
-}
+// 카드 그라데이션 스타일 캐시
+const cardStyleMap = reactive({});
 
-onMounted(async () => {
+// 책 데이터 + 그라데이션 적용
+async function loadBooks() {
   const [bRes, nRes, rRes] = await Promise.all([
     axios.get("/api/books/?category=1"),
     axios.get("/api/books/?category=2"),
@@ -169,72 +149,161 @@ onMounted(async () => {
   newBooks.value = nRes.data.slice(0, 15);
   recommendedBooks.value = rRes.data.slice(0, 15);
 
+  // gradient 계산
+  const all = [
+    ...bestSellers.value,
+    ...newBooks.value,
+    ...recommendedBooks.value,
+  ];
+  for (let book of all) {
+    const img = new Image();
+    img.src = book.cover_url;
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const thief = new ColorThief();
+      const [r, g, b] = thief.getColor(img);
+      const pal = thief.getPalette(img, 5);
+      cardStyleMap[book.id] = {
+        background: `linear-gradient(
+          to bottom,
+          rgb(${r},${g},${b}),
+          rgb(${pal[1].join(",")})
+        )`,
+      };
+    };
+  }
+
   await mainStore.fetchBestSellers();
   if (!isLoggedIn.value) {
     await mainStore.fetchAgeBased(20);
   }
+}
+
+// 배너 슬라이드
+const bannerImages = [banner1, banner2, banner3, banner4, banner5];
+const currentBanner = ref(0);
+let bannerTimer = null;
+
+onMounted(() => {
+  loadBooks();
+  bannerTimer = setInterval(() => {
+    currentBanner.value = (currentBanner.value + 1) % bannerImages.length;
+  }, 5000);
 });
 
+onBeforeUnmount(() => {
+  clearInterval(bannerTimer);
+});
+
+// 라우팅
 function goToBestsellers() {
   router.push({ name: "BestSellers" });
+}
+
+// 슬라이드 이동
+function slidePrev(section) {
+  if (section === "best" && bestIndex.value > 0) bestIndex.value--;
+  if (section === "new" && newIndex.value > 0) newIndex.value--;
+  if (section === "rec" && recIndex.value > 0) recIndex.value--;
+}
+function slideNext(section) {
+  if (
+    section === "best" &&
+    bestIndex.value < bestSellers.value.length - visibleCount
+  )
+    bestIndex.value++;
+  if (
+    section === "new" &&
+    newIndex.value < newBooks.value.length - visibleCount
+  )
+    newIndex.value++;
+  if (
+    section === "rec" &&
+    recIndex.value < recommendedBooks.value.length - visibleCount
+  )
+    recIndex.value++;
 }
 </script>
 
 <style scoped>
 .main-page {
   padding: 2rem;
+  color: #fff;
   background: transparent;
-  color: white;
 }
 
-/* 바깥 컨테이너: 버튼 보이도록 overflow visible */
-.grid-container {
+/* 배너 */
+.banner-slider {
+  width: 100%;
+  aspect-ratio: 16 / 5;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.banner-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.banner-slide {
+  flex: 0 0 100%;
+}
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+/* 섹션 제목 */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.more-link {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* 카드 슬라이더 공통 */
+.slider-container {
   position: relative;
   width: calc((clamp(100px, 15vw, 180px) * 7) + (0.5rem * 6));
   margin: 0 auto 2rem;
-  overflow: visible;
 }
-
-/* 내부 래퍼: 실제 클리핑은 여기서 */
-.book-grid-wrapper {
+.cards-wrapper {
   overflow: hidden;
 }
-
-/* 그리드: flex + x축 스크롤 */
-.book-grid {
+.cards {
   display: flex;
   gap: 0.5rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0.5rem 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.book-grid::-webkit-scrollbar {
-  display: none;
+  transition: none;
 }
 
-/* 카드 크기 유지 */
+/* 카드 */
 .book-card {
   flex: 0 0 clamp(100px, 15vw, 180px);
-  background: black;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
 .card-link {
   display: block;
   color: inherit;
   text-decoration: none;
 }
-
 .book-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-
 .book-card h4 {
   margin: 0.5rem 0 0;
   font-size: 0.9rem;
@@ -244,7 +313,6 @@ function goToBestsellers() {
   color: white;
   padding: 0 0.5rem;
 }
-
 .book-card p {
   font-size: 0.75rem;
   color: gray;
@@ -256,38 +324,25 @@ function goToBestsellers() {
   overflow: hidden;
 }
 
-/* 버튼을 grid-container 바깥으로 배치 */
-.scroll-button {
+/* 좌우 버튼 */
+.slide-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  color: white;
-  font-size: 1.5rem;
   width: 2rem;
   height: 2rem;
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
   border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
 }
-.scroll-button.left {
+.slide-btn.left {
   left: -1.5rem;
 }
-.scroll-button.right {
+.slide-btn.right {
   right: -1.5rem;
-}
-
-section h2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.more-link {
-  font-size: 0.9rem;
-  color: #aaa;
-  text-decoration: none;
 }
 </style>
