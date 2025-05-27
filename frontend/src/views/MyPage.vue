@@ -1,88 +1,100 @@
 <template>
   <div class="my-page">
+    <!-- 프로필 섹션 -->
     <section class="profile-card">
-      <!-- 편집 모드 -->
-      <div v-if="isEditing" class="edit-mode">
-        <div class="avatar-selection">
-          <p>기본 프로필 이미지 선택</p>
-          <div class="avatar-options">
-            <div
-              v-for="[filename, label] in avatarChoices"
-              :key="filename"
-              class="avatar-option"
-            >
-              <img
-                :src="`/avatars/${filename}.png`"
-                :class="{ selected: editedDefaultAvatar === filename }"
-                @click="editedDefaultAvatar = filename"
-              />
-              <p>{{ label }}</p>
+      <div class="profile-container">
+        <!-- 보기 모드 -->
+        <div v-if="!isEditing" class="view-mode">
+          <div class="avatar-wrapper">
+            <img :src="avatarUrl" alt="avatar" class="avatar" />
+          </div>
+          <div class="info-wrapper">
+            <div class="info-header">
+              <div class="title-group">
+                <h1 class="nickname">
+                  {{ profileStore.nickname || "나의 닉네임" }}
+                </h1>
+                <p class="sub-info">
+                  {{ userStore.username || "나의 아이디" }}
+                  <span>／</span>
+                  {{ profileStore.age ?? "나이 비공개" }}
+                </p>
+              </div>
+              <button @click="startEdit" class="edit-btn">
+                내 정보 수정하기
+              </button>
+            </div>
+            <p class="message-box view-mode">
+              {{
+                profileStore.statusMessage ||
+                "나의 한마디를 작성할 수 있습니다."
+              }}
+            </p>
+            <p class="tag-label">내가 선택한 태그</p>
+            <div class="tags">
+              <button
+                v-for="tag in profileStore.emotionTags"
+                :key="tag"
+                class="selected"
+                disabled
+              >
+                {{ tag }}
+              </button>
             </div>
           </div>
         </div>
 
-        <input v-model="editNickname" placeholder="닉네임" class="edit-input" />
-        <textarea
-          v-model="editMessage"
-          class="message-box"
-          placeholder="나의 한마디를 작성할 수 있습니다."
-        ></textarea>
-
-        <div class="tags">
-          <button
-            v-for="tag in allTags"
-            :key="tag"
-            :class="{ selected: editedTags.includes(tag) }"
-            @click="toggleTag(tag)"
-          >
-            {{ tag }}
-          </button>
-        </div>
-
-        <div class="edit-actions">
-          <button @click="saveProfile" class="edit-btn">저장</button>
-          <button @click="cancelEdit" class="edit-btn">취소</button>
-        </div>
-      </div>
-
-      <!-- 보기 모드 -->
-      <div v-else>
-        <img :src="avatarUrl" alt="avatar" class="avatar" />
-
-        <div class="info">
-          <div class="top-row">
-            <h1>{{ profileStore.nickname || "나의 닉네임" }}</h1>
-            <p>
-              {{ userStore.username || "나의 아이디" }} /
-              {{ profileStore.age ?? "나이 비공개" }}
-            </p>
-            <button @click="startEdit" class="edit-btn">
-              내 정보 수정하기
-            </button>
+        <!-- 편집 모드 -->
+        <div v-else class="edit-mode">
+          <div class="avatar-selection">
+            <p class="avatar-label">기본 프로필 이미지 선택</p>
+            <div class="avatar-options">
+              <div
+                v-for="[filename, label] in avatarChoices"
+                :key="filename"
+                class="avatar-option"
+              >
+                <img
+                  :src="`/avatars/${filename}.png`"
+                  :class="{ selected: editedDefaultAvatar === filename }"
+                  @click="editedDefaultAvatar = filename"
+                />
+                <p>{{ label }}</p>
+              </div>
+            </div>
           </div>
-
-          <p class="message-box">
-            {{
-              profileStore.statusMessage || "나의 한마디를 작성할 수 있습니다."
-            }}
-          </p>
-
-          <p color="lightgray">내가 선택한 태그</p>
-          <div class="tags">
-            <button
-              v-for="tag in profileStore.emotionTags"
-              :key="tag"
-              class="selected"
-              disabled
-            >
-              {{ tag }}
-            </button>
+          <div class="edit-fields">
+            <input
+              v-model="editNickname"
+              placeholder="닉네임"
+              class="edit-input"
+            />
+            <textarea
+              v-model="editMessage"
+              class="message-box"
+              placeholder="나의 한마디를 작성할 수 있습니다."
+            />
+            <p class="tag-label">태그 선택</p>
+            <div class="tags">
+              <button
+                v-for="tag in allTags"
+                :key="tag"
+                :class="{ selected: editedTags.includes(tag) }"
+                @click="toggleTag(tag)"
+              >
+                {{ tag }}
+              </button>
+            </div>
+            <div class="edit-actions">
+              <button @click="saveProfile" class="edit-btn">저장</button>
+              <button @click="cancelEdit" class="edit-btn">취소</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 내가 찜한 도서 -->
+    <!-- 내가 찜한 도서 섹션 -->
     <section class="book-section">
       <div class="section-header">
         <h2>내가 찜한 도서</h2>
@@ -105,7 +117,7 @@
       </div>
     </section>
 
-    <!-- 나의 리브리아 -->
+    <!-- 나의 리브리아 섹션 -->
     <section class="book-section">
       <div class="section-header">
         <h2>나의 리브리아</h2>
@@ -159,25 +171,22 @@ const avatarChoices = [
   ["default3", "기본 3"],
 ];
 
-// 프로필 스토어에서 내려주는 full URL 우선, 없으면 public/avatars 에서 기본 선택지 로드
-const avatarUrl = computed(() => {
-  return (
+const avatarUrl = computed(
+  () =>
     profileStore.avatar_url ||
     `/avatars/${profileStore.defaultAvatar || "default1"}.png`
-  );
-});
+);
 
 function startEdit() {
-  isEditing.value = true;
   editNickname.value = profileStore.nickname;
   editMessage.value = profileStore.statusMessage;
   editedTags.value = [...profileStore.emotionTags];
   editedDefaultAvatar.value = profileStore.defaultAvatar || "default1";
+  isEditing.value = true;
 }
 function cancelEdit() {
   isEditing.value = false;
 }
-
 function toggleTag(tag) {
   if (editedTags.value.includes(tag)) {
     editedTags.value = editedTags.value.filter((t) => t !== tag);
@@ -185,7 +194,6 @@ function toggleTag(tag) {
     editedTags.value.push(tag);
   }
 }
-
 async function saveProfile() {
   const payload = {
     nickname: editNickname.value,
@@ -205,56 +213,93 @@ async function saveProfile() {
 
 onMounted(async () => {
   await profileStore.fetchMe();
-  if (auth.user) {
-    userStore.setUserData(auth.user);
-  }
+  if (auth.user) userStore.setUserData(auth.user);
 });
 </script>
 
 <style scoped>
 .my-page {
-  color: #fff;
   padding: 2rem;
+  background: transparent;
+  color: white;
 }
+
+/* 프로필 영역 */
 .profile-card {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
   margin-bottom: 3rem;
 }
+.profile-container {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  gap: 2rem;
+}
+
+/* 보기 모드 */
+.view-mode {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.avatar-wrapper {
+  flex-shrink: 0;
+}
 .avatar {
-  width: 160px;
+  width: 200px;
+  margin-top: 30px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: #444;
   object-fit: cover;
+  border: #e7e7e717 solid;
 }
-.info {
+.info-wrapper {
   flex: 1;
 }
-.top-row {
+.info-header {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
-.message-box {
-  width: 100%;
-  height: 60px;
-  margin: 1rem 0;
-  background: #222;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  padding: 0.5rem;
+.title-group {
+  display: flex;
+  flex-direction: column;
+}
+.nickname {
+  margin: 0;
+}
+.sub-info {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.sub-info span {
+  margin: 0 0.4rem;
+  color: #888;
 }
 .edit-btn {
-  margin-left: auto;
   background: none;
   border: 1px solid #888;
   padding: 0.3rem 1rem;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
   cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.message-box.view-mode {
+  background: #222;
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-height: 60px;
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.tag-label {
+  margin: 0.5rem 0 0.25rem;
+  color: #aaa;
 }
 .tags {
   display: flex;
@@ -265,67 +310,31 @@ onMounted(async () => {
   background: #555;
   color: #fff;
   border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  cursor: pointer;
+  padding: 0.35rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
 }
 .tags button.selected {
   background: #b388f0;
 }
 
-.book-section {
-  margin-top: 2rem;
-}
-.section-header {
+/* 편집 모드 */
+.edit-mode {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 2rem;
+  width: 100%;
 }
-.section-header h2 {
-  font-size: 1.2rem;
-}
-.more-link {
-  font-size: 0.9rem;
-  color: #aaa;
-  text-decoration: underline;
-}
-.book-list {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.book-card {
-  display: block;
-  width: 100px;
-  text-align: center;
-  color: inherit;
-  text-decoration: none;
-}
-.book-card img {
-  width: 100px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-.book-title {
-  font-size: 0.9rem;
-  margin: 0.3rem 0 0.1rem;
-}
-.book-author {
-  font-size: 0.75rem;
-  color: #ccc;
-}
-.empty {
-  color: #777;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
 .avatar-selection {
-  margin-bottom: 1rem;
+  width: 160px;
+}
+.avatar-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 .avatar-options {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 .avatar-option {
@@ -347,18 +356,98 @@ onMounted(async () => {
   font-size: 0.8rem;
   color: #ccc;
 }
-.edit-input {
+.edit-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px; /* ↑ 이 값을 3rem으로 올려서 “저장/취소” 버튼이 아바타 옵션 중앙 아래쯤 위치하도록 조정했습니다 */
+}
+.edit-input,
+textarea {
   background: #222;
   color: #fff;
   border: none;
   padding: 0.4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 20px;
   border-radius: 8px;
-  width: 100%;
 }
 .edit-actions {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* 책 섹션 */
+.book-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+.section-header,
+.book-list {
+  max-width: 800px;
+  width: 100%;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.more-link {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-decoration: underline;
+}
+.book-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+.book-list::-webkit-scrollbar {
+  height: 6px;
+}
+.book-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+.book-card {
+  flex: 0 0 auto;
+  width: 130px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background: #222;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 2px;
+  border-radius: 10px;
+}
+.book-card img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.book-title {
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0.1rem;
+}
+.book-author {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+.empty {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 </style>
