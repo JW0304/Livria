@@ -2,7 +2,7 @@
   <div class="login-wrapper">
     <div class="login-container">
       <div class="brand">
-        <img src="@/assets/logo.png" alt="Livria 로고" class="logo" />
+        <img src="@/assets/purplelogo.png" alt="Livria 로고" class="logo" />
         <h1 class="brand-text">Livria</h1>
       </div>
       <div class="login-box">
@@ -78,21 +78,24 @@ const goReset = () => router.push("/reset-password");
   margin-right: 1rem;
 }
 .brand-text {
-  color: #b388f0;
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: "GongGothicMedium", sans-serif;
+  color: #bc93ff;
+  font-size: 2.4rem;
   margin-bottom: 1.5rem;
 }
 .login-box {
-  background-color: #1e1e1e;
-  padding-top: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-bottom: 3rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 40, 40, 0.9),
+    rgba(10, 10, 10, 0.85)
+  ); /* 진회색 → 검정 */
+  padding: 2rem 5rem 3rem;
   border-radius: 12px;
   width: 320px;
   text-align: center;
   color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* 약간의 그림자 */
+  backdrop-filter: blur(4px); /* 부드러운 느낌 추가 */
 }
 .welcome {
   margin-bottom: 1.5rem;

@@ -220,46 +220,36 @@ watch(
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 1.5rem;
-  background: #222; /* 기본 배경 – JS에서 덮어씌움 */
   text-decoration: none;
 }
-
 .book-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 .book-card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 6px;
 }
 .book-title {
-  font-weight: ;
-  color: white;
   margin: 0.5rem 0 0;
   font-size: 0.9rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
   overflow: hidden;
-  text-decoration: none;
+  text-overflow: ellipsis;
+  color: rgb(255, 255, 255);
+  padding: 0 0.5rem;
 }
 .book-author {
-  color: rgb(218, 217, 217);
-  font-size: 0.8rem;
-  margin: 0.5rem 0 1rem;
+  font-size: 0.75rem;
+  color: rgb(221, 221, 221);
+  margin: 0.25rem 0 0.5rem;
+  padding: 0 0.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-decoration: none;
-
-  /* ✅ 추가 스타일 */
-
-  -webkit-text-stroke: 0.3px rgb(255, 255, 255);
 }
-
 .pagination {
   display: flex;
   justify-content: center;

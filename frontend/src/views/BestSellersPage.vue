@@ -41,10 +41,21 @@
           ></audio>
 
           <button class="play-btn" @click.stop="togglePlay(book.id)">
+            <template
+              v-if="playingId === book.id && !audioRefs[book.id]?.paused"
+            >
+              <Pause size="25" />
+            </template>
+            <template v-else>
+              <Play size="25" />
+            </template>
+          </button>
+
+          <!-- <button class="play-btn" @click.stop="togglePlay(book.id)">
             <span v-if="playingId === book.id && !audioRefs[book.id]?.paused"
               >⏸</span
             ><span v-else>▶</span>
-          </button>
+          </button> -->
 
           <div class="progress-bar">
             <div
@@ -63,8 +74,9 @@
             :href="getAudioUrl(book, selectedTags[book.id])"
             download
             class="download-btn"
-            >⬇️</a
           >
+            <Download size="25" />
+          </a>
         </div>
 
         <!-- 즐겨찾기·찜 토글 아이콘 -->
@@ -96,6 +108,7 @@ import { ref, reactive, computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import axios from "axios";
 import { useAuthStore } from "@/stores/auth";
+import { Play, Pause, Download, Music4, Bookmark } from "lucide-vue-next";
 
 const router = useRouter();
 const auth = useAuthStore();
@@ -245,13 +258,15 @@ async function toggleWish(bookId) {
 .book-author,
 .book-pub {
   margin: 0.2rem 0;
+  margin-bottom: ;
   font-size: 1rem;
+  color: #bbbbbb;
 }
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0 0;
 }
 .tag {
   background: #222;
@@ -263,8 +278,9 @@ async function toggleWish(bookId) {
   color: #fff;
 }
 .tag.selected {
-  background: linear-gradient(to right, #5807a3, #4563eb, #6f80e0, #dbd194);
-  border-color: #fff;
+  background: linear-gradient(to right, #c210e6, #f03482, #ff7eb3);
+  /* background: linear-gradient(to right, #5807a3, #4563eb, #6f80e0, #dbd194); */
+  border-color: #3f3f3f;
 }
 .audio-controls {
   display: flex;
@@ -292,9 +308,10 @@ async function toggleWish(bookId) {
 }
 .progress-fill {
   height: 100%;
-  background: linear-gradient(to right, #c210e6, #f03482, #ff7eb3);
+  background: white;
+  /* background: linear-gradient(to right, #c210e6, #f03482, #ff7eb3); */
   width: 0%;
-  transition: width 0.1s linear;
+  transition: width 0.02s linear;
 }
 .progress-text {
   font-size: 0.8rem;

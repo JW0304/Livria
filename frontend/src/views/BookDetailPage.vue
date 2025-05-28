@@ -23,14 +23,14 @@
             :class="{ active: isInRead(book.id) }"
             @click.stop="toggleRead(book.id)"
           >
-            {{ isInRead(book.id) ? "❤️ 읽음" : "♡ 읽기" }}
+            {{ isInRead(book.id) ? "❤️" : "🤍" }}
           </span>
           <span
             class="icon lock"
             :class="{ active: isInFav(book.id) }"
             @click.stop="toggleFavorite(book.id)"
           >
-            {{ isInFav(book.id) ? "🔓 찜 취소" : "🔒 찜하기" }}
+            {{ isInFav(book.id) ? "🛍️" : "👜" }}
           </span>
         </div>
       </section>
@@ -200,11 +200,16 @@
         <div v-if="isLoggedIn" class="new-review">
           <textarea
             v-model="newContent"
-            placeholder="감상평을 남겨보세요..."
+            placeholder="감상평을 남겨보세요."
             rows="3"
+            class="review-textarea"
           ></textarea>
           <div class="formatting">
-            <button type="button" @click="submitReview" class="submit-btn">
+            <button
+              type="button"
+              @click="submitReview"
+              class="submit-btn custom-submit-btn"
+            >
               ➤
             </button>
           </div>
@@ -532,8 +537,11 @@ onMounted(async () => {
 }
 /* 음악 카드에 상대위치, 하단 공간 확보 */
 .music .card {
-  position: relative;
-  padding-bottom: 1.5rem;
+  background: linear-gradient(to right, #c210e6, #f03482, #ff7eb3);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 500px;
 }
 .card {
   max-width: 1000px;
@@ -562,6 +570,10 @@ onMounted(async () => {
   flex-direction: column;
   justify-content: center;
 }
+title {
+  color: white;
+}
+
 .title-1 {
   color: white;
   font-size: 16px;
@@ -654,6 +666,14 @@ onMounted(async () => {
 .music .card .time_full {
   right: 0.75rem;
 }
+/* 감상평 카드 */
+.review-section {
+  background: rgba(50, 50, 50, 0.9);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+}
+
 .review {
   display: flex;
   align-items: flex-start;
@@ -767,5 +787,26 @@ onMounted(async () => {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: white;
+}
+
+.review-textarea {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: #2a2a2a;
+  color: white;
+  resize: vertical;
+}
+
+.custom-submit-btn {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
 }
 </style>
