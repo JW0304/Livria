@@ -1,0 +1,51 @@
+[
+{
+  "model": "api.genre",
+  "pk": 1,
+  "fields": {
+    "name": "소설/시/희곡"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 2,
+  "fields": {
+    "name": "경제/경영"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 3,
+  "fields": {
+    "name": "자기계발"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 4,
+  "fields": {
+    "name": "인문/교양"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 5,
+  "fields": {
+    "name": "취미/실용"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 6,
+  "fields": {
+    "name": "어린이/청소년"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 7,
+  "fields": {
+    "name": "과학"
+  }
+}
+]

@@ -1,0 +1,409 @@
+[
+{
+  "model": "accounts.emotiontag",
+  "pk": 1,
+  "fields": {
+    "name": "위로와 평안"
+  }
+},
+{
+  "model": "accounts.emotiontag",
+  "pk": 2,
+  "fields": {
+    "name": "몽환적이고 감성적인"
+  }
+},
+{
+  "model": "accounts.emotiontag",
+  "pk": 3,
+  "fields": {
+    "name": "슬픔과 외로움"
+  }
+},
+{
+  "model": "accounts.emotiontag",
+  "pk": 4,
+  "fields": {
+    "name": "에너지와 고조"
+  }
+},
+{
+  "model": "accounts.emotiontag",
+  "pk": 5,
+  "fields": {
+    "name": "사랑과 그리움"
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$iVrW5oeOhI6iwxGGBYRfbc$MebR0ZzmOTh9rCm10xgEXqpm2VB67Td13IqjnYNy5+g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testuser",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T16:48:31.373Z",
+    "nickname": "tester1",
+    "age": 23,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "ㅇㅇ",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1,
+      2
+    ],
+    "favorites": [],
+    "read_books": [
+      2
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TqQeLp01kWis1Ooytz9e1N$hi7Hky1VPUDw+qNvSSESxKa2aTi+ceqUo780ZRTf6e4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "moonreader92",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:43:20.776Z",
+    "nickname": "달빛아래",
+    "age": 24,
+    "avatar": "",
+    "default_avatar": "default3",
+    "status_message": "조용한 밤, 책과 음악이 내 하루의 마침표",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1,
+      2,
+      3
+    ],
+    "favorites": [
+      14,
+      25,
+      37
+    ],
+    "read_books": [
+      7,
+      10,
+      18,
+      38
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$XNwZs6dH3lXvRE6wbhSchs$4Cudl0krxkk9qakOzY5/jek/zrnzFRYjEayAs3tAhIs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "soyoung_0310",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:43:54.607Z",
+    "nickname": "작은책방소영",
+    "age": 36,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "soyoung_0310",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1,
+      4
+    ],
+    "favorites": [
+      4,
+      6,
+      119
+    ],
+    "read_books": [
+      9,
+      20,
+      41,
+      134
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$sERGULginjeqFxBKzRPZf2$To2WDmUargSpqdMdmqjDfirtzL5YTlSkybenSGiX3Wo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jake_music",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:44:23.011Z",
+    "nickname": "제이크의음악서재",
+    "age": 17,
+    "avatar": "",
+    "default_avatar": "default2",
+    "status_message": "좋은 책에는 항상 배경 음악이 필요하니까.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      4,
+      5
+    ],
+    "favorites": [
+      23,
+      24,
+      28
+    ],
+    "read_books": [
+      2,
+      21,
+      35,
+      140
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$40zczVimp9Nl7dP7RsPWzY$IxWs/z4sZ3OCpu1dwCobWrBDQGy3wYK6/VVCgmSBcFU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rainandbooks",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:45:00.167Z",
+    "nickname": "비오는날엔",
+    "age": 43,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "창밖에 비 내리면, 나는 책을 읽는다.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1,
+      5
+    ],
+    "favorites": [
+      9,
+      12,
+      25
+    ],
+    "read_books": [
+      4,
+      10,
+      17,
+      54
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$04nVDRwIkAgMm2xNQQopSi$sqJxO+UfAUw0+b39M9sJEqrfYlDTe9rgW17cTGtenIw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "yuna_notes",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:45:35.868Z",
+    "nickname": "조용한카페",
+    "age": 21,
+    "avatar": "",
+    "default_avatar": "default3",
+    "status_message": "마음이 조용해지는 책을 찾고 있어요.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1,
+      2
+    ],
+    "favorites": [
+      3,
+      56,
+      103
+    ],
+    "read_books": [
+      1,
+      26,
+      46,
+      53
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$G1H3XXmGgLEZC2KUTo5PrS$MdZRuOFbpBi8qOHtsAxXXz1GwlpJjwSWfwZGSQHyOU8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "storyhyejin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:46:06.078Z",
+    "nickname": "혜진의이야기상자",
+    "age": 31,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "매일 밤, 한 편의 이야기로 하루를 마감해요.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      3,
+      5
+    ],
+    "favorites": [
+      3,
+      14,
+      18,
+      119
+    ],
+    "read_books": [
+      31,
+      33,
+      36
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Ed92liPYGSMt6jmgPTSYr6$OiM/X9Lp2lj4u01jRThJYAiE3zR46Bui4A3aHmj2wmE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "cafe_poet",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:47:12.319Z",
+    "nickname": "거리의시인",
+    "age": 52,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "한 잔의 커피, 한 편의 시, 그리고 한 권의 책.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1,
+      2,
+      3
+    ],
+    "favorites": [
+      120,
+      126
+    ],
+    "read_books": [
+      113,
+      117
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$XIh1na6zWIaBlITIeU8AfL$mL9Uv2lUNqcng5U8kyf0SWoOOL4vlWu1hDw2cuhdBpg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bookworm_jun",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:47:43.309Z",
+    "nickname": "책벌레준",
+    "age": 14,
+    "avatar": "",
+    "default_avatar": "default2",
+    "status_message": "책 속엔 언제나 다른 세상이 있어요.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      2,
+      4
+    ],
+    "favorites": [],
+    "read_books": [
+      52
+    ]
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$6g6PCnD3ir8xTVtlsjSAOX$VFPz5FUibYEpX/HUuV89Ykg+hvgmKfE2GDoWLHcAOTA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mellow_j",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:48:10.492Z",
+    "nickname": "잔잔한J의하루",
+    "age": 19,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "잔잔한 하루를 만드는 건, 좋은 문장 한 줄.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      1
+    ],
+    "favorites": [],
+    "read_books": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$7J5NCq8hui2aTKqKGZ0Ne2$CnRo68KmiqyPeN0EuT3Bk8NXAeDUoKiNBywzjHNOtL4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "clara_reads",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-27T18:48:37.028Z",
+    "nickname": "클라라의다락방",
+    "age": 24,
+    "avatar": "",
+    "default_avatar": "default1",
+    "status_message": "책으로 채운 다락방에서, 나만의 시간을 즐겨요.",
+    "groups": [],
+    "user_permissions": [],
+    "emotion_tags": [
+      2
+    ],
+    "favorites": [],
+    "read_books": []
+  }
+}
+]
