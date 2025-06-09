@@ -437,7 +437,7 @@ https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
 > > 메인 페이지
 - 화면 스크롤 및 캐러셀
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/1_Home.gif" alt="메인페이지" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/1_Home.gif" alt="메인페이지" width="800" />
 </p>
 
 <br>
@@ -446,7 +446,7 @@ https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
 >> 사이드 바
 - 클릭 시 슬라이드 인 사이드 바, 마우스 호버 시 글씨 색 변화
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/2_Sidebar.gif" alt="사이드 바" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/2_Sidebar.gif" alt="사이드 바" width="800" />
 </p>
 
 <br>
@@ -457,14 +457,14 @@ https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
 - 도서 검색 기능, 카테고리 별 도서 목록
   
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/5_BookList_Search.gif" alt="도서 목록 페이지1" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/5_BookList_Search.gif" alt="도서 목록 페이지1" width="800" />
 </p>
 
 <br>
 
 - 음악 재생 상태 모니터, 사용자 인터랙션(클릭, 찜하기 등)을 추적
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/3_MusicPlay.gif" alt="도서 목록 페이지2" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/3_MusicPlay.gif" alt="도서 목록 페이지2" width="800" />
 </p>
 
 <br>
@@ -475,7 +475,7 @@ https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
 - API 연결을 통한 작가 정보 생성, 코사인 유사도 기반 도서 추천
 
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/4_BookDetail.gif" alt="도서 상세 페이지" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/4_BookDetail.gif" alt="도서 상세 페이지" width="800" />
 </p>
 
 <br>
@@ -486,14 +486,14 @@ https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
 - 개인 프로필 수정, 찜한 도서/ 읽은 도서 목록 페이지 이동
 
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/7_Mypage1.gif" alt="프로필 페이지1" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/7_Mypage1.gif" alt="프로필 페이지1" width="800" />
 </p>
 
 <br>
 
 - 개인이 담은 목록 내 도서 삭제
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/8_Mypage2.gif" alt="프로필 페이지2" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/8_Mypage2.gif" alt="프로필 페이지2" width="800" />
 <br>
 <br>
 
@@ -501,7 +501,7 @@ https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
 
 - 마우스 호버 시 카드 뒤집기 효과
 <p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/6_ReviewList.gif" alt="리뷰 목록" width="800" />
+<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/6_ReviewList.gif" alt="리뷰 목록" width="800" />
 </p>
 
 <br>
