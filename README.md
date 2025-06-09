@@ -380,48 +380,105 @@
     </tr>
   </thead>
   <tbody>
+    <!-- 언어 -->
     <tr>
       <td>언어</td>
       <td>
-        <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" alt="Python" />
+        <img
+          src="https://img.shields.io/badge/Python-3.9.13-blue?style=for-the-badge&logo=python"
+          alt="Python 3.9.13"
+        />
       </td>
     </tr>
+    <!-- 백엔드 -->
     <tr>
       <td>백엔드</td>
       <td>
-        <img src="https://img.shields.io/badge/Django-3.2-green?style=for-the-badge&logo=django" alt="Django" />
-        <img src="https://img.shields.io/badge/SQLite-3.36-brightgreen?style=for-the-badge&logo=sqlite" alt="SQLite" />
+        <img
+          src="https://img.shields.io/badge/Django-3.2-green?style=for-the-badge&logo=django"
+          alt="Django"
+        />
+        <img
+          src="https://img.shields.io/badge/SQLite-3.36-brightgreen?style=for-the-badge&logo=sqlite"
+          alt="SQLite"
+        />
       </td>
     </tr>
+    <!-- 프론트엔드 -->
     <tr>
       <td>프론트엔드</td>
       <td>
-        <img src="https://img.shields.io/badge/Vue.js-3.0-%2341B883?style=for-the-badge&logo=vue.js" alt="Vue.js" />
-        <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5" alt="HTML5" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3" alt="CSS3" />
+        <img
+          src="https://img.shields.io/badge/Vue.js-3.0-%2341B883?style=for-the-badge&logo=vue.js"
+          alt="Vue.js"
+        />
+        <img
+          src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript"
+          alt="JavaScript"
+        />
+        <img
+          src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+          alt="HTML5"
+        />
+        <img
+          src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+          alt="CSS3"
+        />
       </td>
     </tr>
+    <!-- DevOps -->
     <tr>
       <td>DevOps</td>
       <td>
-        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git" alt="Git" />
-        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub" />
+        <img
+          src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+          alt="Git"
+        />
+        <img
+          src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"
+          alt="GitHub"
+        />
       </td>
     </tr>
+    <!-- 툴 & 에디터 -->
     <tr>
       <td>툴 &amp; 에디터</td>
       <td>
-        <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code" alt="VS Code" />
-        <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman" alt="Postman" />
-        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma" alt="Figma" />
-        <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion" alt="Notion" />
-        <img src="https://img.shields.io/badge/Excalidraw-000000?style=for-the-badge&logo=excalidraw" alt="Excalidraw" />
+        <img
+          src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white"
+          alt="VS Code"
+        />
+        <img
+          src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
+          alt="Postman"
+        />
+        <img
+          src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
+          alt="Figma"
+        />
+        <img
+          src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion"
+          alt="Notion"
+        />
+        <img
+          src="https://img.shields.io/badge/Excalidraw-000000?style=for-the-badge&logo=excalidraw"
+          alt="Excalidraw"
+        />
       </td>
     </tr>
+    <tr>
+      <td>API / 서비스</td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Wikipedia-000000?style=for-the-badge&logo=wikipedia&logoColor=white" alt="Wikipedia" />
+        <img src="https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI GPT API" />
+        <img src="https://img.shields.io/badge/Aladin-FF6E00?style=for-the-badge&logo=aladin&logoColor=white" alt="Aladin" />
+        <img src="https://img.shields.io/badge/MusicGen-000000?style=for-the-badge&logo=musicgen&logoColor=white" alt="MusicGen" />
+        <img src="https://img.shields.io/badge/Upstage-000000?style=for-the-badge&logo=upstage&logoColor=white" alt="Upstage API" />
+      </td>
   </tbody>
 </table>
 </div>
+
 
 
 ## 6. 생성형 AI 활용
@@ -471,6 +528,7 @@
         <img src="https://img.shields.io/badge/Upstage-000000?style=for-the-badge" alt="Upstage" />
       </td>
     </tr>
+    
   </tbody>
 </table>
 </div>
