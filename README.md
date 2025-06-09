@@ -1,9 +1,18 @@
-# 🎼 Livria: 노래하듯 읽는 책, 감성 도서 추천 웹서비스
+# 🎼 Livria: 노래하듯 읽는 책, 감성 기반 맞춤형 도서 추천 웹 플랫폼
 
-![리브리아 로고](./images/Logo.png)
-책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
+<!-- 
+로고 및 프로젝트 명의 간단한 풀이
+-->
+<p align="center">
+  <img src="./images/Logo.png" alt="Livria 로고" width="200" />
+</p>
+<h2 align="center">
+  책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
+</h2>
 
----
+
+
+
 
 ## 1. 팀원 정보 및 역할 분담
 
