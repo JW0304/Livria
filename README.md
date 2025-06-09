@@ -368,9 +368,110 @@
 | DevOps | Git, GitHub |
 | Tools | VS Code, Postman, Figma, Notion, Excalidraw |
 
-- 피그마 목업
-![목업 1](./images/Mockup1.png)
-![목업 2](./images/Mockup2.png)
 
----
+## 5. 개발 환경 & 기술 스택
+
+<div align="center">
+<table cellpadding="8" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th align="center">분야</th>
+      <th align="center">도구</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>언어</td>
+      <td>
+        <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" alt="Python" />
+      </td>
+    </tr>
+    <tr>
+      <td>백엔드</td>
+      <td>
+        <img src="https://img.shields.io/badge/Django-3.2-green?style=for-the-badge&logo=django" alt="Django" />
+        <img src="https://img.shields.io/badge/SQLite-3.36-brightgreen?style=for-the-badge&logo=sqlite" alt="SQLite" />
+      </td>
+    </tr>
+    <tr>
+      <td>프론트엔드</td>
+      <td>
+        <img src="https://img.shields.io/badge/Vue.js-3.0-%2341B883?style=for-the-badge&logo=vue.js" alt="Vue.js" />
+        <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript" alt="JavaScript" />
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5" alt="HTML5" />
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3" alt="CSS3" />
+      </td>
+    </tr>
+    <tr>
+      <td>DevOps</td>
+      <td>
+        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git" alt="Git" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub" />
+      </td>
+    </tr>
+    <tr>
+      <td>툴 &amp; 에디터</td>
+      <td>
+        <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code" alt="VS Code" />
+        <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman" alt="Postman" />
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma" alt="Figma" />
+        <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion" alt="Notion" />
+        <img src="https://img.shields.io/badge/Excalidraw-000000?style=for-the-badge&logo=excalidraw" alt="Excalidraw" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+## 6. 생성형 AI 활용
+
+<div align="center">
+<table cellpadding="8" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th align="center">API / 서비스</th>
+      <th align="center">용도</th>
+      <th align="center">배지</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wikipedia</td>
+      <td>작가 정보 탐색</td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Wikipedia-000000?style=for-the-badge&logo=wikipedia" alt="Wikipedia" />
+      </td>
+    </tr>
+    <tr>
+      <td>OpenAI GPT API</td>
+      <td>작가 정보 생성</td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai" alt="OpenAI" />
+      </td>
+    </tr>
+    <tr>
+      <td>Aladin</td>
+      <td>도서 데이터 생성</td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Aladin-FF6E00?style=for-the-badge" alt="Aladin" />
+      </td>
+    </tr>
+    <tr>
+      <td>MusicGen</td>
+      <td>도서 분위기 기반 음악 생성</td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/MusicGen-000000?style=for-the-badge" alt="MusicGen" />
+      </td>
+    </tr>
+    <tr>
+      <td>Upstage API</td>
+      <td>선호 도서 기반 도서 추천</td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Upstage-000000?style=for-the-badge" alt="Upstage" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
