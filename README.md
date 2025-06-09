@@ -85,9 +85,9 @@
 
 
 <p align="center">
-  <img src="./images/background1.png" alt="야외 독서 트렌드 뉴스" width="430" />
+  <img src="./images/background1.png" alt="야외 독서 트렌드 뉴스" width="400" />
   &nbsp;&nbsp;
-  <img src="./images/background2.png" alt="출퇴근 시간 활용 뉴스" width="430" />
+  <img src="./images/background2.png" alt="출퇴근 시간 활용 뉴스" width="400" />
 </p>
 
 > “올해 트렌드는 ‘야외 독서’…‘텍스트 힙’ 유행 발맞추는 지자체들”  
