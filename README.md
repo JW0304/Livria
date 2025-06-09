@@ -294,6 +294,13 @@
 <br>
 
 > ### 핵심 기능
+>> 음악 재생 동영상
+<video controls width="600" poster="https://raw.githubusercontent.com/JW0304/Livria/front/images/music_play_thumbnail.png">
+  <source src="https://raw.githubusercontent.com/JW0304/Livria/front/images/music_play.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 > > 메인 페이지
 - 화면 스크롤 및 캐러셀
 <p align="center">
