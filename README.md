@@ -148,15 +148,20 @@
   책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
 </h2>
 
+<br>
+<br>
+
 > ### 개발 기간
+>> #### 25.05.20 ~ 05.27
+<br>
+<p align="center">
 <img src="./images/timetable.png" alt="Livria 개발 기간" width="800" />
-
+</p>
 
 <br>
 <br>
 
-
-> ###
+> ### 
 
 <br>
 <br>
