@@ -48,7 +48,7 @@ class AuthViewSet(viewsets.ViewSet):
             user.emotion_tags.add(tag)
 
         token, _ = Token.objects.get_or_create(user=user)
-        serialized_user = UserSerializer(user)
+        serialized_user = UserSerializer(user, context={'request': request})
 
         return Response({
             'token': token.key,
@@ -81,7 +81,7 @@ class AuthViewSet(viewsets.ViewSet):
             )
 
         token, _ = Token.objects.get_or_create(user=user)
-        serialized_user = UserSerializer(user)
+        serialized_user = UserSerializer(user, context={'request': request})
 
         return Response({
             'token': token.key,
