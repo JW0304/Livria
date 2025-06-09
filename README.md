@@ -76,6 +76,36 @@
 <br>
 
 ## 2. 프로젝트 소개
+> 🚀 프로젝트 개발 배경
+
+<p align="center">
+  <img src="./images/background1.png" alt="야외 독서 트렌드 뉴스" width="300" />
+  &nbsp;&nbsp;
+  <img src="./images/background2.png" alt="출퇴근 시간 활용 뉴스" width="300" />
+</p>
+
+현대인의 라이프스타일 변화와 미디어 소비 패턴을 살펴보면:
+
+1. **야외 독서 및 ‘텍스트 힙’(Text Hip) 문화 확산**  
+   - SNS와 뉴스 기사에서 “야외 독서”가 새로운 트렌드로 부상  
+   - 독서 공간의 자유로움과 감성 소비 니즈 증대  
+
+2. **출퇴근 시간의 활용도 증가**  
+   - 직장인 하루 평균 출퇴근 시간 1시간 이상  
+   - 이동 중 ‘짧고 굵은’ 콘텐츠 소비 수요 확대  
+
+3. **기존 추천 서비스의 한계**  
+   - 사용자 감성과 취향을 반영한 콘텐츠 큐레이션 부족  
+   - 독서와 음악을 연동한 감성 기반 경험 미흡  
+
+> 이런 배경에서 **Livria**는  
+> “책(Livre)과 노래(Aria)를 결합한 감성 기반 도서·음악 추천 플랫폼”으로  
+> 사용자의 일상 속 짧은 여유 시간에도 감성에 딱 맞는 큐레이션을 제공합니다.  
+
+
+<br>
+<br>
+
 > 로고 및 프로젝트 명
 
 <!-- 
@@ -86,8 +116,11 @@
 로고 
 -->
 <p align="center">
-  <img src="./images/Logo.png" alt="Livria 로고" width="200" />
+  <img src="./images/Logo.png" alt="Livria 로고" width="180" />
+  &nbsp;&nbsp;
+  <img src="./images/word.png" alt="Livria 글자" width="300" />
 </p>
+
 <h2 align="center">
   책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
 </h2>
