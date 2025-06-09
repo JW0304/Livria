@@ -179,16 +179,129 @@
 
 >> #### 생성형 AI 활용(Chat GPT)
 ##### 미리 작성해둔 기획 및 Wirefram 기반으로 프로젝트 개발 시 생성형 AI 활용 
+<h4>프롬포트 작성 및 요청 사항 전달</h4>
 <p align="center">
 <img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="800" />
 </p>
-<h4 align="center">프롬포트 작성 및 요청 사항 전달</h4>
 <br>
 
+<h4>생성형 AI의 답변</h4>
 <p align="center">
 <img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="800" />
 </p>
-<h4 align="center">생성형 AI의 답변</h4>
+
+<br>
+<br>
+
+> ### 데이터베이스 모델링 (ERD)
+>> 주요 테이블: User, Book, Category (M:N), Review, Music, Review
+<p align="center">
+<img src="./images/ERD.png" alt="ERD" width="800" />
+</p>
+
+<br>
+<br>
+
+
+## 3. 프로젝트 기능
+> ### 기획된 목표 기능
+>> #### 구현된 기능
+<div align="center">
+
+<table cellpadding="8" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th align="center">카테고리</th>
+      <th align="center">주요 기능</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>사용자 관리</strong></td>
+      <td>로그인/회원가입, 로그아웃, 사용자 인증, 개인정보(닉네임·감성 키워드·비밀번호) 수정</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>콘텐츠 관리</strong></td>
+      <td>도서 CRUD, 리뷰 CRUD, 읽은 도서 리스트, 찜한 책/나중에 볼 책 모아보기</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>추천 시스템</strong></td>
+      <td>음악 추천(도서별 음악), 베스트셀러, 코사인-유사도 기반 유사 도서</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>검색 &amp; 필터</strong></td>
+      <td>검색창(제목/작가), 검색 결과, 장르 필터</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>소셜 인터랙션</strong></td>
+      <td>좋아요/댓글(도서·리뷰), 댓글 기능</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>개인화 대시보드</strong></td>
+      <td>마이페이지(프로필·감성 키워드)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>미디어 미리보기</strong></td>
+      <td>음악 미리듣기, 분위기 태그 표시</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>레이아웃 &amp; UI/UX</strong></td>
+      <td>네비게이션 바(로고·검색·인증 버튼), 사이드 콘텐츠(카테고리), 하단 콘텐츠(추천·베스트셀러)</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<br>
+
+>> #### 미구현된 기능
+<div align="center">
+
+<table cellpadding="8" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th align="center">구현 가능</th>
+      <th align="center">구현 불가</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">
+        <ul>
+          <li>AI 기반 음악 커버 이미지 생성</li>
+          <li>화이트모드/소셜 로그인</li>
+          <li>음악 추천 다시 받기</li>
+          <li>반응형 웹</li>
+          <li>내가 좋아하는 작가의 책</li>
+          <li>출판 연도 필터</li>
+        </ul>
+      </td>
+      <td valign="top">
+        <ul>
+          <li>감성 기반 도서 추천(“당신을 위한 선율”)-음악 기반</li>
+          <li>연령별 추천</li>
+          <li>청취 히스토리</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+<br>
+<br>
+
+> ### 핵심 기능
+> > 메인 페이지
+
+> > 프로필 페이지
+
+> > 도서 상세 페이지
+
+> > 리뷰 목록 페이지
+
 
 <br>
 <br>
@@ -199,27 +312,8 @@
 <br>
 <br>
 
-## 2. 목표 서비스와 구현 정도
 
-| 기능 | 구현 |
-|------|------------|
-| 사용자 인증 (회원가입/로그인 등) | O |
-| 도서 / 리뷰 CRUD | O |
-| 좋아요 / 댓글 기능 | O (좋아요한 도서 모아보기 구현) |
-| 도서 추천 기능 | O |
-| 음악 추천 기능 | △ (도서별 음악 추천 구현) |
-| 반응형 웹 (모바일 대응) | △ (일부 구현, 개선 예정) |
-| AI 기반 음악 커버 이미지 생성 | X (향후 구현 예정) |
-| 화이트모드, 소셜 로그인 등 | X (향후 구현 예정) |
 
----
-
-## 3. 데이터베이스 모델링 (ERD)
-
-![ERD 이미지](./images/ERD.png)
-> 주요 테이블: User, Book, Category (M:N), Review, Music, Review
-
----
 
 ## 4. 도서 추천 알고리즘 설명
 
