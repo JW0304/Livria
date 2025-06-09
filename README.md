@@ -165,27 +165,30 @@
 >> #### Notion 및 Excarlidraw 작성
 
 <p align="center">
-<img src="./images/organize_paper.png" alt="노션 정리 및 엑스칼리드로우 작성" width="1000" />
+<img src="./images/organize_paper.png" alt="노션 정리 및 엑스칼리드로우 작성" width="900" />
 </p>
 
 <br>
+
 >> #### Figma를 활용한 Wireframe 작성
 <p align="center">
-<img src="./images/wireframe.png" alt="wireframe 작성" width="1000" />
+<img src="./images/wireframe.png" alt="wireframe 작성" width="900" />
 </p>
 
 <br>
+
 >> #### 생성형 AI 활용(Chat GPT)
 ##### 미리 작성해둔 기획 및 Wirefram 기반으로 프로젝트 개발 시 생성형 AI 활용 
-프롬포트 작성 및 요청 사항 전달
 <p align="center">
-<img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="1000" />
+<img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="800" />
 </p>
+<h4 align="center">프롬포트 작성 및 요청 사항 전달</h4>
 <br>
-생성형 AI의 답변
+
 <p align="center">
-<img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="1000" />
+<img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="800" />
 </p>
+<h4 align="center">생성형 AI의 답변</h4>
 
 <br>
 <br>
