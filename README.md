@@ -1,6 +1,75 @@
 # 🎼 Livria: 노래하듯 읽는 책
 > 감성 기반 맞춤형 도서 추천 웹 플랫폼
 
+<br>
+<!--
+  팀 소개
+-->
+
+<h2 align="center">✨ SSACRABUILD 팀원 소개 ✨</h2>
+
+<table align="center" cellpadding="0" cellspacing="0" width="800">
+  <tr>
+    <!-- 양재원 프로필 -->
+    <td align="center"
+        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa;">
+      <img src="https://avatars.githubusercontent.com/u/195062705?v=4" width="100" style="border-radius:50%;" /><br/>
+      <strong>양재원</strong><br/>
+      <a href="https://github.com/JW0304">JW0304</a>
+    </td>
+    <!-- 역할 칸 -->
+    <td valign="top"
+        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa; width:150px;">
+      <strong>주 담당 프론트엔드 (Vue)</strong><br/>
+      • Figma 기반 UI/UX<br/>
+      • 반응형 레이아웃<br/>
+      • Axios 연동<br/>
+      • 음악 추천 UI<br/>
+      • 페이지별 Vue 구성
+    </td>
+    <!-- 사람 사이 텀 -->
+    <td width="20"></td>
+    <!-- 임유나 프로필 -->
+    <td align="center"
+        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa;">
+      <img src="https://avatars.githubusercontent.com/u/152590695?v=4" width="100" style="border-radius:50%;" /><br/>
+      <strong>임유나</strong><br/>
+      <a href="https://github.com/harinme">harinme</a>
+    </td>
+    <!-- 역할 칸 -->
+    <td valign="top"
+        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa; width:150px;">
+      <strong>주 담당 백엔드 (Django)</strong><br/>
+      • 도서/유저/리뷰 모델 및 API<br/>
+      • 도서 추천 알고리즘<br/>
+      • 음악/도서 생성형 AI 연동<br/>
+      • DB 모델링
+    </td>
+  </tr>
+</table>
+
+<table align="center" cellpadding="5" cellspacing="0" width="800px">
+  <tr>
+    <th align="center">공동 작업</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>프론트엔드↔백엔드 크로스 기능 지원
+          <ul>
+            <li>프론트엔드 담당(양재원): 백엔드 API 연동 및 DB 모델링 지원</li>
+            <li>백엔드 담당(임유나): 프론트엔드 UI/UX 구현 및 Axios 연동 지원</li>
+          </ul>
+        </li>
+        <li>GitHub 브랜치 협업 및 코드 리뷰</li>
+        <li>Notion을 활용한 프로젝트 문서화</li>
+        <li>API 연결 테스트 및 디버깅</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
 <!-- 
 로고 및 프로젝트 명의 간단한 풀이
 -->
@@ -12,19 +81,6 @@
 </h2>
 
 
-
-
-
-## 1. 팀원 정보 및 역할 분담
-
-| 이름 | 역할 | 담당 업무 |
-|------|------|-----------|
-| 임유나 | 백엔드 (Django) | 도서/유저/리뷰 모델 및 API, 도서 추천 알고리즘, 음악/도서 생성형 AI 연동, DB 모델링 |
-| 양재원 | 프론트엔드 (Vue) | Figma 기반 UI/UX, 반응형 레이아웃, Axios 연동, 음악 추천 UI, 페이지별 Vue 구성 |
-
-- 공동: GitHub 브랜치 협업, Notion 문서화, API 연결 테스트
-
----
 
 ## 2. 목표 서비스와 구현 정도
 
