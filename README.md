@@ -71,7 +71,8 @@
 </table>
 
 <br>
-<br>
+<br
+---
 <br>
 <br>
 
@@ -161,279 +162,7 @@
 <br>
 <br>
 
-> ### 개발 과정
->> #### Notion 및 Excarlidraw 작성
-
-<p align="center">
-<img src="./images/organize_paper.png" alt="노션 정리 및 엑스칼리드로우 작성" width="900" />
-</p>
-
-<br>
-
->> #### Figma를 활용한 Wireframe 작성
-<p align="center">
-<img src="./images/wireframe.png" alt="wireframe 작성" width="900" />
-</p>
-
-<br>
-
->> #### 생성형 AI 활용(Chat GPT)
-##### 미리 작성해둔 기획 및 Wirefram 기반으로 프로젝트 개발 시 생성형 AI 활용 
-<h4>프롬포트 작성 및 요청 사항 전달</h4>
-<p align="center">
-<img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="800" />
-</p>
-<br>
-
-<h4>생성형 AI의 답변</h4>
-<p align="center">
-<img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="800" />
-</p>
-
-<br>
-<br>
-
-> ### 데이터베이스 모델링 (ERD)
->> 주요 테이블: User, Book, Category (M:N), Review, Music, Review
-<p align="center">
-<img src="./images/ERD.png" alt="ERD" width="800" />
-</p>
-
-<br>
-<br>
-
-
-## 3. 프로젝트 기능
-> ### 기획된 목표 기능
->> #### 구현된 기능
-<div align="center">
-
-<table cellpadding="8" cellspacing="0" border="0">
-  <thead>
-    <tr>
-      <th align="center">카테고리</th>
-      <th align="center">주요 기능</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><strong>사용자 관리</strong></td>
-      <td>로그인/회원가입, 로그아웃, 사용자 인증, 개인정보(닉네임·감성 키워드·비밀번호) 수정</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>콘텐츠 관리</strong></td>
-      <td>도서 CRUD, 리뷰 CRUD, 읽은 도서 리스트, 찜한 책/나중에 볼 책 모아보기</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>추천 시스템</strong></td>
-      <td>음악 추천(도서별 음악), 베스트셀러, 코사인-유사도 기반 유사 도서</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>검색 &amp; 필터</strong></td>
-      <td>검색창(제목/작가), 검색 결과, 장르 필터</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>소셜 인터랙션</strong></td>
-      <td>좋아요/댓글(도서·리뷰), 댓글 기능</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>개인화 대시보드</strong></td>
-      <td>마이페이지(프로필·감성 키워드)</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>미디어 미리보기</strong></td>
-      <td>음악 미리듣기, 분위기 태그 표시</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>레이아웃 &amp; UI/UX</strong></td>
-      <td>네비게이션 바(로고·검색·인증 버튼), 사이드 콘텐츠(카테고리), 하단 콘텐츠(추천·베스트셀러)</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-<br>
-
->> #### 미구현된 기능
-<div align="center">
-
-<table cellpadding="8" cellspacing="0" border="0">
-  <thead>
-    <tr>
-      <th align="center">구현 가능</th>
-      <th align="center">구현 불가</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <ul>
-          <li>AI 기반 음악 커버 이미지 생성</li>
-          <li>화이트모드/소셜 로그인</li>
-          <li>음악 추천 다시 받기</li>
-          <li>반응형 웹</li>
-          <li>내가 좋아하는 작가의 책</li>
-          <li>출판 연도 필터</li>
-        </ul>
-      </td>
-      <td valign="top">
-        <ul>
-          <li>감성 기반 도서 추천(“당신을 위한 선율”)-음악 기반</li>
-          <li>연령별 추천</li>
-          <li>청취 히스토리</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-
-<br>
-<br>
-
-> ### 핵심 기능
->> 음악 재생 동영상
-
-
-https://github.com/user-attachments/assets/4cda2a14-167c-4d5b-ae90-61fc3305fb86
-
-
-
-
-> > 메인 페이지
-- 화면 스크롤 및 캐러셀
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/1_Home.gif" alt="메인페이지" width="800" />
-</p>
-
-<br>
-
->> 사이드 바
-- 클릭 시 슬라이드 인 사이드 바, 마우스 호버 시 글씨 색 변화
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/2_Sidebar.gif" alt="사이드 바" width="800" />
-</p>
-
-<br>
-<br>
-
->> 도서 목록 페이지
-
-- 도서 검색 기능, 카테고리 별 도서 목록
-  
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/5_BookList_Search.gif" alt="도서 목록 페이지1" width="800" />
-</p>
-
-<br>
-
-- 음악 재생 상태 모니터, 사용자 인터랙션(클릭, 찜하기 등)을 추적
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/3_MusicPlay.gif" alt="도서 목록 페이지2" width="800" />
-</p>
-
-<br>
-<br>
-
->> 도서 상세 페이지
-
-- API 연결을 통한 작가 정보 생성, 코사인 유사도 기반 도서 추천
-
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/4_BookDetail.gif" alt="도서 상세 페이지" width="800" />
-</p>
-
-<br>
-<br>
-
->> 프로필 페이지
-
-- 개인 프로필 수정, 찜한 도서/ 읽은 도서 목록 페이지 이동
-
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/7_Mypage1.gif" alt="프로필 페이지1" width="800" />
-</p>
-
-<br>
-
-- 개인이 담은 목록 내 도서 삭제
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/8_Mypage2.gif" alt="프로필 페이지2" width="800" />
-<br>
-<br>
-
->> 리뷰 목록 페이지
-
-- 마우스 호버 시 카드 뒤집기 효과
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/6_ReviewList.gif" alt="리뷰 목록" width="800" />
-</p>
-
-<br>
-<br>
-
-> ###
-
-
-<br>
-<br>
-
-
-
-
-## 4. 도서 추천 알고리즘 설명
-
-- **임베딩 기반 추천 (유사도 분석)**  
-  → 도서 제목과 설명을 벡터화 후 코사인 유사도 계산  
-  → 상위 4개의 유사 도서를 자동 추천
-
-- **GPT 기반 선호 도서 맞춤형 추천**  
-  → 사용자 선호 도서에 맞춰 어울리는 음악과 함께 추천
-
----
-
-## 5. 핵심 기능 요약
-
-- 메인 페이지: 로그인 여부에 따라 추천 콘텐츠 차별화
-- 검색 기능, 사이드바 네비게이션
-- 도서 상세 페이지에서 음악 생성/추천
-- 리뷰 작성 및 전체 조회 기능
-- 프로필 정보 수정 및 감정 태그 UI 제공
-
----
-
-## 6. 생성형 AI 활용
-
-- **Wikipedia**: 작가 정보 탐색
-- **OpenAI GPT API**: 작가 정보 생성
-- **Aladin**: 도서 데이터 생성
-- **MusicGen**: 도서 분위기 기반 음악 생성
-- **Upstage API**: 선호 도서 기반 도서 추천
-
----
-
-## 7. 느낀점
-
-- **임유나**: 촉박한 시간에 기획부터 구현까지 모든 과정을 압축적으로 진행하다 보니, 처음 구상했던 기능들을 모두 구현하지 못한 점이 가장 아쉬웠습니다. 특히 추천 알고리즘과 AI 연동, 음악 생성 및 추가적인 기능들 구현처럼 기술적으로 흥미로운 요소들을 더 깊이 다루고 싶었지만, 일정에 쫓겨 핵심만 구현해야 했습니다. 하지만 힘들었던 만큼 팀원과 함께 문제를 해결하고 완성해나가는 과정이 재밌고 값진 경험이었고, 백엔드 전체 흐름을 직접 설계하고 연결하는 과정에서 많은 걸 배울 수 있었습니다. 다음에 프로젝트를 이어서 진행할 때는 더 여유 있는 일정 속에서, 미처 시도하지 못한 기능까지 완성해보고 싶습니다.
-
-- **양재원**: 짧은 기간 안에 프로젝트를 완성하다 보니 아쉬운 점도 있었지만, Django와 Vue를 비롯해 다양한 개발 도구를 실제로 활용하며 많은 것을 배울 수 있는 값진 경험이었습니다. 프론트와 백엔드를 나누어 협업하면서 역할 분담의 중요성을 느꼈고, 팀원과의 소통과 기획 과정에서도 큰 도움을 받아 고마운 마음이 들었고, 앞으로도 함께 으쌰으쌰하고 싶습니다. 마지막으로, 이번 프로젝트를 통해 평소에 백엔드와 프론트엔드 기술, 그리고 협업 도구들에 대한 지식과 경험을 꾸준히 쌓아두는 것이 중요하다는 점을 절실히 깨달았습니다.
-
----
-
-## 8. 기타
-
-- 기술 스택
-| 분야 | 도구 |
-| --- | --- |
-| Backend | Django, SQLite |
-| Frontend | Vue.js, JavaScript, CSS, HTML |
-| DevOps | Git, GitHub |
-| Tools | VS Code, Postman, Figma, Notion, Excalidraw |
-
-
-## 5. 개발 환경 & 기술 스택
+> ### 개발 환경 & 기술 스택
 
 <div align="center">
 <table cellpadding="8" cellspacing="0" border="0">
@@ -543,57 +272,286 @@ https://github.com/user-attachments/assets/4cda2a14-167c-4d5b-ae90-61fc3305fb86
 </table>
 </div>
 
+### API / 서비스 (간략 참조)
+
+- **Wikipedia**: 작가 정보 탐색  
+- **OpenAI GPT API**: 작가 정보 생성  
+- **Aladin**: 도서 데이터 생성  
+- **MusicGen**: 도서 분위기 기반 음악 생성  
+- **Upstage API**: 선호 도서 기반 도서 추천  
 
 
-## 6. 생성형 AI 활용
+<br>
 
+> ### 개발 과정
+>> #### Notion 및 Excarlidraw 작성
+
+<p align="center">
+<img src="./images/organize_paper.png" alt="노션 정리 및 엑스칼리드로우 작성" width="900" />
+</p>
+
+<br>
+
+>> #### Figma를 활용한 Wireframe 작성
+<p align="center">
+<img src="./images/wireframe.png" alt="wireframe 작성" width="900" />
+</p>
+
+<br>
+
+>> #### 생성형 AI 활용(Chat GPT)
+##### 미리 작성해둔 기획 및 Wirefram 기반으로 프로젝트 개발 시 생성형 AI 활용 
+<h4>프롬포트 작성 및 요청 사항 전달</h4>
+<p align="center">
+<img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="800" />
+</p>
+<br>
+
+<h4>생성형 AI의 답변</h4>
+<p align="center">
+<img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="800" />
+</p>
+
+<br>
+<br>
+
+> ### 데이터베이스 모델링 (ERD)
+>> 주요 테이블: User, Book, Category (M:N), Review, Music, Review
+<p align="center">
+<img src="./images/ERD.png" alt="ERD" width="800" />
+</p>
+
+<br>
+<br>
+---
+<br>
+<br>
+
+
+## 3. 프로젝트 기능
+> ### 기획된 목표 기능
+>> #### 구현된 기능
 <div align="center">
+
 <table cellpadding="8" cellspacing="0" border="0">
   <thead>
     <tr>
-      <th align="center">API / 서비스</th>
-      <th align="center">용도</th>
-      <th align="center">배지</th>
+      <th align="center">카테고리</th>
+      <th align="center">주요 기능</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Wikipedia</td>
-      <td>작가 정보 탐색</td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Wikipedia-000000?style=for-the-badge&logo=wikipedia" alt="Wikipedia" />
-      </td>
+      <td align="center"><strong>사용자 관리</strong></td>
+      <td>로그인/회원가입, 로그아웃, 사용자 인증, 개인정보(닉네임·감성 키워드·비밀번호) 수정</td>
     </tr>
     <tr>
-      <td>OpenAI GPT API</td>
-      <td>작가 정보 생성</td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai" alt="OpenAI" />
-      </td>
+      <td align="center"><strong>콘텐츠 관리</strong></td>
+      <td>도서 CRUD, 리뷰 CRUD, 읽은 도서 리스트, 찜한 책/나중에 볼 책 모아보기</td>
     </tr>
     <tr>
-      <td>Aladin</td>
-      <td>도서 데이터 생성</td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Aladin-FF6E00?style=for-the-badge" alt="Aladin" />
-      </td>
+      <td align="center"><strong>추천 시스템</strong></td>
+      <td>음악 추천(도서별 음악), 베스트셀러, 코사인-유사도 기반 유사 도서</td>
     </tr>
     <tr>
-      <td>MusicGen</td>
-      <td>도서 분위기 기반 음악 생성</td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/MusicGen-000000?style=for-the-badge" alt="MusicGen" />
-      </td>
+      <td align="center"><strong>검색 &amp; 필터</strong></td>
+      <td>검색창(제목/작가), 검색 결과, 장르 필터</td>
     </tr>
     <tr>
-      <td>Upstage API</td>
-      <td>선호 도서 기반 도서 추천</td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Upstage-000000?style=for-the-badge" alt="Upstage" />
-      </td>
+      <td align="center"><strong>소셜 인터랙션</strong></td>
+      <td>좋아요/댓글(도서·리뷰), 댓글 기능</td>
     </tr>
-    
+    <tr>
+      <td align="center"><strong>개인화 대시보드</strong></td>
+      <td>마이페이지(프로필·감성 키워드)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>미디어 미리보기</strong></td>
+      <td>음악 미리듣기, 분위기 태그 표시</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>레이아웃 &amp; UI/UX</strong></td>
+      <td>네비게이션 바(로고·검색·인증 버튼), 사이드 콘텐츠(카테고리), 하단 콘텐츠(추천·베스트셀러)</td>
+    </tr>
   </tbody>
 </table>
+
+</div>
+<br>
+
+>> #### 미구현된 기능
+<div align="center">
+
+<table cellpadding="8" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th align="center">구현 가능</th>
+      <th align="center">구현 불가</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">
+        <ul>
+          <li>AI 기반 음악 커버 이미지 생성</li>
+          <li>화이트모드/소셜 로그인</li>
+          <li>음악 추천 다시 받기</li>
+          <li>반응형 웹</li>
+          <li>내가 좋아하는 작가의 책</li>
+          <li>출판 연도 필터</li>
+        </ul>
+      </td>
+      <td valign="top">
+        <ul>
+          <li>감성 기반 도서 추천(“당신을 위한 선율”)-음악 기반</li>
+          <li>연령별 추천</li>
+          <li>청취 히스토리</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+<br>
+<br>
+
+> ### 핵심 기능
+>> 음악 재생 동영상
+https://github.com/user-attachments/assets/4cda2a14-167c-4d5b-ae90-61fc3305fb86
+
+
+<br>
+<br>
+
+> > 메인 페이지
+- 화면 스크롤 및 캐러셀
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/1_Home.gif" alt="메인페이지" width="800" />
+</p>
+
+<br>
+<br>
+
+>> 사이드 바
+- 클릭 시 슬라이드 인 사이드 바, 마우스 호버 시 글씨 색 변화
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/2_Sidebar.gif" alt="사이드 바" width="800" />
+</p>
+
+<br>
+<br>
+
+>> 도서 목록 페이지
+
+- 도서 검색 기능, 카테고리 별 도서 목록
+  
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/5_BookList_Search.gif" alt="도서 목록 페이지1" width="800" />
+</p>
+
+<br>
+
+- 음악 재생 상태 모니터, 사용자 인터랙션(클릭, 찜하기 등)을 추적
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/3_MusicPlay.gif" alt="도서 목록 페이지2" width="800" />
+</p>
+
+<br>
+<br>
+
+>> 도서 상세 페이지
+
+- API 연결을 통한 작가 정보 생성, 코사인 유사도 기반 도서 추천
+
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/4_BookDetail.gif" alt="도서 상세 페이지" width="800" />
+</p>
+
+<br>
+<br>
+
+>> 프로필 페이지
+
+- 개인 프로필 수정, 찜한 도서/ 읽은 도서 목록 페이지 이동
+
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/7_Mypage1.gif" alt="프로필 페이지1" width="800" />
+</p>
+
+<br>
+
+- 개인이 담은 목록 내 도서 삭제
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/8_Mypage2.gif" alt="프로필 페이지2" width="800" />
+<br>
+<br>
+
+>> 리뷰 목록 페이지
+
+- 마우스 호버 시 카드 뒤집기 효과
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images_GIF/6_ReviewList.gif" alt="리뷰 목록" width="800" />
+</p>
+
+<br>
+<br>
+
+> ### 도서 추천 알고리즘
+<table align="center" cellpadding="10" cellspacing="0" border="0">
+  <tr>
+    <th align="center">도서 추천 알고리즘</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>임베딩 기반 추천 (유사도 분석)</strong>
+      <ul style="display: inline-block; text-align: left; margin: 8px 0;">
+        <li>도서 제목과 설명을 벡터화 후 코사인 유사도 계산</li>
+        <li>상위 4개의 유사 도서를 자동 추천</li>
+      </ul>
+      <br/>
+      <strong>GPT 기반 선호 도서 맞춤형 추천</strong>
+      <ul style="display: inline-block; text-align: left; margin: 8px 0;">
+        <li>사용자 선호 도서에 맞춰 어울리는 음악과 함께 추천</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br>
+<br>
+---
+<br>
+<br>
+
+
+## 4. 프로젝트를 마치며
+> ### 느낀 점
+- **임유나**: 촉박한 시간에 기획부터 구현까지 모든 과정을 압축적으로 진행하다 보니, 처음 구상했던 기능들을 모두 구현하지 못한 점이 가장 아쉬웠습니다. 특히 추천 알고리즘과 AI 연동, 음악 생성 및 추가적인 기능들 구현처럼 기술적으로 흥미로운 요소들을 더 깊이 다루고 싶었지만, 일정에 쫓겨 핵심만 구현해야 했습니다. 하지만 힘들었던 만큼 팀원과 함께 문제를 해결하고 완성해나가는 과정이 재밌고 값진 경험이었고, 백엔드 전체 흐름을 직접 설계하고 연결하는 과정에서 많은 걸 배울 수 있었습니다. 다음에 프로젝트를 이어서 진행할 때는 더 여유 있는 일정 속에서, 미처 시도하지 못한 기능까지 완성해보고 싶습니다.
+
+- **양재원**: 짧은 기간 안에 프로젝트를 완성하다 보니 아쉬운 점도 있었지만, Django와 Vue를 비롯해 다양한 개발 도구를 실제로 활용하며 많은 것을 배울 수 있는 값진 경험이었습니다. 프론트와 백엔드를 나누어 협업하면서 역할 분담의 중요성을 느꼈고, 팀원과의 소통과 기획 과정에서도 큰 도움을 받아 고마운 마음이 들었고, 앞으로도 함께 으쌰으쌰하고 싶습니다. 마지막으로, 이번 프로젝트를 통해 평소에 백엔드와 프론트엔드 기술, 그리고 협업 도구들에 대한 지식과 경험을 꾸준히 쌓아두는 것이 중요하다는 점을 절실히 깨달았습니다.
+
+> ### 향후 발전 과제
+> > 추후 업데이트 예정 리스트
+<div align="center">
+  <table cellpadding="8" cellspacing="0" border="0">
+    <tr>
+      <th align="center">🚀 향후 발전 과제</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <p align="left">
+          ☐ AI 기반 음악 커버 이미지 생성<br/>
+          ☐ 화이트모드/소셜 로그인<br/>
+          ☐ 음악 추천 다시 받기<br/>
+          ☐ 반응형 웹<br/>
+          ☐ 내가 좋아하는 작가의 책<br/>
+          ☐ 출판 연도 필터
+        </p>
+      </td>
+    </tr>
+  </table>
 </div>
 
