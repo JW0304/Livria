@@ -128,7 +128,7 @@
 <br>
 
 > 이런 배경에서 **Livria**는  
-> “책(Livre)과 노래(Aria)를 결합한 감성 기반 도서·음악 추천 플랫폼”으로 사용자의 일상 속 짧은 여유 시간에도 감성에 딱 맞는 큐레이션을 제공합니다.  
+> “책(Livre)과 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼”으로 사용자의 일상 속 짧은 여유 시간에도 감성에 딱 맞는 큐레이션을 제공합니다.  
 
 <br>
 <br>
@@ -161,7 +161,31 @@
 <br>
 <br>
 
-> ### 
+> ### 개발 과정
+>> #### Notion 및 Excarlidraw 작성
+
+<p align="center">
+<img src="./images/organize_paper.png" alt="노션 정리 및 엑스칼리드로우 작성" width="1000" />
+</p>
+
+<br>
+>> #### Figma를 활용한 Wireframe 작성
+<p align="center">
+<img src="./images/wireframe.png" alt="wireframe 작성" width="1000" />
+</p>
+
+<br>
+>> #### 생성형 AI 활용(Chat GPT)
+##### 미리 작성해둔 기획 및 Wirefram 기반으로 프로젝트 개발 시 생성형 AI 활용 
+프롬포트 작성 및 요청 사항 전달
+<p align="center">
+<img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="1000" />
+</p>
+<br>
+생성형 AI의 답변
+<p align="center">
+<img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="1000" />
+</p>
 
 <br>
 <br>
@@ -171,6 +195,7 @@
 
 <br>
 <br>
+
 ## 2. 목표 서비스와 구현 정도
 
 | 기능 | 구현 |
