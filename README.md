@@ -295,6 +295,10 @@
 
 > ### 핵심 기능
 > > 메인 페이지
+<p align="center">
+<img src="https://github.com/JW0304/Livria/blob/front/images/main.gif" alt="메인페이지" width="100%" />
+</p>
+
 
 > > 프로필 페이지
 
