@@ -6,6 +6,7 @@
   팀 소개
 -->
 
+##  1. 팀원 소개 및 역할 분담
 <h2 align="center">✨ SSACRABUILD 팀원 소개 ✨</h2>
 
 <table align="center" cellpadding="0" cellspacing="0" width="800">
@@ -69,9 +70,20 @@
   </tr>
 </table>
 
+<br>
+<br>
+<br>
+<br>
+
+## 2. 프로젝트 소개
+> 로고 및 프로젝트 명
 
 <!-- 
-로고 및 프로젝트 명의 간단한 풀이
+프로젝트 전반적인 소개
+-->
+
+<!--
+로고 
 -->
 <p align="center">
   <img src="./images/Logo.png" alt="Livria 로고" width="200" />
