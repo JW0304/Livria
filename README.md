@@ -424,7 +424,11 @@
 
 > ### 핵심 기능
 >> 음악 재생 동영상
-https://github.com/user-attachments/assets/4cda2a14-167c-4d5b-ae90-61fc3305fb86
+
+
+https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
+
+
 
 
 <br>
