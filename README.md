@@ -1,131 +1,20 @@
-# 🎼 Livria: 노래하듯 읽는 책
-> 감성 기반 맞춤형 도서 추천 웹 플랫폼
+# 🎼 Livria: 노래하듯 읽는 책, 감성 도서 추천 웹서비스
 
-<br>
-<!--
-  팀 소개
--->
+![리브리아 로고](./images/Logo.png)
+책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
 
-##  1. 팀원 소개 및 역할 분담
-<h2 align="center">✨ SSACRABUILD 팀원 소개 ✨</h2>
+---
 
-<table align="center" cellpadding="0" cellspacing="0" width="800">
-  <tr>
-    <!-- 양재원 프로필 -->
-    <td align="center"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa;">
-      <img src="https://avatars.githubusercontent.com/u/195062705?v=4" width="100" style="border-radius:50%;" /><br/>
-      <strong>양재원</strong><br/>
-      <a href="https://github.com/JW0304">JW0304</a>
-    </td>
-    <!-- 역할 칸 -->
-    <td valign="top"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa; width:150px;">
-      <strong>주 담당 프론트엔드 (Vue)</strong><br/>
-      • Figma 기반 UI/UX<br/>
-      • 반응형 레이아웃<br/>
-      • Axios 연동<br/>
-      • 음악 추천 UI<br/>
-      • 페이지별 Vue 구성
-    </td>
-    <!-- 사람 사이 텀 -->
-    <td width="20"></td>
-    <!-- 임유나 프로필 -->
-    <td align="center"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa;">
-      <img src="https://avatars.githubusercontent.com/u/152590695?v=4" width="100" style="border-radius:50%;" /><br/>
-      <strong>임유나</strong><br/>
-      <a href="https://github.com/harinme">harinme</a>
-    </td>
-    <!-- 역할 칸 -->
-    <td valign="top"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa; width:150px;">
-      <strong>주 담당 백엔드 (Django)</strong><br/>
-      • 도서/유저/리뷰 모델 및 API<br/>
-      • 도서 추천 알고리즘<br/>
-      • 음악/도서 생성형 AI 연동<br/>
-      • DB 모델링
-    </td>
-  </tr>
-</table>
+## 1. 팀원 정보 및 역할 분담
 
-<table align="center" cellpadding="5" cellspacing="0" width="800px">
-  <tr>
-    <th align="center">공동 작업</th>
-  </tr>
-  <tr>
-    <td>
-      <ul>
-        <li>프론트엔드↔백엔드 크로스 기능 지원
-          <ul>
-            <li>프론트엔드 담당(양재원): 백엔드 API 연동 및 DB 모델링 지원</li>
-            <li>백엔드 담당(임유나): 프론트엔드 UI/UX 구현 및 Axios 연동 지원</li>
-          </ul>
-        </li>
-        <li>GitHub 브랜치 협업 및 코드 리뷰</li>
-        <li>Notion을 활용한 프로젝트 문서화</li>
-        <li>API 연결 테스트 및 디버깅</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+| 이름 | 역할 | 담당 업무 |
+|------|------|-----------|
+| 임유나 | 백엔드 (Django) | 도서/유저/리뷰 모델 및 API, 도서 추천 알고리즘, 음악/도서 생성형 AI 연동, DB 모델링 |
+| 양재원 | 프론트엔드 (Vue) | Figma 기반 UI/UX, 반응형 레이아웃, Axios 연동, 음악 추천 UI, 페이지별 Vue 구성 |
 
-<br>
-<br>
-<br>
-<br>
+- 공동: GitHub 브랜치 협업, Notion 문서화, API 연결 테스트
 
-## 2. 프로젝트 소개
-> 🚀 프로젝트 개발 배경
-
-<p align="center">
-  <img src="./images/background1.png" alt="야외 독서 트렌드 뉴스" width="300" />
-  &nbsp;&nbsp;
-  <img src="./images/background2.png" alt="출퇴근 시간 활용 뉴스" width="300" />
-</p>
-
-현대인의 라이프스타일 변화와 미디어 소비 패턴을 살펴보면:
-
-1. **야외 독서 및 ‘텍스트 힙’(Text Hip) 문화 확산**  
-   - SNS와 뉴스 기사에서 “야외 독서”가 새로운 트렌드로 부상  
-   - 독서 공간의 자유로움과 감성 소비 니즈 증대  
-
-2. **출퇴근 시간의 활용도 증가**  
-   - 직장인 하루 평균 출퇴근 시간 1시간 이상  
-   - 이동 중 ‘짧고 굵은’ 콘텐츠 소비 수요 확대  
-
-3. **기존 추천 서비스의 한계**  
-   - 사용자 감성과 취향을 반영한 콘텐츠 큐레이션 부족  
-   - 독서와 음악을 연동한 감성 기반 경험 미흡  
-
-> 이런 배경에서 **Livria**는  
-> “책(Livre)과 노래(Aria)를 결합한 감성 기반 도서·음악 추천 플랫폼”으로  
-> 사용자의 일상 속 짧은 여유 시간에도 감성에 딱 맞는 큐레이션을 제공합니다.  
-
-
-<br>
-<br>
-
-> 로고 및 프로젝트 명
-
-<!-- 
-프로젝트 전반적인 소개
--->
-
-<!--
-로고 
--->
-<p align="center">
-  <img src="./images/Logo.png" alt="Livria 로고" width="180" />
-  &nbsp;&nbsp;
-  <img src="./images/word.png" alt="Livria 글자" width="300" />
-</p>
-
-<h2 align="center">
-  책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
-</h2>
-
-
+---
 
 ## 2. 목표 서비스와 구현 정도
 
