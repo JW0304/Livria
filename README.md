@@ -1,567 +1,427 @@
-# 🎼 Livria: 노래하듯 읽는 책
-> 감성 기반 맞춤형 도서 추천 웹 플랫폼
+# 생성형 AI를 활용한 도서 추천 사이트 Livria
 
-<br>
-<!--
-  팀 소개
--->
+> 책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
 
-##  1. 팀원 소개 및 역할 분담
-<h2 align="center">✨ SSACRABUILD 팀원 소개 ✨</h2>
+Livria는 생성형 AI를 활용하여 도서별 맞춤 음악을 생성하고, 코사인 유사도 기반 도서 추천을 제공하는 웹 애플리케이션입니다.
 
-<table align="center" cellpadding="0" cellspacing="0" width="800">
-  <tr>
-    <!-- 양재원 프로필 -->
-    <td align="center"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa;">
-      <img src="https://avatars.githubusercontent.com/u/195062705?v=4" width="100" style="border-radius:50%;" /><br/>
-      <strong>양재원</strong><br/>
-      <a href="https://github.com/JW0304">JW0304</a>
-    </td>
-    <!-- 역할 칸 -->
-    <td valign="top"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa; width:150px;">
-      <strong>주 담당 프론트엔드 (Vue)</strong><br/>
-      • Figma 기반 UI/UX<br/>
-      • 반응형 레이아웃<br/>
-      • Axios 연동<br/>
-      • 음악 추천 UI<br/>
-      • 페이지별 Vue 구성
-    </td>
-    <!-- 사람 사이 텀 -->
-    <td width="20"></td>
-    <!-- 임유나 프로필 -->
-    <td align="center"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa;">
-      <img src="https://avatars.githubusercontent.com/u/152590695?v=4" width="100" style="border-radius:50%;" /><br/>
-      <strong>임유나</strong><br/>
-      <a href="https://github.com/harinme">harinme</a>
-    </td>
-    <!-- 역할 칸 -->
-    <td valign="top"
-        style="border:1px solid #ccc; border-radius:10px; padding:10px; box-shadow:2px 2px 5px #aaa; width:150px;">
-      <strong>주 담당 백엔드 (Django)</strong><br/>
-      • 도서/유저/리뷰 모델 및 API<br/>
-      • 도서 추천 알고리즘<br/>
-      • 음악/도서 생성형 AI 연동<br/>
-      • DB 모델링
-    </td>
-  </tr>
-</table>
+## 📋 목차
 
-<table align="center" cellpadding="5" cellspacing="0" width="800px">
-  <tr>
-    <th align="center">공동 작업</th>
-  </tr>
-  <tr>
-    <td>
-      <ul>
-        <li>프론트엔드↔백엔드 크로스 기능 지원
-          <ul>
-            <li>프론트엔드 담당(양재원): 백엔드 API 연동 및 DB 모델링 지원</li>
-            <li>백엔드 담당(임유나): 프론트엔드 UI/UX 구현 및 Axios 연동 지원</li>
-          </ul>
-        </li>
-        <li>GitHub 브랜치 협업 및 코드 리뷰</li>
-        <li>Notion을 활용한 프로젝트 문서화</li>
-        <li>API 연결 테스트 및 디버깅</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+- [프로젝트 개요](#프로젝트-개요)
+- [기술 스택](#기술-스택)
+- [시스템 아키텍처](#시스템-아키텍처)
+- [주요 기능](#주요-기능)
+- [프로젝트 구조](#프로젝트-구조)
+- [도서 추천 알고리즘](#도서-추천-알고리즘)
+- [데이터베이스 모델링](#데이터베이스-모델링)
+- [시작하기](#시작하기)
+- [API 연동](#api-연동)
 
-<br>
-<br>
+## 🎯 프로젝트 개요
 
----
+Livria는 사용자의 감성과 취향을 반영한 도서 추천과 함께 도서별 맞춤 음악을 제공하는 플랫폼입니다.
 
-<br>
-<br>
+### 핵심 기능
+- 생성형 AI 기반 도서별 음악 생성
+- 코사인 유사도 기반 도서 추천
+- GPT 기반 작가 정보 생성
+- 사용자 맞춤형 도서 큐레이션
 
+### 프로젝트 정보
+- **기간**: 2025.05.20 ~ 05.27 (1주)
+- **인원**: 2명
 
-## 2. 프로젝트 소개
-> ### 🚀 프로젝트 개발 배경
+## 🛠 기술 스택
 
-<br>
+### Frontend
+- **Vue.js 3.5.13** - 프론트엔드 프레임워크
+- **Vite 6.2.4** - 빌드 도구
+- **Vue Router 4.5.0** - 라우팅
+- **Pinia 3.0.1** - 상태 관리
+- **Axios 1.9.0** - HTTP 클라이언트
+- **Swiper 11.2.8** - 캐러셀 컴포넌트
+- **Vibrant** - 이미지 색상 추출
+- **Sass** - CSS 전처리기
 
-> 관련 신문 기사 스크랩
+### Backend
+- **Python 3.9.13**
+- **Django 4.2.21** - 웹 프레임워크
+- **Django REST Framework 3.16.0** - API 개발
+- **SQLite 3.36** - 데이터베이스
+- **scikit-learn 1.6.1** - 머신러닝 (코사인 유사도)
+- **NumPy 2.2.6** - 수치 연산
+- **BeautifulSoup4 4.13.4** - 웹 스크래핑
 
+### AI & 외부 API
+- **OpenAI GPT API** - 작가 정보 생성
+- **Wikipedia API** - 작가 정보 탐색
+- **Aladin API** - 도서 데이터 수집
+- **MusicGen** - 도서 분위기 기반 음악 생성
+- **Upstage API** - 선호 도서 기반 도서 추천
 
-<p align="center">
-  <img src="./images/background1.png" alt="야외 독서 트렌드 뉴스" width="400" />
-  &nbsp;&nbsp;
-  <img src="./images/background2.png" alt="출퇴근 시간 활용 뉴스" width="400" />
-</p>
+### 개발 도구
+- **Git / GitHub** - 버전 관리
+- **Postman** - API 테스트
+- **Figma** - UI/UX 디자인
+- **Notion** - 프로젝트 문서화
+- **Excalidraw** - 다이어그램 작성
 
-> “올해 트렌드는 ‘야외 독서’…‘텍스트 힙’ 유행 발맞추는 지자체들”  
-> — 오유림, *한국경제*, 2025-05-11  [원문 보기](https://www.hankyung.com/article/202505114926i)  
->
-> “직장인 출퇴근에 하루 평균 1시간14분 써…30대 통근 시간 가장 길어”  
-> — 박상영, *경향신문*, 2024-12-20  [원문 보기](https://www.khan.co.kr/article/202412201422001)
+## 🏗️ 시스템 아키텍처
 
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Frontend (Vue.js)                         │
+│              Vue 3 + Pinia + Vue Router                      │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            │ HTTP / REST API
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│              Backend (Django REST Framework)                │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │ Accounts    │  │ API         │  │ Services     │       │
+│  │ (인증)      │  │ (도서/리뷰)  │  │ (AI 연동)    │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+└─────────────────────────────────────────────────────────────┘
+         │                │                  │
+         │                │                  │
+         ↓                ↓                  ↓
+┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+│   SQLite     │  │   OpenAI     │  │   External   │
+│   (DB)       │  │   GPT API    │  │   APIs       │
+└──────────────┘  └──────────────┘  └──────────────┘
+```
 
-<table align="center" width="700" cellpadding="10" cellspacing="0">
-  <tr>
-    <td align="left">
-      <h4>현대인의 라이프스타일 변화와 미디어 소비 패턴을 살펴보면:</h4>
-      <ul>
-        <li><strong>야외 독서 및 ‘텍스트 힙’(Text Hip) 문화 확산</strong>
-          <ul>
-            <li>SNS와 뉴스 기사에서 “야외 독서”가 새로운 트렌드로 부상</li>
-            <li>독서 공간의 자유로움과 감성 소비 니즈 증대</li>
-          </ul>
-        </li>
-        <li><strong>출퇴근 시간의 활용도 증가</strong>
-          <ul>
-            <li>직장인 하루 평균 출퇴근 시간 1시간 이상</li>
-            <li>이동 중 ‘짧고 굵은’ 콘텐츠 소비 수요 확대</li>
-          </ul>
-        </li>
-        <li><strong>기존 추천 서비스의 한계</strong>
-          <ul>
-            <li>사용자 감성과 취향을 반영한 콘텐츠 큐레이션 부족</li>
-            <li>독서와 음악을 연동한 감성 기반 경험 미흡</li>
-          </ul>
-        </li>
-      </ul>
-    </td>
-  </tr>
-</table>
+## ✨ 주요 기능
 
-<br>
+### 1. 사용자 관리
+- 로그인/회원가입
+- 사용자 인증 (JWT)
+- 개인정보 수정 (닉네임, 감성 키워드, 비밀번호)
+- 프로필 이미지 관리
 
-> 이런 배경에서 **Livria**는  
-> “책(Livre)과 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼”으로 사용자의 일상 속 짧은 여유 시간에도 감성에 딱 맞는 큐레이션을 제공합니다.  
+### 2. 도서 관리
+- 도서 CRUD
+- 도서 검색 (제목/작가)
+- 카테고리별 도서 목록
+- 장르 필터링
+- 베스트셀러 조회
 
-<br>
-<br>
+### 3. 추천 시스템
+- **코사인 유사도 기반 유사 도서 추천**
+  - 도서 제목과 설명을 벡터화
+  - 임베딩 기반 유사도 계산
+  - 상위 4개 유사 도서 자동 추천
+- **GPT 기반 선호 도서 맞춤형 추천**
+  - 사용자 선호 도서 기반 추천
+  - 음악과 함께 제공
 
-> ### 로고 및 프로젝트 명
+### 4. 음악 생성 및 추천
+- 도서별 맞춤 음악 생성 (MusicGen)
+- 음악 미리듣기
+- 분위기 태그 표시
+- 음악 반응 (좋아요)
 
-<!--
-로고 
--->
-<p align="center">
-  <img src="./images/Logo.png" alt="Livria 로고" width="180" />
-  &nbsp;&nbsp;
-  <img src="./images/word.png" alt="Livria 글자" width="300" />
-</p>
+### 5. 리뷰 시스템
+- 리뷰 CRUD
+- 리뷰 좋아요/댓글
+- 리뷰 목록 조회
 
-<h2 align="center">
-  책(Livre) + 노래(Aria)를 결합한 감성 기반 도서 추천 플랫폼
-</h2>
+### 6. 개인화 기능
+- 읽은 도서 리스트
+- 찜한 책 관리
+- 나중에 볼 책 저장
+- 마이페이지 (프로필, 감성 키워드)
 
-<br>
-<br>
+### 7. 작가 정보
+- Wikipedia API를 통한 작가 정보 탐색
+- GPT API를 통한 작가 정보 생성
+- 작가 이미지 및 상세 정보 표시
 
-> ### 개발 기간
->> #### 25.05.20 ~ 05.27
-<br>
-<p align="center">
-<img src="./images/timetable.png" alt="Livria 개발 기간" width="800" />
-</p>
+## 📁 프로젝트 구조
 
-<br>
-<br>
+```
+Livria/
+├── frontend/                  # 프론트엔드
+│   ├── src/
+│   │   ├── components/       # 공통 컴포넌트
+│   │   │   ├── BookCard.vue
+│   │   │   ├── BookList.vue
+│   │   │   ├── Header.vue
+│   │   │   ├── Sidebar.vue
+│   │   │   └── Pagination.vue
+│   │   ├── views/           # 페이지 컴포넌트
+│   │   │   ├── MainPage.vue
+│   │   │   ├── BookListPage.vue
+│   │   │   ├── BookDetailPage.vue
+│   │   │   ├── MyPage.vue
+│   │   │   └── ReviewListPage.vue
+│   │   ├── stores/          # Pinia 상태 관리
+│   │   │   ├── auth.js
+│   │   │   ├── books.js
+│   │   │   ├── user.js
+│   │   │   └── reviews.js
+│   │   ├── router/          # Vue Router
+│   │   │   └── index.js
+│   │   └── assets/          # 정적 리소스
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/                   # 백엔드
+│   ├── accounts/             # 인증 앱
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   └── urls.py
+│   ├── api/                  # API 앱
+│   │   ├── models.py         # 도서, 리뷰, 음악 모델
+│   │   ├── views.py          # API 뷰
+│   │   ├── serializers.py   # DRF 시리얼라이저
+│   │   ├── services/         # 비즈니스 로직
+│   │   │   ├── aladin.py     # Aladin API 연동
+│   │   │   ├── music_service.py  # 음악 생성
+│   │   │   └── author_media_service.py  # 작가 정보
+│   │   └── management/       # Django 커맨드
+│   │       └── commands/
+│   │           ├── generate_book_music.py
+│   │           └── update_similar_books.py
+│   ├── livria_backend/       # Django 설정
+│   │   ├── settings.py
+│   │   └── urls.py
+│   ├── requirements.txt
+│   └── manage.py
+│
+└── README.md
+```
 
-> ### 개발 환경 & 기술 스택
+## 🧮 도서 추천 알고리즘
 
-<div align="center">
-<table cellpadding="8" cellspacing="0" border="0">
-  <thead>
-    <tr>
-      <th align="center">분야</th>
-      <th align="center">도구</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- 언어 -->
-    <tr>
-      <td>언어</td>
-      <td>
-        <img
-          src="https://img.shields.io/badge/Python-3.9.13-blue?style=for-the-badge&logo=python"
-          alt="Python 3.9.13"
-        />
-      </td>
-    </tr>
-    <!-- 백엔드 -->
-    <tr>
-      <td>백엔드</td>
-      <td>
-        <img
-          src="https://img.shields.io/badge/Django-3.2-green?style=for-the-badge&logo=django"
-          alt="Django"
-        />
-        <img
-          src="https://img.shields.io/badge/SQLite-3.36-brightgreen?style=for-the-badge&logo=sqlite"
-          alt="SQLite"
-        />
-      </td>
-    </tr>
-    <!-- 프론트엔드 -->
-    <tr>
-      <td>프론트엔드</td>
-      <td>
-        <img
-          src="https://img.shields.io/badge/Vue.js-3.0-%2341B883?style=for-the-badge&logo=vue.js"
-          alt="Vue.js"
-        />
-        <img
-          src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript"
-          alt="JavaScript"
-        />
-        <img
-          src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-          alt="HTML5"
-        />
-        <img
-          src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-          alt="CSS3"
-        />
-      </td>
-    </tr>
-    <!-- DevOps -->
-    <tr>
-      <td>DevOps</td>
-      <td>
-        <img
-          src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
-          alt="Git"
-        />
-        <img
-          src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"
-          alt="GitHub"
-        />
-      </td>
-    </tr>
-    <!-- 툴 & 에디터 -->
-    <tr>
-      <td>툴 &amp; 에디터</td>
-      <td>
-        <img
-          src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white"
-          alt="VS Code"
-        />
-        <img
-          src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
-          alt="Postman"
-        />
-        <img
-          src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
-          alt="Figma"
-        />
-        <img
-          src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion"
-          alt="Notion"
-        />
-        <img
-          src="https://img.shields.io/badge/Excalidraw-000000?style=for-the-badge&logo=excalidraw"
-          alt="Excalidraw"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>API / 서비스</td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Wikipedia-000000?style=for-the-badge&logo=wikipedia&logoColor=white" alt="Wikipedia" />
-        <img src="https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI GPT API" />
-        <img src="https://img.shields.io/badge/Aladin-FF6E00?style=for-the-badge&logo=aladin&logoColor=white" alt="Aladin" />
-        <img src="https://img.shields.io/badge/MusicGen-000000?style=for-the-badge&logo=musicgen&logoColor=white" alt="MusicGen" />
-        <img src="https://img.shields.io/badge/Upstage-000000?style=for-the-badge&logo=upstage&logoColor=white" alt="Upstage API" />
-      </td>
-  </tbody>
-</table>
-</div>
+### 1. 임베딩 기반 추천 (코사인 유사도)
 
-### API / 서비스 (간략 참조)
+```python
+# 도서 제목과 설명을 벡터화
+book_embedding = vectorize(book.title + book.description)
 
-- **Wikipedia**: 작가 정보 탐색  
-- **OpenAI GPT API**: 작가 정보 생성  
-- **Aladin**: 도서 데이터 생성  
-- **MusicGen**: 도서 분위기 기반 음악 생성  
-- **Upstage API**: 선호 도서 기반 도서 추천  
+# 코사인 유사도 계산
+similarity = cosine_similarity(book_embedding, all_book_embeddings)
 
+# 상위 4개 유사 도서 추천
+recommended_books = get_top_n_similar(similarity, n=4)
+```
 
-<br>
+**특징:**
+- 도서 제목과 설명을 벡터화하여 유사도 계산
+- scikit-learn의 cosine_similarity 활용
+- 실시간 유사 도서 추천
 
-> ### 개발 과정
->> #### Notion 및 Excarlidraw 작성
+### 2. GPT 기반 선호 도서 맞춤형 추천
 
-<p align="center">
-<img src="./images/organize_paper.png" alt="노션 정리 및 엑스칼리드로우 작성" width="900" />
-</p>
+- 사용자의 선호 도서 리스트를 분석
+- OpenAI GPT API를 활용한 맞춤형 추천
+- 음악과 함께 제공되는 감성 기반 추천
 
-<br>
+## 🗄️ 데이터베이스 모델링
 
->> #### Figma를 활용한 Wireframe 작성
-<p align="center">
-<img src="./images/wireframe.png" alt="wireframe 작성" width="900" />
-</p>
+### 주요 모델
 
-<br>
+- **User**: 사용자 정보, 감성 키워드
+- **Book**: 도서 정보, 임베딩 벡터, 유사 도서 관계
+- **Category**: 카테고리 (M:N 관계)
+- **Review**: 리뷰 정보
+- **Music**: 도서별 생성된 음악
+- **MusicReaction**: 음악 반응 (좋아요)
 
->> #### 생성형 AI 활용(Chat GPT)
-##### 미리 작성해둔 기획 및 Wirefram 기반으로 프로젝트 개발 시 생성형 AI 활용 
-<h4>프롬포트 작성 및 요청 사항 전달</h4>
-<p align="center">
-<img src="./images/request.png" alt="프롬포트 작성 및 요청 사항" width="800" />
-</p>
-<br>
+### ERD
 
-<h4>생성형 AI의 답변</h4>
-<p align="center">
-<img src="./images/answer.png" alt="프롬포트 작성 및 요청 사항" width="800" />
-</p>
+```
+User ──┬── Review
+       ├── Book (읽은 도서, 찜한 도서)
+       └── MusicReaction
 
-<br>
-<br>
+Book ──┬── Category (M:N)
+       ├── Review
+       ├── Music
+       └── Book (유사 도서, M:N)
+```
 
-> ### 데이터베이스 모델링 (ERD)
->> 주요 테이블: User, Book, Category (M:N), Review, Music, Review
-<p align="center">
-<img src="./images/ERD.png" alt="ERD" width="800" />
-</p>
+## 🚀 시작하기
 
-<br>
-<br>
+### 필수 요구사항
 
----
+- **Node.js 18 이상** (Frontend)
+- **Python 3.9 이상** (Backend)
+- **pip** (Python 패키지 관리)
 
-<br>
-<br>
+### 설치 및 실행
 
+#### 1. 저장소 클론
 
-## 3. 프로젝트 기능
-> ### 기획된 목표 기능
->> #### 구현된 기능
-<div align="center">
+```bash
+git clone https://github.com/JW0304/LIVRIA.git
+cd Livria
+```
 
-<table cellpadding="8" cellspacing="0" border="0">
-  <thead>
-    <tr>
-      <th align="center">카테고리</th>
-      <th align="center">주요 기능</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><strong>사용자 관리</strong></td>
-      <td>로그인/회원가입, 로그아웃, 사용자 인증, 개인정보(닉네임·감성 키워드·비밀번호) 수정</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>콘텐츠 관리</strong></td>
-      <td>도서 CRUD, 리뷰 CRUD, 읽은 도서 리스트, 찜한 책/나중에 볼 책 모아보기</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>추천 시스템</strong></td>
-      <td>음악 추천(도서별 음악), 베스트셀러, 코사인-유사도 기반 유사 도서</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>검색 &amp; 필터</strong></td>
-      <td>검색창(제목/작가), 검색 결과, 장르 필터</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>소셜 인터랙션</strong></td>
-      <td>좋아요/댓글(도서·리뷰), 댓글 기능</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>개인화 대시보드</strong></td>
-      <td>마이페이지(프로필·감성 키워드)</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>미디어 미리보기</strong></td>
-      <td>음악 미리듣기, 분위기 태그 표시</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>레이아웃 &amp; UI/UX</strong></td>
-      <td>네비게이션 바(로고·검색·인증 버튼), 사이드 콘텐츠(카테고리), 하단 콘텐츠(추천·베스트셀러)</td>
-    </tr>
-  </tbody>
-</table>
+#### 2. Backend 설정
 
-</div>
-<br>
+```bash
+cd backend
 
->> #### 미구현된 기능
-<div align="center">
+# 가상환경 생성 및 활성화
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-<table cellpadding="8" cellspacing="0" border="0">
-  <thead>
-    <tr>
-      <th align="center">구현 가능</th>
-      <th align="center">구현 불가</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <ul>
-          <li>AI 기반 음악 커버 이미지 생성</li>
-          <li>화이트모드/소셜 로그인</li>
-          <li>음악 추천 다시 받기</li>
-          <li>반응형 웹</li>
-          <li>내가 좋아하는 작가의 책</li>
-          <li>출판 연도 필터</li>
-        </ul>
-      </td>
-      <td valign="top">
-        <ul>
-          <li>감성 기반 도서 추천(“당신을 위한 선율”)-음악 기반</li>
-          <li>연령별 추천</li>
-          <li>청취 히스토리</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+# 의존성 설치
+pip install -r requirements.txt
 
-</div>
+# 데이터베이스 마이그레이션
+python manage.py migrate
 
+# 개발 서버 실행
+python manage.py runserver
+```
 
-<br>
-<br>
+Backend는 `http://localhost:8000`에서 실행됩니다.
 
-> ### 핵심 기능
->> 음악 재생 동영상
+#### 3. Frontend 설정
 
+```bash
+cd frontend
 
-https://github.com/user-attachments/assets/b68469d6-68de-4e3b-8cce-b45dc1e6f3bd
+# 의존성 설치
+npm install
 
+# 개발 서버 실행
+npm run dev
+```
 
+Frontend는 `http://localhost:5173`에서 실행됩니다.
 
+### 환경 변수 설정
 
-<br>
-<br>
+#### Backend (.env)
 
-> > 메인 페이지
+```bash
+# OpenAI API
+OPENAI_API_KEY=your_openai_api_key
+
+# Django 설정
+SECRET_KEY=your_secret_key
+DEBUG=True
+```
+
+## 🔌 API 연동
+
+### 외부 API
+
+1. **Aladin API**
+   - 도서 정보 수집
+   - 도서 검색 및 상세 정보
+
+2. **OpenAI GPT API**
+   - 작가 정보 생성
+   - 도서 추천 생성
+
+3. **Wikipedia API**
+   - 작가 정보 탐색
+   - 작가 배경 정보 수집
+
+4. **MusicGen**
+   - 도서 분위기 기반 음악 생성
+   - 태그 기반 음악 추천
+
+5. **Upstage API**
+   - 선호 도서 기반 도서 추천
+
+### API 엔드포인트
+
+#### 인증
+- `POST /accounts/signup/` - 회원가입
+- `POST /accounts/login/` - 로그인
+- `POST /accounts/logout/` - 로그아웃
+
+#### 도서
+- `GET /api/books/` - 도서 목록
+- `GET /api/books/{id}/` - 도서 상세
+- `GET /api/books/{id}/similar/` - 유사 도서
+- `GET /api/books/search/` - 도서 검색
+
+#### 리뷰
+- `GET /api/reviews/` - 리뷰 목록
+- `POST /api/reviews/` - 리뷰 작성
+- `PUT /api/reviews/{id}/` - 리뷰 수정
+- `DELETE /api/reviews/{id}/` - 리뷰 삭제
+
+#### 음악
+- `GET /api/books/{id}/music/` - 도서별 음악
+- `POST /api/music/{id}/reaction/` - 음악 반응
+
+## 📝 주요 기술적 특징
+
+### Frontend
+- **컴포넌트 기반 아키텍처**: Vue 3 Composition API
+- **상태 관리**: Pinia를 통한 전역 상태 관리
+- **라우팅**: Vue Router를 통한 SPA 구현
+- **UI/UX**: Swiper 캐러셀, 카드 뒤집기 효과
+- **이미지 처리**: Vibrant를 통한 이미지 색상 추출
+
+### Backend
+- **RESTful API**: Django REST Framework
+- **머신러닝 통합**: scikit-learn을 통한 유사도 계산
+- **비동기 처리**: 외부 API 호출 최적화
+- **데이터 관리**: Django ORM을 통한 데이터베이스 관리
+- **커맨드**: Django management commands를 통한 배치 작업
+
+### AI 통합
+- **음악 생성**: MusicGen을 통한 도서별 음악 생성
+- **텍스트 생성**: GPT API를 통한 작가 정보 생성
+- **추천 시스템**: 임베딩 기반 유사도 계산
+
+## 🎬 주요 화면
+
+### 메인 페이지
 - 화면 스크롤 및 캐러셀
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/1_Home.gif" alt="메인페이지" width="800" />
-</p>
+- 베스트셀러 및 추천 도서 표시
 
-<br>
-<br>
+### 도서 목록 페이지
+- 도서 검색 기능
+- 카테고리별 도서 목록
+- 음악 재생 상태 모니터
 
->> 사이드 바
-- 클릭 시 슬라이드 인 사이드 바, 마우스 호버 시 글씨 색 변화
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/2_Sidebar.gif" alt="사이드 바" width="800" />
-</p>
+### 도서 상세 페이지
+- API 연결을 통한 작가 정보 생성
+- 코사인 유사도 기반 도서 추천
+- 도서별 음악 재생
 
-<br>
-<br>
+### 프로필 페이지
+- 개인 프로필 수정
+- 찜한 도서/읽은 도서 목록
+- 목록 내 도서 삭제
 
->> 도서 목록 페이지
-
-- 도서 검색 기능, 카테고리 별 도서 목록
-  
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/5_BookList_Search.gif" alt="도서 목록 페이지1" width="800" />
-</p>
-
-<br>
-
-- 음악 재생 상태 모니터, 사용자 인터랙션(클릭, 찜하기 등)을 추적
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/3_MusicPlay.gif" alt="도서 목록 페이지2" width="800" />
-</p>
-
-<br>
-<br>
-
->> 도서 상세 페이지
-
-- API 연결을 통한 작가 정보 생성, 코사인 유사도 기반 도서 추천
-
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/4_BookDetail.gif" alt="도서 상세 페이지" width="800" />
-</p>
-
-<br>
-<br>
-
->> 프로필 페이지
-
-- 개인 프로필 수정, 찜한 도서/ 읽은 도서 목록 페이지 이동
-
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/7_Mypage1.gif" alt="프로필 페이지1" width="800" />
-</p>
-
-<br>
-
-- 개인이 담은 목록 내 도서 삭제
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/8_Mypage2.gif" alt="프로필 페이지2" width="800" />
-<br>
-<br>
-
->> 리뷰 목록 페이지
-
+### 리뷰 목록 페이지
 - 마우스 호버 시 카드 뒤집기 효과
-<p align="center">
-<img src="https://github.com/JW0304/Livria/blob/master/images_GIF/6_ReviewList.gif" alt="리뷰 목록" width="800" />
-</p>
+- 리뷰 상세 정보 표시
 
-<br>
-<br>
+## 👥 팀
 
-> ### 도서 추천 알고리즘
-<table align="center" cellpadding="10" cellspacing="0" border="0">
-  <tr>
-    <th align="center">도서 추천 알고리즘</th>
-  </tr>
-  <tr>
-    <td align="center">
-      <strong>임베딩 기반 추천 (유사도 분석)</strong>
-      <ul style="display: inline-block; text-align: left; margin: 8px 0;">
-        <li>도서 제목과 설명을 벡터화 후 코사인 유사도 계산</li>
-        <li>상위 4개의 유사 도서를 자동 추천</li>
-      </ul>
-      <br/>
-      <strong>GPT 기반 선호 도서 맞춤형 추천</strong>
-      <ul style="display: inline-block; text-align: left; margin: 8px 0;">
-        <li>사용자 선호 도서에 맞춰 어울리는 음악과 함께 추천</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+- **기간**: 2025.05.20 ~ 05.27 (1주)
+- **인원**: 2명
 
-<br>
-<br>
+### 역할 분담
 
----
+#### 프론트엔드 (Vue.js)
+- Figma 기반 UI/UX 구현
+- 반응형 레이아웃
+- Axios를 통한 API 연동
+- 음악 추천 UI
+- 페이지별 Vue 구성
 
-<br>
-<br>
+#### 백엔드 (Django)
+- 도서/유저/리뷰 모델 및 API
+- 도서 추천 알고리즘 구현
+- 음악/도서 생성형 AI 연동
+- DB 모델링
 
-
-## 4. 프로젝트를 마치며
-> ### 느낀 점
-- **임유나**: 촉박한 시간에 기획부터 구현까지 모든 과정을 압축적으로 진행하다 보니, 처음 구상했던 기능들을 모두 구현하지 못한 점이 가장 아쉬웠습니다. 특히 추천 알고리즘과 AI 연동, 음악 생성 및 추가적인 기능들 구현처럼 기술적으로 흥미로운 요소들을 더 깊이 다루고 싶었지만, 일정에 쫓겨 핵심만 구현해야 했습니다. 하지만 힘들었던 만큼 팀원과 함께 문제를 해결하고 완성해나가는 과정이 재밌고 값진 경험이었고, 백엔드 전체 흐름을 직접 설계하고 연결하는 과정에서 많은 걸 배울 수 있었습니다. 다음에 프로젝트를 이어서 진행할 때는 더 여유 있는 일정 속에서, 미처 시도하지 못한 기능까지 완성해보고 싶습니다.
-
-- **양재원**: 짧은 기간 안에 프로젝트를 완성하다 보니 아쉬운 점도 있었지만, Django와 Vue를 비롯해 다양한 개발 도구를 실제로 활용하며 많은 것을 배울 수 있는 값진 경험이었습니다. 프론트와 백엔드를 나누어 협업하면서 역할 분담의 중요성을 느꼈고, 팀원과의 소통과 기획 과정에서도 큰 도움을 받아 고마운 마음이 들었고, 앞으로도 함께 으쌰으쌰하고 싶습니다. 마지막으로, 이번 프로젝트를 통해 평소에 백엔드와 프론트엔드 기술, 그리고 협업 도구들에 대한 지식과 경험을 꾸준히 쌓아두는 것이 중요하다는 점을 절실히 깨달았습니다.
-
-> ### 향후 발전 과제
-> > 추후 업데이트 예정 리스트
-<div align="center">
-  <table cellpadding="8" cellspacing="0" border="0">
-    <tr>
-      <th align="center">🚀 향후 발전 과제</th>
-    </tr>
-    <tr>
-      <td align="center">
-        <p align="left">
-          ☐ AI 기반 음악 커버 이미지 생성<br/>
-          ☐ 화이트모드/소셜 로그인<br/>
-          ☐ 음악 추천 다시 받기<br/>
-          ☐ 반응형 웹<br/>
-          ☐ 내가 좋아하는 작가의 책<br/>
-          ☐ 출판 연도 필터
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
-
+#### 공동 작업
+- 프론트엔드↔백엔드 크로스 기능 지원
+- GitHub 브랜치 협업 및 코드 리뷰
+- Notion을 활용한 프로젝트 문서화
+- API 연결 테스트 및 디버깅
